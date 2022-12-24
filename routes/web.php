@@ -32,8 +32,6 @@ Route::get('services', 'service');
 Route::get('legal' , [GlobalController::class, 'getLegal']);
 Route::get('confidentialite' , [GlobalController::class, 'getConf']);
 
-Route::get('profil', [GlobalController::class, 'getProfil'])->name('getProfil');
-
 Route::post('order', [GlobalController::class, 'setOrder'])->name('setOrder');
 Route::get('order', [GlobalController::class, 'getProfil'])->name('getProfil');
 Route::post('confirm_order', [GlobalController::class, 'confirmOrder'])->name('confirmOrder');

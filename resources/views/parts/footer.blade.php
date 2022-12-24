@@ -179,9 +179,6 @@
     </div>
   </section>
 
-
-
-
   <div class="border border-gray-200 bg-gray-50">
     <div
       class=" p-6 mx-auto max-w-[1440px] flex flex-col md:flex-row justify-center md:justify-between items-center text-center">
