@@ -468,5 +468,5 @@
   </div>
 
      </div>
-                 @include('parts.footer')
+     
  @endsection

@@ -11,10 +11,11 @@
     </navbar>
     <main>
         @yield('main')
+            
     </main>
-
-
-
+<footer>
+   @include('parts.footer')
+</footer>
 
 
     @vite('resources/js/app.js')

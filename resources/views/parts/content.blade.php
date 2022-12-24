@@ -249,7 +249,7 @@
     </section>
 
   </div>
-            @include('parts.footer')
+
   <script>
 {{-- var bgImageArray = ["banner.jpeg", "banner2.jpg", "banner3.jpg"],
 base = "./img/",

@@ -12,5 +12,5 @@
          </section>
 
      </div>
-                 @include('parts.footer')
+     
  @endsection
