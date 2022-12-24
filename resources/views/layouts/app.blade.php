@@ -11,10 +11,9 @@
     </navbar>
     <main>
         @yield('main')
+               @include('parts.footer')
     </main>
-    <footer>
-        @include('parts.footer')
-    </footer>
+
     @vite('resources/js/app.js')
 
     <script src="https://cdn.jsdelivr.net/npm/@barba/core"></script>
