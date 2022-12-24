@@ -36,6 +36,11 @@ class GlobalController extends Controller
         return view('rent');
     }
 
+    public function annonce()
+    {
+        return view('annonce');
+    }
+
     public function buy()
     {
         return view('buy');
