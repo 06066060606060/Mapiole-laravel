@@ -69,16 +69,15 @@
 
 
         <div class="flex justify-center pt-4 lg:hidden">
-            <a class="mx-1 text-sm font-bold text-gray-100 border-b-4 border-gray-900 darked" href="/"
-                @click="isOpen = false">&nbsp;
-                Louer</a>
-            <a class="mx-1 text-sm font-bold text-gray-100 hover:text-gray-800 darked" href="recherche"
+            <a class="mx-1 text-sm font-bold text-gray-100 hover:text-gray-800 hover:border-b-2 hover:border-gray-900 darked" href="/"
+                @click="isOpen = false">&nbsp; Louer</a>
+            <a class="mx-1 text-sm font-bold text-gray-100 hover:text-gray-800 hover:border-b-2 hover:border-gray-900 darked" href="recherche"
                 @click="isOpen = false">&nbsp; Acheter</a>
-            <a class="mx-1 text-sm font-bold text-gray-100 hover:text-gray-800 darked" href="vendre"
+            <a class="mx-1 text-sm font-bold text-gray-100 hover:text-gray-800 hover:border-b-2 hover:border-gray-900 darked" href="vendre"
                 @click="isOpen = false">&nbsp; Vendre</a>
-            <a class="mx-1 text-sm font-bold text-gray-100 hover:text-gray-800 darked" href="construire"
+            <a class="mx-1 text-sm font-bold text-gray-100 hover:text-gray-800 hover:border-b-2 hover:border-gray-900 darked" href="construire"
                 @click="isOpen = false">&nbsp; Construire</a>
-            <a class="mx-1 text-sm font-bold text-gray-100 hover:text-gray-800 darked" href="services"
+            <a class="mx-1 text-sm font-bold text-gray-100 hover:text-gray-800 hover:border-b-2 hover:border-gray-900 darked" href="services"
                 @click="isOpen = false">&nbsp; Services</a>
         </div>
 
