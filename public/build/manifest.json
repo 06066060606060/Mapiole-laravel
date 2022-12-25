@@ -3,22 +3,18 @@
     "file": "assets/anim.0792a69c.svg",
     "src": "resources/css/anim.svg"
   },
-  "resources/img/gift.png": {
-    "file": "assets/gift.d04b1766.png",
-    "src": "resources/img/gift.png"
-  },
   "resources/js/app.js": {
-    "file": "assets/app.ccb835fd.js",
+    "file": "assets/app.19223444.js",
     "src": "resources/js/app.js",
     "isEntry": true
   },
   "resources/css/app.css": {
-    "file": "assets/app.1282f571.css",
+    "file": "assets/app.9c0569e7.css",
     "src": "resources/css/app.css",
     "isEntry": true
   },
-  "resources/css/gift.png": {
-    "file": "assets/gift.d04b1766.png",
-    "src": "resources/css/gift.png"
+  "resources/js/app.css": {
+    "file": "assets/app.8962dd2d.css",
+    "src": "resources/js/app.css"
   }
 }
