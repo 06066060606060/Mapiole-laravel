@@ -3,24 +3,257 @@
     <nav x-data="{ isOpen: false }" class="w-full py-2 mx-4 md:mx-8">
         <div class="items-center ">
 
-
             <div class="flex justify-around">
                 <div>
                     <a class="text-2xl" href="/"><img src="./img/logo.png" class="w-auto h-20"></a>
                 </div>
                 <div class="items-center hidden pt-2 mx-4 lg:flex">
-                    <a class="mx-2 font-bold text-gray-100 hover:text-gray-800 hover:border-b-4 hover:border-gray-900 darked"
-                        href="louer" @click="isOpen = false">&nbsp;
-                        Louer</a>
-                    <a class="mx-2 font-bold text-gray-100 hover:text-gray-800 hover:border-b-4 hover:border-gray-900 darked"
-                        href="acheter" @click="isOpen = false">&nbsp;
-                        Acheter</a>
-                    <a class="mx-2 font-bold text-gray-100 hover:text-gray-800 hover:border-b-4 hover:border-gray-900 darked"
-                        href="vendre" @click="isOpen = false">&nbsp; Vendre</a>
-                    <a class="mx-2 font-bold text-gray-100 hover:text-gray-800 hover:border-b-4 hover:border-gray-900 darked"
-                        href="construire" @click="isOpen = false">&nbsp; Construire</a>
-                    <a class="mx-2 font-bold text-gray-100 hover:text-gray-800 hover:border-b-4 hover:border-gray-900 darked"
-                        href="services" @click="isOpen = false">&nbsp; Services</a>
+                {{-- louer --}}
+                    <div x-data="{ isOpen: false }" class="relative inline-block">
+                        <!-- Dropdown toggle button -->
+                        <button @click="isOpen = !isOpen" class="relative z-10 block p-2 mx-2 font-bold text-gray-100 hover:text-gray-800 hover:border-b-4 hover:border-gray-900 darked">
+                            Rechercher
+                        </button>
+
+                        <!-- Rechercher-->
+                        <div  x-cloak  x-show="isOpen" @click.away="isOpen = false"
+                            x-transition:enter="transition ease-out duration-100"
+                            x-transition:enter-start="opacity-0 scale-90" x-transition:enter-end="opacity-100 scale-100"
+                            x-transition:leave="transition ease-in duration-100"
+                            x-transition:leave-start="opacity-100 scale-100" x-transition:leave-end="opacity-0 scale-90"
+                            class="absolute right-0 z-20 w-48 py-2 mt-2 origin-top-right bg-white rounded-md shadow-xl ">
+                            <a href="#"
+                                class="block px-4 py-3 text-sm text-gray-600 capitalize transition-colors duration-300 transform hover:bg-gray-100 ">
+                                Appartement à louer </a>
+                            <a href="#"
+                                class="block px-4 py-3 text-sm text-gray-600 capitalize transition-colors duration-300 transform hover:bg-gray-100 ">
+                                Acheter un terrain </a>
+                            <a href="#"
+                                class="block px-4 py-3 text-sm text-gray-600 capitalize transition-colors duration-300 transform hover:bg-gray-100 ">
+                                Vendre une maison  </a>
+                            <a href="#"
+                                class="block px-4 py-3 text-sm text-gray-600 capitalize transition-colors duration-300 transform hover:bg-gray-100 ">
+                                Construction </a>
+                            <a href="#"
+                                class="block px-4 py-3 text-sm text-gray-600 capitalize transition-colors duration-300 transform hover:bg-gray-100 ">
+                                Trouver une main d'oeuvre  </a>
+                                      <a href="#"
+                                class="block px-4 py-3 text-sm text-gray-600 capitalize transition-colors duration-300 transform hover:bg-gray-100 ">
+                               Immobilier commercial  </a>
+                                      <a href="#"
+                                class="block px-4 py-3 text-sm text-gray-600 capitalize transition-colors duration-300 transform hover:bg-gray-100 ">
+                                Appartement meublé à louer  </a>
+                                      <a href="#"
+                                class="block px-4 py-3 text-sm text-gray-600 capitalize transition-colors duration-300 transform hover:bg-gray-100 ">
+                                Trouver un locataire </a>
+                                      <a href="#"
+                                class="block px-4 py-3 text-sm text-gray-600 capitalize transition-colors duration-300 transform hover:bg-gray-100 ">
+                                Consulter un expert immobilier   </a>
+                                    <a href="#"
+                                class="block px-4 py-3 text-sm text-gray-600 capitalize transition-colors duration-300 transform hover:bg-gray-100 ">
+                                Accompagnement procédures administratives  </a>
+                                    <a href="#"
+                                class="block px-4 py-3 text-sm text-gray-600 capitalize transition-colors duration-300 transform hover:bg-gray-100 ">
+                                Nos meilleures recommandations  </a>
+                                    <a href="#"
+                                class="block px-4 py-3 text-sm text-gray-600 capitalize transition-colors duration-300 transform hover:bg-gray-100 ">
+                                Investissement locatif   </a>
+                                    <a href="#"
+                                class="block px-4 py-3 text-sm text-gray-600 capitalize transition-colors duration-300 transform hover:bg-gray-100 ">
+                                Services immobiliers  </a>
+                        </div>
+                    </div>
+                   {{-- acheter --}}
+                    <div x-data="{ isOpen: false }" class="relative inline-block">
+                        <!-- Dropdown toggle button -->
+                        <button @click="isOpen = !isOpen" class="relative z-10 block p-2 mx-2 font-bold text-gray-100 hover:text-gray-800 hover:border-b-4 hover:border-gray-900 darked">
+                            Acheter
+                        </button>
+
+                      
+                        <div  x-cloak  x-show="isOpen" @click.away="isOpen = false"
+                            x-transition:enter="transition ease-out duration-100"
+                            x-transition:enter-start="opacity-0 scale-90" x-transition:enter-end="opacity-100 scale-100"
+                            x-transition:leave="transition ease-in duration-100"
+                            x-transition:leave-start="opacity-100 scale-100" x-transition:leave-end="opacity-0 scale-90"
+                            class="absolute right-0 z-20 w-48 py-2 mt-2 origin-top-right bg-white rounded-md shadow-xl ">
+                        <a href="#"
+                                class="block px-4 py-3 text-sm text-gray-600 capitalize transition-colors duration-300 transform hover:bg-gray-100 ">
+                                Acheter un appartement </a>
+                            <a href="#"
+                                class="block px-4 py-3 text-sm text-gray-600 capitalize transition-colors duration-300 transform hover:bg-gray-100 ">
+                              Acheter une maison </a>
+                            <a href="#"
+                                class="block px-4 py-3 text-sm text-gray-600 capitalize transition-colors duration-300 transform hover:bg-gray-100 ">
+                              Acheter un terrain </a>
+                            <a href="#"
+                                class="block px-4 py-3 text-sm text-gray-600 capitalize transition-colors duration-300 transform hover:bg-gray-100 ">
+                                Acheter des bureaux </a>
+                            <a href="#"
+                                class="block px-4 py-3 text-sm text-gray-600 capitalize transition-colors duration-300 transform hover:bg-gray-100 ">
+                              Acheter un espace commercial </a>
+                                      <a href="#"
+                                class="block px-4 py-3 text-sm text-gray-600 capitalize transition-colors duration-300 transform hover:bg-gray-100 ">
+                              Acheter une villa  </a>
+                                      <a href="#"
+                                class="block px-4 py-3 text-sm text-gray-600 capitalize transition-colors duration-300 transform hover:bg-gray-100 ">
+                               Acheter un immeuble  </a>
+                                      <a href="#"
+                                class="block px-4 py-3 text-sm text-gray-600 capitalize transition-colors duration-300 transform hover:bg-gray-100 ">
+                               Consulter un expert immobilier</a>
+                                      <a href="#"
+                                class="block px-4 py-3 text-sm text-gray-600 capitalize transition-colors duration-300 transform hover:bg-gray-100 ">
+                            Guide de vente de biens immobiliers  </a>
+                               
+                        </div>
+                    </div>
+                    {{-- vendre --}}
+                    <div x-data="{ isOpen: false }" class="relative inline-block">
+                        <!-- Dropdown toggle button -->
+                        <button @click="isOpen = !isOpen" class="relative z-10 block p-2 mx-2 font-bold text-gray-100 hover:text-gray-800 hover:border-b-4 hover:border-gray-900 darked">
+                            Vendre
+                        </button>
+
+                     
+                        <div  x-cloak  x-show="isOpen" @click.away="isOpen = false"
+                            x-transition:enter="transition ease-out duration-100"
+                            x-transition:enter-start="opacity-0 scale-90" x-transition:enter-end="opacity-100 scale-100"
+                            x-transition:leave="transition ease-in duration-100"
+                            x-transition:leave-start="opacity-100 scale-100" x-transition:leave-end="opacity-0 scale-90"
+                            class="absolute right-0 z-20 w-48 py-2 mt-2 origin-top-right bg-white rounded-md shadow-xl ">
+                           <a href="#"
+                                class="block px-4 py-3 text-sm text-gray-600 capitalize transition-colors duration-300 transform hover:bg-gray-100 ">
+                              Vendre un appartement </a>
+                            <a href="#"
+                                class="block px-4 py-3 text-sm text-gray-600 capitalize transition-colors duration-300 transform hover:bg-gray-100 ">
+                           Vendre une maison </a>
+                            <a href="#"
+                                class="block px-4 py-3 text-sm text-gray-600 capitalize transition-colors duration-300 transform hover:bg-gray-100 ">
+                           Vendre un terrain </a>
+                            <a href="#"
+                                class="block px-4 py-3 text-sm text-gray-600 capitalize transition-colors duration-300 transform hover:bg-gray-100 ">
+                            Vendre des bureaux </a>
+                            <a href="#"
+                                class="block px-4 py-3 text-sm text-gray-600 capitalize transition-colors duration-300 transform hover:bg-gray-100 ">
+                             Vendre un espace commercial </a>
+                                      <a href="#"
+                                class="block px-4 py-3 text-sm text-gray-600 capitalize transition-colors duration-300 transform hover:bg-gray-100 ">
+                             Vendre une villa  </a>
+                                      <a href="#"
+                                class="block px-4 py-3 text-sm text-gray-600 capitalize transition-colors duration-300 transform hover:bg-gray-100 ">
+                               Vendre un immeuble </a>
+                                      <a href="#"
+                                class="block px-4 py-3 text-sm text-gray-600 capitalize transition-colors duration-300 transform hover:bg-gray-100 ">
+                             Confier mon bien à vendre </a>
+                                      <a href="#"
+                                class="block px-4 py-3 text-sm text-gray-600 capitalize transition-colors duration-300 transform hover:bg-gray-100 ">
+                            Consulter un expert immobilier  </a>
+                             <a href="#"
+                                class="block px-4 py-3 text-sm text-gray-600 capitalize transition-colors duration-300 transform hover:bg-gray-100 ">
+                            Guide de vente de biens immobiliers </a>
+                        </div>
+                    </div>
+                    {{-- louer --}}
+                    <div x-data="{ isOpen: false }" class="relative inline-block">
+                        <!-- Dropdown toggle button -->
+                        <button @click="isOpen = !isOpen" class="relative z-10 block p-2 mx-2 font-bold text-gray-100 hover:text-gray-800 hover:border-b-4 hover:border-gray-900 darked">
+                            Louer
+                        </button>
+
+                   
+                        <div  x-cloak x-show="isOpen" @click.away="isOpen = false"
+                            x-transition:enter="transition ease-out duration-100"
+                            x-transition:enter-start="opacity-0 scale-90" x-transition:enter-end="opacity-100 scale-100"
+                            x-transition:leave="transition ease-in duration-100"
+                            x-transition:leave-start="opacity-100 scale-100" x-transition:leave-end="opacity-0 scale-90"
+                            class="absolute right-0 z-20 w-48 py-2 mt-2 origin-top-right bg-white rounded-md shadow-xl ">
+                              <a href="#"
+                                class="block px-4 py-3 text-sm text-gray-600 capitalize transition-colors duration-300 transform hover:bg-gray-100 ">
+                             Louer un appartement </a>
+                            <a href="#"
+                                class="block px-4 py-3 text-sm text-gray-600 capitalize transition-colors duration-300 transform hover:bg-gray-100 ">
+                           Louer une maison</a>
+                            <a href="#"
+                                class="block px-4 py-3 text-sm text-gray-600 capitalize transition-colors duration-300 transform hover:bg-gray-100 ">
+                          Louer des bureaux </a>
+                            <a href="#"
+                                class="block px-4 py-3 text-sm text-gray-600 capitalize transition-colors duration-300 transform hover:bg-gray-100 ">
+                           Louer un espace commercial </a>
+                            <a href="#"
+                                class="block px-4 py-3 text-sm text-gray-600 capitalize transition-colors duration-300 transform hover:bg-gray-100 ">
+                            Louer un terrain </a>
+                                      <a href="#"
+                                class="block px-4 py-3 text-sm text-gray-600 capitalize transition-colors duration-300 transform hover:bg-gray-100 ">
+                           Louer une villa </a>
+                                      <a href="#"
+                                class="block px-4 py-3 text-sm text-gray-600 capitalize transition-colors duration-300 transform hover:bg-gray-100 ">
+                            Loué un appartement meublé </a>
+                                      <a href="#"
+                                class="block px-4 py-3 text-sm text-gray-600 capitalize transition-colors duration-300 transform hover:bg-gray-100 ">
+                            Louer un terrain commercial  </a>
+                                      <a href="#"
+                                class="block px-4 py-3 text-sm text-gray-600 capitalize transition-colors duration-300 transform hover:bg-gray-100 ">
+                            Consulter un expert immobilier </a>
+                             <a href="#"
+                                class="block px-4 py-3 text-sm text-gray-600 capitalize transition-colors duration-300 transform hover:bg-gray-100 ">
+                           Guide de location de biens immobiliers</a>
+                        </div>
+                    </div>
+                 {{-- services --}}
+                    <div x-data="{ isOpen: false }" class="relative inline-block">
+                        <!-- Dropdown toggle button -->
+                        <button @click="isOpen = !isOpen" class="relative z-10 block p-2 mx-2 font-bold text-gray-100 hover:text-gray-800 hover:border-b-4 hover:border-gray-900 darked">
+                            Services
+                        </button>
+
+                  
+                        <div  x-cloak  x-show="isOpen" @click.away="isOpen = false"
+                            x-transition:enter="transition ease-out duration-100"
+                            x-transition:enter-start="opacity-0 scale-90" x-transition:enter-end="opacity-100 scale-100"
+                            x-transition:leave="transition ease-in duration-100"
+                            x-transition:leave-start="opacity-100 scale-100" x-transition:leave-end="opacity-0 scale-90"
+                            class="absolute right-0 z-20 w-48 py-2 mt-2 origin-top-right bg-white rounded-md shadow-xl ">
+                            <a href="#"
+                                class="block px-4 py-3 text-sm text-gray-600 capitalize transition-colors duration-300 transform hover:bg-gray-100 ">
+                             Recherche immobilière </a>
+                            <a href="#"
+                                class="block px-4 py-3 text-sm text-gray-600 capitalize transition-colors duration-300 transform hover:bg-gray-100 ">
+                          Conseil et acommpagnement</a>
+                            <a href="#"
+                                class="block px-4 py-3 text-sm text-gray-600 capitalize transition-colors duration-300 transform hover:bg-gray-100 ">
+                        Commander un document administratif  </a>
+                            <a href="#"
+                                class="block px-4 py-3 text-sm text-gray-600 capitalize transition-colors duration-300 transform hover:bg-gray-100 ">
+                          Commander une main d'oeuvre </a>
+                            <a href="#"
+                                class="block px-4 py-3 text-sm text-gray-600 capitalize transition-colors duration-300 transform hover:bg-gray-100 ">
+                          Morcellement</a>
+                                      <a href="#"
+                                class="block px-4 py-3 text-sm text-gray-600 capitalize transition-colors duration-300 transform hover:bg-gray-100 ">
+                          Titre foncier </a>
+                                      <a href="#"
+                                class="block px-4 py-3 text-sm text-gray-600 capitalize transition-colors duration-300 transform hover:bg-gray-100 ">
+                            Loué un appartement meublé </a>
+                                      <a href="#"
+                                class="block px-4 py-3 text-sm text-gray-600 capitalize transition-colors duration-300 transform hover:bg-gray-100 ">
+                           Topographie </a>
+                                      <a href="#"
+                                class="block px-4 py-3 text-sm text-gray-600 capitalize transition-colors duration-300 transform hover:bg-gray-100 ">
+                           Immatriculation foncière</a>
+                             <a href="#"
+                                class="block px-4 py-3 text-sm text-gray-600 capitalize transition-colors duration-300 transform hover:bg-gray-100 ">
+                           Architecture technique et design</a>
+                               <a href="#"
+                                class="block px-4 py-3 text-sm text-gray-600 capitalize transition-colors duration-300 transform hover:bg-gray-100 ">
+                            Trouver un notaire </a>
+                               <a href="#"
+                                class="block px-4 py-3 text-sm text-gray-600 capitalize transition-colors duration-300 transform hover:bg-gray-100 ">
+                           Trouver un avocat </a>
+                               <a href="#"
+                                class="block px-4 py-3 text-sm text-gray-600 capitalize transition-colors duration-300 transform hover:bg-gray-100 ">
+                          Trouver un agent immobilier </a>
+                        </div>
+                    </div>
                 </div>
                 <div class="flex items-center">
                     <a href=""
@@ -50,35 +283,270 @@
                         </div>
                     </div>
                     <button @click="isOpen = !isOpen" type="button"
-                    class="text-gray-600 hover:text-gray-700 focus:outline-none focus:text-gray-800 "
-                    aria-label="toggle menu">
-                    <svg x-cloak x-show="!isOpen" xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none"
-                        viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                        <path stroke-linecap="round" stroke-linejoin="round" d="M4 8h16M4 16h16" />
-                    </svg>
+                        class="text-gray-600 hover:text-gray-700 focus:outline-none focus:text-gray-800 "
+                        aria-label="toggle menu">
+                        <svg x-cloak x-show="!isOpen" xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none"
+                            viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M4 8h16M4 16h16" />
+                        </svg>
 
-                    <svg x-cloak x-show="isOpen" xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none"
-                        viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                        <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
-                    </svg>
-                </button>
+                        <svg x-cloak x-show="isOpen" xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none"
+                            viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+                        </svg>
+                    </button>
                 </div>
-                
+
             </div>
         </div>
 
 
         <div class="flex justify-center pt-4 lg:hidden">
-            <a class="mx-1 text-sm font-bold text-gray-100 hover:text-gray-800 hover:border-b-2 hover:border-gray-900 darked" href="/"
-                @click="isOpen = false">&nbsp; Louer</a>
-            <a class="mx-1 text-sm font-bold text-gray-100 hover:text-gray-800 hover:border-b-2 hover:border-gray-900 darked" href="recherche"
-                @click="isOpen = false">&nbsp; Acheter</a>
-            <a class="mx-1 text-sm font-bold text-gray-100 hover:text-gray-800 hover:border-b-2 hover:border-gray-900 darked" href="vendre"
-                @click="isOpen = false">&nbsp; Vendre</a>
-            <a class="mx-1 text-sm font-bold text-gray-100 hover:text-gray-800 hover:border-b-2 hover:border-gray-900 darked" href="construire"
-                @click="isOpen = false">&nbsp; Construire</a>
-            <a class="mx-1 text-sm font-bold text-gray-100 hover:text-gray-800 hover:border-b-2 hover:border-gray-900 darked" href="services"
-                @click="isOpen = false">&nbsp; Services</a>
+             {{-- louer --}}
+                    <div x-data="{ isOpen: false }" class="relative inline-block">
+                        <!-- Dropdown toggle button -->
+                        <button @click="isOpen = !isOpen" class="relative z-10 block p-2 mx-2 font-bold text-gray-100 hover:text-gray-800 hover:border-b-4 hover:border-gray-900 darked">
+                            Rechercher
+                        </button>
+
+                        <!-- Louer-->
+                        <div  x-cloak  x-show="isOpen" @click.away="isOpen = false"
+                            x-transition:enter="transition ease-out duration-100"
+                            x-transition:enter-start="opacity-0 scale-90" x-transition:enter-end="opacity-100 scale-100"
+                            x-transition:leave="transition ease-in duration-100"
+                            x-transition:leave-start="opacity-100 scale-100" x-transition:leave-end="opacity-0 scale-90"
+                            class="absolute left-0 z-20 w-48 py-2 mt-2 origin-top-right bg-white rounded-md shadow-xl ">
+                             <a href="#"
+                                class="block px-4 py-3 text-sm text-gray-600 capitalize transition-colors duration-300 transform hover:bg-gray-100 ">
+                                Appartement à louer </a>
+                            <a href="#"
+                                class="block px-4 py-3 text-sm text-gray-600 capitalize transition-colors duration-300 transform hover:bg-gray-100 ">
+                                Acheter un terrain </a>
+                            <a href="#"
+                                class="block px-4 py-3 text-sm text-gray-600 capitalize transition-colors duration-300 transform hover:bg-gray-100 ">
+                                Vendre une maison  </a>
+                            <a href="#"
+                                class="block px-4 py-3 text-sm text-gray-600 capitalize transition-colors duration-300 transform hover:bg-gray-100 ">
+                                Construction </a>
+                            <a href="#"
+                                class="block px-4 py-3 text-sm text-gray-600 capitalize transition-colors duration-300 transform hover:bg-gray-100 ">
+                                Trouver une main d'oeuvre  </a>
+                                      <a href="#"
+                                class="block px-4 py-3 text-sm text-gray-600 capitalize transition-colors duration-300 transform hover:bg-gray-100 ">
+                               Immobilier commercial  </a>
+                                      <a href="#"
+                                class="block px-4 py-3 text-sm text-gray-600 capitalize transition-colors duration-300 transform hover:bg-gray-100 ">
+                                Appartement meublé à louer  </a>
+                                      <a href="#"
+                                class="block px-4 py-3 text-sm text-gray-600 capitalize transition-colors duration-300 transform hover:bg-gray-100 ">
+                                Trouver un locataire </a>
+                                      <a href="#"
+                                class="block px-4 py-3 text-sm text-gray-600 capitalize transition-colors duration-300 transform hover:bg-gray-100 ">
+                                Consulter un expert immobilier   </a>
+                                    <a href="#"
+                                class="block px-4 py-3 text-sm text-gray-600 capitalize transition-colors duration-300 transform hover:bg-gray-100 ">
+                                Accompagnement procédures administratives  </a>
+                                    <a href="#"
+                                class="block px-4 py-3 text-sm text-gray-600 capitalize transition-colors duration-300 transform hover:bg-gray-100 ">
+                                Nos meilleures recommandations  </a>
+                                    <a href="#"
+                                class="block px-4 py-3 text-sm text-gray-600 capitalize transition-colors duration-300 transform hover:bg-gray-100 ">
+                                Investissement locatif   </a>
+                                    <a href="#"
+                                class="block px-4 py-3 text-sm text-gray-600 capitalize transition-colors duration-300 transform hover:bg-gray-100 ">
+                                Services immobiliers  </a>
+                        </div>
+                    </div>
+                   {{-- acheter --}}
+                    <div x-data="{ isOpen: false }" class="relative inline-block">
+                        <!-- Dropdown toggle button -->
+                        <button @click="isOpen = !isOpen" class="relative z-10 block p-2 mx-2 font-bold text-gray-100 hover:text-gray-800 hover:border-b-4 hover:border-gray-900 darked">
+                            Acheter
+                        </button>
+
+                      
+                        <div  x-cloak  x-show="isOpen" @click.away="isOpen = false"
+                            x-transition:enter="transition ease-out duration-100"
+                            x-transition:enter-start="opacity-0 scale-90" x-transition:enter-end="opacity-100 scale-100"
+                            x-transition:leave="transition ease-in duration-100"
+                            x-transition:leave-start="opacity-100 scale-100" x-transition:leave-end="opacity-0 scale-90"
+                            class="absolute right-0 z-20 w-48 py-2 mt-2 origin-top-right bg-white rounded-md shadow-xl ">
+                            <a href="#"
+                                class="block px-4 py-3 text-sm text-gray-600 capitalize transition-colors duration-300 transform hover:bg-gray-100 ">
+                                Acheter un appartement </a>
+                            <a href="#"
+                                class="block px-4 py-3 text-sm text-gray-600 capitalize transition-colors duration-300 transform hover:bg-gray-100 ">
+                              Acheter une maison </a>
+                            <a href="#"
+                                class="block px-4 py-3 text-sm text-gray-600 capitalize transition-colors duration-300 transform hover:bg-gray-100 ">
+                              Acheter un terrain </a>
+                            <a href="#"
+                                class="block px-4 py-3 text-sm text-gray-600 capitalize transition-colors duration-300 transform hover:bg-gray-100 ">
+                                Acheter des bureaux </a>
+                            <a href="#"
+                                class="block px-4 py-3 text-sm text-gray-600 capitalize transition-colors duration-300 transform hover:bg-gray-100 ">
+                              Acheter un espace commercial </a>
+                                      <a href="#"
+                                class="block px-4 py-3 text-sm text-gray-600 capitalize transition-colors duration-300 transform hover:bg-gray-100 ">
+                              Acheter une villa  </a>
+                                      <a href="#"
+                                class="block px-4 py-3 text-sm text-gray-600 capitalize transition-colors duration-300 transform hover:bg-gray-100 ">
+                               Acheter un immeuble  </a>
+                                      <a href="#"
+                                class="block px-4 py-3 text-sm text-gray-600 capitalize transition-colors duration-300 transform hover:bg-gray-100 ">
+                               Consulter un expert immobilier</a>
+                                      <a href="#"
+                                class="block px-4 py-3 text-sm text-gray-600 capitalize transition-colors duration-300 transform hover:bg-gray-100 ">
+                            Guide de vente de biens immobiliers  </a>
+                        </div>
+                    </div>
+                    {{-- vendre --}}
+                    <div x-data="{ isOpen: false }" class="relative inline-block">
+                        <!-- Dropdown toggle button -->
+                        <button @click="isOpen = !isOpen" class="relative z-10 block p-2 mx-2 font-bold text-gray-100 hover:text-gray-800 hover:border-b-4 hover:border-gray-900 darked">
+                            Vendre
+                        </button>
+
+                     
+                        <div  x-cloak  x-show="isOpen" @click.away="isOpen = false"
+                            x-transition:enter="transition ease-out duration-100"
+                            x-transition:enter-start="opacity-0 scale-90" x-transition:enter-end="opacity-100 scale-100"
+                            x-transition:leave="transition ease-in duration-100"
+                            x-transition:leave-start="opacity-100 scale-100" x-transition:leave-end="opacity-0 scale-90"
+                            class="absolute right-0 z-20 w-48 py-2 mt-2 origin-top-right bg-white rounded-md shadow-xl ">
+                                   <a href="#"
+                                class="block px-4 py-3 text-sm text-gray-600 capitalize transition-colors duration-300 transform hover:bg-gray-100 ">
+                              Vendre un appartement </a>
+                            <a href="#"
+                                class="block px-4 py-3 text-sm text-gray-600 capitalize transition-colors duration-300 transform hover:bg-gray-100 ">
+                           Vendre une maison </a>
+                            <a href="#"
+                                class="block px-4 py-3 text-sm text-gray-600 capitalize transition-colors duration-300 transform hover:bg-gray-100 ">
+                           Vendre un terrain </a>
+                            <a href="#"
+                                class="block px-4 py-3 text-sm text-gray-600 capitalize transition-colors duration-300 transform hover:bg-gray-100 ">
+                            Vendre des bureaux </a>
+                            <a href="#"
+                                class="block px-4 py-3 text-sm text-gray-600 capitalize transition-colors duration-300 transform hover:bg-gray-100 ">
+                             Vendre un espace commercial </a>
+                                      <a href="#"
+                                class="block px-4 py-3 text-sm text-gray-600 capitalize transition-colors duration-300 transform hover:bg-gray-100 ">
+                             Vendre une villa  </a>
+                                      <a href="#"
+                                class="block px-4 py-3 text-sm text-gray-600 capitalize transition-colors duration-300 transform hover:bg-gray-100 ">
+                               Vendre un immeuble </a>
+                                      <a href="#"
+                                class="block px-4 py-3 text-sm text-gray-600 capitalize transition-colors duration-300 transform hover:bg-gray-100 ">
+                             Confier mon bien à vendre </a>
+                                      <a href="#"
+                                class="block px-4 py-3 text-sm text-gray-600 capitalize transition-colors duration-300 transform hover:bg-gray-100 ">
+                            Consulter un expert immobilier  </a>
+                             <a href="#"
+                                class="block px-4 py-3 text-sm text-gray-600 capitalize transition-colors duration-300 transform hover:bg-gray-100 ">
+                            Guide de vente de biens immobiliers </a>
+                        </div>
+                    </div>
+                    {{-- construire --}}
+                    <div x-data="{ isOpen: false }" class="relative inline-block">
+                        <!-- Dropdown toggle button -->
+                        <button @click="isOpen = !isOpen" class="relative z-10 block p-2 mx-2 font-bold text-gray-100 hover:text-gray-800 hover:border-b-4 hover:border-gray-900 darked">
+                            Louer
+                        </button>
+
+                   
+                        <div  x-cloak x-show="isOpen" @click.away="isOpen = false"
+                            x-transition:enter="transition ease-out duration-100"
+                            x-transition:enter-start="opacity-0 scale-90" x-transition:enter-end="opacity-100 scale-100"
+                            x-transition:leave="transition ease-in duration-100"
+                            x-transition:leave-start="opacity-100 scale-100" x-transition:leave-end="opacity-0 scale-90"
+                            class="absolute right-0 z-20 w-48 py-2 mt-2 origin-top-right bg-white rounded-md shadow-xl ">
+                                     <a href="#"
+                                class="block px-4 py-3 text-sm text-gray-600 capitalize transition-colors duration-300 transform hover:bg-gray-100 ">
+                             Louer un appartement </a>
+                            <a href="#"
+                                class="block px-4 py-3 text-sm text-gray-600 capitalize transition-colors duration-300 transform hover:bg-gray-100 ">
+                           Louer une maison</a>
+                            <a href="#"
+                                class="block px-4 py-3 text-sm text-gray-600 capitalize transition-colors duration-300 transform hover:bg-gray-100 ">
+                          Louer des bureaux </a>
+                            <a href="#"
+                                class="block px-4 py-3 text-sm text-gray-600 capitalize transition-colors duration-300 transform hover:bg-gray-100 ">
+                           Louer un espace commercial </a>
+                            <a href="#"
+                                class="block px-4 py-3 text-sm text-gray-600 capitalize transition-colors duration-300 transform hover:bg-gray-100 ">
+                            Louer un terrain </a>
+                                      <a href="#"
+                                class="block px-4 py-3 text-sm text-gray-600 capitalize transition-colors duration-300 transform hover:bg-gray-100 ">
+                           Louer une villa </a>
+                                      <a href="#"
+                                class="block px-4 py-3 text-sm text-gray-600 capitalize transition-colors duration-300 transform hover:bg-gray-100 ">
+                            Loué un appartement meublé </a>
+                                      <a href="#"
+                                class="block px-4 py-3 text-sm text-gray-600 capitalize transition-colors duration-300 transform hover:bg-gray-100 ">
+                            Louer un terrain commercial  </a>
+                                      <a href="#"
+                                class="block px-4 py-3 text-sm text-gray-600 capitalize transition-colors duration-300 transform hover:bg-gray-100 ">
+                            Consulter un expert immobilier </a>
+                             <a href="#"
+                                class="block px-4 py-3 text-sm text-gray-600 capitalize transition-colors duration-300 transform hover:bg-gray-100 ">
+                           Guide de location de biens immobiliers</a>
+                        </div>
+                    </div>
+                 {{-- services --}}
+                    <div x-data="{ isOpen: false }" class="relative inline-block">
+                        <!-- Dropdown toggle button -->
+                        <button @click="isOpen = !isOpen" class="relative z-10 block p-2 mx-2 font-bold text-gray-100 hover:text-gray-800 hover:border-b-4 hover:border-gray-900 darked">
+                            Services
+                        </button>
+
+                  
+                        <div  x-cloak  x-show="isOpen" @click.away="isOpen = false"
+                            x-transition:enter="transition ease-out duration-100"
+                            x-transition:enter-start="opacity-0 scale-90" x-transition:enter-end="opacity-100 scale-100"
+                            x-transition:leave="transition ease-in duration-100"
+                            x-transition:leave-start="opacity-100 scale-100" x-transition:leave-end="opacity-0 scale-90"
+                            class="absolute right-0 z-20 w-48 py-2 mt-2 origin-top-right bg-white rounded-md shadow-xl ">
+                                  <a href="#"
+                                class="block px-4 py-3 text-sm text-gray-600 capitalize transition-colors duration-300 transform hover:bg-gray-100 ">
+                             Recherche immobilière </a>
+                            <a href="#"
+                                class="block px-4 py-3 text-sm text-gray-600 capitalize transition-colors duration-300 transform hover:bg-gray-100 ">
+                          Conseil et acommpagnement</a>
+                            <a href="#"
+                                class="block px-4 py-3 text-sm text-gray-600 capitalize transition-colors duration-300 transform hover:bg-gray-100 ">
+                        Commander un document administratif  </a>
+                            <a href="#"
+                                class="block px-4 py-3 text-sm text-gray-600 capitalize transition-colors duration-300 transform hover:bg-gray-100 ">
+                          Commander une main d'oeuvre </a>
+                            <a href="#"
+                                class="block px-4 py-3 text-sm text-gray-600 capitalize transition-colors duration-300 transform hover:bg-gray-100 ">
+                          Morcellement</a>
+                                      <a href="#"
+                                class="block px-4 py-3 text-sm text-gray-600 capitalize transition-colors duration-300 transform hover:bg-gray-100 ">
+                          Titre foncier </a>
+                                      <a href="#"
+                                class="block px-4 py-3 text-sm text-gray-600 capitalize transition-colors duration-300 transform hover:bg-gray-100 ">
+                            Loué un appartement meublé </a>
+                                      <a href="#"
+                                class="block px-4 py-3 text-sm text-gray-600 capitalize transition-colors duration-300 transform hover:bg-gray-100 ">
+                           Topographie </a>
+                                      <a href="#"
+                                class="block px-4 py-3 text-sm text-gray-600 capitalize transition-colors duration-300 transform hover:bg-gray-100 ">
+                           Immatriculation foncière</a>
+                             <a href="#"
+                                class="block px-4 py-3 text-sm text-gray-600 capitalize transition-colors duration-300 transform hover:bg-gray-100 ">
+                           Architecture technique et design</a>
+                               <a href="#"
+                                class="block px-4 py-3 text-sm text-gray-600 capitalize transition-colors duration-300 transform hover:bg-gray-100 ">
+                            Trouver un notaire </a>
+                               <a href="#"
+                                class="block px-4 py-3 text-sm text-gray-600 capitalize transition-colors duration-300 transform hover:bg-gray-100 ">
+                           Trouver un avocat </a>
+                               <a href="#"
+                                class="block px-4 py-3 text-sm text-gray-600 capitalize transition-colors duration-300 transform hover:bg-gray-100 ">
+                          Trouver un agent immobilier </a>
+                        </div>
+                    </div>
         </div>
 
         <!-- // pop menu  -->
