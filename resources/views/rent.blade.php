@@ -89,7 +89,7 @@
          <div class="mx-auto max-w-[1440px]">
 
 
-             <section class="text-gray-600 body-font">
+              <section class="text-gray-600 body-font pt-12">
                  <div class="px-4 py-12 mx-auto ">
                      <div class="flex flex-wrap w-full mb-8">
                          <div class="w-full pl-4 mb-4 lg:w-1/2 lg:mb-0">
@@ -98,72 +98,10 @@
                              <div class="h-1 bg-blue-800 rounded w-96"></div>
 
                          </div>
-
+                      
                      </div>
                      <section id="resultats" class="flex flex-col">
-                         <div class="mb-4 bg-gray-100 rounded-lg ">
-                             <div class="container pb-8 mx-auto md:mx-4">
-                                 <div class="mt-4 md:flex">
-                                     <div class="w-full swiper mySwiper md:w-1/2">
-                                         <div class="swiper-wrapper">
-
-                                             <div class="swiper-slide">
-                                                 <img class="object-cover w-full h-96" src="./img/03.jpg" alt="">
-                                             </div>
-
-                                             <div class="swiper-slide">
-                                                 <img class="object-cover w-full h-96" src="./img/04.jpeg" alt="">
-                                             </div>
-
-                                             <div class="swiper-slide">
-                                                 <img class="object-cover w-full h-96" src="./img/05.jpeg" alt="">
-                                             </div>
-                                         </div>
-                                         <div class=" swiper-button-next"></div>
-                                         <div class="swiper-button-prev"></div>
-                                         <div class="swiper-pagination"></div>
-                                     </div>
-
-                                     <div class="pl-8 mx-6 mt-6 lg:w-1/2 lg:mt-0">
-                                         <button
-                                             class="px-4 py-2 mb-4 text-sm font-bold text-white bg-green-800 rounded-full">Location</button>
-                                         <p class="text-xl font-bold text-blue-500 uppercase">Appartement</p>
-                                         <a
-                                             class="block mt-4 text-2xl font-semibold text-gray-800 hover:underline md:text-3xl">
-                                             3 pièces, 60 m²
-                                         </a>
-
-                                         <p class="max-w-xl mt-3 text-sm text-gray-800 md:text-sm">
-                                             Dans un emplacement central (terminus de tramway Weissenbühl), nous louons à
-                                             partir du 1er mars 2023
-                                             ou sur rendez-vous un appartement de 4,5 pièces en mezzanine (avec ascenseur).
-
-                                             L'appartement dispose d'un balcon (face à la rue), parquet dans les chambres et
-                                             sols en dalles dans
-                                             la
-                                             cuisine (avec lave-vaisselle) et dans la salle de bain / WC.
-
-                                             Le compartiment cave offre un espace de rangement supplémentaire.
-                                         </p>
-
-                                         <a href="annonce"
-                                             class="inline-block px-4 py-2 mt-2 text-white bg-blue-800 rounded text-bold hover:bg-blue-700 active:bg-blue-800">Plus
-                                             d'info</a>
-                                         <div class="flex">
-                                             <div class="flex items-center mt-6">
-                                                 <img class="object-cover object-center w-10 h-10 rounded-full"
-                                                     src="https://images.unsplash.com/photo-1531590878845-12627191e687?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=764&q=80"
-                                                     alt="">
-
-                                                 <div class="mx-4">
-                                                     <p class="text-sm text-gray-500 ">Particulier</p>
-                                                 </div>
-                                             </div>
-                                         </div>
-                                     </div>
-                                 </div>
-                             </div>
-                         </div>
+                        
 
                          <div class="mb-4 bg-gray-100 rounded-lg ">
                              <div class="container pb-8 mx-auto md:mx-4">
@@ -230,6 +168,69 @@
                              </div>
                          </div>
 
+ <div class="mb-4 bg-gray-100 rounded-lg ">
+                             <div class="container pb-8 mx-auto md:mx-4">
+                                 <div class="mt-4 md:flex">
+                                     <div class="w-full swiper mySwiper md:w-1/2">
+                                         <div class="swiper-wrapper">
+
+                                             <div class="swiper-slide">
+                                                 <img class="object-cover w-full h-96" src="./img/03.jpg" alt="">
+                                             </div>
+
+                                             <div class="swiper-slide">
+                                                 <img class="object-cover w-full h-96" src="./img/04.jpeg" alt="">
+                                             </div>
+
+                                             <div class="swiper-slide">
+                                                 <img class="object-cover w-full h-96" src="./img/05.jpeg" alt="">
+                                             </div>
+                                         </div>
+                                         <div class=" swiper-button-next"></div>
+                                         <div class="swiper-button-prev"></div>
+                                         <div class="swiper-pagination"></div>
+                                     </div>
+
+                                     <div class="pl-8 mx-6 mt-6 lg:w-1/2 lg:mt-0">
+                                         <button
+                                             class="px-4 py-2 mb-4 text-sm font-bold text-white bg-green-800 rounded-full">Location</button>
+                                         <p class="text-xl font-bold text-blue-500 uppercase">Appartement</p>
+                                         <a
+                                             class="block mt-4 text-2xl font-semibold text-gray-800 hover:underline md:text-3xl">
+                                             3 pièces, 60 m²
+                                         </a>
+
+                                         <p class="max-w-xl mt-3 text-sm text-gray-800 md:text-sm">
+                                             Dans un emplacement central (terminus de tramway Weissenbühl), nous louons à
+                                             partir du 1er mars 2023
+                                             ou sur rendez-vous un appartement de 4,5 pièces en mezzanine (avec ascenseur).
+
+                                             L'appartement dispose d'un balcon (face à la rue), parquet dans les chambres et
+                                             sols en dalles dans
+                                             la
+                                             cuisine (avec lave-vaisselle) et dans la salle de bain / WC.
+
+                                             Le compartiment cave offre un espace de rangement supplémentaire.
+                                         </p>
+
+                                         <a href="annonce"
+                                             class="inline-block px-4 py-2 mt-2 text-white bg-blue-800 rounded text-bold hover:bg-blue-700 active:bg-blue-800">Plus
+                                             d'info</a>
+                                         <div class="flex">
+                                             <div class="flex items-center mt-6">
+                                                 <img class="object-cover object-center w-10 h-10 rounded-full"
+                                                     src="https://images.unsplash.com/photo-1531590878845-12627191e687?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=764&q=80"
+                                                     alt="">
+
+                                                 <div class="mx-4">
+                                                     <p class="text-sm text-gray-500 ">Particulier</p>
+                                                 </div>
+                                             </div>
+                                         </div>
+                                     </div>
+                                 </div>
+                             </div>
+                         </div>
                      </section>
 
 
