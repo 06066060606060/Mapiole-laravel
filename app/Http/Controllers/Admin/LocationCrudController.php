@@ -234,7 +234,7 @@ class LocationCrudController extends CrudController
                 'Non' => 'Non',
             ],
             // optional
-            'default' => '0',
+            'default' => 'Oui',
             'inline' => true, // show the radios all on the same line?
         ]);
 
