@@ -49,7 +49,27 @@ class Vente extends Model
      ];
     // protected $hidden = [];
     // protected $dates = [];
+    protected $casts = [
+        'image' => 'array'
+    ];
+
+    /*
+    |--------------------------------------------------------------------------
+    | FUNCTIONS
+    |--------------------------------------------------------------------------
+    */
+    public function setImageAttribute($value)
+    {
+    
+        $attribute_name = "image";
+        $disk = "public";
+        $destination_path = "/uploads";
+
+        $this->uploadMultipleFilesToDisk($value, $attribute_name, $disk, $destination_path);
    
+
+    // return $this->attributes[{$attribute_name}]; // uncomment if this is a translatable field
+    }
 
     public function user()
     {
