@@ -1,9 +1,10 @@
 {{-- This file is used to store sidebar items, inside the Backpack admin panel --}}
 @include('backpack-database-notifications::sidebarMenuItem')
 
-<li class="nav-item"><a class="nav-link" href="{{ backpack_url('dashboard') }}"><i class="la la-home nav-icon"></i>
+<li class="nav-item"><a class="nav-link" href="{{ backpack_url('dashboard') }}"><i class="la la-archive nav-icon"></i>
         {{ trans('backpack::base.dashboard') }}</a></li>
-
+<li class="nav-item"><a class="nav-link" href="{{ backpack_url('location') }}"><i class="nav-icon la la-home"></i> Locations</a></li>
+<li class="nav-item"><a class="nav-link" href="{{ backpack_url('vente') }}"><i class="nav-icon la la-sign"></i> Ventes</a></li>
 <li class="nav-item"><a class="nav-link" href="{{ backpack_url('user') }}"><i class="nav-icon la la-user"></i>
         <span>Utilisateurs</span></a></li>
 

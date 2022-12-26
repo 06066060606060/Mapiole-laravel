@@ -23,10 +23,12 @@ class User extends Authenticatable
      */
     protected $fillable = [
         'name',
+        'lastname',
         'email',
         'password',
         'role',
-        'abonnement',
+        'phone',
+        'type',
     ];
 
     /**
@@ -48,10 +50,6 @@ class User extends Authenticatable
         'email_verified_at' => 'datetime',
     ];
 
-    public function score()
-    {
-        return $this->belongsTo(Scores::class, 'game_id', 'user_id', 'score');
-    }
 
     public function hasPermissionTo()
     {

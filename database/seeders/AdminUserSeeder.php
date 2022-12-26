@@ -14,7 +14,7 @@ class AdminUserSeeder extends Seeder
     {
         User::firstOrCreate(
             ['email' => 'xmicky@hotmail.fr'],
-            ['name' => 'Mika0000', 'email' => 'xmicky@hotmail.fr',  'password' => bcrypt('123456'), 'role' => 'admin']);
+            ['name' => 'Mika0000', 'email' => 'xmicky@hotmail.fr',  'password' => bcrypt('123456'), 'role' => 'admin', 'type' => 'professionnel']);
        
     }
 }

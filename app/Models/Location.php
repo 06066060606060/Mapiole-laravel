@@ -6,7 +6,7 @@ use Backpack\CRUD\app\Models\Traits\CrudTrait;
 use Illuminate\Database\Eloquent\Model;
 
 
-class Games extends Model
+class Location extends Model
 {
     use CrudTrait;
 
@@ -16,23 +16,36 @@ class Games extends Model
     |--------------------------------------------------------------------------
     */
 
-    protected $table = 'games';
+    protected $table = 'locations';
     // protected $primaryKey = 'id';
-     public $timestamps = false;
+    // public $timestamps = false;
     protected $guarded = ['id'];
      protected $fillable = [
+        'user_id',
+        'prix',
         'name',
-        'banner',
-        'image',
-        'type',
         'description',
-        'link',
+        'image',
         'category',
-        'tags',
+        'adresse',
+        'ville',
+        'pays',
+        'type',
+        'loyer',
+        'code_postal',
+        'surface',
+        'nb_piece',
+        'nb_chambre',
+        'nb_salle_bain',
+        'nb_toilette',
+        'terrasse',
+        'balcon',
+        'garage',
+        'parking',
+        'piscine',
+        'ascenseur',
         'status',
-        'data0',
-        'data1',
-        'data2',
+        'type_chauffage',
      ];
     // protected $hidden = [];
     // protected $dates = [];
@@ -57,27 +70,10 @@ class Games extends Model
 
     // return $this->attributes[{$attribute_name}]; // uncomment if this is a translatable field
     }
-    /*
-    |--------------------------------------------------------------------------
-    | RELATIONS
-    |--------------------------------------------------------------------------
-    */
 
-    /*
-    |--------------------------------------------------------------------------
-    | SCOPES
-    |--------------------------------------------------------------------------
-    */
+    public function user()
+    {
+        return $this->belongsTo(User::class);
+    }
 
-    /*
-    |--------------------------------------------------------------------------
-    | ACCESSORS
-    |--------------------------------------------------------------------------
-    */
-
-    /*
-    |--------------------------------------------------------------------------
-    | MUTATORS
-    |--------------------------------------------------------------------------
-    */
 }

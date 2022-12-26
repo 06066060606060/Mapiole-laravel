@@ -6,10 +6,15 @@
 @section('content')
     <section class="text-gray-600 body-font">
         <div id="main-content" class="relative w-full h-full mt-2 overflow-y-auto rounded-lg">
+                @if (backpack_user()->role == 'admin')
+            <p class="w-1/2 px-4 py-2 mx-8 mt-4 text-xs text-gray-200 bg-gray-900 rounded -pl-2">
+                Derniéres mise à jour: {{ $version }}<br>
+                -1er commit<br>
+
+
+            </p>
+        @endif
             <div class="flex flex-col gap-4 px-4 pt-6 pb-6 xl:flex-row">
-               
-               
- 
                 <div class="p-4 bg-white rounded-lg shadow sm:p-6 xl:p-8 ">
                     <div class="flex items-center justify-between mb-2">
                         <div>
@@ -17,8 +22,7 @@
                             <a class="p-2 text-sm font-medium text-gray-800 rounded-lg">Total: {{ $users->count() }}</a>
                         </div>
                         <div class="flex-shrink-0">
-                            <a href="user/"
-                                class="p-2 text-sm font-medium rounded-lg text-cyan-600 hover:bg-gray-100">Tout
+                            <a href="user/" class="p-2 text-sm font-medium rounded-lg text-cyan-600 hover:bg-gray-100">Tout
                                 voir</a>
                         </div>
                     </div>
@@ -44,15 +48,13 @@
                                             </tr>
                                         </thead>
                                         <tbody class="bg-white">
-                                          
+
                                             @foreach ($users as $user)
-                                         
                                                 <tr>
-                                                 <td
-                                                        class="pl-8 text-sm font-normal text-gray-900 whitespace-nowrap">
+                                                    <td class="pl-8 text-sm font-normal text-gray-900 whitespace-nowrap">
                                                         @if ($user == backpack_auth()->user())
                                                             <div class="w-3 h-3 ml-2 bg-green-500 rounded-full"></div>
-                                                            @else
+                                                        @else
                                                             <div class="w-3 h-3 ml-2 bg-red-500 rounded-full"></div>
                                                         @endif
                                                     </td>
@@ -76,16 +78,9 @@
 
             </div>
         </div>
-        </div>
-        @if (backpack_user()->role == 'admin')
-            <p class="w-1/2 px-4 py-2 mx-8 mt-4 text-xs text-gray-200 bg-gray-900 rounded -pl-2">
-                Derniéres mise à jour: {{ $version }}<br>
-                 -1er commit<br>
-    
 
-            </p>
-        @endif
-        </div>
+
+ 
 
 
     </section>

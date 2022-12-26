@@ -5,9 +5,10 @@ namespace App\Http\Controllers;
 use App\Models\Infosperso;
 use App\Models\User;
 use App\Models\Pages;
-use App\Models\Session;
+use App\Models\Sessions;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Session;
 
 class GlobalController extends Controller
 {
@@ -133,7 +134,7 @@ class GlobalController extends Controller
     static function getSessions()
     {
         //retrive all users
-        $users_session = Session::all();
+        $users_session = Sessions::all();
         return $users_session;
     }
 
@@ -146,4 +147,14 @@ class GlobalController extends Controller
     {
         return view('confidentialite');
     }
+
+    public function logout(Request $request)
+    {
+        Session::flush();
+        Auth::logout();
+        $request->session()->invalidate();
+        return view("/");
+    }
+
+
 }
