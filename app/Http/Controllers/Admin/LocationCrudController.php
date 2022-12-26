@@ -54,9 +54,23 @@ class LocationCrudController extends CrudController
         $this->crud->setValidation([
             'name' => 'required|min:2',
         ]);
-        CRUD::column('name')->label('Nom');
+        CRUD::column('name')->label('Titre');
         $this->getFieldsData();
         CRUD::column('description');
+        $this->crud->addColumn([
+            'name'    => 'status',
+            'label'   => 'Activé',
+            'type'    => 'text',
+            'wrapper' => [
+                'element' => 'span',
+                'class' => function ($crud, $column, $entry, $related_key) {
+                    if ($entry->status == 'Oui') {
+                            return 'ml-4 badge badge-primary';
+                        } else {
+                            return 'ml-4 badge badge-danger';
+                        }
+                },  ]
+            ]);
 
         /**
          * Columns can be defined using the fluent syntax or array syntax:
@@ -216,8 +230,8 @@ class LocationCrudController extends CrudController
             'type' => 'radio',
             'options' => [
                 // the key will be stored in the db, the value will be shown as label;
-                1 => 'Oui',
-                0 => 'Non',
+                'Oui' => 'Oui',
+                'Non' => 'Non',
             ],
             // optional
             'default' => '0',

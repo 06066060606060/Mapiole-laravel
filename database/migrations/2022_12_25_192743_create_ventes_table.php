@@ -39,7 +39,7 @@ return new class extends Migration
             $table->integer('parking')->nullable();
             $table->integer('piscine')->nullable();
             $table->integer('ascenseur')->nullable();
-            $table->integer('status')->nullable();
+            $table->string('status')->nullable();
             $table->string('type_chauffage')->nullable();
             $table->timestamps();
         });

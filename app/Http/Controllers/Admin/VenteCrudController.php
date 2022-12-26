@@ -17,7 +17,7 @@ class VenteCrudController extends CrudController
     use \Backpack\CRUD\app\Http\Controllers\Operations\CreateOperation;
     use \Backpack\CRUD\app\Http\Controllers\Operations\UpdateOperation;
     use \Backpack\CRUD\app\Http\Controllers\Operations\DeleteOperation;
-    use \Backpack\CRUD\app\Http\Controllers\Operations\ShowOperation;
+  //  use \Backpack\CRUD\app\Http\Controllers\Operations\ShowOperation;
 
     /**
      * Configure the CrudPanel object. Apply settings to all operations.
@@ -55,9 +55,23 @@ class VenteCrudController extends CrudController
         $this->crud->setValidation([
             'name' => 'required|min:2',
         ]);
-        CRUD::column('name')->label('Nom');
+        CRUD::column('name')->label('Titre');
         $this->getFieldsData();
         CRUD::column('description');
+        $this->crud->addColumn([
+            'name'    => 'status',
+            'label'   => 'Activé',
+            'type'    => 'text',
+            'wrapper' => [
+                'element' => 'span',
+                'class' => function ($crud, $column, $entry, $related_key) {
+                    if ($entry->active == 'Oui') {
+                            return 'ml-4 badge badge-primary';
+                        } else {
+                            return 'ml-4 badge badge-danger';
+                        }
+                },  ]
+            ]);
         /**
          * Columns can be defined using the fluent syntax or array syntax:
          * - CRUD::column('price')->type('number');
@@ -211,11 +225,11 @@ class VenteCrudController extends CrudController
             'type' => 'radio',
             'options' => [
                 // the key will be stored in the db, the value will be shown as label;
-                1 => 'Oui',
-                0 => 'Non',
+                'Oui' => 'Oui',
+                'Non' => 'Non',
             ],
             // optional
-            'default' => '0',
+            'default' => 'Oui',
             'inline' => true, // show the radios all on the same line?
         ]);
 
