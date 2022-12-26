@@ -15,9 +15,10 @@
             </svg>
         </button>
 
-        <div id="mega-menu-full"
-            class="hidden justify-between items-center w-full md:flex md:w-auto md:order-1 bg-white md:bg-transparent mt-8 md:mt-0 pb-4">
-            <ul class="flex flex-col w-full mt-4 text-sm font-medium md:flex-row md:space-x-8 md:mt-0">
+        <div id="mega-menu-full" class="hidden justify-between items-center w-full md:flex md:w-auto md:order-1 bg-white md:bg-transparent mt-8 md:mt-0 pb-4">
+
+            <ul class="flex flex-col w-full mt-4 text-sm font-medium md:flex-row md:space-x-4 md:mt-0">
+           
                 <li>
                     <button id="mega-menu-full-dropdown-button" data-collapse-toggle="mega-menu-full-dropdown"
                         class="flex justify-between items-center py-2 pr-4 pl-3 w-full font-bold text-gray-700 border-b border-gray-100 md:w-auto hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-blue-600 md:p-0 mt-2    ">Rechercher
@@ -68,7 +69,8 @@
                                 clip-rule="evenodd"></path>
                         </svg></button>
                 </li>
-
+                <li class="flex lg:w-64">
+                </li>
                 <li>
                     <div class="flex items-center mt-2 md:mt-0">
                         @if (backpack_auth()->check())
