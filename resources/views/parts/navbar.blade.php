@@ -21,7 +21,7 @@
            
                 <li>
                     <button id="mega-menu-full-dropdown-button" data-collapse-toggle="mega-menu-full-dropdown"
-                        class="flex justify-between items-center py-2 pr-4 pl-3 w-full font-medium text-gray-700 border-b border-gray-100 md:w-auto hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-blue-600 md:p-0 mt-2    ">Rechercher
+                        class="flex justify-between items-center py-2 pr-4 pl-3 w-full font-medium text-gray-700 border-b border-gray-100 md:w-auto hover:bg-gray-200 md:hover:bg-transparent md:border-0 md:hover:text-blue-600 md:p-0 mt-2    ">Rechercher
                         <svg class="ml-1 w-4 h-4" fill="currentColor" viewBox="0 0 20 20"
                             xmlns="http://www.w3.org/2000/svg">
                             <path fill-rule="evenodd"
@@ -31,7 +31,7 @@
                 </li>
                 <li>
                     <button id="mega-menu-full-dropdown-button2" data-collapse-toggle="mega-menu-full-dropdown2"
-                        class="flex justify-between items-center py-2 pr-4 pl-3 w-full font-medium text-gray-700 border-b border-gray-100 md:w-auto hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-blue-600 md:p-0  mt-2    ">Acheter
+                        class="flex justify-between items-center py-2 pr-4 pl-3 w-full font-medium text-gray-700 border-b border-gray-100 md:w-auto hover:bg-gray-200 md:hover:bg-transparent md:border-0 md:hover:text-blue-600 md:p-0  mt-2    ">Acheter
                         <svg class="ml-1 w-4 h-4" fill="currentColor" viewBox="0 0 20 20"
                             xmlns="http://www.w3.org/2000/svg">
                             <path fill-rule="evenodd"
@@ -41,7 +41,7 @@
                 </li>
                 <li>
                     <button id="mega-menu-full-dropdown-button3" data-collapse-toggle="mega-menu-full-dropdown3"
-                        class="flex justify-between items-center py-2 pr-4 pl-3 w-full font-medium text-gray-700 border-b border-gray-100 md:w-auto hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-blue-600 md:p-0  mt-2    ">Vendre
+                        class="flex justify-between items-center py-2 pr-4 pl-3 w-full font-medium text-gray-700 border-b border-gray-100 md:w-auto hover:bg-gray-200 md:hover:bg-transparent md:border-0 md:hover:text-blue-600 md:p-0  mt-2    ">Vendre
                         <svg class="ml-1 w-4 h-4" fill="currentColor" viewBox="0 0 20 20"
                             xmlns="http://www.w3.org/2000/svg">
                             <path fill-rule="evenodd"
@@ -51,7 +51,7 @@
                 </li>
                 <li>
                     <button id="mega-menu-full-dropdown-button4" data-collapse-toggle="mega-menu-full-dropdown4"
-                        class="flex justify-between items-center py-2 pr-4 pl-3 w-full font-medium text-gray-700 border-b border-gray-100 md:w-auto hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-blue-600 md:p-0  mt-2    ">Louer
+                        class="flex justify-between items-center py-2 pr-4 pl-3 w-full font-medium text-gray-700 border-b border-gray-100 md:w-auto hover:bg-gray-200 md:hover:bg-transparent md:border-0 md:hover:text-blue-600 md:p-0  mt-2    ">Louer
                         <svg class="ml-1 w-4 h-4" fill="currentColor" viewBox="0 0 20 20"
                             xmlns="http://www.w3.org/2000/svg">
                             <path fill-rule="evenodd"
@@ -61,7 +61,7 @@
                 </li>
                 <li>
                     <button id="mega-menu-full-dropdown-button5" data-collapse-toggle="mega-menu-full-dropdown5"
-                        class="flex justify-between items-center py-2 pr-4 pl-3 w-full font-medium text-gray-700 border-b border-gray-100 md:w-auto hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-blue-600 md:p-0  mt-2    ">Services
+                        class="flex justify-between items-center py-2 pr-4 pl-3 w-full font-medium text-gray-700 border-b border-gray-100 md:w-auto hover:bg-gray-200 md:hover:bg-transparent md:border-0 md:hover:text-blue-600 md:p-0  mt-2    ">Services
                         <svg class="ml-1 w-4 h-4" fill="currentColor" viewBox="0 0 20 20"
                             xmlns="http://www.w3.org/2000/svg">
                             <path fill-rule="evenodd"
@@ -75,12 +75,12 @@
                     <div class="flex items-center mt-2 md:mt-0">
                         @if (backpack_auth()->check())
                             <a href=""
-                                class="text-xs md:text-base font-bold items-center justify-center w-52 h-10 px-2 ml-1 mr-2 text-gray-600 bg-white border border-gray-600 rounded-md flex focus:outline-none hover:bg-gray-900 hover:text-white">
+                                class="text-xs md:text-base font-medium items-center justify-center w-52 h-10 px-2 ml-1 mr-2 text-gray-600 bg-white border border-gray-600 rounded-md flex focus:outline-none hover:bg-gray-900 hover:text-white">
                                 Poster une annonce
                             </a>
                         @else
                             <a onclick="document.getElementById('primary_button').click()"
-                                class="text-xs md:text-base font-bold items-center justify-center w-52  h-10 px-2 ml-1 mr-2 text-gray-600 bg-white border border-gray-600 rounded-md flex focus:outline-none hover:bg-gray-900 hover:text-white">
+                                class="text-xs md:text-base font-medium items-center justify-center w-52  h-10 px-2 ml-1 mr-2 text-gray-600 bg-white border border-gray-600 rounded-md flex focus:outline-none hover:bg-gray-900 hover:text-white">
                                 Poster une annonce
                             </a>
                         @endif
@@ -129,15 +129,8 @@
                             <button @click="isOpen = !isOpen" type="button"
                                 class="text-gray-600 hover:text-gray-700 focus:outline-none focus:text-gray-800 "
                                 aria-label="toggle menu">
-                                <svg x-cloak x-show="!isOpen" xmlns="http://www.w3.org/2000/svg" class="w-6 h-6"
-                                    fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                                    <path stroke-linecap="round" stroke-linejoin="round" d="M4 8h16M4 16h16" />
-                                </svg>
+                                Menu
 
-                                <svg x-cloak x-show="isOpen" xmlns="http://www.w3.org/2000/svg" class="w-6 h-6"
-                                    fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                                    <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
-                                </svg>
                             </button>
 
                             <!-- // pop menu  -->
@@ -279,35 +272,35 @@
         <div class="grid py-5 px-4 mx-auto max-w-screen-xl text-gray-900  sm:grid-cols-2 md:grid-cols-3 md:px-6">
             <ul aria-labelledby="mega-menu-full-dropdown-button">
                 <li>
-                    <a href="#" class="block p-3 rounded-lg hover:bg-gray-50 ">
-                        <div class="font-semibold">Vendre un appartement</div>
+                    <a href="#" class="block p-3 rounded-lg hover:bg-gray-200 ">
+                        <div class="font-medium">Vendre un appartement</div>
 
                     </a>
                 </li>
                 <li>
-                    <a href="#" class="block p-3 rounded-lg hover:bg-gray-50 ">
-                        <div class="font-semibold">Acheter un terrain
+                    <a href="#" class="block p-3 rounded-lg hover:bg-gray-200 ">
+                        <div class="font-medium">Acheter un terrain
                         </div>
 
                     </a>
                 </li>
                 <li>
-                    <a href="#" class="block p-3 rounded-lg hover:bg-gray-50 ">
-                        <div class="font-semibold">Vendre une maison</div>
+                    <a href="#" class="block p-3 rounded-lg hover:bg-gray-200 ">
+                        <div class="font-medium">Vendre une maison</div>
 
                     </a>
                 </li>
 
                 <li>
-                    <a href="#" class="block p-3 rounded-lg hover:bg-gray-50 ">
-                        <div class="font-semibold">Construction</div>
+                    <a href="#" class="block p-3 rounded-lg hover:bg-gray-200 ">
+                        <div class="font-medium">Construction</div>
 
                     </a>
                 </li>
 
                 <li>
-                    <a href="#" class="block p-3 rounded-lg hover:bg-gray-50 ">
-                        <div class="font-semibold">Trouver une main d'oeuvre</div>
+                    <a href="#" class="block p-3 rounded-lg hover:bg-gray-200 ">
+                        <div class="font-medium">Trouver une main d'oeuvre</div>
 
                     </a>
                 </li>
@@ -315,39 +308,39 @@
             <ul class="hidden md:block">
                 <li>
 
-                    <a href="#" class="block p-3 rounded-lg hover:bg-gray-50 ">
-                        <div class="font-semibold">Immobilier commercial
+                    <a href="#" class="block p-3 rounded-lg hover:bg-gray-200 ">
+                        <div class="font-medium">Immobilier commercial
                         </div>
 
                     </a>
                 </li>
                 <li>
-                    <a href="#" class="block p-3 rounded-lg hover:bg-gray-50 ">
-                        <div class="font-semibold">Appartement meublé à louer
+                    <a href="#" class="block p-3 rounded-lg hover:bg-gray-200 ">
+                        <div class="font-medium">Appartement meublé à louer
 
-                        </div>
-
-                    </a>
-                </li>
-
-                <li>
-                    <a href="#" class="block p-3 rounded-lg hover:bg-gray-50 ">
-                        <div class="font-semibold">Trouver un locataire
                         </div>
 
                     </a>
                 </li>
 
                 <li>
-                    <a href="#" class="block p-3 rounded-lg hover:bg-gray-50 ">
-                        <div class="font-semibold">Consulter un expert immobilier</div>
+                    <a href="#" class="block p-3 rounded-lg hover:bg-gray-200 ">
+                        <div class="font-medium">Trouver un locataire
+                        </div>
 
                     </a>
                 </li>
 
                 <li>
-                    <a href="#" class="block p-3 rounded-lg hover:bg-gray-50 ">
-                        <div class="font-semibold">Accompagnement procédures administratives
+                    <a href="#" class="block p-3 rounded-lg hover:bg-gray-200 ">
+                        <div class="font-medium">Consulter un expert immobilier</div>
+
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#" class="block p-3 rounded-lg hover:bg-gray-200 ">
+                        <div class="font-medium">Accompagnement procédures administratives
                         </div>
 
                     </a>
@@ -356,16 +349,16 @@
             <ul class="hidden md:block">
                 <li>
 
-                    <a href="#" class="block p-3 rounded-lg hover:bg-gray-50 ">
-                        <div class="font-semibold">Nos meilleures recommandations
+                    <a href="#" class="block p-3 rounded-lg hover:bg-gray-200 ">
+                        <div class="font-medium">Nos meilleures recommandations
                         </div>
 
                     </a>
                 </li>
                 <li>
 
-                    <a href="#" class="block p-3 rounded-lg hover:bg-gray-50 ">
-                        <div class="font-semibold">Investissement locatif
+                    <a href="#" class="block p-3 rounded-lg hover:bg-gray-200 ">
+                        <div class="font-medium">Investissement locatif
 
                         </div>
 
@@ -373,8 +366,8 @@
                 </li>
                 <li>
 
-                    <a href="#" class="block p-3 rounded-lg hover:bg-gray-50 ">
-                        <div class="font-semibold">Services immobiliers
+                    <a href="#" class="block p-3 rounded-lg hover:bg-gray-200 ">
+                        <div class="font-medium">Services immobiliers
 
                         </div>
 
@@ -387,22 +380,22 @@
         <div class="grid py-5 px-4 mx-auto max-w-screen-xl text-gray-900  sm:grid-cols-2 md:grid-cols-3 md:px-6">
             <ul aria-labelledby="mega-menu-full-dropdown-button2">
                 <li>
-                    <a href="#" class="block p-3 rounded-lg hover:bg-gray-50 ">
-                        <div class="font-semibold">Acheter un appartement
+                    <a href="#" class="block p-3 rounded-lg hover:bg-gray-200 ">
+                        <div class="font-medium">Acheter un appartement
                         </div>
 
                     </a>
                 </li>
                 <li>
-                    <a href="#" class="block p-3 rounded-lg hover:bg-gray-50 ">
-                        <div class="font-semibold">Acheter une maison
+                    <a href="#" class="block p-3 rounded-lg hover:bg-gray-200 ">
+                        <div class="font-medium">Acheter une maison
                         </div>
 
                     </a>
                 </li>
                 <li>
-                    <a href="#" class="block p-3 rounded-lg hover:bg-gray-50 ">
-                        <div class="font-semibold">Acheter un terrain
+                    <a href="#" class="block p-3 rounded-lg hover:bg-gray-200 ">
+                        <div class="font-medium">Acheter un terrain
                         </div>
 
                     </a>
@@ -410,22 +403,22 @@
             </ul>
             <ul>
                 <li>
-                    <a href="#" class="block p-3 rounded-lg hover:bg-gray-50 ">
-                        <div class="font-semibold">Acheter des bureaux
+                    <a href="#" class="block p-3 rounded-lg hover:bg-gray-200 ">
+                        <div class="font-medium">Acheter des bureaux
                         </div>
 
                     </a>
                 </li>
                 <li>
-                    <a href="#" class="block p-3 rounded-lg hover:bg-gray-50 ">
-                        <div class="font-semibold">Acheter un espace commercial
+                    <a href="#" class="block p-3 rounded-lg hover:bg-gray-200 ">
+                        <div class="font-medium">Acheter un espace commercial
                         </div>
 
                     </a>
                 </li>
                 <li>
-                    <a href="#" class="block p-3 rounded-lg hover:bg-gray-50 ">
-                        <div class="font-semibold">Acheter une villa
+                    <a href="#" class="block p-3 rounded-lg hover:bg-gray-200 ">
+                        <div class="font-medium">Acheter une villa
                         </div>
 
                     </a>
@@ -433,22 +426,22 @@
             </ul>
             <ul class="hidden md:block">
                 <li>
-                    <a href="#" class="block p-3 rounded-lg hover:bg-gray-50 ">
-                        <div class="font-semibold">Acheter un immeuble
+                    <a href="#" class="block p-3 rounded-lg hover:bg-gray-200 ">
+                        <div class="font-medium">Acheter un immeuble
                         </div>
 
                     </a>
                 </li>
                 <li>
-                    <a href="#" class="block p-3 rounded-lg hover:bg-gray-50 ">
-                        <div class="font-semibold">Consulter un expert immobilier
+                    <a href="#" class="block p-3 rounded-lg hover:bg-gray-200 ">
+                        <div class="font-medium">Consulter un expert immobilier
                         </div>
 
                     </a>
                 </li>
                 <li>
-                    <a href="#" class="block p-3 rounded-lg hover:bg-gray-50 ">
-                        <div class="font-semibold">Guide d'achat de biens immobiliers
+                    <a href="#" class="block p-3 rounded-lg hover:bg-gray-200 ">
+                        <div class="font-medium">Guide d'achat de biens immobiliers
                         </div>
 
                     </a>
@@ -461,22 +454,22 @@
         <div class="grid py-5 px-4 mx-auto max-w-screen-xl text-gray-900  sm:grid-cols-2 md:grid-cols-3 md:px-6">
             <ul aria-labelledby="mega-menu-full-dropdown-button3">
                 <li>
-                    <a href="#" class="block p-3 rounded-lg hover:bg-gray-50 ">
-                        <div class="font-semibold">Vendre un appartement
+                    <a href="#" class="block p-3 rounded-lg hover:bg-gray-200 ">
+                        <div class="font-medium">Vendre un appartement
                         </div>
 
                     </a>
                 </li>
                 <li>
-                    <a href="#" class="block p-3 rounded-lg hover:bg-gray-50 ">
-                        <div class="font-semibold">Vendre une maison
+                    <a href="#" class="block p-3 rounded-lg hover:bg-gray-200 ">
+                        <div class="font-medium">Vendre une maison
                         </div>
 
                     </a>
                 </li>
                 <li>
-                    <a href="#" class="block p-3 rounded-lg hover:bg-gray-50 ">
-                        <div class="font-semibold">Vendre un terrain
+                    <a href="#" class="block p-3 rounded-lg hover:bg-gray-200 ">
+                        <div class="font-medium">Vendre un terrain
                         </div>
 
                     </a>
@@ -484,22 +477,22 @@
             </ul>
             <ul>
                 <li>
-                    <a href="#" class="block p-3 rounded-lg hover:bg-gray-50 ">
-                        <div class="font-semibold">Vendre des bureaux
+                    <a href="#" class="block p-3 rounded-lg hover:bg-gray-200 ">
+                        <div class="font-medium">Vendre des bureaux
                         </div>
 
                     </a>
                 </li>
                 <li>
-                    <a href="#" class="block p-3 rounded-lg hover:bg-gray-50 ">
-                        <div class="font-semibold">Vendre un espace commercial
+                    <a href="#" class="block p-3 rounded-lg hover:bg-gray-200 ">
+                        <div class="font-medium">Vendre un espace commercial
                         </div>
 
                     </a>
                 </li>
                 <li>
-                    <a href="#" class="block p-3 rounded-lg hover:bg-gray-50 ">
-                        <div class="font-semibold">Vendre une villa
+                    <a href="#" class="block p-3 rounded-lg hover:bg-gray-200 ">
+                        <div class="font-medium">Vendre une villa
                         </div>
 
                     </a>
@@ -507,29 +500,29 @@
             </ul>
             <ul class="hidden md:block">
                 <li>
-                    <a href="#" class="block p-3 rounded-lg hover:bg-gray-50 ">
-                        <div class="font-semibold">Vendre un immeuble
+                    <a href="#" class="block p-3 rounded-lg hover:bg-gray-200 ">
+                        <div class="font-medium">Vendre un immeuble
                         </div>
 
                     </a>
                 </li>
                 <li>
-                    <a href="#" class="block p-3 rounded-lg hover:bg-gray-50 ">
-                        <div class="font-semibold">Confier mon bien à vendre
+                    <a href="#" class="block p-3 rounded-lg hover:bg-gray-200 ">
+                        <div class="font-medium">Confier mon bien à vendre
                         </div>
 
                     </a>
                 </li>
                 <li>
-                    <a href="#" class="block p-3 rounded-lg hover:bg-gray-50 ">
-                        <div class="font-semibold">Consulter un expert immobilier
+                    <a href="#" class="block p-3 rounded-lg hover:bg-gray-200 ">
+                        <div class="font-medium">Consulter un expert immobilier
                         </div>
 
                     </a>
                 </li>
                 <li>
-                    <a href="#" class="block p-3 rounded-lg hover:bg-gray-50 ">
-                        <div class="font-semibold">Guide de vente de biens immobiliers
+                    <a href="#" class="block p-3 rounded-lg hover:bg-gray-200 ">
+                        <div class="font-medium">Guide de vente de biens immobiliers
 
                         </div>
 
@@ -543,22 +536,22 @@
         <div class="grid py-5 px-4 mx-auto max-w-screen-xl text-gray-900  sm:grid-cols-2 md:grid-cols-3 md:px-6">
             <ul aria-labelledby="mega-menu-full-dropdown-button4">
                 <li>
-                    <a href="#" class="block p-3 rounded-lg hover:bg-gray-50 ">
-                        <div class="font-semibold">Louer un appartement
+                    <a href="#" class="block p-3 rounded-lg hover:bg-gray-200 ">
+                        <div class="font-medium">Louer un appartement
                         </div>
 
                     </a>
                 </li>
                 <li>
-                    <a href="#" class="block p-3 rounded-lg hover:bg-gray-50 ">
-                        <div class="font-semibold">Louer une maison
+                    <a href="#" class="block p-3 rounded-lg hover:bg-gray-200 ">
+                        <div class="font-medium">Louer une maison
                         </div>
 
                     </a>
                 </li>
                 <li>
-                    <a href="#" class="block p-3 rounded-lg hover:bg-gray-50 ">
-                        <div class="font-semibold">Louer des bureaux
+                    <a href="#" class="block p-3 rounded-lg hover:bg-gray-200 ">
+                        <div class="font-medium">Louer des bureaux
                         </div>
 
                     </a>
@@ -566,21 +559,21 @@
             </ul>
             <ul>
                 <li>
-                    <a href="#" class="block p-3 rounded-lg hover:bg-gray-50 ">
-                        <div class="font-semibold">Louer un espace commercial
+                    <a href="#" class="block p-3 rounded-lg hover:bg-gray-200 ">
+                        <div class="font-medium">Louer un espace commercial
                         </div>
 
                     </a>
                 </li>
                 <li>
-                    <a href="#" class="block p-3 rounded-lg hover:bg-gray-50 ">
-                        <div class="font-semibold">Louer un terrain</div>
+                    <a href="#" class="block p-3 rounded-lg hover:bg-gray-200 ">
+                        <div class="font-medium">Louer un terrain</div>
 
                     </a>
                 </li>
                 <li>
-                    <a href="#" class="block p-3 rounded-lg hover:bg-gray-50 ">
-                        <div class="font-semibold">Louer une villa
+                    <a href="#" class="block p-3 rounded-lg hover:bg-gray-200 ">
+                        <div class="font-medium">Louer une villa
                         </div>
 
                     </a>
@@ -588,22 +581,22 @@
             </ul>
             <ul class="hidden md:block">
                 <li>
-                    <a href="#" class="block p-3 rounded-lg hover:bg-gray-50 ">
-                        <div class="font-semibold">Louer un appartement meublé
+                    <a href="#" class="block p-3 rounded-lg hover:bg-gray-200 ">
+                        <div class="font-medium">Louer un appartement meublé
                         </div>
 
                     </a>
                 </li>
                 <li>
-                    <a href="#" class="block p-3 rounded-lg hover:bg-gray-50 ">
-                        <div class="font-semibold">Louer un terrain commercial
+                    <a href="#" class="block p-3 rounded-lg hover:bg-gray-200 ">
+                        <div class="font-medium">Louer un terrain commercial
                         </div>
 
                     </a>
                 </li>
                 <li>
-                    <a href="#" class="block p-3 rounded-lg hover:bg-gray-50 ">
-                        <div class="font-semibold">Guide de location de biens immobiliers</div>
+                    <a href="#" class="block p-3 rounded-lg hover:bg-gray-200 ">
+                        <div class="font-medium">Guide de location de biens immobiliers</div>
 
                     </a>
                 </li>
@@ -616,73 +609,73 @@
         <div class="grid py-5 px-4 mx-auto max-w-screen-xl text-gray-900  sm:grid-cols-2 md:grid-cols-3 md:px-6">
             <ul aria-labelledby="mega-menu-full-dropdown-button5">
                 <li>
-                    <a href="#" class="block p-3 rounded-lg hover:bg-gray-50 ">
-                        <div class="font-semibold">Consulter un expert immobilier
+                    <a href="#" class="block p-3 rounded-lg hover:bg-gray-200 ">
+                        <div class="font-medium">Consulter un expert immobilier
                         </div>
 
                     </a>
                 </li>
                 <li>
-                    <a href="#" class="block p-3 rounded-lg hover:bg-gray-50 ">
-                        <div class="font-semibold">Commander un document administratif </div>
+                    <a href="#" class="block p-3 rounded-lg hover:bg-gray-200 ">
+                        <div class="font-medium">Commander un document administratif </div>
 
                     </a>
                 </li>
                 <li>
-                    <a href="#" class="block p-3 rounded-lg hover:bg-gray-50 ">
-                        <div class="font-semibold">Commander une main d’oeuvre
-                        </div>
-
-                    </a>
-                </li>
-
-                <li>
-                    <a href="#" class="block p-3 rounded-lg hover:bg-gray-50 ">
-                        <div class="font-semibold">Suivre son dossier personnel
+                    <a href="#" class="block p-3 rounded-lg hover:bg-gray-200 ">
+                        <div class="font-medium">Commander une main d’oeuvre
                         </div>
 
                     </a>
                 </li>
 
                 <li>
-                    <a href="#" class="block p-3 rounded-lg hover:bg-gray-50 ">
-                        <div class="font-semibold">Morcellement</div>
+                    <a href="#" class="block p-3 rounded-lg hover:bg-gray-200 ">
+                        <div class="font-medium">Suivre son dossier personnel
+                        </div>
+
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#" class="block p-3 rounded-lg hover:bg-gray-200 ">
+                        <div class="font-medium">Morcellement</div>
 
                     </a>
                 </li>
             </ul>
             <ul>
                 <li>
-                    <a href="#" class="block p-3 rounded-lg hover:bg-gray-50 ">
-                        <div class="font-semibold">Titre foncier
+                    <a href="#" class="block p-3 rounded-lg hover:bg-gray-200 ">
+                        <div class="font-medium">Titre foncier
                         </div>
 
                     </a>
                 </li>
 
                 <li>
-                    <a href="#" class="block p-3 rounded-lg hover:bg-gray-50 ">
-                        <div class="font-semibold">Topographie</div>
+                    <a href="#" class="block p-3 rounded-lg hover:bg-gray-200 ">
+                        <div class="font-medium">Topographie</div>
 
                     </a>
                 </li>
                 <li>
-                    <a href="#" class="block p-3 rounded-lg hover:bg-gray-50 ">
-                        <div class="font-semibold">Immatriculation foncière
+                    <a href="#" class="block p-3 rounded-lg hover:bg-gray-200 ">
+                        <div class="font-medium">Immatriculation foncière
                         </div>
 
                     </a>
                 </li>
                 <li>
-                    <a href="#" class="block p-3 rounded-lg hover:bg-gray-50 ">
-                        <div class="font-semibold">Architecture technique et design
+                    <a href="#" class="block p-3 rounded-lg hover:bg-gray-200 ">
+                        <div class="font-medium">Architecture technique et design
                         </div>
 
                     </a>
                 </li>
                 <li>
-                    <a href="#" class="block p-3 rounded-lg hover:bg-gray-50 ">
-                        <div class="font-semibold">Trouver un notaire
+                    <a href="#" class="block p-3 rounded-lg hover:bg-gray-200 ">
+                        <div class="font-medium">Trouver un notaire
 
                         </div>
 
@@ -691,24 +684,24 @@
             </ul>
             <ul>
                 <li>
-                    <a href="#" class="block p-3 rounded-lg hover:bg-gray-50 ">
-                        <div class="font-semibold">Trouver un avocat
+                    <a href="#" class="block p-3 rounded-lg hover:bg-gray-200 ">
+                        <div class="font-medium">Trouver un avocat
 
                         </div>
 
                     </a>
                 </li>
                 <li>
-                    <a href="#" class="block p-3 rounded-lg hover:bg-gray-50 ">
-                        <div class="font-semibold">Trouver un agent immobilier
+                    <a href="#" class="block p-3 rounded-lg hover:bg-gray-200 ">
+                        <div class="font-medium">Trouver un agent immobilier
 
                         </div>
 
                     </a>
                 </li>
                 <li>
-                    <a href="#" class="block p-3 rounded-lg hover:bg-gray-50 ">
-                        <div class="font-semibold">Guide d'investissement immobilier
+                    <a href="#" class="block p-3 rounded-lg hover:bg-gray-200 ">
+                        <div class="font-medium">Guide d'investissement immobilier
                         </div>
 
                     </a>
