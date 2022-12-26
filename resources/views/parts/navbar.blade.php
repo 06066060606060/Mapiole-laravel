@@ -15,13 +15,13 @@
             </svg>
         </button>
 
-        <div id="mega-menu-full" class="hidden justify-between items-center w-full md:flex md:w-auto md:order-1 bg-white md:bg-transparent mt-8 md:mt-0 pb-4">
+        <div id="mega-menu-full" class="hidden justify-between items-center w-full md:flex md:w-auto md:order-1 bg-white md:bg-transparent mt-10 md:mt-0 pb-4">
 
             <ul class="flex flex-col w-full mt-4 text-sm font-medium md:flex-row md:space-x-4 md:mt-0">
            
                 <li>
                     <button id="mega-menu-full-dropdown-button" data-collapse-toggle="mega-menu-full-dropdown"
-                        class="flex justify-between items-center py-2 pr-4 pl-3 w-full font-bold text-gray-700 border-b border-gray-100 md:w-auto hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-blue-600 md:p-0 mt-2    ">Rechercher
+                        class="flex justify-between items-center py-2 pr-4 pl-3 w-full font-medium text-gray-700 border-b border-gray-100 md:w-auto hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-blue-600 md:p-0 mt-2    ">Rechercher
                         <svg class="ml-1 w-4 h-4" fill="currentColor" viewBox="0 0 20 20"
                             xmlns="http://www.w3.org/2000/svg">
                             <path fill-rule="evenodd"
@@ -31,7 +31,7 @@
                 </li>
                 <li>
                     <button id="mega-menu-full-dropdown-button2" data-collapse-toggle="mega-menu-full-dropdown2"
-                        class="flex justify-between items-center py-2 pr-4 pl-3 w-full font-bold text-gray-700 border-b border-gray-100 md:w-auto hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-blue-600 md:p-0  mt-2    ">Acheter
+                        class="flex justify-between items-center py-2 pr-4 pl-3 w-full font-medium text-gray-700 border-b border-gray-100 md:w-auto hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-blue-600 md:p-0  mt-2    ">Acheter
                         <svg class="ml-1 w-4 h-4" fill="currentColor" viewBox="0 0 20 20"
                             xmlns="http://www.w3.org/2000/svg">
                             <path fill-rule="evenodd"
@@ -41,7 +41,7 @@
                 </li>
                 <li>
                     <button id="mega-menu-full-dropdown-button3" data-collapse-toggle="mega-menu-full-dropdown3"
-                        class="flex justify-between items-center py-2 pr-4 pl-3 w-full font-bold text-gray-700 border-b border-gray-100 md:w-auto hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-blue-600 md:p-0  mt-2    ">Vendre
+                        class="flex justify-between items-center py-2 pr-4 pl-3 w-full font-medium text-gray-700 border-b border-gray-100 md:w-auto hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-blue-600 md:p-0  mt-2    ">Vendre
                         <svg class="ml-1 w-4 h-4" fill="currentColor" viewBox="0 0 20 20"
                             xmlns="http://www.w3.org/2000/svg">
                             <path fill-rule="evenodd"
@@ -51,7 +51,7 @@
                 </li>
                 <li>
                     <button id="mega-menu-full-dropdown-button4" data-collapse-toggle="mega-menu-full-dropdown4"
-                        class="flex justify-between items-center py-2 pr-4 pl-3 w-full font-bold text-gray-700 border-b border-gray-100 md:w-auto hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-blue-600 md:p-0  mt-2    ">Louer
+                        class="flex justify-between items-center py-2 pr-4 pl-3 w-full font-medium text-gray-700 border-b border-gray-100 md:w-auto hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-blue-600 md:p-0  mt-2    ">Louer
                         <svg class="ml-1 w-4 h-4" fill="currentColor" viewBox="0 0 20 20"
                             xmlns="http://www.w3.org/2000/svg">
                             <path fill-rule="evenodd"
@@ -61,7 +61,7 @@
                 </li>
                 <li>
                     <button id="mega-menu-full-dropdown-button5" data-collapse-toggle="mega-menu-full-dropdown5"
-                        class="flex justify-between items-center py-2 pr-4 pl-3 w-full font-bold text-gray-700 border-b border-gray-100 md:w-auto hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-blue-600 md:p-0  mt-2    ">Services
+                        class="flex justify-between items-center py-2 pr-4 pl-3 w-full font-medium text-gray-700 border-b border-gray-100 md:w-auto hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-blue-600 md:p-0  mt-2    ">Services
                         <svg class="ml-1 w-4 h-4" fill="currentColor" viewBox="0 0 20 20"
                             xmlns="http://www.w3.org/2000/svg">
                             <path fill-rule="evenodd"
