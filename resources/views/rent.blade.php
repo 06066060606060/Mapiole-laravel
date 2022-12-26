@@ -36,7 +36,7 @@
                   <div class="flex flex-col">
                     <label for="search" class="pt-2 text-white md:pt-0">Quoi?</label>
                     <select name="note"
-                      class="mx-1 w-[110px] appearance-none btnmenu p-4 text-center text-sm text-black bg-white rounded-lg hover:border-blue-500 shadow-sm">
+                      class="filtre mx-1 w-[110px] appearance-none btnmenu p-4 text-center text-sm text-black bg-white rounded-lg hover:border-blue-500 shadow-sm">
                       <option value="" class="text-center">Appartement</option>
                       <option value="10" class="text-center">Maison</option>
                       <option value="20" class="text-center">Bureau</option>
@@ -48,7 +48,7 @@
                   <div class="flex flex-col">
                     <label for="search" class="pt-2 text-white md:pt-0">Prix?</label>
                     <select name="note"
-                      class="mx-1 w-[94px] appearance-none btnmenu p-4 text-center text-sm text-black bg-white rounded-lg hover:border-blue-500 shadow-sm">
+                      class="filtre mx-1 w-[94px] appearance-none btnmenu p-4 text-center text-sm text-black bg-white rounded-lg hover:border-blue-500 shadow-sm">
                       <option value="" class="text-center">Indifférent</option>
                       <option value="10" class="text-center">50000</option>
                       <option value="20" class="text-center">30000</option>
@@ -60,7 +60,7 @@
                   <div class="flex flex-col">
                     <label for="search" class="pt-2 text-white md:pt-0">Piéces?</label>
                     <select name="note"
-                      class="mx-1 w-[94px] appearance-none btnmenu p-4 text-center text-sm text-black bg-white rounded-lg hover:border-blue-500 shadow-sm">
+                      class="filtre mx-1 w-[94px] appearance-none btnmenu p-4 text-center text-sm text-black bg-white rounded-lg hover:border-blue-500 shadow-sm">
                       <option value="" class="text-center">Indifférent</option>
                       <option value="10" class="text-center">1</option>
                       <option value="20" class="text-center">2</option>
@@ -91,7 +91,7 @@
                   <div class="flex flex-col">
                     <label for="search" class="pt-2 text-white md:pt-0">Quoi?</label>
                     <select name="note"
-                      class="mx-1 w-[110px] appearance-none btnmenu p-4 text-center text-sm text-black bg-white rounded-lg hover:border-blue-500 shadow-sm">
+                      class="filtre mx-1 w-[110px] appearance-none btnmenu p-4 text-center text-sm text-black bg-white rounded-lg hover:border-blue-500 shadow-sm">
                       <option value="" class="text-center">Appartement</option>
                       <option value="10" class="text-center">Maison</option>
                       <option value="20" class="text-center">Bureau</option>
@@ -103,7 +103,7 @@
                   <div class="flex flex-col">
                     <label for="search" class="pt-2 text-white md:pt-0">Prix?</label>
                     <select name="note"
-                      class="mx-1 w-[94px] appearance-none btnmenu p-4 text-center text-sm text-black bg-white rounded-lg hover:border-blue-500 shadow-sm">
+                      class="filtre mx-1 w-[94px] appearance-none btnmenu p-4 text-center text-sm text-black bg-white rounded-lg hover:border-blue-500 shadow-sm">
                       <option value="" class="text-center">Indifférent</option>
                       <option value="10" class="text-center">50000</option>
                       <option value="20" class="text-center">30000</option>
@@ -115,7 +115,7 @@
                   <div class="flex flex-col">
                     <label for="search" class="pt-2 text-white md:pt-0">Piéces?</label>
                     <select name="note"
-                      class="mx-1 w-[94px] appearance-none btnmenu p-4 text-center text-sm text-black bg-white rounded-lg hover:border-blue-500 shadow-sm">
+                      class="filtre mx-1 w-[94px] appearance-none btnmenu p-4 text-center text-sm text-black bg-white rounded-lg hover:border-blue-500 shadow-sm">
                       <option value="" class="text-center">Indifférent</option>
                       <option value="10" class="text-center">1</option>
                       <option value="20" class="text-center">2</option>
@@ -165,14 +165,14 @@
                   <form action="" method="get">
 
                     <select name="note"
-                      class="mx-1 w-[188px] my-2 appearance-none btnmenu  h-[33.99px]  text-center text-sm text-black bg-gray-300 border border-transparent rounded-md hover:border-blue-500 apple">
+                      class="filtre mx-1 w-[188px] my-2 appearance-none btnmenu  h-[33.99px]  text-center text-sm text-black bg-gray-300 border border-transparent rounded-md hover:border-blue-500 apple">
                       <option value="" class="text-center">Vente</option>
                       <option value="" class="text-center">Location</option>
                       </option>
                     </select>
 
                     <select name="note"
-                      class="mx-1 w-[188px] my-2 appearance-none btnmenu  h-[33.99px]  text-center text-sm text-black bg-gray-300 border border-transparent rounded-md hover:border-blue-500 apple">
+                      class="filtre mx-1 w-[188px] my-2 appearance-none btnmenu  h-[33.99px]  text-center text-sm text-black bg-gray-300 border border-transparent rounded-md hover:border-blue-500 apple">
                       <option value="" class="text-center">Type</option>
                       <option value="" class="text-center">Appartement</option>
                       <option value="10" class="text-center">Maison</option>
@@ -182,7 +182,7 @@
                     </select>
 
                     <select name="prix"
-                      class="mx-1  w-[188px] my-2 appearance-none btnmenu h-[33.99px] text-center text-sm text-black bg-gray-300 border border-transparent rounded-md hover:border-blue-500 apple">
+                      class="filtre mx-1  w-[188px] my-2 appearance-none btnmenu h-[33.99px] text-center text-sm text-black bg-gray-300 border border-transparent rounded-md hover:border-blue-500 apple">
                       <option value="" class="text-center">Prix</option>
                       <option value="10" class="text-center">0</option>
                       <option value="20" class="text-center">0</option>
@@ -191,7 +191,7 @@
                     </select>
 
                     <select name="note"
-                      class="mx-1 w-[188px] my-2 appearance-none btnmenu h-[33.99px] text-center text-sm text-black bg-gray-300 border border-transparent rounded-md hover:border-blue-500 apple">
+                      class="filtre mx-1 w-[188px] my-2 appearance-none btnmenu h-[33.99px] text-center text-sm text-black bg-gray-300 border border-transparent rounded-md hover:border-blue-500 apple">
                       <option value="" class="text-center">Piéces</option>
                       </option>
                     </select>

@@ -77,8 +77,30 @@ class LocationCrudController extends CrudController
         $this->crud->setValidation([
             'name' => 'required|min:2|max:255',
         ]);
+
+
         CRUD::field('user_id')->label('Utilisateur');
-        CRUD::field('name')->label('Nom');
+
+        CRUD::addField([
+            'name' => 'user_id',
+            'label' => 'Utilisateur',
+            'attributes' => [
+                'class'       => 'form-control ',
+              ], // change the HTML attributes of your input
+              'wrapper'   => [ 
+                 'class'      => 'form-group col-xs-2 pl-3 pt-2'
+              ], // change the HTML attributes for the field wrapper - mostly for resizing fields 
+        ]);
+        CRUD::addField([
+            'name' => 'name',
+            'label' => 'titre de l\'annonce',
+            'attributes' => [
+                'class'       => 'form-control ',
+              ], // change the HTML attributes of your input
+              'wrapper'   => [ 
+                 'class'      => 'form-group col-xs-3 pl-3 pt-2'
+              ], // change the HTML attributes for the field wrapper - mostly for resizing fields 
+        ]);
         CRUD::addField([
             // Photo
             'name' => 'image',
@@ -88,21 +110,105 @@ class LocationCrudController extends CrudController
             'prefix' => 'storage/',
             'upload' => true,
             'temporary' => 10,
+              'wrapper'   => [ 
+                 'class'      => 'form-group w-52 pl-3'
+              ], // change the HTML attributes for the field wrapper - mostly for resizing fields 
         ]);
         CRUD::field('description')->type('textarea');
+
+        CRUD::addField(['name' => 'prix', 'type' => 'number', 'label' => 'Prix / mois', 'wrapper' => [ 'class' => 'form-group col-md pl-3'],]);
+        CRUD::addField(['name' => 'surface', 'type' => 'number', 'label' => 'Surface m3', 'wrapper' => [ 'class' => 'form-group col-md pl-3'],]);
+        CRUD::addField(['name' => 'nb_piece', 'type' => 'number', 'label' => 'Nb pièces', 'wrapper' => [ 'class' => 'form-group col-md pl-3'],]);
+        CRUD::addField(['name' => 'nb_chambre', 'type' => 'number', 'label' => 'Nb chambres', 'wrapper' => [ 'class' => 'form-group col-md pl-3'],]);
+        CRUD::addField(['name' => 'nb_salle_bain', 'type' => 'number', 'label' => 'Nb salle de bain', 'wrapper' => [ 'class' => 'form-group col-md pl-3'],]);
+        CRUD::addField(['name' => 'nb_toilette', 'type' => 'number', 'label' => 'Nb toilette', 'wrapper' => [ 'class' => 'form-group col-md pl-3'],]);
+        $this->crud->addField([   // CustomHTML
+            'name'  => 'separator',
+            'type'  => 'custom_html',
+            'value' => '<hr>'
+        ],);
+
         $this->crud->addField([
             // select_from_array
-            'name' => 'category',
-            'label' => 'Catégorie',
+            'name' => 'terrasse',
+            'label' => 'terrasse/balcon',
+            'type' => 'select_from_array',
+            'wrapper' => [ 'class' => 'form-group col-md pl-3'],
+            'options' => [
+                // the key will be stored in the db, the value will be shown as label;
+                1 => 'Oui',
+                0 => 'Non',
+            ],
+            // optional
+            'default' => '0',
+            'inline' => true, // show the radios all on the same line?
+        ]);
+        $this->crud->addField([
+            // select_from_array
+            'name' => 'garage',
+            'label' => 'garage',
+            'type' => 'select_from_array',
+            'wrapper' => [ 'class' => 'form-group col-md pl-3'],
+            'options' => [
+                // the key will be stored in the db, the value will be shown as label;
+                1 => 'Oui',
+                0 => 'Non',
+            ],
+            // optional
+            'default' => '0',
+            'inline' => true, // show the radios all on the same line?
+        ]);
+        $this->crud->addField([
+            // select_from_array
+            'name' => 'parking',
+            'label' => 'parking',
+            'wrapper' => [ 'class' => 'form-group col-md pl-3'],
             'type' => 'select_from_array',
             'options' => [
-                'Vente' => 'Vente',
-                'Location' => 'Location',
+                // the key will be stored in the db, the value will be shown as label;
+                1 => 'Oui',
+                0 => 'Non',
             ],
-            'allows_null' => false,
-            'default' => 'Autre',
-            // 'allows_multiple' => true, // OPTIONAL; needs you to cast this to array in your model;
+            // optional
+            'default' => '0',
+            'inline' => true, // show the radios all on the same line?
         ]);
+        $this->crud->addField([
+            // select_from_array
+            'name' => 'piscine',
+            'label' => 'piscine',
+            'wrapper' => [ 'class' => 'form-group col-md pl-3'],
+            'type' => 'select_from_array',
+            'options' => [
+                // the key will be stored in the db, the value will be shown as label;
+                1 => 'Oui',
+                0 => 'Non',
+            ],
+            // optional
+            'default' => '0',
+            'inline' => true, // show the radios all on the same line?
+        ]);
+        $this->crud->addField([
+            // select_from_array
+            'name' => 'jardin',
+            'label' => 'jardin',
+            'wrapper' => [ 'class' => 'form-group col-md pl-3'],
+            'type' => 'select_from_array',
+            'options' => [
+                // the key will be stored in the db, the value will be shown as label;
+                1 => 'Oui',
+                0 => 'Non',
+            ],
+            // optional
+            'default' => '0',
+            'inline' => true, // show the radios all on the same line?
+        ]);
+      
+        CRUD::addField(['name' => 'adresse', 'type' => 'text', 'label' => 'Adresse']);
+        CRUD::addField(['name' => 'ville', 'type' => 'text', 'label' => 'Ville', 'wrapper' => [ 'class' => 'form-group col-md pl-3'],]);
+        CRUD::addField(['name' => 'code_postal', 'type' => 'text', 'label' => 'Code postal', 'wrapper' => [ 'class' => 'form-group col-md pl-3'],]);
+
+        
         $this->crud->addField([
             // radio
             'name' => 'status', // the name of the db column

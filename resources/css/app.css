@@ -85,7 +85,7 @@ img{
 }
 
 
-select {
+.filtre {
   /* text-indent: 33% hanging;   /* FIX POUR CENTRER SELECT  TEXT DANS SAFARI */
    text-align: center;
    text-align: -webkit-center;

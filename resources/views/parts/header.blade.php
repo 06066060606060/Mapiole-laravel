@@ -3,13 +3,13 @@
       <div class="flex flex-col items-center justify-center w-full h-full bg-gray-900/40">
         <h2 class="mx-4 text-5xl font-bold text-white drop-shadow-xl">Inscrivez vous.</h2>
         <p class="max-w-lg pt-2 mx-4 text-white">
-        <p class="mx-4 text-2xl font-medium text-center text-white drop-shadow-xl">Le meilleur choix pour les maisons, les appartements
-          ou autres.</p>
+        <p class="mx-4 text-2xl font-medium text-center text-white drop-shadow-xl">Le meilleur choix pour vendre ou acheter<br> une maison, un appartements
+          ou un terrain.</p>
         </p>
         <label for="Toggle3"
           class="flex flex-col items-center p-2 mt-4 text-white rounded-md cursor-pointer md:flex-row">
           <input id="Toggle3" type="checkbox" class="hidden peer">
-          <a href="./register.html"
+          <a onclick="document.getElementById('secondaryButton').click()"
             class="px-6 py-3 m-2 font-bold transition duration-200 bg-blue-900 rounded hover:bg-blue-600 hover:scale-105 active:scale-100">Inscription</a>
           <a href="./login.html"
             class="px-6 py-3 m-2 font-bold transition duration-200 bg-gray-500 rounded hover:bg-gray-300 hover:text-gray-800 hover:scale-105 active:scale-100">Trouver
