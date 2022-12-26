@@ -243,10 +243,16 @@
 
                      <div class="flex flex-wrap pb-16 mt-8 -m-4">
                          <div class="p-4 xl:w-1/4 md:w-1/2">
-                             <div
-                                 class="p-6 transition duration-200 bg-gray-100 border border-gray-200 rounded-lg shadow-xl hover:border-gray-400">
+                             <figure
+                                 class="snip1461 p-6 transition duration-200 bg-gray-100 border border-gray-200 rounded-lg shadow-xl hover:border-gray-400">
                                  <img class="object-cover object-center w-full h-40 mb-6"
                                      src="./img/Atlanta-Georgia-400x284.png" alt="content">
+                                      <figcaption>
+    <div>
+      <h2>Hanson</h2>
+      <h4>Deck</h4>
+    </div>
+  </figcaption>
                                  <h3 class="text-xs font-bold tracking-widest text-blue-500 title-font">SUBTITLE</h3>
                                  <p class="pb-2 text-base leading-relaxed">Fingerstache flexitarian street art 8-bit
                                      waistcoat. Distillery
@@ -254,10 +260,10 @@
                                  <a href="annonce"
                                      class="flex justify-center px-4 py-2 mx-auto font-bold text-white transition duration-200 bg-blue-900 rounded hover:bg-blue-600 active:bg-blue-800">Plus
                                      d'infos</a>
-                             </div>
+                             </figure>
                          </div>
                          <div class="p-4 xl:w-1/4 md:w-1/2">
-                             <div
+                             <figure
                                  class="p-6 transition duration-200 bg-gray-100 border border-gray-200 rounded-lg shadow-xl hover:border-gray-400">
                                  <img class="object-cover object-center w-full h-40 mb-6"
                                      src="./img/Auburn_Maine-400x284.png" alt="content">
@@ -268,10 +274,10 @@
                                  <a href="annonce"
                                      class="flex justify-center px-4 py-2 mx-auto font-bold text-white transition duration-200 bg-blue-900 rounded hover:bg-blue-600 active:bg-blue-800">Plus
                                      d'infos</a>
-                             </div>
+                             </figure>
                          </div>
                          <div class="p-4 xl:w-1/4 md:w-1/2">
-                             <div
+                             <figure
                                  class="p-6 transition duration-200 bg-gray-100 border border-gray-200 rounded-lg shadow-xl hover:border-gray-400">
                                  <img class="object-cover object-center w-full h-40 mb-6"
                                      src="./img/Austin-Texas-400x284.png" alt="content">
@@ -282,10 +288,10 @@
                                  <a href="annonce"
                                      class="flex justify-center px-4 py-2 mx-auto font-bold text-white transition duration-200 bg-blue-900 rounded hover:bg-blue-600 active:bg-blue-800">Plus
                                      d'infos</a>
-                             </div>
+                             </figure>
                          </div>
                          <div class="p-4 xl:w-1/4 md:w-1/2">
-                             <div
+                             <figure
                                  class="p-6 transition duration-200 bg-gray-100 border border-gray-200 rounded-lg shadow-xl hover:border-gray-400">
                                  <img class="object-cover object-center w-full h-40 mb-6"
                                      src="./img/BirminghamAL-400x284.jpg" alt="content">
@@ -296,10 +302,10 @@
                                  <a href="annonce"
                                      class="flex justify-center px-4 py-2 mx-auto font-bold text-white transition duration-200 bg-blue-900 rounded hover:bg-blue-600 active:bg-blue-800">Plus
                                      d'infos</a>
-                             </div>
+                             </figure>
                          </div>
                          <div class="p-4 xl:w-1/4 md:w-1/2">
-                             <div
+                             <figure
                                  class="p-6 transition duration-200 bg-gray-100 border border-gray-200 rounded-lg shadow-xl hover:border-gray-400">
                                  <img class="object-cover object-center w-full h-40 mb-6"
                                      src="./img/Beverly_Hills_CA-400x284.png" alt="content">
@@ -310,10 +316,10 @@
                                  <a href="annonce"
                                      class="flex justify-center px-4 py-2 mx-auto font-bold text-white transition duration-200 bg-blue-900 rounded hover:bg-blue-600 active:bg-blue-800">Plus
                                      d'infos</a>
-                             </div>
+                             </figure>
                          </div>
                          <div class="p-4 xl:w-1/4 md:w-1/2">
-                             <div
+                             <figure
                                  class="p-6 transition duration-200 bg-gray-100 border border-gray-200 rounded-lg shadow-xl hover:border-gray-400">
                                  <img class="object-cover object-center w-full h-40 mb-6"
                                      src="./img/BirminghamAL-400x284.jpg" alt="content">
@@ -324,10 +330,10 @@
                                  <a href="annonce"
                                      class="flex justify-center px-4 py-2 mx-auto font-bold text-white transition duration-200 bg-blue-900 rounded hover:bg-blue-600 active:bg-blue-800">Plus
                                      d'infos</a>
-                             </div>
+                             </figure>
                          </div>
                          <div class="p-4 xl:w-1/4 md:w-1/2">
-                             <div
+                             <figure
                                  class="p-6 transition duration-200 bg-gray-100 border border-gray-200 rounded-lg shadow-xl hover:border-gray-400">
                                  <img class="object-cover object-center w-full h-40 mb-6"
                                      src="./img/Bluffton_SC-400x284.png" alt="content">
@@ -338,10 +344,10 @@
                                  <a href="annonce"
                                      class="flex justify-center px-4 py-2 mx-auto font-bold text-white transition duration-200 bg-blue-900 rounded hover:bg-blue-600 active:bg-blue-800">Plus
                                      d'infos</a>
-                             </div>
+                             </figure>
                          </div>
                          <div class="p-4 xl:w-1/4 md:w-1/2">
-                             <div
+                             <figure
                                  class="p-6 transition duration-200 bg-gray-100 border border-gray-200 rounded-lg shadow-xl hover:border-gray-400">
                                  <img class="object-cover object-center w-full h-40 mb-6"
                                      src="./img/Boston_MA-400x284.jpg" alt="content">
@@ -352,7 +358,7 @@
                                  <a href="annonce"
                                      class="flex justify-center px-4 py-2 mx-auto font-bold text-white transition duration-200 bg-blue-900 rounded hover:bg-blue-600 active:bg-blue-800">Plus
                                      d'infos</a>
-                             </div>
+                             </figure>
                          </div>
                      </div>
                  </div>
@@ -360,4 +366,18 @@
          </div>
 
      </div>
+<style>
+
+
+</style>
+
+<script>
+$(".hover").mouseleave(
+  function () {
+    $(this).removeClass("hover");
+  }
+);
+
+</script>
+
  @endsection
