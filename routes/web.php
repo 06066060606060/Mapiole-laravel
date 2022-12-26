@@ -40,3 +40,19 @@ Route::post('delete_order', [GlobalController::class, 'deleteOrder'])->name('del
 Route::post('save_address', [GlobalController::class, 'saveAddress'])->name('saveAddress');
 
 Route::post('deleteuser/{id}', [GlobalController::class, 'deleteUser'])->name('deleteUser');
+
+Route::get('/blog', function () {
+    return view('blog');
+});
+
+Route::get('company', function () {
+    return view('company');
+});
+
+Route::get('/community', function () {
+    return view('community');
+});
+
+Route::get('career', function () {
+    return view('career');
+});

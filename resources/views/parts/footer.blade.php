@@ -199,16 +199,16 @@
         <div class="grid grid-cols-1 gap-6 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
           <div>
             <h3 class="text-gray-700 uppercase ">A propos</h3>
-            <a href="#" class="block mt-2 text-sm text-gray-600 hover:underline">Company</a>
-            <a href="#" class="block mt-2 text-sm text-gray-600 hover:underline">community</a>
-            <a href="#" class="block mt-2 text-sm text-gray-600 hover:underline">Careers</a>
+            <a href="company" class="block mt-2 text-sm text-gray-600 hover:underline">Company</a>
+            <a href="community" class="block mt-2 text-sm text-gray-600 hover:underline">community</a>
+            <a href="career" class="block mt-2 text-sm text-gray-600 hover:underline">Careers</a>
           </div>
 
           <div>
             <h3 class="text-gray-700 uppercase ">Blog</h3>
-            <a href="#" class="block mt-2 text-sm text-gray-600 hover:underline">Teck</a>
-            <a href="#" class="block mt-2 text-sm text-gray-600 hover:underline">Music</a>
-            <a href="#" class="block mt-2 text-sm text-gray-600 hover:underline">Videos</a>
+            <a href="#" class="block mt-2 text-sm text-gray-600 hover:underline">Blog page</a>
+            <a href="#" class="block mt-2 text-sm text-gray-600 hover:underline"></a>
+            <a href="#" class="block mt-2 text-sm text-gray-600 hover:underline"></a>
           </div>
 
           <div>

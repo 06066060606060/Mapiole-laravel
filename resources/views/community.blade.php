@@ -8,7 +8,7 @@
         <div class="p-5 mx-auto text-gray-100 sm:p-10 md:px-16  min-h-screen">
             <div class="flex flex-col max-w-5xl mx-auto overflow-hidden rounded">
 
-                <div class="text-white ">
+                <div class="text-black ">
                     @php
                         echo $pages[1]->content;
                     @endphp
