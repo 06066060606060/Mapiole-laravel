@@ -8,10 +8,10 @@
         <div id="main-content" class="relative w-full h-full mt-2 overflow-y-auto rounded-lg">
                 @if (backpack_user()->role == 'admin')
             <p class="w-1/2 px-4 py-2 mx-8 mt-4 text-xs text-gray-200 bg-gray-900 rounded -pl-2">
-                Derniéres mise à jour: {{ $version }}<br>
+                Derniéres mise à jour: 1.02<br>
                 -modif menu<br>
-                -fix login register
-                -fix mail
+                -fix login register<br>
+                -fix mail<br>
 
 
             </p>
