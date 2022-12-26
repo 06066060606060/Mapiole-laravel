@@ -3,9 +3,10 @@
         <a href="/" class="flex items-center mr-16">
             <img src="./img/logo.png" class="mr-3 h-20" alt=" Logo" />
         </a>
-    
-    
-        <div id="mega-menu-full" class=" justify-between items-center w-full flex md:w-auto md:order-1 bg-white md:bg-transparent mt-8 md:mt-0 pb-4">
+
+
+        <div id="mega-menu-full"
+            class=" justify-between items-center w-full flex md:w-auto md:order-1 bg-white md:bg-transparent mt-8 md:mt-0 pb-4">
             <ul class="flex flex-col w-full mt-4 text-sm font-medium md:flex-row md:space-x-8 md:mt-0">
                 <li>
                     <button id="mega-menu-full-dropdown-button" data-collapse-toggle="mega-menu-full-dropdown"
@@ -57,7 +58,7 @@
                                 clip-rule="evenodd"></path>
                         </svg></button>
                 </li>
-               
+
                 <li>
                     <div class="flex items-center mt-2 md:mt-0">
                         @if (backpack_auth()->check())
@@ -375,19 +376,22 @@
             <ul aria-labelledby="mega-menu-full-dropdown-button2">
                 <li>
                     <a href="#" class="block p-3 rounded-lg hover:bg-gray-50 ">
-                        <div class="font-semibold">Louer</div>
+                        <div class="font-semibold">Acheter un appartement
+                        </div>
 
                     </a>
                 </li>
                 <li>
                     <a href="#" class="block p-3 rounded-lg hover:bg-gray-50 ">
-                        <div class="font-semibold">Segmentation</div>
+                        <div class="font-semibold">Acheter une maison
+                        </div>
 
                     </a>
                 </li>
                 <li>
                     <a href="#" class="block p-3 rounded-lg hover:bg-gray-50 ">
-                        <div class="font-semibold">Marketing CRM</div>
+                        <div class="font-semibold">Acheter un terrain
+                        </div>
 
                     </a>
                 </li>
@@ -395,19 +399,22 @@
             <ul>
                 <li>
                     <a href="#" class="block p-3 rounded-lg hover:bg-gray-50 ">
-                        <div class="font-semibold">Online Stores</div>
+                        <div class="font-semibold">Acheter des bureaux
+                        </div>
 
                     </a>
                 </li>
                 <li>
                     <a href="#" class="block p-3 rounded-lg hover:bg-gray-50 ">
-                        <div class="font-semibold">Segmentation</div>
+                        <div class="font-semibold">Acheter un espace commercial
+                        </div>
 
                     </a>
                 </li>
                 <li>
                     <a href="#" class="block p-3 rounded-lg hover:bg-gray-50 ">
-                        <div class="font-semibold">Marketing CRM</div>
+                        <div class="font-semibold">Acheter une villa
+                        </div>
 
                     </a>
                 </li>
@@ -415,19 +422,22 @@
             <ul class="hidden md:block">
                 <li>
                     <a href="#" class="block p-3 rounded-lg hover:bg-gray-50 ">
-                        <div class="font-semibold">Audience Management</div>
+                        <div class="font-semibold">Acheter un immeuble
+                        </div>
 
                     </a>
                 </li>
                 <li>
                     <a href="#" class="block p-3 rounded-lg hover:bg-gray-50 ">
-                        <div class="font-semibold">Creative Tools</div>
+                        <div class="font-semibold">Consulter un expert immobilier
+                        </div>
 
                     </a>
                 </li>
                 <li>
                     <a href="#" class="block p-3 rounded-lg hover:bg-gray-50 ">
-                        <div class="font-semibold">Marketing Automation</div>
+                        <div class="font-semibold">Guide d'achat de biens immobiliers
+                        </div>
 
                     </a>
                 </li>
@@ -440,19 +450,22 @@
             <ul aria-labelledby="mega-menu-full-dropdown-button3">
                 <li>
                     <a href="#" class="block p-3 rounded-lg hover:bg-gray-50 ">
-                        <div class="font-semibold">acheter</div>
+                        <div class="font-semibold">Vendre un appartement
+                        </div>
 
                     </a>
                 </li>
                 <li>
                     <a href="#" class="block p-3 rounded-lg hover:bg-gray-50 ">
-                        <div class="font-semibold">Segmentation</div>
+                        <div class="font-semibold">Vendre une maison
+                        </div>
 
                     </a>
                 </li>
                 <li>
                     <a href="#" class="block p-3 rounded-lg hover:bg-gray-50 ">
-                        <div class="font-semibold">Marketing CRM</div>
+                        <div class="font-semibold">Vendre un terrain
+                        </div>
 
                     </a>
                 </li>
@@ -460,19 +473,22 @@
             <ul>
                 <li>
                     <a href="#" class="block p-3 rounded-lg hover:bg-gray-50 ">
-                        <div class="font-semibold">Online Stores</div>
+                        <div class="font-semibold">Vendre des bureaux
+                        </div>
 
                     </a>
                 </li>
                 <li>
                     <a href="#" class="block p-3 rounded-lg hover:bg-gray-50 ">
-                        <div class="font-semibold">Segmentation</div>
+                        <div class="font-semibold">Vendre un espace commercial
+                        </div>
 
                     </a>
                 </li>
                 <li>
                     <a href="#" class="block p-3 rounded-lg hover:bg-gray-50 ">
-                        <div class="font-semibold">Marketing CRM</div>
+                        <div class="font-semibold">Vendre une villa
+                        </div>
 
                     </a>
                 </li>
@@ -480,19 +496,30 @@
             <ul class="hidden md:block">
                 <li>
                     <a href="#" class="block p-3 rounded-lg hover:bg-gray-50 ">
-                        <div class="font-semibold">Audience Management</div>
+                        <div class="font-semibold">Vendre un immeuble
+                        </div>
 
                     </a>
                 </li>
                 <li>
                     <a href="#" class="block p-3 rounded-lg hover:bg-gray-50 ">
-                        <div class="font-semibold">Creative Tools</div>
+                        <div class="font-semibold">Confier mon bien à vendre
+                        </div>
 
                     </a>
                 </li>
                 <li>
                     <a href="#" class="block p-3 rounded-lg hover:bg-gray-50 ">
-                        <div class="font-semibold">Marketing Automation</div>
+                        <div class="font-semibold">Consulter un expert immobilier
+                        </div>
+
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="block p-3 rounded-lg hover:bg-gray-50 ">
+                        <div class="font-semibold">Guide de vente de biens immobiliers
+
+                        </div>
 
                     </a>
                 </li>
@@ -505,19 +532,22 @@
             <ul aria-labelledby="mega-menu-full-dropdown-button4">
                 <li>
                     <a href="#" class="block p-3 rounded-lg hover:bg-gray-50 ">
-                        <div class="font-semibold">Estimer</div>
+                        <div class="font-semibold">Louer un appartement
+                        </div>
 
                     </a>
                 </li>
                 <li>
                     <a href="#" class="block p-3 rounded-lg hover:bg-gray-50 ">
-                        <div class="font-semibold">Segmentation</div>
+                        <div class="font-semibold">Louer une maison
+                        </div>
 
                     </a>
                 </li>
                 <li>
                     <a href="#" class="block p-3 rounded-lg hover:bg-gray-50 ">
-                        <div class="font-semibold">Marketing CRM</div>
+                        <div class="font-semibold">Louer des bureaux
+                        </div>
 
                     </a>
                 </li>
@@ -525,19 +555,21 @@
             <ul>
                 <li>
                     <a href="#" class="block p-3 rounded-lg hover:bg-gray-50 ">
-                        <div class="font-semibold">Online Stores</div>
+                        <div class="font-semibold">Louer un espace commercial
+                        </div>
 
                     </a>
                 </li>
                 <li>
                     <a href="#" class="block p-3 rounded-lg hover:bg-gray-50 ">
-                        <div class="font-semibold">Segmentation</div>
+                        <div class="font-semibold">Louer un terrain</div>
 
                     </a>
                 </li>
                 <li>
                     <a href="#" class="block p-3 rounded-lg hover:bg-gray-50 ">
-                        <div class="font-semibold">Marketing CRM</div>
+                        <div class="font-semibold">Louer une villa
+                        </div>
 
                     </a>
                 </li>
@@ -545,22 +577,25 @@
             <ul class="hidden md:block">
                 <li>
                     <a href="#" class="block p-3 rounded-lg hover:bg-gray-50 ">
-                        <div class="font-semibold">Audience Management</div>
+                        <div class="font-semibold">Louer un appartement meublé
+                        </div>
 
                     </a>
                 </li>
                 <li>
                     <a href="#" class="block p-3 rounded-lg hover:bg-gray-50 ">
-                        <div class="font-semibold">Creative Tools</div>
+                        <div class="font-semibold">Louer un terrain commercial
+                        </div>
 
                     </a>
                 </li>
                 <li>
                     <a href="#" class="block p-3 rounded-lg hover:bg-gray-50 ">
-                        <div class="font-semibold">Marketing Automation</div>
+                        <div class="font-semibold">Guide de location de biens immobiliers</div>
 
                     </a>
                 </li>
+
             </ul>
         </div>
     </div>
@@ -570,59 +605,99 @@
             <ul aria-labelledby="mega-menu-full-dropdown-button5">
                 <li>
                     <a href="#" class="block p-3 rounded-lg hover:bg-gray-50 ">
-                        <div class="font-semibold">services</div>
+                        <div class="font-semibold">Consulter un expert immobilier
+                        </div>
 
                     </a>
                 </li>
                 <li>
                     <a href="#" class="block p-3 rounded-lg hover:bg-gray-50 ">
-                        <div class="font-semibold">Segmentation</div>
+                        <div class="font-semibold">Commander un document administratif </div>
 
                     </a>
                 </li>
                 <li>
                     <a href="#" class="block p-3 rounded-lg hover:bg-gray-50 ">
-                        <div class="font-semibold">Marketing CRM</div>
+                        <div class="font-semibold">Commander une main d’oeuvre
+                        </div>
 
                     </a>
                 </li>
-            </ul>
+           
+                <li>
+                    <a href="#" class="block p-3 rounded-lg hover:bg-gray-50 ">
+                        <div class="font-semibold">Suivre son dossier personnel
+                        </div>
+
+                    </a>
+                </li>
+               
+                <li>
+                    <a href="#" class="block p-3 rounded-lg hover:bg-gray-50 ">
+                        <div class="font-semibold">Morcellement</div>
+
+                    </a>
+                </li>
+                  </ul>
             <ul>
                 <li>
                     <a href="#" class="block p-3 rounded-lg hover:bg-gray-50 ">
-                        <div class="font-semibold">Online Stores</div>
+                        <div class="font-semibold">Titre foncier
+                        </div>
+
+                    </a>
+                </li>
+            
+                <li>
+                    <a href="#" class="block p-3 rounded-lg hover:bg-gray-50 ">
+                        <div class="font-semibold">Topographie</div>
 
                     </a>
                 </li>
                 <li>
                     <a href="#" class="block p-3 rounded-lg hover:bg-gray-50 ">
-                        <div class="font-semibold">Segmentation</div>
+                        <div class="font-semibold">Immatriculation foncière
+                        </div>
 
                     </a>
                 </li>
                 <li>
                     <a href="#" class="block p-3 rounded-lg hover:bg-gray-50 ">
-                        <div class="font-semibold">Marketing CRM</div>
-
-                    </a>
-                </li>
-            </ul>
-            <ul class="hidden md:block">
-                <li>
-                    <a href="#" class="block p-3 rounded-lg hover:bg-gray-50 ">
-                        <div class="font-semibold">Audience Management</div>
+                        <div class="font-semibold">Architecture technique et design
+                        </div>
 
                     </a>
                 </li>
                 <li>
                     <a href="#" class="block p-3 rounded-lg hover:bg-gray-50 ">
-                        <div class="font-semibold">Creative Tools</div>
+                        <div class="font-semibold">Trouver un notaire
+
+                        </div>
+
+                    </a>
+                </li>
+                </ul>
+            <ul>
+                <li>
+                    <a href="#" class="block p-3 rounded-lg hover:bg-gray-50 ">
+                        <div class="font-semibold">Trouver un avocat
+
+                        </div>
 
                     </a>
                 </li>
                 <li>
                     <a href="#" class="block p-3 rounded-lg hover:bg-gray-50 ">
-                        <div class="font-semibold">Marketing Automation</div>
+                        <div class="font-semibold">Trouver un agent immobilier
+
+                        </div>
+
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="block p-3 rounded-lg hover:bg-gray-50 ">
+                        <div class="font-semibold">Guide d'investissement immobilier
+                        </div>
 
                     </a>
                 </li>
