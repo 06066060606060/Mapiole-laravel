@@ -59,7 +59,7 @@
                 </li>
                
                 <li>
-                    <div class="flex items-center">
+                    <div class="flex items-center mt-2 md:mt-0">
                         @if (backpack_auth()->check())
                             <a href=""
                                 class="text-xs md:text-base font-bold items-center justify-center w-52 h-10 px-2 ml-1 mr-2 text-gray-600 bg-white border border-gray-600 rounded-md flex focus:outline-none hover:bg-gray-900 hover:text-white">
