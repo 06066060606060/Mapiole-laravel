@@ -1,7 +1,9 @@
-<nav id="navbar" class="fixed top-0 z-10 w-full pt-2 pb-2 transition duration-200 ">
-    <div class="flex flex-wrap items-center w-full px-4 md:px-6 py-2.5 justify-around">
-        <a href="/" class="flex items-center mr-16">
-            <img src="./img/logo.png" class="mr-3 h-32" alt=" Logo" />
+<nav id="navbar" class="fixed top-0 z-10 w-full pt-2 pb-2 transition duration-200 " >
+    <div class="flex flex-wrap items-center w-full px-4 md:px-6 py-2.5 justify-around" >
+        <a href="/" class="flex items-center mr-16"  >
+         <img src="./img/logo.png" class="mr-3 h-32" alt=" Logo" />
+            <img src="./img/blob.svg" class="absolute mr-3 h-32 -z-10" alt=" Logo" />
+            
         </a>
         <button data-collapse-toggle="mega-menu-full" type="button"
             class="inline-flex items-center p-2 ml-1 text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200"
