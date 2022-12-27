@@ -80,6 +80,15 @@
             </div>
         </div>
 
+<form method="POST" action="../changelocale">
+@csrf
+
+ 
+
+    <button type ="submit" class="">
+       change
+    </button>
+</form>
 
  
 

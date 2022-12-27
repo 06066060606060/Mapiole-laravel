@@ -156,5 +156,18 @@ class GlobalController extends Controller
         return view("/");
     }
 
+    /**
+ * Change session locale
+ * @param  Request $request
+ * @return Response
+ */
+public function changeLocale()
+{
+
+
+    \Session::put('locale', 'en');
+
+    return redirect()->back();
+}
 
 }

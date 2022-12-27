@@ -23,7 +23,7 @@
            
                 <li>
                     <button id="mega-menu-full-dropdown-button" data-collapse-toggle="mega-menu-full-dropdown"
-                        class="flex justify-between items-center py-2 pr-4 pl-3 w-full font-medium text-gray-700  border-b border-gray-100 md:w-auto hover:bg-gray-200 md:hover:bg-transparent md:border-0 md:hover:text-blue-600 md:p-0 mt-2    ">Rechercher
+                        class="flex justify-between items-center py-2 pr-4 pl-3 w-full font-medium  md:text-white text-gray-800 border-b border-gray-100 md:w-auto hover:bg-gray-200 md:hover:bg-transparent md:border-0 md:hover:text-blue-600 md:p-0 mt-2    ">Rechercher
                         <svg class="ml-1 w-4 h-4" fill="currentColor" viewBox="0 0 20 20"
                             xmlns="http://www.w3.org/2000/svg">
                             <path fill-rule="evenodd"
@@ -33,7 +33,7 @@
                 </li>
                 <li>
                     <button id="mega-menu-full-dropdown-button2" data-collapse-toggle="mega-menu-full-dropdown2"
-                        class="flex justify-between items-center py-2 pr-4 pl-3 w-full font-medium text-gray-700  border-b border-gray-100 md:w-auto hover:bg-gray-200 md:hover:bg-transparent md:border-0 md:hover:text-blue-600 md:p-0  mt-2    ">Acheter
+                        class="flex justify-between items-center py-2 pr-4 pl-3 w-full font-medium  md:text-white text-gray-800  border-b border-gray-100 md:w-auto hover:bg-gray-200 md:hover:bg-transparent md:border-0 md:hover:text-blue-600 md:p-0  mt-2    ">Acheter
                         <svg class="ml-1 w-4 h-4" fill="currentColor" viewBox="0 0 20 20"
                             xmlns="http://www.w3.org/2000/svg">
                             <path fill-rule="evenodd"
@@ -43,7 +43,7 @@
                 </li>
                 <li>
                     <button id="mega-menu-full-dropdown-button3" data-collapse-toggle="mega-menu-full-dropdown3"
-                        class="flex justify-between items-center py-2 pr-4 pl-3 w-full font-medium text-gray-700  border-b border-gray-100 md:w-auto hover:bg-gray-200 md:hover:bg-transparent md:border-0 md:hover:text-blue-600 md:p-0  mt-2    ">Vendre
+                        class="flex justify-between items-center py-2 pr-4 pl-3 w-full font-medium  md:text-white  text-gray-800 border-b border-gray-100 md:w-auto hover:bg-gray-200 md:hover:bg-transparent md:border-0 md:hover:text-blue-600 md:p-0  mt-2    ">Vendre
                         <svg class="ml-1 w-4 h-4" fill="currentColor" viewBox="0 0 20 20"
                             xmlns="http://www.w3.org/2000/svg">
                             <path fill-rule="evenodd"
@@ -53,7 +53,7 @@
                 </li>
                 <li>
                     <button id="mega-menu-full-dropdown-button4" data-collapse-toggle="mega-menu-full-dropdown4"
-                        class="flex justify-between items-center py-2 pr-4 pl-3 w-full font-medium text-gray-700  border-b border-gray-100 md:w-auto hover:bg-gray-200 md:hover:bg-transparent md:border-0 md:hover:text-blue-600 md:p-0  mt-2    ">Louer
+                        class="flex justify-between items-center py-2 pr-4 pl-3 w-full font-medium  md:text-white text-gray-800  border-b border-gray-100 md:w-auto hover:bg-gray-200 md:hover:bg-transparent md:border-0 md:hover:text-blue-600 md:p-0  mt-2    ">Louer
                         <svg class="ml-1 w-4 h-4" fill="currentColor" viewBox="0 0 20 20"
                             xmlns="http://www.w3.org/2000/svg">
                             <path fill-rule="evenodd"
@@ -63,7 +63,7 @@
                 </li>
                 <li>
                     <button id="mega-menu-full-dropdown-button5" data-collapse-toggle="mega-menu-full-dropdown5"
-                        class="flex justify-between items-center py-2 pr-4 pl-3 w-full font-medium text-gray-700  border-b border-gray-100 md:w-auto hover:bg-gray-200 md:hover:bg-transparent md:border-0 md:hover:text-blue-600 md:p-0  mt-2    ">Services
+                        class="flex justify-between items-center py-2 pr-4 pl-3 w-full font-medium  text-gray-800 md:text-white  border-b border-gray-100 md:w-auto hover:bg-gray-200 md:hover:bg-transparent md:border-0 md:hover:text-blue-600 md:p-0  mt-2    ">Services
                         <svg class="ml-1 w-4 h-4" fill="currentColor" viewBox="0 0 20 20"
                             xmlns="http://www.w3.org/2000/svg">
                             <path fill-rule="evenodd"
