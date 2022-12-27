@@ -187,6 +187,7 @@
             if (scroll_position < 60) {
                 navbar.style.backgroundColor = "transparent";
                 $('.darked').addClass('text-gray-100').removeClass('text-gray-800');
+                
 
             } else {
                 navbar.style.backgroundColor = "white";

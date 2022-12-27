@@ -212,9 +212,9 @@
 
           <div>
             <h3 class="text-gray-700 uppercase ">Blog</h3>
-            <a href="blog" class="block mt-2 text-sm text-gray-600 hover:underline">Blog page</a>
-            <a href="#" class="block mt-2 text-sm text-gray-600 hover:underline"></a>
-            <a href="#" class="block mt-2 text-sm text-gray-600 hover:underline"></a>
+            <a href="blog" class="block mt-2 text-sm text-gray-600 hover:underline">location au Cameroun</a>
+            <a href="#" class="block mt-2 text-sm text-gray-600 hover:underline">Terrain au Cameroun</a>
+            <a href="#" class="block mt-2 text-sm text-gray-600 hover:underline">Titre foncier au Cameroun</a>
           </div>
 
           <div>

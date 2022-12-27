@@ -23,7 +23,7 @@
            
                 <li>
                     <button id="mega-menu-full-dropdown-button" data-collapse-toggle="mega-menu-full-dropdown"
-                        class="flex justify-between items-center py-2 pr-4 pl-3 w-full font-medium  md:text-white text-gray-800 border-b border-gray-100 md:w-auto hover:bg-gray-200 md:hover:bg-transparent md:border-0 md:hover:text-blue-600 md:p-0 mt-2    ">Rechercher
+                        class="megabutton flex justify-between items-center py-2 pr-4 pl-3 w-full font-medium xl:text-gray-700  text-black border-b border-gray-100 md:w-auto hover:bg-gray-200 md:hover:bg-transparent md:border-0 md:hover:text-blue-600 md:p-0 mt-2    ">Rechercher
                         <svg class="ml-1 w-4 h-4" fill="currentColor" viewBox="0 0 20 20"
                             xmlns="http://www.w3.org/2000/svg">
                             <path fill-rule="evenodd"
@@ -33,7 +33,7 @@
                 </li>
                 <li>
                     <button id="mega-menu-full-dropdown-button2" data-collapse-toggle="mega-menu-full-dropdown2"
-                        class="flex justify-between items-center py-2 pr-4 pl-3 w-full font-medium  md:text-white text-gray-800  border-b border-gray-100 md:w-auto hover:bg-gray-200 md:hover:bg-transparent md:border-0 md:hover:text-blue-600 md:p-0  mt-2    ">Acheter
+                        class="megabutton flex justify-between items-center py-2 pr-4 pl-3 w-full font-medium xl:text-gray-700  text-black  border-b border-gray-100 md:w-auto hover:bg-gray-200 md:hover:bg-transparent md:border-0 md:hover:text-blue-600 md:p-0  mt-2    ">Acheter
                         <svg class="ml-1 w-4 h-4" fill="currentColor" viewBox="0 0 20 20"
                             xmlns="http://www.w3.org/2000/svg">
                             <path fill-rule="evenodd"
@@ -43,7 +43,7 @@
                 </li>
                 <li>
                     <button id="mega-menu-full-dropdown-button3" data-collapse-toggle="mega-menu-full-dropdown3"
-                        class="flex justify-between items-center py-2 pr-4 pl-3 w-full font-medium  md:text-white  text-gray-800 border-b border-gray-100 md:w-auto hover:bg-gray-200 md:hover:bg-transparent md:border-0 md:hover:text-blue-600 md:p-0  mt-2    ">Vendre
+                        class="megabutton flex justify-between items-center py-2 pr-4 pl-3 w-full font-medium xl:text-gray-700   text-black border-b border-gray-100 md:w-auto hover:bg-gray-200 md:hover:bg-transparent md:border-0 md:hover:text-blue-600 md:p-0  mt-2    ">Vendre
                         <svg class="ml-1 w-4 h-4" fill="currentColor" viewBox="0 0 20 20"
                             xmlns="http://www.w3.org/2000/svg">
                             <path fill-rule="evenodd"
@@ -53,7 +53,7 @@
                 </li>
                 <li>
                     <button id="mega-menu-full-dropdown-button4" data-collapse-toggle="mega-menu-full-dropdown4"
-                        class="flex justify-between items-center py-2 pr-4 pl-3 w-full font-medium  md:text-white text-gray-800  border-b border-gray-100 md:w-auto hover:bg-gray-200 md:hover:bg-transparent md:border-0 md:hover:text-blue-600 md:p-0  mt-2    ">Louer
+                        class="megabutton flex justify-between items-center py-2 pr-4 pl-3 w-full font-medium xl:text-gray-700  text-black  border-b border-gray-100 md:w-auto hover:bg-gray-200 md:hover:bg-transparent md:border-0 md:hover:text-blue-600 md:p-0  mt-2    ">Louer
                         <svg class="ml-1 w-4 h-4" fill="currentColor" viewBox="0 0 20 20"
                             xmlns="http://www.w3.org/2000/svg">
                             <path fill-rule="evenodd"
@@ -63,7 +63,7 @@
                 </li>
                 <li>
                     <button id="mega-menu-full-dropdown-button5" data-collapse-toggle="mega-menu-full-dropdown5"
-                        class="flex justify-between items-center py-2 pr-4 pl-3 w-full font-medium  text-gray-800 md:text-white  border-b border-gray-100 md:w-auto hover:bg-gray-200 md:hover:bg-transparent md:border-0 md:hover:text-blue-600 md:p-0  mt-2    ">Services
+                        class="megabutton flex justify-between items-center py-2 pr-4 pl-3 w-full font-medium xl:text-gray-700 text-black   border-b border-gray-100 md:w-auto hover:bg-gray-200 md:hover:bg-transparent md:border-0 md:hover:text-blue-600 md:p-0  mt-2    ">Services
                         <svg class="ml-1 w-4 h-4" fill="currentColor" viewBox="0 0 20 20"
                             xmlns="http://www.w3.org/2000/svg">
                             <path fill-rule="evenodd"
@@ -89,13 +89,14 @@
 
                         <div x-data="{ isOpen: false }" class="relative inline-block pr-4">
                             <!-- Dropdown toggle button -->
-                            <button @click="isOpen = !isOpen"
+                            <button @click="isOpen = !isOpen" type="button"
                                 class="relative z-10 block p-[7px] text-gray-700 hover:text-gray-100  bg-white border border-gray-600 rounded-md focus:outline-none hover:bg-gray-900">
                                 <i class=" fas fa-user "></i>
                             </button>
 
                             <!-- Dropdown menu -->
                             <div x-cloak x-show="isOpen" @click.away="isOpen = false"
+                            
                                 x-transition:enter="transition ease-out duration-100"
                                 x-transition:enter-start="opacity-0 scale-90"
                                 x-transition:enter-end="opacity-100 scale-100"
@@ -136,7 +137,7 @@
                             </button>
 
                             <!-- // pop menu  -->
-                            <div x-cloak
+                            <div x-cloak x-show="isOpen" @click.away="isOpen = false"
                                 :class="[!isOpen ? 'translate-x-full opacity-0 ' : 'opacity-100 translate-x-0']"
                                 class="absolute right-0 z-20 px-6 py-4 mt-6 transition duration-200 ease-in-out bg-white border border-gray-200 rounded-md shadow-xl w-72 hover:border-gray-400">
                                 <div class="flex flex-col pb-4 space-y-2 align-baseline md:pb-0">
@@ -607,7 +608,7 @@
         </div>
     </div>
 
-    <div id="mega-menu-full-dropdown5" class="mt-1 bg-white border-gray-200 shadow-sm border-y  hidden">
+    <div id="mega-menu-full-dropdown5" class="mt-1 bg-white border-gray-200 shadow-sm border-y hidden">
         <div class="grid py-5 px-4 mx-auto max-w-screen-xl text-gray-900  sm:grid-cols-2 md:grid-cols-3 md:px-6">
             <ul aria-labelledby="mega-menu-full-dropdown-button5">
                 <li>
@@ -712,6 +713,15 @@
         </div>
     </div>
 </nav>
+<script>
+//$('.megabutton').mouseenter(function() { $(this).click() });
+$('#mega-menu-full-dropdown-button').click(function() { $('#mega-menu-full-dropdown5, #mega-menu-full-dropdown4, #mega-menu-full-dropdown3, #mega-menu-full-dropdown2, #mega-menu-full-dropdown1').addClass('hidden');});
+$('#mega-menu-full-dropdown-button1').click(function() { $('#mega-menu-full-dropdown5, #mega-menu-full-dropdown4, #mega-menu-full-dropdown3, #mega-menu-full-dropdown2, #mega-menu-full-dropdown').addClass('hidden');});
+$('#mega-menu-full-dropdown-button2').click(function() { $('#mega-menu-full-dropdown5, #mega-menu-full-dropdown4, #mega-menu-full-dropdown3, #mega-menu-full-dropdown1, #mega-menu-full-dropdown').addClass('hidden');});
+$('#mega-menu-full-dropdown-button3').click(function() { $('#mega-menu-full-dropdown5, #mega-menu-full-dropdown4, #mega-menu-full-dropdown2, #mega-menu-full-dropdown1, #mega-menu-full-dropdown').addClass('hidden');});
+$('#mega-menu-full-dropdown-button4').click(function() { $('#mega-menu-full-dropdown5, #mega-menu-full-dropdown3, #mega-menu-full-dropdown2, #mega-menu-full-dropdown1, #mega-menu-full-dropdown').addClass('hidden');});
+$('#mega-menu-full-dropdown-button5').click(function() { $('#mega-menu-full-dropdown4, #mega-menu-full-dropdown3, #mega-menu-full-dropdown2, #mega-menu-full-dropdown1, #mega-menu-full-dropdown').addClass('hidden');});
+</script>
 <style>
 
 </style>
