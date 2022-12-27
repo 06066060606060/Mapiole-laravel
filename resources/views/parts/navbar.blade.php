@@ -1,5 +1,5 @@
-<nav id="navbar" class="fixed top-0 z-10 w-full pt-2 pb-2 transition duration-200 " >
-    <div class="flex flex-wrap items-center w-full px-4 md:px-6 py-2.5 justify-around" >
+<nav id="navbar" class="fixed top-0 w-full pt-2 pb-2 transition duration-200 z-50 border-b border-gray-400 border-opacity-50 backdrop-blur-lg" >
+    <div class="flex flex-wrap items-center w-full px-4 md:px-6 py-2.5 justify-around " >
         <a href="/" class="flex items-center mr-16"  >
          <img src="./img/logo.png" class="mr-3 h-32" alt=" Logo" />
             <img src="./img/blob.svg" class="absolute ml-8 h-32 -z-10" alt=" Logo" />
@@ -307,7 +307,7 @@
                     </a>
                 </li>
             </ul>
-            <ul class="hidden md:block">
+            <ul>
                 <li>
 
                     <a href="#" class="block p-3 rounded-lg hover:bg-gray-200 ">
@@ -348,7 +348,7 @@
                     </a>
                 </li>
             </ul>
-            <ul class="hidden md:block">
+            <ul>
                 <li>
 
                     <a href="#" class="block p-3 rounded-lg hover:bg-gray-200 ">
@@ -426,7 +426,7 @@
                     </a>
                 </li>
             </ul>
-            <ul class="hidden md:block">
+            <ul>
                 <li>
                     <a href="#" class="block p-3 rounded-lg hover:bg-gray-200 ">
                         <div class="font-medium">Acheter un immeuble
@@ -500,7 +500,7 @@
                     </a>
                 </li>
             </ul>
-            <ul class="hidden md:block">
+            <ul>
                 <li>
                     <a href="#" class="block p-3 rounded-lg hover:bg-gray-200 ">
                         <div class="font-medium">Vendre un immeuble
@@ -581,7 +581,7 @@
                     </a>
                 </li>
             </ul>
-            <ul class="hidden md:block">
+            <ul>
                 <li>
                     <a href="#" class="block p-3 rounded-lg hover:bg-gray-200 ">
                         <div class="font-medium">Louer un appartement meublé

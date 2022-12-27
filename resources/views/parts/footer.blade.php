@@ -186,8 +186,9 @@
       <div class="w-full -mx-6 lg:w-2/5">
         <div class="px-6">
           <div>
-            <a class="flex justify-center md:justify-start" href="./index.html"><img src="./img/logo.png"
-                class="w-auto h-28"></a>
+            <a class="flex justify-center md:justify-start" href="./index.html">
+            <img src="./img/logo.png" class="w-auto h-28">
+                </a>
           </div>
 
           <p class="max-w-sm mt-4 text-center text-gray-500 md:text-left">Peu importe ce que vous cherchez<br> trouver
