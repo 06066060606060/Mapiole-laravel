@@ -14,7 +14,7 @@ use Backpack\CRUD\app\Library\CrudPanel\CrudPanelFacade as CRUD;
 class PagesCrudController extends CrudController
 {
     use \Backpack\CRUD\app\Http\Controllers\Operations\ListOperation;
-    // use \Backpack\CRUD\app\Http\Controllers\Operations\CreateOperation;
+     use \Backpack\CRUD\app\Http\Controllers\Operations\CreateOperation;
     use \Backpack\CRUD\app\Http\Controllers\Operations\UpdateOperation;
     // use \Backpack\CRUD\app\Http\Controllers\Operations\DeleteOperation;
     //use \Backpack\CRUD\app\Http\Controllers\Operations\ShowOperation;
@@ -40,8 +40,24 @@ class PagesCrudController extends CrudController
     protected function setupListOperation()
     {
         
+        $this->crud->addColumn([
+            'name'    => 'label',
+            'label'   => 'Pages',
+            'type'    => 'text',
+            'wrapper' => [
+                'element' => 'span',
+                'class' => function ($crud, $column, $entry, $related_key) {
+                            return 'ml-4 badge badge-primary';
+                        }
+                  ]
+            ]);
         CRUD::column('title');
-        // CRUD::column('content');
+        CRUD::column('content');
+        //if id = 1 then show a button
+
+
+
+
         /**
          * Columns can be defined using the fluent syntax or array syntax:
          * - CRUD::column('price')->type('number');
@@ -58,10 +74,11 @@ class PagesCrudController extends CrudController
     {
 
         CRUD::setValidation(PagesRequest::class);
+        CRUD::field('title')->label('Titre');
         $this->crud->addField([
             'name' => 'content',
-            'label' => 'Content',
-            'type' => 'summernote',
+            'label' => 'Contenu',
+            'type' => 'textarea',
             'placeholder' => 'Your text text here',
         ]);
         /**
