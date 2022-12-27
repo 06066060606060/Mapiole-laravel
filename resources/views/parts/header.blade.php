@@ -10,9 +10,9 @@
           class="flex flex-col items-center p-2 mt-4 text-white rounded-md cursor-pointer md:flex-row">
           <input id="Toggle3" type="checkbox" class="hidden peer">
           <a onclick="document.getElementById('secondaryButton').click()"
-            class="px-6 py-3 m-2 font-bold transition duration-200 bg-blue-900 rounded hover:bg-blue-600 hover:scale-105 active:scale-100">Inscription</a>
+            class="px-6 py-3 m-2 font-bold transition duration-200 bg-[#6805F2] rounded hover:bg-indigo-600 hover:scale-105 active:scale-100">Inscription</a>
           <a href=""
-            class="px-6 py-3 m-2 font-bold transition duration-200 bg-gray-500 rounded hover:bg-gray-300 hover:text-gray-800 hover:scale-105 active:scale-100">Vous étes
+            class="px-6 py-3 m-2 font-bold transition duration-200 bg-gray-500 rounded hover:bg-indigo-300 hover:text-gray-800 hover:scale-105 active:scale-100">Vous étes
             un professionnel</a>
         </label>
       </div>
@@ -26,7 +26,7 @@
           <div
             class="flex items-center justify-center flex-shrink-0 w-12 h-12 text-xl font-bold bg-gray-200 rounded-full shadow">
 
-            <i class="text-blue-900 fa-solid fa-building-columns"></i>
+            <i class="text-[#6805F2] fa-solid fa-building-columns"></i>
           </div>
 
           <h3 class="mt-4 text-xl font-bold text-gray-800 md:text-xl">
@@ -41,7 +41,7 @@
           class="p-6 transition duration-200 bg-gray-100 border border-gray-200 shadow-xl md:p-10 rounded-xl hover:scale-105">
           <div
             class="flex items-center justify-center flex-shrink-0 w-12 h-12 text-xl font-bold bg-gray-200 rounded-full shadow">
-            <i class="text-blue-900 fa-solid fa-sign-hanging"></i>
+            <i class="text-[#6805F2] fa-solid fa-sign-hanging"></i>
           </div>
 
           <h3 class="mt-4 text-xl font-bold text-gray-800 md:text-xl">
@@ -56,7 +56,7 @@
           class="p-6 transition duration-200 bg-gray-100 border border-gray-200 shadow-xl md:p-10 rounded-xl hover:scale-105">
           <div
             class="flex items-center justify-center flex-shrink-0 w-12 h-12 text-xl font-bold bg-gray-200 rounded-full shadow">
-            <i class="text-blue-900 fa-solid fa-house"></i>
+            <i class="text-[#6805F2] fa-solid fa-house"></i>
           </div>
 
           <h3 class="mt-4 text-xl font-bold text-gray-800 md:text-xl">
@@ -71,7 +71,7 @@
           class="p-6 transition duration-200 bg-gray-100 border border-gray-200 shadow-xl md:p-10 rounded-xl hover:scale-105">
           <div
             class="flex items-center justify-center flex-shrink-0 w-12 h-12 text-xl font-bold bg-gray-200 rounded-full shadow ">
-            <i class="text-blue-900 fa-solid fa-person"></i>
+            <i class="text-[#6805F2] fa-solid fa-person"></i>
           </div>
 
           <h3 class="mt-4 text-xl font-bold text-gray-800 md:text-xl">

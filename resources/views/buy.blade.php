@@ -30,7 +30,7 @@
                                  </p>
 
                                  <button
-                                     class="px-4 py-2 bg-gray-100 hover:bg-gray-200 text-gray-800 text-sm font-medium rounded-md">
+                                     class="px-4 py-2 bg-gray-100 hover:bg-indigo-300 text-gray-800 text-sm font-medium rounded-md">
                                      Reset Filtres
                                  </button>
                              </div>
@@ -75,7 +75,7 @@
                                      </select>
 
                                      <button
-                                         class="px-4 py-3 w-full text-white rounded-md hover:bg-blue-600 bg-blue-500 border-transparent transition duration-200 focus:border-gray-500 active:bg-white active:text-black border border-gray-400 text-sm">
+                                         class="px-4 py-3 w-full text-white rounded-md hover:bg-indigo-600 bg-indigo-600 border-transparent transition duration-200 focus:border-gray-500 active:bg-white active:text-black border border-gray-400 text-sm">
                                          Rechercher
                                      </button>
 
@@ -95,7 +95,7 @@
                          <div class="w-full pl-4 mb-4 lg:w-1/2 lg:mb-0">
                              <h1 class="mb-2 text-3xl font-medium text-gray-900 md:text-4xl title-font">Résultats de votre
                                  recherche</h1>
-                             <div class="h-1 bg-blue-800 rounded w-96"></div>
+                             <div class="h-1 bg-[#6805F2] rounded w-96"></div>
 
                          </div>
                       
@@ -127,7 +127,7 @@
                                      <div class="pl-8 mx-6 mt-6 lg:w-1/2 lg:mt-0">
                                          <button
                                              class="px-4 py-2 mb-4 text-sm font-bold text-white bg-green-800 rounded-full">Location</button>
-                                         <p class="text-xl font-bold text-blue-500 uppercase">Appartement</p>
+                                         <p class="text-xl font-bold text-indigo-600 uppercase">Appartement</p>
                                          <a
                                              class="block mt-4 text-2xl font-semibold text-gray-800 hover:underline md:text-3xl">
                                              3 pièces, 60 m²
@@ -147,7 +147,7 @@
                                          </p>
 
                                          <a href="annonce"
-                                             class="inline-block px-4 py-2 mt-2 text-white bg-blue-800 rounded text-bold hover:bg-blue-700 active:bg-blue-800">Plus
+                                             class="inline-block px-4 py-2 mt-2 text-white bg-[#6805F2] rounded text-bold hover:bg-blue-700 active:bg-[#6805F2]">Plus
                                              d'info</a>
                                          <div class="flex">
                                              <div class="flex items-center mt-6">
@@ -193,7 +193,7 @@
                                      <div class="pl-8 mx-6 mt-6 lg:w-1/2 lg:mt-0">
                                          <button
                                              class="px-4 py-2 mb-4 text-sm font-bold text-white bg-purple-800 rounded-full">Vente</button>
-                                         <p class="text-xl font-bold text-blue-500 uppercase">Maison</p>
+                                         <p class="text-xl font-bold text-indigo-600 uppercase">Maison</p>
                                          <a
                                              class="block mt-4 text-2xl font-semibold text-gray-800 hover:underline md:text-3xl">
                                              6 pièces, 100 m²
@@ -213,7 +213,7 @@
                                          </p>
 
                                          <a href="annonce"
-                                             class="inline-block px-4 py-2 mt-2 text-white bg-blue-800 rounded text-bold hover:bg-blue-700 active:bg-blue-800">Plus
+                                             class="inline-block px-4 py-2 mt-2 text-white bg-[#6805F2] rounded text-bold hover:bg-blue-700 active:bg-[#6805F2]">Plus
                                              d'info</a>
                                          <div class="flex">
                                              <div class="flex items-center mt-6">
@@ -236,7 +236,7 @@
                      <div class="w-full py-4 pl-4 lg:w-1/2 lg:mb-0">
                          <h1 class="mt-4 mb-2 text-3xl font-medium text-gray-900 md:text-4xl title-font">Egalement
                              Disponible</h1>
-                         <div class="h-1 bg-blue-800 rounded w-96"></div>
+                         <div class="h-1 bg-[#6805F2] rounded w-96"></div>
 
                      </div>
 
@@ -246,12 +246,12 @@
                                  class="p-6 transition duration-200 bg-gray-100 border border-gray-200 rounded-lg shadow-xl hover:border-gray-400">
                                  <img class="object-cover object-center w-full h-40 mb-6"
                                      src="./img/Atlanta-Georgia-400x284.png" alt="content">
-                                 <h3 class="text-xs font-bold tracking-widest text-blue-500 title-font">SUBTITLE</h3>
+                                 <h3 class="text-xs font-bold tracking-widest text-indigo-600 title-font">SUBTITLE</h3>
                                  <p class="pb-2 text-base leading-relaxed">Fingerstache flexitarian street art 8-bit
                                      waistcoat. Distillery
                                      hexagon disrupt edison bulbche.</p>
                                  <a href="annonce"
-                                     class="flex justify-center px-4 py-2 mx-auto font-bold text-white transition duration-200 bg-blue-900 rounded hover:bg-blue-600 active:bg-blue-800">Plus
+                                     class="flex justify-center px-4 py-2 mx-auto font-bold text-white transition duration-200 bg-[#6805F2] rounded hover:bg-indigo-600 active:bg-[#6805F2]">Plus
                                      d'infos</a>
                              </div>
                          </div>
@@ -260,12 +260,12 @@
                                  class="p-6 transition duration-200 bg-gray-100 border border-gray-200 rounded-lg shadow-xl hover:border-gray-400">
                                  <img class="object-cover object-center w-full h-40 mb-6"
                                      src="./img/Auburn_Maine-400x284.png" alt="content">
-                                 <h3 class="text-xs font-bold tracking-widest text-blue-500 title-font">SUBTITLE</h3>
+                                 <h3 class="text-xs font-bold tracking-widest text-indigo-600 title-font">SUBTITLE</h3>
                                  <p class="pb-2 text-base leading-relaxed">Fingerstache flexitarian street art 8-bit
                                      waistcoat. Distillery
                                      hexagon disrupt edison bulbche.</p>
                                  <a href="annonce"
-                                     class="flex justify-center px-4 py-2 mx-auto font-bold text-white transition duration-200 bg-blue-900 rounded hover:bg-blue-600 active:bg-blue-800">Plus
+                                     class="flex justify-center px-4 py-2 mx-auto font-bold text-white transition duration-200 bg-[#6805F2] rounded hover:bg-indigo-600 active:bg-[#6805F2]">Plus
                                      d'infos</a>
                              </div>
                          </div>
@@ -274,12 +274,12 @@
                                  class="p-6 transition duration-200 bg-gray-100 border border-gray-200 rounded-lg shadow-xl hover:border-gray-400">
                                  <img class="object-cover object-center w-full h-40 mb-6"
                                      src="./img/Austin-Texas-400x284.png" alt="content">
-                                 <h3 class="text-xs font-bold tracking-widest text-blue-500 title-font">SUBTITLE</h3>
+                                 <h3 class="text-xs font-bold tracking-widest text-indigo-600 title-font">SUBTITLE</h3>
                                  <p class="pb-2 text-base leading-relaxed">Fingerstache flexitarian street art 8-bit
                                      waistcoat. Distillery
                                      hexagon disrupt edison bulbche.</p>
                                  <a href="annonce"
-                                     class="flex justify-center px-4 py-2 mx-auto font-bold text-white transition duration-200 bg-blue-900 rounded hover:bg-blue-600 active:bg-blue-800">Plus
+                                     class="flex justify-center px-4 py-2 mx-auto font-bold text-white transition duration-200 bg-[#6805F2] rounded hover:bg-indigo-600 active:bg-[#6805F2]">Plus
                                      d'infos</a>
                              </div>
                          </div>
@@ -288,12 +288,12 @@
                                  class="p-6 transition duration-200 bg-gray-100 border border-gray-200 rounded-lg shadow-xl hover:border-gray-400">
                                  <img class="object-cover object-center w-full h-40 mb-6"
                                      src="./img/BirminghamAL-400x284.jpg" alt="content">
-                                 <h3 class="text-xs font-bold tracking-widest text-blue-500 title-font">SUBTITLE</h3>
+                                 <h3 class="text-xs font-bold tracking-widest text-indigo-600 title-font">SUBTITLE</h3>
                                  <p class="pb-2 text-base leading-relaxed">Fingerstache flexitarian street art 8-bit
                                      waistcoat. Distillery
                                      hexagon disrupt edison bulbche.</p>
                                  <a href="annonce"
-                                     class="flex justify-center px-4 py-2 mx-auto font-bold text-white transition duration-200 bg-blue-900 rounded hover:bg-blue-600 active:bg-blue-800">Plus
+                                     class="flex justify-center px-4 py-2 mx-auto font-bold text-white transition duration-200 bg-[#6805F2] rounded hover:bg-indigo-600 active:bg-[#6805F2]">Plus
                                      d'infos</a>
                              </div>
                          </div>
@@ -302,12 +302,12 @@
                                  class="p-6 transition duration-200 bg-gray-100 border border-gray-200 rounded-lg shadow-xl hover:border-gray-400">
                                  <img class="object-cover object-center w-full h-40 mb-6"
                                      src="./img/Beverly_Hills_CA-400x284.png" alt="content">
-                                 <h3 class="text-xs font-bold tracking-widest text-blue-500 title-font">SUBTITLE</h3>
+                                 <h3 class="text-xs font-bold tracking-widest text-indigo-600 title-font">SUBTITLE</h3>
                                  <p class="pb-2 text-base leading-relaxed">Fingerstache flexitarian street art 8-bit
                                      waistcoat. Distillery
                                      hexagon disrupt edison bulbche.</p>
                                  <a href="annonce"
-                                     class="flex justify-center px-4 py-2 mx-auto font-bold text-white transition duration-200 bg-blue-900 rounded hover:bg-blue-600 active:bg-blue-800">Plus
+                                     class="flex justify-center px-4 py-2 mx-auto font-bold text-white transition duration-200 bg-[#6805F2] rounded hover:bg-indigo-600 active:bg-[#6805F2]">Plus
                                      d'infos</a>
                              </div>
                          </div>
@@ -316,12 +316,12 @@
                                  class="p-6 transition duration-200 bg-gray-100 border border-gray-200 rounded-lg shadow-xl hover:border-gray-400">
                                  <img class="object-cover object-center w-full h-40 mb-6"
                                      src="./img/BirminghamAL-400x284.jpg" alt="content">
-                                 <h3 class="text-xs font-bold tracking-widest text-blue-500 title-font">SUBTITLE</h3>
+                                 <h3 class="text-xs font-bold tracking-widest text-indigo-600 title-font">SUBTITLE</h3>
                                  <p class="pb-2 text-base leading-relaxed">Fingerstache flexitarian street art 8-bit
                                      waistcoat. Distillery
                                      hexagon disrupt edison bulbche.</p>
                                  <a href="annonce"
-                                     class="flex justify-center px-4 py-2 mx-auto font-bold text-white transition duration-200 bg-blue-900 rounded hover:bg-blue-600 active:bg-blue-800">Plus
+                                     class="flex justify-center px-4 py-2 mx-auto font-bold text-white transition duration-200 bg-[#6805F2] rounded hover:bg-indigo-600 active:bg-[#6805F2]">Plus
                                      d'infos</a>
                              </div>
                          </div>
@@ -330,12 +330,12 @@
                                  class="p-6 transition duration-200 bg-gray-100 border border-gray-200 rounded-lg shadow-xl hover:border-gray-400">
                                  <img class="object-cover object-center w-full h-40 mb-6"
                                      src="./img/Bluffton_SC-400x284.png" alt="content">
-                                 <h3 class="text-xs font-bold tracking-widest text-blue-500 title-font">SUBTITLE</h3>
+                                 <h3 class="text-xs font-bold tracking-widest text-indigo-600 title-font">SUBTITLE</h3>
                                  <p class="pb-2 text-base leading-relaxed">Fingerstache flexitarian street art 8-bit
                                      waistcoat. Distillery
                                      hexagon disrupt edison bulbche.</p>
                                  <a href="annonce"
-                                     class="flex justify-center px-4 py-2 mx-auto font-bold text-white transition duration-200 bg-blue-900 rounded hover:bg-blue-600 active:bg-blue-800">Plus
+                                     class="flex justify-center px-4 py-2 mx-auto font-bold text-white transition duration-200 bg-[#6805F2] rounded hover:bg-indigo-600 active:bg-[#6805F2]">Plus
                                      d'infos</a>
                              </div>
                          </div>
@@ -344,12 +344,12 @@
                                  class="p-6 transition duration-200 bg-gray-100 border border-gray-200 rounded-lg shadow-xl hover:border-gray-400">
                                  <img class="object-cover object-center w-full h-40 mb-6"
                                      src="./img/Boston_MA-400x284.jpg" alt="content">
-                                 <h3 class="text-xs font-bold tracking-widest text-blue-500 title-font">SUBTITLE</h3>
+                                 <h3 class="text-xs font-bold tracking-widest text-indigo-600 title-font">SUBTITLE</h3>
                                  <p class="pb-2 text-base leading-relaxed">Fingerstache flexitarian street art 8-bit
                                      waistcoat. Distillery
                                      hexagon disrupt edison bulbche.</p>
                                  <a href="annonce"
-                                     class="flex justify-center px-4 py-2 mx-auto font-bold text-white transition duration-200 bg-blue-900 rounded hover:bg-blue-600 active:bg-blue-800">Plus
+                                     class="flex justify-center px-4 py-2 mx-auto font-bold text-white transition duration-200 bg-[#6805F2] rounded hover:bg-indigo-600 active:bg-[#6805F2]">Plus
                                      d'infos</a>
                              </div>
                          </div>
