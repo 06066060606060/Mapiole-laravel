@@ -71,7 +71,11 @@
                                 clip-rule="evenodd"></path>
                         </svg></button>
                 </li>
-                <li class="flex xl:w-64">
+                <li>
+                      <a onclick="document.getElementById('primary_button').click()"
+                                class="text-xs md:text-base font-medium items-center justify-center w-32 mr-16 h-10 px-2 ml-1  text-gray-600 bg-white border border-gray-600 rounded-md flex focus:outline-none hover:bg-[#6805F2] hover:text-white">
+                                Professionel
+                            </a>
                 </li>
                 <li>
                     <div class="flex items-center mt-2 md:mt-0">

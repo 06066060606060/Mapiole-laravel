@@ -3,7 +3,7 @@
     @php $mail = $pages[5]->content; @endphp
      @php $phone = $pages[4]->content; @endphp
 
-<section class="mx-4 bg-white">
+<section class="mx-4 bg-white pt-8">
     <div class=" px-6 py-8 mx-auto max-w-[1440px]">
       <div class="grid gap-8 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
         <div class="flex flex-col items-center">
@@ -184,7 +184,7 @@
     </div>
   </section>
 
-  <div class="border border-gray-200 bg-gray-50">
+  <div class="border border-gray-200 footergrad">
     <div
       class=" p-6 mx-auto max-w-[1440px] flex flex-col md:flex-row justify-center md:justify-between items-center text-center">
 
@@ -196,46 +196,52 @@
                 </a>
           </div>
 
-          <p class="max-w-sm mt-4 text-center text-gray-500 md:text-left">Peu importe ce que vous cherchez<br> trouver
+          <p class="max-w-sm mt-4 text-center text-gray-100 md:text-left">Peu importe ce que vous cherchez<br> trouver
             le logement de vos rêves.</p>
         </div>
       </div>
 
-      <div class="mt-6 lg:mt-0 lg:flex-1">
+      <div class="mt-6 lg:mt-0 lg:flex-1 ">
         <div class="grid grid-cols-1 gap-6 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
           <div>
-            <h3 class="text-gray-700 uppercase ">A propos</h3>
-            <a href="company" class="block mt-2 text-sm text-gray-600 hover:underline">Company</a>
-            <a href="community" class="block mt-2 text-sm text-gray-600 hover:underline">community</a>
-            <a href="career" class="block mt-2 text-sm text-gray-600 hover:underline">Careers</a>
+            <h3 class="text-gray-100 uppercase ">A propos</h3>
+            <a href="company" class="block mt-2 text-sm text-gray-100 hover:underline">Company</a>
+            <a href="community" class="block mt-2 text-sm text-gray-100 hover:underline">community</a>
+            <a href="career" class="block mt-2 text-sm text-gray-100 hover:underline">Careers</a>
           </div>
 
           <div>
-            <h3 class="text-gray-700 uppercase ">Blog</h3>
-            <a href="blog" class="block mt-2 text-sm text-gray-600 hover:underline">location au Cameroun</a>
-            <a href="#" class="block mt-2 text-sm text-gray-600 hover:underline">Terrain au Cameroun</a>
-            <a href="#" class="block mt-2 text-sm text-gray-600 hover:underline">Titre foncier au Cameroun</a>
+            <h3 class="text-gray-100 uppercase ">Blog</h3>
+            <a href="blog" class="block mt-2 text-sm text-gray-100 hover:underline">location au Cameroun</a>
+            <a href="#" class="block mt-2 text-sm text-gray-100 hover:underline">Terrain au Cameroun</a>
+            <a href="#" class="block mt-2 text-sm text-gray-100 hover:underline">Titre foncier au Cameroun</a>
           </div>
 
           <div>
-            <h3 class="text-gray-700 uppercase ">Partenaires</h3>
-            <a href="#" class="block mt-2 text-sm text-gray-600 hover:underline">Megaloud</a>
-            <a href="#" class="block mt-2 text-sm text-gray-600 hover:underline">Aperion</a>
-            <a href="#" class="block mt-2 text-sm text-gray-600 hover:underline">Meraki</a>
+            <h3 class="text-gray-100 uppercase ">Partenaires</h3>
+            <a href="#" class="block mt-2 text-sm text-gray-100 hover:underline">Megaloud</a>
+            <a href="#" class="block mt-2 text-sm text-gray-100 hover:underline">Aperion</a>
+            <a href="#" class="block mt-2 text-sm text-gray-100 hover:underline">Meraki</a>
           </div>
 
           <div>
-            <h3 class="text-gray-700 uppercase ">Contact</h3>
-            <span class="block mt-2 text-sm text-gray-600 hover:underline">{{ $phone }}</span>
-            <span class="block mt-2 text-sm text-gray-600 hover:underline">{{ $mail }}</span>
+            <h3 class="text-gray-100 uppercase ">Contact</h3>
+            <span class="block mt-2 text-sm text-gray-100 hover:underline">{{ $phone }}</span>
+            <span class="block mt-2 text-sm text-gray-100 hover:underline">{{ $mail }}</span>
           </div>
         </div>
       </div>
 
       <hr class="h-px my-6 bg-gray-200 border-none ">
     </div>
-    <div>
-      <p class="pb-2 text-center text-gray-500">© Mapiole 2022 - All rights reserved</p>
+    <div class="bg-gray-900">
+      <p class="pb-2 text-center text-gray-300 py-2">© Mapiole 2022 - All rights reserved</p>
     </div>
   </div>
 
+<style>
+.footergrad {
+background: rgb(34,75,176);
+background: linear-gradient(270deg, rgba(34,75,176,1) 0%, rgba(5,29,91,1) 51%, rgba(3,23,79,1) 100%);
+}
+</style>
