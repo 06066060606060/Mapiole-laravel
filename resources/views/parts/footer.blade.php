@@ -1,3 +1,8 @@
+    @php use \App\Http\Controllers\GlobalController; @endphp
+    @php  $pages = GlobalController::pages();@endphp
+    @php $mail = $pages[5]->content; @endphp
+     @php $phone = $pages[4]->content; @endphp
+
 <section class="mx-4 bg-white">
     <div class=" px-6 py-8 mx-auto max-w-[1440px]">
       <div class="grid gap-8 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
@@ -207,7 +212,7 @@
 
           <div>
             <h3 class="text-gray-700 uppercase ">Blog</h3>
-            <a href="#" class="block mt-2 text-sm text-gray-600 hover:underline">Blog page</a>
+            <a href="blog" class="block mt-2 text-sm text-gray-600 hover:underline">Blog page</a>
             <a href="#" class="block mt-2 text-sm text-gray-600 hover:underline"></a>
             <a href="#" class="block mt-2 text-sm text-gray-600 hover:underline"></a>
           </div>
@@ -221,8 +226,8 @@
 
           <div>
             <h3 class="text-gray-700 uppercase ">Contact</h3>
-            <span class="block mt-2 text-sm text-gray-600 hover:underline">+5266548965</span>
-            <span class="block mt-2 text-sm text-gray-600 hover:underline">Contact@mapiole.com</span>
+            <span class="block mt-2 text-sm text-gray-600 hover:underline">{{ $phone }}</span>
+            <span class="block mt-2 text-sm text-gray-600 hover:underline">{{ $mail }}</span>
           </div>
         </div>
       </div>

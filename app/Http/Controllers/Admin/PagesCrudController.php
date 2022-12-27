@@ -39,7 +39,7 @@ class PagesCrudController extends CrudController
      */
     protected function setupListOperation()
     {
-        
+        $this->crud->orderBy('id', 'asc');
         $this->crud->addColumn([
             'name'    => 'label',
             'label'   => 'Pages',
@@ -51,8 +51,8 @@ class PagesCrudController extends CrudController
                         }
                   ]
             ]);
-        CRUD::column('title');
-        CRUD::column('content');
+        CRUD::column('title')->type('text')->label('Titre');
+        CRUD::column('content')->label('Contenu');
         //if id = 1 then show a button
 
 
@@ -74,7 +74,7 @@ class PagesCrudController extends CrudController
     {
 
         CRUD::setValidation(PagesRequest::class);
-        CRUD::field('title')->label('Titre');
+        CRUD::field('title')->type('text')->label('Titre');
         $this->crud->addField([
             'name' => 'content',
             'label' => 'Contenu',

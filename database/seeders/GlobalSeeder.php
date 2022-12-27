@@ -31,5 +31,15 @@ class GlobalSeeder extends Seeder
             ['id' => '4', 'label' => 'about', 'title' => 'A propos',  'content' => '']
         );
 
+        Pages::firstOrCreate(
+            ['label' => 'email'],
+            ['id' => '5', 'label' => 'email', 'title' => 'Admin email',  'content' => 'Contact@mapiole.com']
+        );
+
+        Pages::firstOrCreate(
+            ['label' => 'phone'],
+            ['id' => '6', 'label' => 'phone', 'title' => 'Admin phone',  'content' => '06.01.01.01.01']
+        );
+
     }
 }
