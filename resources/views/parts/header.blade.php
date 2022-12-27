@@ -11,8 +11,8 @@
           <input id="Toggle3" type="checkbox" class="hidden peer">
           <a onclick="document.getElementById('secondaryButton').click()"
             class="px-6 py-3 m-2 font-bold transition duration-200 bg-blue-900 rounded hover:bg-blue-600 hover:scale-105 active:scale-100">Inscription</a>
-          <a href="./login.html"
-            class="px-6 py-3 m-2 font-bold transition duration-200 bg-gray-500 rounded hover:bg-gray-300 hover:text-gray-800 hover:scale-105 active:scale-100">Trouver
+          <a href=""
+            class="px-6 py-3 m-2 font-bold transition duration-200 bg-gray-500 rounded hover:bg-gray-300 hover:text-gray-800 hover:scale-105 active:scale-100">Vous étes
             un professionnel</a>
         </label>
       </div>
