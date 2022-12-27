@@ -9,6 +9,7 @@
         <span>Utilisateurs</span></a></li>
         <li class="nav-item"><a class="nav-link" href="{{ backpack_url('pages') }}"><i class="nav-icon la la-file"></i>
                 Pages</a></li>
+<li class="nav-item"><a class="nav-link" href="{{ backpack_url('blogs') }}"><i class="nav-icon la la-th-list"></i> Blogs</a></li>
 <li class="nav-item nav-dropdown">
     <a class="nav-link nav-dropdown-toggle" href="#"><i class="nav-icon la la-cog"></i> Parametres</a>
     <ul class="nav-dropdown-items">
