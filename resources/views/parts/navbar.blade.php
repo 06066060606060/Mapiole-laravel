@@ -279,34 +279,34 @@
         <div class="grid py-5 px-4 mx-auto max-w-screen-xl text-gray-900  sm:grid-cols-2 md:grid-cols-3 md:px-6">
             <ul aria-labelledby="mega-menu-full-dropdown-button">
                 <li>
-                    <a href="louer" class="block p-3 rounded-lg hover:bg-indigo-300 ">
+                    <a href="louer" class="mega-menu-link block p-3 rounded-lg hover:bg-indigo-300 ">
                         <div class="font-medium">Vendre un appartement</div>
 
                     </a>
                 </li>
                 <li>
-                    <a href="louer" class="block p-3 rounded-lg hover:bg-indigo-300 ">
+                    <a href="louer" class="mega-menu-link block p-3 rounded-lg hover:bg-indigo-300 ">
                         <div class="font-medium">Acheter un terrain
                         </div>
 
                     </a>
                 </li>
                 <li>
-                    <a href="louer" class="block p-3 rounded-lg hover:bg-indigo-300 ">
+                    <a href="louer" class="mega-menu-link block p-3 rounded-lg hover:bg-indigo-300 ">
                         <div class="font-medium">Vendre une maison</div>
 
                     </a>
                 </li>
 
                 <li>
-                    <a href="louer" class="block p-3 rounded-lg hover:bg-indigo-300 ">
+                    <a href="louer" class="mega-menu-link block p-3 rounded-lg hover:bg-indigo-300 ">
                         <div class="font-medium">Construction</div>
 
                     </a>
                 </li>
 
                 <li>
-                    <a href="louer" class="block p-3 rounded-lg hover:bg-indigo-300 ">
+                    <a href="louer" class="mega-menu-link block p-3 rounded-lg hover:bg-indigo-300 ">
                         <div class="font-medium">Trouver une main d'oeuvre</div>
 
                     </a>
@@ -315,14 +315,14 @@
             <ul>
                 <li>
 
-                    <a href="louer" class="block p-3 rounded-lg hover:bg-indigo-300 ">
+                    <a href="louer" class="mega-menu-link block p-3 rounded-lg hover:bg-indigo-300 ">
                         <div class="font-medium">Immobilier commercial
                         </div>
 
                     </a>
                 </li>
                 <li>
-                    <a href="louer" class="block p-3 rounded-lg hover:bg-indigo-300 ">
+                    <a href="louer" class="mega-menu-link block p-3 rounded-lg hover:bg-indigo-300 ">
                         <div class="font-medium">Appartement meublé à louer
 
                         </div>
@@ -331,7 +331,7 @@
                 </li>
 
                 <li>
-                    <a href="louer" class="block p-3 rounded-lg hover:bg-indigo-300 ">
+                    <a href="louer" class="mega-menu-link block p-3 rounded-lg hover:bg-indigo-300 ">
                         <div class="font-medium">Trouver un locataire
                         </div>
 
@@ -339,14 +339,14 @@
                 </li>
 
                 <li>
-                    <a href="louer" class="block p-3 rounded-lg hover:bg-indigo-300 ">
+                    <a href="louer" class="mega-menu-link block p-3 rounded-lg hover:bg-indigo-300 ">
                         <div class="font-medium">Consulter un expert immobilier</div>
 
                     </a>
                 </li>
 
                 <li>
-                    <a href="louer" class="block p-3 rounded-lg hover:bg-indigo-300 ">
+                    <a href="louer" class="mega-menu-link block p-3 rounded-lg hover:bg-indigo-300 ">
                         <div class="font-medium">Accompagnement procédures administratives
                         </div>
 
@@ -356,7 +356,7 @@
             <ul>
                 <li>
 
-                    <a href="louer" class="block p-3 rounded-lg hover:bg-indigo-300 ">
+                    <a href="louer" class="mega-menu-link block p-3 rounded-lg hover:bg-indigo-300 ">
                         <div class="font-medium">Nos meilleures recommandations
                         </div>
 
@@ -364,7 +364,7 @@
                 </li>
                 <li>
 
-                    <a href="louer" class="block p-3 rounded-lg hover:bg-indigo-300 ">
+                    <a href="louer" class="mega-menu-link block p-3 rounded-lg hover:bg-indigo-300 ">
                         <div class="font-medium">Investissement locatif
 
                         </div>
@@ -373,7 +373,7 @@
                 </li>
                 <li>
 
-                    <a href="louer" class="block p-3 rounded-lg hover:bg-indigo-300 ">
+                    <a href="louer" class="mega-menu-link block p-3 rounded-lg hover:bg-indigo-300 ">
                         <div class="font-medium">Services immobiliers
 
                         </div>
@@ -387,21 +387,21 @@
         <div class="grid py-5 px-4 mx-auto max-w-screen-xl text-gray-900  sm:grid-cols-2 md:grid-cols-3 md:px-6">
             <ul aria-labelledby="mega-menu-full-dropdown-button2">
                 <li>
-                    <a href="louer" class="block p-3 rounded-lg hover:bg-indigo-300 ">
+                    <a href="louer" class="mega-menu-link block p-3 rounded-lg hover:bg-indigo-300 ">
                         <div class="font-medium">Acheter un appartement
                         </div>
 
                     </a>
                 </li>
                 <li>
-                    <a href="louer" class="block p-3 rounded-lg hover:bg-indigo-300 ">
+                    <a href="louer" class="mega-menu-link block p-3 rounded-lg hover:bg-indigo-300 ">
                         <div class="font-medium">Acheter une maison
                         </div>
 
                     </a>
                 </li>
                 <li>
-                    <a href="louer" class="block p-3 rounded-lg hover:bg-indigo-300 ">
+                    <a href="louer" class="mega-menu-link block p-3 rounded-lg hover:bg-indigo-300 ">
                         <div class="font-medium">Acheter un terrain
                         </div>
 
@@ -410,21 +410,21 @@
             </ul>
             <ul>
                 <li>
-                    <a href="louer" class="block p-3 rounded-lg hover:bg-indigo-300 ">
+                    <a href="louer" class="mega-menu-link block p-3 rounded-lg hover:bg-indigo-300 ">
                         <div class="font-medium">Acheter des bureaux
                         </div>
 
                     </a>
                 </li>
                 <li>
-                    <a href="louer" class="block p-3 rounded-lg hover:bg-indigo-300 ">
+                    <a href="louer" class="mega-menu-link block p-3 rounded-lg hover:bg-indigo-300 ">
                         <div class="font-medium">Acheter un espace commercial
                         </div>
 
                     </a>
                 </li>
                 <li>
-                    <a href="louer" class="block p-3 rounded-lg hover:bg-indigo-300 ">
+                    <a href="louer" class="mega-menu-link block p-3 rounded-lg hover:bg-indigo-300 ">
                         <div class="font-medium">Acheter une villa
                         </div>
 
@@ -433,21 +433,21 @@
             </ul>
             <ul>
                 <li>
-                    <a href="louer" class="block p-3 rounded-lg hover:bg-indigo-300 ">
+                    <a href="louer" class="mega-menu-link block p-3 rounded-lg hover:bg-indigo-300 ">
                         <div class="font-medium">Acheter un immeuble
                         </div>
 
                     </a>
                 </li>
                 <li>
-                    <a href="louer" class="block p-3 rounded-lg hover:bg-indigo-300 ">
+                    <a href="louer" class="mega-menu-link block p-3 rounded-lg hover:bg-indigo-300 ">
                         <div class="font-medium">Consulter un expert immobilier
                         </div>
 
                     </a>
                 </li>
                 <li>
-                    <a href="louer" class="block p-3 rounded-lg hover:bg-indigo-300 ">
+                    <a href="louer" class="mega-menu-link block p-3 rounded-lg hover:bg-indigo-300 ">
                         <div class="font-medium">Guide d'achat de biens immobiliers
                         </div>
 
@@ -461,21 +461,21 @@
         <div class="grid py-5 px-4 mx-auto max-w-screen-xl text-gray-900  sm:grid-cols-2 md:grid-cols-3 md:px-6">
             <ul aria-labelledby="mega-menu-full-dropdown-button3">
                 <li>
-                    <a href="louer" class="block p-3 rounded-lg hover:bg-indigo-300 ">
+                    <a href="vendre" class="mega-menu-link block p-3 rounded-lg hover:bg-indigo-300 ">
                         <div class="font-medium">Vendre un appartement
                         </div>
 
                     </a>
                 </li>
                 <li>
-                    <a href="louer" class="block p-3 rounded-lg hover:bg-indigo-300 ">
+                    <a href="vendre" class="mega-menu-link block p-3 rounded-lg hover:bg-indigo-300 ">
                         <div class="font-medium">Vendre une maison
                         </div>
 
                     </a>
                 </li>
                 <li>
-                    <a href="louer" class="block p-3 rounded-lg hover:bg-indigo-300 ">
+                    <a href="vendre" class="mega-menu-link block p-3 rounded-lg hover:bg-indigo-300 ">
                         <div class="font-medium">Vendre un terrain
                         </div>
 
@@ -484,21 +484,21 @@
             </ul>
             <ul>
                 <li>
-                    <a href="louer" class="block p-3 rounded-lg hover:bg-indigo-300 ">
+                    <a href="vendre" class="mega-menu-link block p-3 rounded-lg hover:bg-indigo-300 ">
                         <div class="font-medium">Vendre des bureaux
                         </div>
 
                     </a>
                 </li>
                 <li>
-                    <a href="louer" class="block p-3 rounded-lg hover:bg-indigo-300 ">
+                    <a href="vendre" class="mega-menu-link block p-3 rounded-lg hover:bg-indigo-300 ">
                         <div class="font-medium">Vendre un espace commercial
                         </div>
 
                     </a>
                 </li>
                 <li>
-                    <a href="louer" class="block p-3 rounded-lg hover:bg-indigo-300 ">
+                    <a href="vendre" class="mega-menu-link block p-3 rounded-lg hover:bg-indigo-300 ">
                         <div class="font-medium">Vendre une villa
                         </div>
 
@@ -507,28 +507,28 @@
             </ul>
             <ul>
                 <li>
-                    <a href="louer" class="block p-3 rounded-lg hover:bg-indigo-300 ">
+                    <a href="vendre" class="mega-menu-link block p-3 rounded-lg hover:bg-indigo-300 ">
                         <div class="font-medium">Vendre un immeuble
                         </div>
 
                     </a>
                 </li>
                 <li>
-                    <a href="louer" class="block p-3 rounded-lg hover:bg-indigo-300 ">
+                    <a href="vendre" class="mega-menu-link block p-3 rounded-lg hover:bg-indigo-300 ">
                         <div class="font-medium">Confier mon bien à vendre
                         </div>
 
                     </a>
                 </li>
                 <li>
-                    <a href="louer" class="block p-3 rounded-lg hover:bg-indigo-300 ">
+                    <a href="vendre" class="mega-menu-link block p-3 rounded-lg hover:bg-indigo-300 ">
                         <div class="font-medium">Consulter un expert immobilier
                         </div>
 
                     </a>
                 </li>
                 <li>
-                    <a href="louer" class="block p-3 rounded-lg hover:bg-indigo-300 ">
+                    <a href="vendre" class="mega-menu-linkblock p-3 rounded-lg hover:bg-indigo-300 ">
                         <div class="font-medium">Guide de vente de biens immobiliers
 
                         </div>
@@ -543,21 +543,21 @@
         <div class="grid py-5 px-4 mx-auto max-w-screen-xl text-gray-900  sm:grid-cols-2 md:grid-cols-3 md:px-6">
             <ul aria-labelledby="mega-menu-full-dropdown-button4">
                 <li>
-                    <a href="louer" class="block p-3 rounded-lg hover:bg-indigo-300 ">
+                    <a href="louer" class="mega-menu-link block p-3 rounded-lg hover:bg-indigo-300 ">
                         <div class="font-medium">Louer un appartement
                         </div>
 
                     </a>
                 </li>
                 <li>
-                    <a href="louer" class="block p-3 rounded-lg hover:bg-indigo-300 ">
+                    <a href="louer" class="mega-menu-link block p-3 rounded-lg hover:bg-indigo-300 ">
                         <div class="font-medium">Louer une maison
                         </div>
 
                     </a>
                 </li>
                 <li>
-                    <a href="louer" class="block p-3 rounded-lg hover:bg-indigo-300 ">
+                    <a href="louer" class="mega-menu-link block p-3 rounded-lg hover:bg-indigo-300 ">
                         <div class="font-medium">Louer des bureaux
                         </div>
 
@@ -566,20 +566,20 @@
             </ul>
             <ul>
                 <li>
-                    <a href="louer" class="block p-3 rounded-lg hover:bg-indigo-300 ">
+                    <a href="louer" class="mega-menu-link block p-3 rounded-lg hover:bg-indigo-300 ">
                         <div class="font-medium">Louer un espace commercial
                         </div>
 
                     </a>
                 </li>
                 <li>
-                    <a href="louer" class="block p-3 rounded-lg hover:bg-indigo-300 ">
+                    <a href="louer" class="mega-menu-link block p-3 rounded-lg hover:bg-indigo-300 ">
                         <div class="font-medium">Louer un terrain</div>
 
                     </a>
                 </li>
                 <li>
-                    <a href="louer" class="block p-3 rounded-lg hover:bg-indigo-300 ">
+                    <a href="louer" class="mega-menu-link block p-3 rounded-lg hover:bg-indigo-300 ">
                         <div class="font-medium">Louer une villa
                         </div>
 
@@ -588,21 +588,21 @@
             </ul>
             <ul>
                 <li>
-                    <a href="louer" class="block p-3 rounded-lg hover:bg-indigo-300 ">
+                    <a href="louer" class="mega-menu-link block p-3 rounded-lg hover:bg-indigo-300 ">
                         <div class="font-medium">Louer un appartement meublé
                         </div>
 
                     </a>
                 </li>
                 <li>
-                    <a href="louer" class="block p-3 rounded-lg hover:bg-indigo-300 ">
+                    <a href="louer" class="mega-menu-link block p-3 rounded-lg hover:bg-indigo-300 ">
                         <div class="font-medium">Louer un terrain commercial
                         </div>
 
                     </a>
                 </li>
                 <li>
-                    <a href="louer" class="block p-3 rounded-lg hover:bg-indigo-300 ">
+                    <a href="louer" class="mega-menu-link block p-3 rounded-lg hover:bg-indigo-300 ">
                         <div class="font-medium">Guide de location de biens immobiliers</div>
 
                     </a>
@@ -616,20 +616,20 @@
         <div class="grid py-5 px-4 mx-auto max-w-screen-xl text-gray-900  sm:grid-cols-2 md:grid-cols-3 md:px-6">
             <ul aria-labelledby="mega-menu-full-dropdown-button5">
                 <li>
-                    <a href="louer" class="block p-3 rounded-lg hover:bg-indigo-300 ">
+                    <a href="louer" class="mega-menu-link block p-3 rounded-lg hover:bg-indigo-300 ">
                         <div class="font-medium">Consulter un expert immobilier
                         </div>
 
                     </a>
                 </li>
                 <li>
-                    <a href="louer" class="block p-3 rounded-lg hover:bg-indigo-300 ">
+                    <a href="louer" class="mega-menu-link block p-3 rounded-lg hover:bg-indigo-300 ">
                         <div class="font-medium">Commander un document administratif </div>
 
                     </a>
                 </li>
                 <li>
-                    <a href="louer" class="block p-3 rounded-lg hover:bg-indigo-300 ">
+                    <a href="louer" class="mega-menu-link block p-3 rounded-lg hover:bg-indigo-300 ">
                         <div class="font-medium">Commander une main d’oeuvre
                         </div>
 
@@ -637,7 +637,7 @@
                 </li>
 
                 <li>
-                    <a href="louer" class="block p-3 rounded-lg hover:bg-indigo-300 ">
+                    <a href="louer" class="mega-menu-link block p-3 rounded-lg hover:bg-indigo-300 ">
                         <div class="font-medium">Suivre son dossier personnel
                         </div>
 
@@ -645,7 +645,7 @@
                 </li>
 
                 <li>
-                    <a href="louer" class="block p-3 rounded-lg hover:bg-indigo-300 ">
+                    <a href="louer" class="mega-menu-link block p-3 rounded-lg hover:bg-indigo-300 ">
                         <div class="font-medium">Morcellement</div>
 
                     </a>
@@ -653,7 +653,7 @@
             </ul>
             <ul>
                 <li>
-                    <a href="louer" class="block p-3 rounded-lg hover:bg-indigo-300 ">
+                    <a href="louer" class="mega-menu-link block p-3 rounded-lg hover:bg-indigo-300 ">
                         <div class="font-medium">Titre foncier
                         </div>
 
@@ -661,27 +661,27 @@
                 </li>
 
                 <li>
-                    <a href="louer" class="block p-3 rounded-lg hover:bg-indigo-300 ">
+                    <a href="louer" class="mega-menu-link block p-3 rounded-lg hover:bg-indigo-300 ">
                         <div class="font-medium">Topographie</div>
 
                     </a>
                 </li>
                 <li>
-                    <a href="louer" class="block p-3 rounded-lg hover:bg-indigo-300 ">
+                    <a href="louer" class="mega-menu-link block p-3 rounded-lg hover:bg-indigo-300 ">
                         <div class="font-medium">Immatriculation foncière
                         </div>
 
                     </a>
                 </li>
                 <li>
-                    <a href="louer" class="block p-3 rounded-lg hover:bg-indigo-300 ">
+                    <a href="louer" class="mega-menu-link block p-3 rounded-lg hover:bg-indigo-300 ">
                         <div class="font-medium">Architecture technique et design
                         </div>
 
                     </a>
                 </li>
                 <li>
-                    <a href="louer" class="block p-3 rounded-lg hover:bg-indigo-300 ">
+                    <a href="louer" class="mega-menu-link block p-3 rounded-lg hover:bg-indigo-300 ">
                         <div class="font-medium">Trouver un notaire
 
                         </div>
@@ -691,7 +691,7 @@
             </ul>
             <ul>
                 <li>
-                    <a href="louer" class="block p-3 rounded-lg hover:bg-indigo-300 ">
+                    <a href="louer" class="mega-menu-link block p-3 rounded-lg hover:bg-indigo-300 ">
                         <div class="font-medium">Trouver un avocat
 
                         </div>
@@ -699,7 +699,7 @@
                     </a>
                 </li>
                 <li>
-                    <a href="louer" class="block p-3 rounded-lg hover:bg-indigo-300 ">
+                    <a href="louer" class="mega-menu-link block p-3 rounded-lg hover:bg-indigo-300 ">
                         <div class="font-medium">Trouver un agent immobilier
 
                         </div>
@@ -707,7 +707,7 @@
                     </a>
                 </li>
                 <li>
-                    <a href="louer" class="block p-3 rounded-lg hover:bg-indigo-300 ">
+                    <a href="louer" class="mega-menu-link block p-3 rounded-lg hover:bg-indigo-300 ">
                         <div class="font-medium">Guide d'investissement immobilier
                         </div>
 
@@ -725,6 +725,8 @@ $('#mega-menu-full-dropdown-button2').click(function() { $('#mega-menu-full-drop
 $('#mega-menu-full-dropdown-button3').click(function() { $('#mega-menu-full-dropdown5, #mega-menu-full-dropdown4, #mega-menu-full-dropdown2, #mega-menu-full-dropdown1, #mega-menu-full-dropdown').addClass('hidden');});
 $('#mega-menu-full-dropdown-button4').click(function() { $('#mega-menu-full-dropdown5, #mega-menu-full-dropdown3, #mega-menu-full-dropdown2, #mega-menu-full-dropdown1, #mega-menu-full-dropdown').addClass('hidden');});
 $('#mega-menu-full-dropdown-button5').click(function() { $('#mega-menu-full-dropdown4, #mega-menu-full-dropdown3, #mega-menu-full-dropdown2, #mega-menu-full-dropdown1, #mega-menu-full-dropdown').addClass('hidden');});
+$('.mega-menu-link').click(function(){ $('#mega-menu-full-dropdown5, #mega-menu-full-dropdown4, #mega-menu-full-dropdown3, #mega-menu-full-dropdown2, #mega-menu-full-dropdown1, #mega-menu-full-dropdown').addClass('hidden');
+});
 </script>
 <style>
 
