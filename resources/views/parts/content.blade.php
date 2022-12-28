@@ -30,7 +30,7 @@
           </div>
       </section>
 
-      <section class="bg-[#ffb08ed1] py-16 px-4">
+      <section class="fgrad2 py-16 px-4">
           <div class="mx-auto max-w-[1440px]">
               <div class="grid gap-6 lg:grid-cols-3">
                   <div class="overflow-hidden rounded lg:flex lg:col-span-3">
@@ -346,5 +346,10 @@
       .fgrad {
           background: rgb(34, 75, 176);
           background: linear-gradient(270deg, rgba(34, 75, 176, 1) 0%, rgba(5, 29, 91, 1) 51%, rgba(3, 23, 79, 1) 100%);
+      }
+
+      .fgrad2 {
+        background: rgb(116,19,234);
+background: linear-gradient(353deg, rgba(116,19,234,1) 0%, rgba(163,77,210,1) 0%, rgba(255,190,162,1) 69%);
       }
   </style>

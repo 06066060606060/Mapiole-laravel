@@ -75,6 +75,7 @@
                 -ajout pages cgu,cgu,faq<br>
                 -systeme d'edition des pages<br>
                 -page autoscroll<br>
+                -ajout paramétre mail inscription<br>
             </p>
         @endif
             </div>
