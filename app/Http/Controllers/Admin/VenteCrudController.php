@@ -120,9 +120,23 @@ class VenteCrudController extends CrudController
             'upload' => true,
             'temporary' => 10,
               'wrapper'   => [ 
-                 'class'      => 'form-group w-52 pl-3'
+                 'class'      => 'form-group w-64 pl-3'
               ], // change the HTML attributes for the field wrapper - mostly for resizing fields 
         ]);
+
+        CRUD::addField([
+            'name' => 'documents',
+            'key' => 'documents',
+            'label' => 'Documents',
+            'type' => 'upload_multiple',
+            'prefix' => 'storage/',
+            'upload' => true,
+            'temporary' => 10,
+              'wrapper'   => [ 
+                 'class'      => 'form-group w-64 pl-3'
+              ], // change the HTML attributes for the field wrapper - mostly for resizing fields 
+        ]);
+
         CRUD::field('description')->type('textarea');
 
         CRUD::addField(['name' => 'prix', 'type' => 'number', 'label' => 'Prix / mois', 'wrapper' => [ 'class' => 'form-group col-md pl-3'],]);

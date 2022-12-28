@@ -23,9 +23,9 @@
     	@foreach($values as $key => $file_path)
     		<div class="file-preview">
     			@if (isset($field['temporary']))
-		            <img class="w-20 h-auto" src="{{ isset($field['disk'])?asset(\Storage::disk($field['disk'])->temporaryUrl($file_path, Carbon\Carbon::now()->addMinutes($field['temporary']))):asset('storage/' . $file_path) }}"></img>
+		            <a target="_blank" href="{{ isset($field['disk'])?asset(\Storage::disk($field['disk'])->temporaryUrl($file_path, Carbon\Carbon::now()->addMinutes($field['temporary']))):asset('storage/' . $file_path) }}">{{'storage/' . $file_path}}</a>
 		        @else
-		            <a target="_blank" href="{{ isset($field['disk'])?asset(\Storage::disk($field['disk'])->url('storage/' . $file_path)):asset($file_path) }}"></a>
+		            <a target="_blank" href="{{ isset($field['disk'])?asset(\Storage::disk($field['disk'])->url('storage/' . $file_path)):asset('storage/' .$file_path) }}">{{'storage/' . $file_path}}</a>
 		        @endif
 		    	<a href="#" class="btn btn-light btn-sm float-right file-clear-button" title="Clear file" data-filename="{{ $file_path }}"><i class="la la-remove"></i></a>
 		    	<div class="clearfix"></div>

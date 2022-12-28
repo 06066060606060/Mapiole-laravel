@@ -26,6 +26,7 @@ class Location extends Model
         'name',
         'description',
         'image',
+        'documents',
         'category',
         'adresse',
         'ville',
@@ -50,7 +51,8 @@ class Location extends Model
     // protected $hidden = [];
     // protected $dates = [];
     protected $casts = [
-        'image' => 'array'
+        'image' => 'array',
+        'documents' => 'array',
     ];
 
     /*
@@ -62,6 +64,19 @@ class Location extends Model
     {
     
         $attribute_name = "image";
+        $disk = "public";
+        $destination_path = "/uploads";
+
+        $this->uploadMultipleFilesToDisk($value, $attribute_name, $disk, $destination_path);
+   
+
+    // return $this->attributes[{$attribute_name}]; // uncomment if this is a translatable field
+    }
+
+    public function setDocumentsAttribute($value)
+    {
+    
+        $attribute_name = "documents";
         $disk = "public";
         $destination_path = "/uploads";
 

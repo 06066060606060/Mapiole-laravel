@@ -76,6 +76,7 @@
                 -systeme d'edition des pages<br>
                 -page autoscroll<br>
                 -ajout paramétre mail inscription<br>
+                -ajout uploads documents multiple<br>
             </p>
         @endif
             </div>

@@ -350,6 +350,6 @@
 
       .fgrad2 {
         background: rgb(116,19,234);
-background: linear-gradient(353deg, rgba(116,19,234,1) 0%, rgba(163,77,210,1) 0%, rgba(255,190,162,1) 69%);
+        background: linear-gradient(353deg, rgba(116,19,234,1) 0%, rgba(163,77,210,1) 0%, rgba(255,190,162,1) 69%);
       }
   </style>
