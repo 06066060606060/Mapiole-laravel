@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Admin;
 use App\Http\Requests\VenteRequest;
 use Backpack\CRUD\app\Http\Controllers\CrudController;
 use Backpack\CRUD\app\Library\CrudPanel\CrudPanelFacade as CRUD;
+use Pestopancake\LaravelBackpackNotifications\Notifications\DatabaseNotification;
 
 /**
  * Class VenteCrudController
