@@ -246,3 +246,8 @@ background: rgb(34,75,176);
 background: linear-gradient(270deg, rgba(34,75,176,1) 0%, rgba(5,29,91,1) 51%, rgba(3,23,79,1) 100%);
 }
 </style>
+<script>
+$('a').on("click",function(){
+      $(window).scrollTop(0);
+});
+</script>

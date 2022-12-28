@@ -7,9 +7,9 @@
     @section('main')
         <div data-barba="container">
             <section class="relative mx-auto space-y-16">
-                <div id="dvImage" class="w-full h-[32rem] shadow-xl bg-cover  no-repeat center center fixed)"
+                <div id="dvImage" class="w-full h-[20rem] shadow-xl bg-cover  no-repeat center center fixed)"
                     style="background-image: url('./img/banner.jpeg');">
-                    <div class="flex flex-col items-center justify-center w-full h-full bg-gray-900/40">
+                    <div class="flex flex-col items-center justify-center w-full h-full bg-gray-900/40 pt-12">
                         <h1 class="text-4xl font-bold text-white">{{ $page->title }}</h1>
                     </div>
                 </div>

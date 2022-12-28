@@ -70,12 +70,11 @@
   @if (backpack_user()->role == 'admin')
             <p class="w-1/4 px-4 py-2 mx-8 text-xs text-gray-800 bg-white shadow rounded -pl-2">
                 Derniéres mise à jour: 1.9<br>
-                -modif menu<br>
-                -fix login register<br>
-                -fix mail<br>
+                -fix mail inscription<br>
                 -base de donnée pages, blog<br>
                 -ajout pages cgu,cgu,faq<br>
-                 -systeme d'edition des pages<br>
+                -systeme d'edition des pages<br>
+                -page autoscroll<br>
             </p>
         @endif
             </div>
