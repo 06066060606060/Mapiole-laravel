@@ -22,7 +22,7 @@ Route::get('louer', 'rent');
 Route::get('acheter', 'buy');
 Route::get('construire', 'build');
 Route::get('vendre', 'sell');
-Route::get('services', 'service');
+Route::get('service', 'service');
 Route::get('annonce', 'annonce');
 
 

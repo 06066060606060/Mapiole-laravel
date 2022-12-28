@@ -97,7 +97,7 @@ class LocationCrudController extends CrudController
 
 
         CRUD::field('user_id')->label('Utilisateur');
-
+  
         CRUD::addField([
             'name' => 'user_id',
             'label' => 'Utilisateur',

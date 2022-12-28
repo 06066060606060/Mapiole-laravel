@@ -7,11 +7,11 @@
                  <div class="flex flex-col items-center justify-center w-full h-full bg-gray-900/40">
                      <div class="flex flex-col items-center justify-center w-full h-full px-4">
                          <p
-                             class="pb-4 md:pb-8 pt-40 md:pt24 text-xl md:text-5xl font-bold text-center text-white drop-shadow-xl">
-                             Trouvez un bien en location</p>
-                         <div class="w-full md:w-1/2 shadow-lg p-5 rounded-lg bg-white">
+                             class="pt-40 pb-4 text-xl font-medium text-center text-white md:pb-8 md:pt24 md:text-5xl drop-shadow-xl">
+                             Rechercher un bien en location</p>
+                         <div class="w-full p-5 bg-white rounded-lg shadow-lg md:w-1/2">
                              <div class="relative">
-                                 <div class="absolute flex items-center ml-2 h-full">
+                                 <div class="absolute flex items-center h-full ml-2">
                                      <svg class="w-4 h-4 fill-current text-primary-gray-dark" viewBox="0 0 16 16"
                                          fill="none" xmlns="http://www.w3.org/2000/svg">
                                          <path
@@ -21,7 +21,7 @@
                                  </div>
 
                                  <input type="text" placeholder="Recherche par ville, prix, surface..."
-                                     class="px-8 py-3 w-full rounded-md bg-gray-100 border-transparent focus:border-gray-500  focus:ring-0 text-sm">
+                                     class="w-full px-8 py-3 text-sm bg-gray-100 border-transparent rounded-md focus:border-gray-500 focus:ring-0">
                              </div>
 
                              <div class="flex items-center justify-between mt-4">
@@ -30,22 +30,22 @@
                                  </p>
 
                                  <button
-                                     class="px-4 py-2 bg-gray-100 hover:bg-indigo-300 text-gray-800 text-sm font-medium rounded-md">
+                                     class="px-4 py-2 text-sm font-medium text-gray-800 bg-gray-100 rounded-md hover:bg-indigo-300">
                                      Reset Filtres
                                  </button>
                              </div>
 
                              <div>
-                                 <div class="grid grid-cols-2 md:grid-cols-3 xl:grid-cols-5 gap-4 mt-4">
+                                 <div class="grid grid-cols-2 gap-4 mt-4 md:grid-cols-3 xl:grid-cols-5">
                                      <select
-                                         class="px-4 py-3 w-full rounded-md bg-gray-100 border-transparent focus:border-gray-500  focus:ring-0 text-sm">
+                                         class="w-full px-4 py-3 text-sm bg-gray-100 border-transparent rounded-md focus:border-gray-500 focus:ring-0">
                                          <option value="">Type</option>
                                          <option value="for-rent">Maison</option>
                                          <option value="for-sale">Appartements</option>
                                      </select>
 
                                      <select
-                                         class="px-4 py-3 w-full rounded-md bg-gray-100 border-transparent focus:border-gray-500  focus:ring-0 text-sm">
+                                         class="w-full px-4 py-3 text-sm bg-gray-100 border-transparent rounded-md focus:border-gray-500 focus:ring-0">
                                          <option value="">Prix</option>
                                          <option value="1000">RM 1000</option>
                                          <option value="2000">RM 2000</option>
@@ -54,7 +54,7 @@
                                      </select>
 
                                      <select
-                                         class="px-4 py-3 w-full rounded-md bg-gray-100 border-transparent focus:border-gray-500  focus:ring-0 text-sm">
+                                         class="w-full px-4 py-3 text-sm bg-gray-100 border-transparent rounded-md focus:border-gray-500 focus:ring-0">
                                          <option value="">Surface</option>
                                          <option value="200">200 sq.ft</option>
                                          <option value="400">400 sq.ft</option>
@@ -65,7 +65,7 @@
                                      </select>
 
                                      <select
-                                         class="px-4 py-3 w-full rounded-md bg-gray-100 border-transparent focus:border-gray-500  focus:ring-0 text-sm">
+                                         class="w-full px-4 py-3 text-sm bg-gray-100 border-transparent rounded-md focus:border-gray-500 focus:ring-0">
                                          <option value="">Nb Chambres</option>
                                          <option value="1">1 bedroom</option>
                                          <option value="2">2 bedrooms</option>
@@ -75,7 +75,7 @@
                                      </select>
 
                                      <button
-                                         class="px-4 py-3 w-full text-white rounded-md hover:bg-indigo-600 bg-indigo-600 border-transparent transition duration-200 focus:border-gray-500 active:bg-white active:text-black border border-gray-400 text-sm">
+                                         class="w-full px-4 py-3 text-sm text-white transition duration-200 bg-indigo-600 border border-transparent border-gray-400 rounded-md hover:bg-indigo-600 focus:border-gray-500 active:bg-white active:text-black">
                                          Rechercher
                                      </button>
 
@@ -89,7 +89,7 @@
          <div class="mx-auto max-w-[1440px]">
 
 
-              <section class="text-gray-600 body-font pt-12">
+              <section class="pt-12 text-gray-600 body-font">
                  <div class="px-4 py-12 mx-auto ">
                      <div class="flex flex-wrap w-full mb-8">
                          <div class="w-full pl-4 mb-4 lg:w-1/2 lg:mb-0">
@@ -244,7 +244,7 @@
                      <div class="flex flex-wrap pb-16 mt-8 -m-4">
                          <div class="p-4 xl:w-1/4 md:w-1/2">
                              <figure
-                                 class="snip1461 p-6 transition duration-200 bg-gray-100 border border-gray-200 rounded-lg shadow-xl hover:border-gray-400">
+                                 class="p-6 transition duration-200 bg-gray-100 border border-gray-200 rounded-lg shadow-xl snip1461 hover:border-gray-400">
                                  <img class="object-cover object-center w-full h-40 mb-6"
                                      src="./img/Atlanta-Georgia-400x284.png" alt="content">
                                  <h3 class="text-xs font-bold tracking-widest text-indigo-600 title-font">SUBTITLE</h3>
