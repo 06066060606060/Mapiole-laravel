@@ -1,6 +1,6 @@
   <div class=" xl:pt-52 lg:pt-[400px] pt-[500px] md:pt-[450px]">
 
-      <section class="max-w-[1440px] mx-auto ">
+      <section class="max-w-[1440px] mx-auto px-4">
           <h2 class="text-4xl font-bold text-center md:text-5xl drop-shadow-xl">Trouvez <b
                   class="text-[#6805F2]">votre</b> nouveau <b class="text-[#6805F2]">chez-vous..</b></h2>
           <div class="grid gap-6 my-16 lg:grid-cols-3">
@@ -30,7 +30,7 @@
           </div>
       </section>
 
-      <section class="bg-[#FFB08E] py-16">
+      <section class="bg-[#ffb08ed1] py-16 px-4">
           <div class="mx-auto max-w-[1440px]">
               <div class="grid gap-6 lg:grid-cols-3">
                   <div class="overflow-hidden rounded lg:flex lg:col-span-3">
@@ -178,7 +178,7 @@
           </div>
       </div>
 
-      <section class="bg-blue-100 mt-14">
+      <section class="bg-blue-100 mt-14 px-4">
           <div class="grid gap-6 py-10 mx-auto  lg:grid-cols-2 mybody max-w-[1440px]">
 
               <img src="./img/house1.jpeg" alt=""
@@ -198,7 +198,7 @@
           </div>
       </section>
 
-      <div class="grid gap-6 pt-8 mx-auto  lg:grid-cols-2 mybody max-w-[1440px]">
+      <div class="grid gap-6 pt-8 mx-auto  lg:grid-cols-2 mybody max-w-[1440px] px-4">
           <p class="py-12 mx-auto text-4xl font-bold text-center lg:col-span-full md:text-5xl drop-shadow-xl">Vous
               souhaitez <b class="text-[#6805F2]">vendre</b> ou
               <b class="text-[#6805F2]">louez</b> votre bien.
@@ -218,9 +218,9 @@
           </div>
       </div>
 
-
-      <section class="mt-12 mb-24 bg-gray-100 border border-gray-200 rounded-md shadow-xl mx-auto  max-w-[1440px]">
-          <div class="container flex flex-col p-6 mx-auto">
+<section class="mt-12 mb-24 mx-auto  max-w-[1440px] ">
+      <div class=" bg-gray-100 border border-gray-200 rounded-md shadow-xl mx-4">
+          <div class="container flex flex-col p-6">
               <h2 class="py-4 text-3xl font-bold text-center">Comment ça marche ?</h2>
               <div class="divide-y divide-gray-300">
                   <div class="grid justify-center grid-cols-4 p-8 mx-auto space-y-8 lg:space-y-0">
@@ -267,15 +267,15 @@
                   </div>
               </div>
           </div>
-      </section>
+      </div>
+</section>
 
 
 
 
-
-      <section class="py-8 bg-[#002932] ">
+      <section class="p-8 bg-[#002932] ">
           <div
-              class="p-6 pt-10 pb-20 mx-auto my-8 bg-gray-100 border border-gray-200 rounded shadow-md lg:px-8 max-w-[1440px]">
+              class="p-6 pt-10 pb-20 mx-auto my-8 bg-gray-100 border border-gray-200 rounded shadow-md max-w-[1440px] ">
               <h2 class="text-3xl font-bold text-center md:text-4xl">Trouvez votre bien et comparez les offres.</h2>
 
               <img src="./img/house3.jpeg" alt="" class="object-cover w-full h-auto mt-8 max-h-96 ">

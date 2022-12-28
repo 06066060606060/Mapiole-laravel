@@ -6,17 +6,6 @@
 @section('content')
     <section class="text-gray-600 body-font">
         <div id="main-content" class="relative w-full h-full mt-2 overflow-y-auto rounded-lg">
-                @if (backpack_user()->role == 'admin')
-            <p class="w-1/2 px-4 py-2 mx-8 mt-4 text-xs text-gray-200 bg-gray-900 rounded -pl-2">
-                Derniéres mise à jour: 1.02<br>
-                -modif menu<br>
-                -fix login register<br>
-                -fix mail<br>
-                -base de donnée pages, blog<br>
-                -ajout pages cgu,cgu,faq<br>
-                 -systeme d'edition des pages<br>
-            </p>
-        @endif
             <div class="flex flex-col gap-4 px-4 pt-6 pb-6 xl:flex-row">
                 <div class="p-4 bg-white rounded-lg shadow sm:p-6 xl:p-8 ">
                     <div class="flex items-center justify-between mb-2">
@@ -78,23 +67,19 @@
                         </div>
                     </div>
                 </div>
-
+  @if (backpack_user()->role == 'admin')
+            <p class="w-1/4 px-4 py-2 mx-8 text-xs text-gray-800 bg-white shadow rounded -pl-2">
+                Derniéres mise à jour: 1.9<br>
+                -modif menu<br>
+                -fix login register<br>
+                -fix mail<br>
+                -base de donnée pages, blog<br>
+                -ajout pages cgu,cgu,faq<br>
+                 -systeme d'edition des pages<br>
+            </p>
+        @endif
             </div>
         </div>
-
-<form method="POST" action="../changelocale">
-@csrf
-
- 
-
-    <button type ="submit" class="">
-       change
-    </button>
-</form>
-
- 
-
-
     </section>
     <style>
         * {
