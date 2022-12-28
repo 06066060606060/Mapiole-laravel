@@ -18,8 +18,8 @@ return new class extends Migration
             $table->unsignedBigInteger('user_id');
             $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
             $table->integer('prix')->nullable();
-            $table->string('name')->nullable();
-            $table->string('description')->nullable();
+            $table->text('name')->nullable();
+            $table->text('description')->nullable();
             $table->string('image')->nullable();
             $table->string('documents')->nullable();
             $table->string('category')->nullable();

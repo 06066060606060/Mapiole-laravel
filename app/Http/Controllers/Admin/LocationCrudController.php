@@ -73,7 +73,7 @@ class LocationCrudController extends CrudController
                         }
                 },  ]
             ]);
-
+            CRUD::column('ville');
         /**
          * Columns can be defined using the fluent syntax or array syntax:
          * - CRUD::column('price')->type('number');
