@@ -50,12 +50,23 @@ Route::get('/blog', function () {
 Route::get('company', function () {
     return view('company');
 });
-Route::get('/community', function () {
+Route::get('community', function () {
     return view('community');
 });
 Route::get('career', function () {
     return view('career');
 });
+
+Route::get('faq', function () {
+    return view('faq');
+});
+Route::get('cgu', function () {
+    return view('cgu');
+});
+Route::get('cgv', function () {
+    return view('cgv');
+});
+
 
 //languages
 Route::post('changelocale',  [GlobalController::class, 'changeLocale']);

@@ -3,7 +3,7 @@
  @section('main')
      <div data-barba="container">
         <section class="relative mx-auto space-y-16">
-    <div class="w-full bg-center bg-cover h-[42rem] shadow-xl" style="background-image: url('./img/banner.jpeg');">
+    <div class="w-full bg-center bg-cover h-[32rem] shadow-xl" style="background-image: url('./img/banner.jpeg');">
     <div class="flex flex-col items-center justify-center w-full h-full bg-gray-900/40">
         <h1 class="text-4xl font-bold text-white">Annonce</h1>
     </div>

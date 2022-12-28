@@ -12,8 +12,9 @@
                 -modif menu<br>
                 -fix login register<br>
                 -fix mail<br>
-                -ajout pages footer<br>
-                -ajout reglages page<br>
+                -base de donnée pages, blog<br>
+                -ajout pages cgu,cgu,faq<br>
+                 -systeme d'edition des pages<br>
             </p>
         @endif
             <div class="flex flex-col gap-4 px-4 pt-6 pb-6 xl:flex-row">

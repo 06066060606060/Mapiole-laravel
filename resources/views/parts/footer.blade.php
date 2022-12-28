@@ -205,16 +205,16 @@
         <div class="grid grid-cols-1 gap-6 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
           <div>
             <h3 class="text-gray-100 uppercase ">A propos</h3>
-            <a href="company" class="block mt-2 text-sm text-gray-100 hover:underline">Company</a>
-            <a href="community" class="block mt-2 text-sm text-gray-100 hover:underline">community</a>
-            <a href="career" class="block mt-2 text-sm text-gray-100 hover:underline">Careers</a>
+            <a href="company" class="block mt-2 text-sm text-gray-100 hover:underline">Companie</a>
+            <a href="community" class="block mt-2 text-sm text-gray-100 hover:underline">communauté</a>
+            <a href="career" class="block mt-2 text-sm text-gray-100 hover:underline">Carriére</a>
           </div>
 
           <div>
-            <h3 class="text-gray-100 uppercase ">Blog</h3>
-            <a href="blog" class="block mt-2 text-sm text-gray-100 hover:underline">location au Cameroun</a>
-            <a href="#" class="block mt-2 text-sm text-gray-100 hover:underline">Terrain au Cameroun</a>
-            <a href="#" class="block mt-2 text-sm text-gray-100 hover:underline">Titre foncier au Cameroun</a>
+            <h3 class="text-gray-100 uppercase ">Infos</h3>
+            <a href="faq" class="block mt-2 text-sm text-gray-100 hover:underline">FAQ</a>
+            <a href="cgu" class="block mt-2 text-sm text-gray-100 hover:underline">CGU</a>
+            <a href="cgv" class="block mt-2 text-sm text-gray-100 hover:underline">CGV</a>
           </div>
 
           <div>
@@ -226,6 +226,7 @@
 
           <div>
             <h3 class="text-gray-100 uppercase ">Contact</h3>
+            <a href="blog" class="block mt-2 text-sm text-gray-100 hover:underline">Blog</a>
             <span class="block mt-2 text-sm text-gray-100 hover:underline">{{ $phone }}</span>
             <span class="block mt-2 text-sm text-gray-100 hover:underline">{{ $mail }}</span>
           </div>

@@ -718,7 +718,7 @@
     </div>
 </nav>
 <script>
-$('.megabutton').mouseenter(function() { $(this).click() });
+//$('.megabutton').mouseenter(function() { $(this).click() });
 $('#mega-menu-full-dropdown-button').click(function() { $('#mega-menu-full-dropdown5, #mega-menu-full-dropdown4, #mega-menu-full-dropdown3, #mega-menu-full-dropdown2, #mega-menu-full-dropdown1').addClass('hidden');});
 $('#mega-menu-full-dropdown-button1').click(function() { $('#mega-menu-full-dropdown5, #mega-menu-full-dropdown4, #mega-menu-full-dropdown3, #mega-menu-full-dropdown2, #mega-menu-full-dropdown').addClass('hidden');});
 $('#mega-menu-full-dropdown-button2').click(function() { $('#mega-menu-full-dropdown5, #mega-menu-full-dropdown4, #mega-menu-full-dropdown3, #mega-menu-full-dropdown1, #mega-menu-full-dropdown').addClass('hidden');});

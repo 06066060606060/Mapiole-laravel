@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Blogs;
 use App\Models\Infosperso;
 use App\Models\User;
 use App\Models\Pages;
@@ -31,6 +32,11 @@ class GlobalController extends Controller
         return $pages;
     }
 
+    static function blogs()
+    {
+        $blogs = Blogs::all();
+        return $blogs;
+    }
 
     public function rent()
     {
