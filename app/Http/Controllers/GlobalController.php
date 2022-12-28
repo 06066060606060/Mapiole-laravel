@@ -6,6 +6,7 @@ use App\Models\Blogs;
 use App\Models\Infosperso;
 use App\Models\User;
 use App\Models\Pages;
+use App\Models\Emails;
 use App\Models\Sessions;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
@@ -36,6 +37,12 @@ class GlobalController extends Controller
     {
         $blogs = Blogs::all();
         return $blogs;
+    }
+
+    static function emails()
+    {
+        $emails = Emails::all();
+        return $emails;
     }
 
     public function rent()

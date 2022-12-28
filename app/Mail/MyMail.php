@@ -30,6 +30,6 @@ class MyMail extends Mailable
      */
     public function build()
     {
-        return $this->subject('Mail de GoKdo')->view('mail.contactmail');
+        return $this->subject('Mail de Mapiole.com')->view('mail.contactmail');
     }
 }

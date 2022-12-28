@@ -215,8 +215,8 @@ class VenteCrudController extends CrudController
       
         CRUD::addField(['name' => 'adresse', 'type' => 'text', 'label' => 'Adresse']);
         CRUD::addField(['name' => 'ville', 'type' => 'text', 'label' => 'Ville', 'wrapper' => [ 'class' => 'form-group col-md pl-3'],]);
-        CRUD::addField(['name' => 'code_postal', 'type' => 'number', 'label' => 'Code postal', 'wrapper' => [ 'class' => 'form-group col-md pl-3'],]);
-        CRUD::addField(['name' => 'telephone', 'type' => 'number', 'label' => 'Téléphone', 'wrapper' => [ 'class' => 'form-group col-md pl-3'],]);
+        CRUD::addField(['name' => 'code_postal', 'type' => 'text', 'label' => 'Code postal', 'wrapper' => [ 'class' => 'form-group col-md pl-3'],]);
+        CRUD::addField(['name' => 'telephone', 'type' => 'text', 'label' => 'Téléphone', 'wrapper' => [ 'class' => 'form-group col-md pl-3'],]);
         
         $this->crud->addField([
             // radio

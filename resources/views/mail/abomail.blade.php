@@ -140,7 +140,7 @@
                                                                 style="width:100%;padding-right:0px;padding-left:0px;">
                                                                 <div align="center" class="alignment"
                                                                     style="line-height:10px"><img alt="Image"
-                                                                        src="https://xbmod.fr/gokdo/img/logo.png"
+                                                                        src="https://mapiole.xbmod.fr/img/logo.png"
                                                                         style="display: block; height: auto; border: 0; width: 125px; max-width: 100%;"
                                                                         title="Image" width="125" /></div>
                                                             </td>
@@ -172,22 +172,6 @@
                                                         class="text_block block-1" role="presentation"
                                                         style="mso-table-lspace: 0pt; mso-table-rspace: 0pt; word-break: break-word;"
                                                         width="100%">
-                                                        <tr>
-                                                            <td class="pad"
-                                                                style="padding-left:15px;padding-right:10px;padding-top:20px;">
-                                                                <div style="font-family: sans-serif">
-                                                                    <div class=""
-                                                                        style="font-size: 12px; font-family: Lato, Tahoma, Verdana, Segoe, sans-serif; mso-line-height-alt: 18px; color: #ffffff; line-height: 1.5;">
-                                                                        <p
-                                                                            style="margin: 0; font-size: 14px; text-align: center; mso-line-height-alt: 75px;">
-                                                                            <span style="font-size:50px;"><strong><span
-                                                                                        style="font-size:50px;"><span
-                                                                                            style="font-size:38px;">Bonjour</span></span></strong></span>
-                                                                        </p>
-                                                                    </div>
-                                                                </div>
-                                                            </td>
-                                                        </tr>
                                                     </table>
                                                     <table border="0" cellpadding="10" cellspacing="0"
                                                         class="paragraph_block block-2" role="presentation"
@@ -211,7 +195,7 @@
                                                                 style="padding-bottom:10px;padding-left:10px;padding-right:10px;padding-top:20px;text-align:center;">
                                                                 <div align="center" class="alignment">
                                                                     <!--[if mso]><v:roundrect xmlns:v="urn:schemas-microsoft-com:vml" xmlns:w="urn:schemas-microsoft-com:office:word" href="#" style="height:52px;width:232px;v-text-anchor:middle;" arcsize="29%" stroke="false" fillcolor="#15a542"><w:anchorlock/><v:textbox inset="0px,0px,0px,0px"><center style="color:#ffffff; font-family:Tahoma, Verdana, sans-serif; font-size:16px"><![endif]--><a
-                                                                        href=""
+                                                                        href="https://mapiole.xbmod.fr/"
                                                                         style="text-decoration:none;display:inline-block;color:#ffffff;background-color:#15a542;border-radius:15px;width:auto;border-top:0px solid transparent;font-weight:400;border-right:0px solid transparent;border-bottom:0px solid transparent;border-left:0px solid transparent;padding-top:10px;padding-bottom:10px;font-family:Lato, Tahoma, Verdana, Segoe, sans-serif;font-size:16px;text-align:center;mso-border-alt:none;word-break:keep-all;"
                                                                         target="_blank"><span
                                                                             style="padding-left:40px;padding-right:40px;font-size:16px;display:inline-block;letter-spacing:normal;"><span

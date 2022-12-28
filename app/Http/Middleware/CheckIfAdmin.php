@@ -5,6 +5,7 @@ namespace App\Http\Middleware;
 use Closure;
 use Illuminate\Support\Facades\Mail;
 use App\Mail\AboMail;
+use App\Models\Emails;
 use Pestopancake\LaravelBackpackNotifications\Notifications\DatabaseNotification;
 
 class CheckIfAdmin
@@ -30,6 +31,7 @@ class CheckIfAdmin
      */
     private function checkIfUserIsAdmin($user)
     {
+        $emails = Emails::all();
         if ($user->role == 'admin') {
             //   dd('admin');
             return true;
@@ -39,9 +41,9 @@ class CheckIfAdmin
             $mailcontent = [
                 'email' => env('MAIL_USERNAME'),
                 'message' =>
-                    'Bienvenue ' .
-                    $user->name .
-                    ' Votre Compte à été crée avec succés',
+                    $emails[0]->titre . " " .
+                    $user->name . " " .
+                     $emails[0]->contenu,
             ];
             Mail::to($user->email)->queue(new AboMail($mailcontent));
             $user->role = 'user';

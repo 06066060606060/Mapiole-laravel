@@ -30,6 +30,6 @@ class AboMail extends Mailable
      */
     public function build()
     {
-        return $this->subject('Mail de GoKdo')->view('mail.abomail');
+        return $this->subject('Mail de Mapiole.com')->view('mail.abomail');
     }
 }

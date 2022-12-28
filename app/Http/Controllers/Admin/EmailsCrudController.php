@@ -2,22 +2,22 @@
 
 namespace App\Http\Controllers\Admin;
 
-use App\Http\Requests\PagesRequest;
+use App\Http\Requests\EmailsRequest;
 use Backpack\CRUD\app\Http\Controllers\CrudController;
 use Backpack\CRUD\app\Library\CrudPanel\CrudPanelFacade as CRUD;
 
 /**
- * Class PagesCrudController
+ * Class EmailsCrudController
  * @package App\Http\Controllers\Admin
  * @property-read \Backpack\CRUD\app\Library\CrudPanel\CrudPanel $crud
  */
-class PagesCrudController extends CrudController
+class EmailsCrudController extends CrudController
 {
     use \Backpack\CRUD\app\Http\Controllers\Operations\ListOperation;
-    //use \Backpack\CRUD\app\Http\Controllers\Operations\CreateOperation;
+    use \Backpack\CRUD\app\Http\Controllers\Operations\CreateOperation;
     use \Backpack\CRUD\app\Http\Controllers\Operations\UpdateOperation;
-    // use \Backpack\CRUD\app\Http\Controllers\Operations\DeleteOperation;
-    //use \Backpack\CRUD\app\Http\Controllers\Operations\ShowOperation;
+    use \Backpack\CRUD\app\Http\Controllers\Operations\DeleteOperation;
+   // use \Backpack\CRUD\app\Http\Controllers\Operations\ShowOperation;
 
     /**
      * Configure the CrudPanel object. Apply settings to all operations.
@@ -26,10 +26,14 @@ class PagesCrudController extends CrudController
      */
     public function setup()
     {
-        CRUD::setModel(\App\Models\Pages::class);
-        CRUD::setRoute(config('backpack.base.route_prefix') . '/pages');
-        CRUD::setEntityNameStrings('pages', 'pages');
+        CRUD::setModel(\App\Models\Emails::class);
+        CRUD::setRoute(config('backpack.base.route_prefix') . '/emails');
+        CRUD::setEntityNameStrings('emails', 'emails');
     }
+
+
+
+    
 
     /**
      * Define what happens when the List operation is loaded.
@@ -39,23 +43,18 @@ class PagesCrudController extends CrudController
      */
     protected function setupListOperation()
     {
-        $this->crud->orderBy('id', 'asc');
         $this->crud->addColumn([
-            'name'    => 'label',
-            'label'   => 'Pages',
+            'name'    => 'type',
+            'label'   => 'Type',
             'type'    => 'text',
             'wrapper' => [
                 'element' => 'span',
                 'class' => function ($crud, $column, $entry, $related_key) {
-                            return 'ml-4 badge badge-warning';
-                        }
-                  ]
+                            return 'ml-4 badge badge-success';
+                        } ]
             ]);
-        CRUD::column('title')->type('text')->label('Titre');
-        CRUD::column('content')->label('Contenu');
-        //if id = 1 then show a button
-
-
+        CRUD::column('titre');
+        CRUD::column('contenu');
 
 
         /**
@@ -64,6 +63,7 @@ class PagesCrudController extends CrudController
          * - CRUD::addColumn(['name' => 'price', 'type' => 'number']); 
          */
     }
+
     /**
      * Define what happens when the Create operation is loaded.
      * 
@@ -72,16 +72,19 @@ class PagesCrudController extends CrudController
      */
     protected function setupCreateOperation()
     {
+        CRUD::setValidation(EmailsRequest::class);
 
-        CRUD::setValidation(PagesRequest::class);
-        CRUD::field('label')->type('text')->label('label');
-        CRUD::field('title')->type('text')->label('Titre');
+        $this->crud->setValidation([
+            'titre' => 'required|min:2|max:255',
+        ]);
+        CRUD::field('titre')->type('text')->label('Titre');
         $this->crud->addField([
-            'name' => 'content',
+            'name' => 'contenu',
             'label' => 'Contenu',
-            'type' => 'summernote',
+            'type' => 'textarea',
             'placeholder' => 'Your text text here',
         ]);
+       
         /**
          * Fields can be defined using the fluent syntax or array syntax:
          * - CRUD::field('price')->type('number');
@@ -97,14 +100,6 @@ class PagesCrudController extends CrudController
      */
     protected function setupUpdateOperation()
     {
-     
-        CRUD::setValidation(PagesRequest::class);
-        CRUD::field('title')->type('text')->label('Titre');
-        $this->crud->addField([
-            'name' => 'content',
-            'label' => 'Contenu',
-            'type' => 'summernote',
-            'placeholder' => 'Your text text here',
-        ]);
+        $this->setupCreateOperation();
     }
 }
