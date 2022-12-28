@@ -94,7 +94,7 @@
                         <div x-data="{ isOpen: false }" class="relative inline-block pr-4">
                             <!-- Dropdown toggle button -->
                             <button @click="isOpen = !isOpen" type="button"
-                                class="relative z-10 block p-[8px] text-gray-700 hover:text-gray-100  bg-white border border-gray-600 rounded-md focus:outline-none hover:bg-[#6805F2]">
+                                class="mega-menu-link relative z-10 block p-[8px] text-gray-700 hover:text-gray-100  bg-white border border-gray-600 rounded-md focus:outline-none hover:bg-[#6805F2]">
                                 <i class=" fas fa-user "></i>
                             </button>
 
@@ -134,7 +134,7 @@
 
                         <div x-data="{ isOpen: false }" class="relative inline-block pr-4">
                             <button @click="isOpen = !isOpen" type="button"
-                                class="text-gray-600 hover:text-gray-700 focus:outline-none focus:text-gray-800 "
+                                class="mega-menu-link text-gray-600 hover:text-gray-700 focus:outline-none focus:text-gray-800 "
                                 aria-label="toggle menu">
                                 Menu
 
