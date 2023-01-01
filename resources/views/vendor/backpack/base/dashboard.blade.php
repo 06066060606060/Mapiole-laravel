@@ -77,6 +77,10 @@
                 -page autoscroll<br>
                 -ajout paramétre mail inscription<br>
                 -ajout uploads documents multiple<br>
+                -ajout fonction  annonce<br>
+                -ajout fonction professionnel<br>
+                -ajout table settings<br>
+                -ajout mail setting<br>
             </p>
         @endif
             </div>
