@@ -14,7 +14,7 @@ use Backpack\CRUD\app\Library\CrudPanel\CrudPanelFacade as CRUD;
 class PagesCrudController extends CrudController
 {
     use \Backpack\CRUD\app\Http\Controllers\Operations\ListOperation;
-    use \Backpack\CRUD\app\Http\Controllers\Operations\CreateOperation;
+   // use \Backpack\CRUD\app\Http\Controllers\Operations\CreateOperation;
     use \Backpack\CRUD\app\Http\Controllers\Operations\UpdateOperation;
     // use \Backpack\CRUD\app\Http\Controllers\Operations\DeleteOperation;
     //use \Backpack\CRUD\app\Http\Controllers\Operations\ShowOperation;
@@ -74,7 +74,7 @@ class PagesCrudController extends CrudController
     {
 
         CRUD::setValidation(PagesRequest::class);
-        CRUD::field('label')->type('text')->label('label');
+     //   CRUD::field('label')->type('text')->label('label');
         CRUD::field('title')->type('text')->label('Titre');
         $this->crud->addField([
             'name' => 'content',
@@ -100,7 +100,7 @@ class PagesCrudController extends CrudController
      
         CRUD::setValidation(PagesRequest::class);
         
-        CRUD::field('label')->type('text')->label('label');
+      //  CRUD::field('label')->type('text')->label('label');
 
         CRUD::field('title')->type('text')->label('Titre');
         $this->crud->addField([
