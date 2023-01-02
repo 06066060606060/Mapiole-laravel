@@ -1,5 +1,5 @@
  <section class="relative mx-auto space-y-16">
-    <div id="dvImage" class="w-full h-[42rem] shadow-xl bg-cover  no-repeat center center fixed)" style="background-image: url('./img/banner.jpeg');">
+    <div id="dvImage" class="w-full h-[42rem] shadow-xl bg-cover  no-repeat center center" style="background-image: url('./img/banner.jpeg');">
       <div class="flex flex-col items-center justify-center w-full h-full bg-gray-900/40">
         <h2 class="mx-4 text-5xl font-bold text-white drop-shadow-xl">Inscrivez vous.</h2>
         <p class="max-w-lg pt-2 mx-4 text-white">
@@ -11,7 +11,7 @@
           <input id="Toggle3" type="checkbox" class="hidden peer">
           <a onclick="document.getElementById('secondaryButton').click()"
             class="px-6 py-3 m-2 font-bold transition duration-200 bg-[#6805F2] rounded hover:bg-indigo-600 hover:scale-105 active:scale-100">Inscription</a>
-          <a href=""
+          <a href="professionnel"
             class="px-6 py-3 m-2 font-bold transition duration-200 bg-gray-500 rounded hover:bg-indigo-300 hover:text-gray-800 hover:scale-105 active:scale-100">Vous étes
             un professionnel</a>
         </label>

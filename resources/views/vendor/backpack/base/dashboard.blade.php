@@ -75,6 +75,8 @@
                 -ajout table settings<br>
                 -ajout mail setting<br>
                 -ajout pages de blog<br>
+                -locations dynamique<br>
+                -ventes dynamique<br>
             </p>
         @endif
             </div>

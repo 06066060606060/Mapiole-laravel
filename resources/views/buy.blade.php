@@ -235,124 +235,39 @@
 
                      <div class="w-full py-4 pl-4 lg:w-1/2 lg:mb-0">
                          <h1 class="mt-4 mb-2 text-3xl font-medium text-gray-900 md:text-4xl title-font">Egalement
-                             Disponible</h1>
+                             Disponible à la vente</h1>
                          <div class="h-1 bg-[#6805F2] rounded w-96"></div>
 
                      </div>
 
                      <div class="flex flex-wrap pb-16 mt-8 -m-4">
+                        @forelse($ventes as $vente)
                          <div class="p-4 xl:w-1/4 md:w-1/2">
+                           @php $images =  $vente->image[0] ?? null; @endphp
+                             <div class="p-6 transition duration-200 bg-gray-100 border border-gray-200 rounded-lg shadow-xl hover:border-gray-400">
+                                 <img class="object-cover object-center w-full h-40 mb-6"
+                                     src="{{ asset('storage/' . $images) }}" alt="content">
+                                 <h3 class="text-xs font-bold tracking-widest text-indigo-600 title-font">{{ $vente->name }}</h3>
+                                 <p class="pb-2 text-base leading-relaxed cropped">{{ $vente->description }}</p>
+                                 <a href="annonce?id={{ $vente->id }}"
+                                     class="flex justify-center px-4 py-2 mx-auto font-bold text-white transition duration-200 bg-[#6805F2] rounded hover:bg-indigo-600 active:bg-[#6805F2]">Plus
+                                     d'infos</a>
+                             </div>
+                         </div>
+                        @empty
+                        <div class="p-4 xl:w-1/4 md:w-1/2">
                              <div
                                  class="p-6 transition duration-200 bg-gray-100 border border-gray-200 rounded-lg shadow-xl hover:border-gray-400">
                                  <img class="object-cover object-center w-full h-40 mb-6"
-                                     src="./img/Atlanta-Georgia-400x284.png" alt="content">
-                                 <h3 class="text-xs font-bold tracking-widest text-indigo-600 title-font">SUBTITLE</h3>
-                                 <p class="pb-2 text-base leading-relaxed">Fingerstache flexitarian street art 8-bit
-                                     waistcoat. Distillery
-                                     hexagon disrupt edison bulbche.</p>
+                                     src="./img/empty.png" alt="content">
+                                 <h3 class="text-xs font-bold tracking-widest text-indigo-600 title-font">Empty</h3>
+                                 <p class="pb-2 text-base leading-relaxed">Dummy text.</p>
                                  <a href="annonce"
                                      class="flex justify-center px-4 py-2 mx-auto font-bold text-white transition duration-200 bg-[#6805F2] rounded hover:bg-indigo-600 active:bg-[#6805F2]">Plus
                                      d'infos</a>
                              </div>
                          </div>
-                         <div class="p-4 xl:w-1/4 md:w-1/2">
-                             <div
-                                 class="p-6 transition duration-200 bg-gray-100 border border-gray-200 rounded-lg shadow-xl hover:border-gray-400">
-                                 <img class="object-cover object-center w-full h-40 mb-6"
-                                     src="./img/Auburn_Maine-400x284.png" alt="content">
-                                 <h3 class="text-xs font-bold tracking-widest text-indigo-600 title-font">SUBTITLE</h3>
-                                 <p class="pb-2 text-base leading-relaxed">Fingerstache flexitarian street art 8-bit
-                                     waistcoat. Distillery
-                                     hexagon disrupt edison bulbche.</p>
-                                 <a href="annonce"
-                                     class="flex justify-center px-4 py-2 mx-auto font-bold text-white transition duration-200 bg-[#6805F2] rounded hover:bg-indigo-600 active:bg-[#6805F2]">Plus
-                                     d'infos</a>
-                             </div>
-                         </div>
-                         <div class="p-4 xl:w-1/4 md:w-1/2">
-                             <div
-                                 class="p-6 transition duration-200 bg-gray-100 border border-gray-200 rounded-lg shadow-xl hover:border-gray-400">
-                                 <img class="object-cover object-center w-full h-40 mb-6"
-                                     src="./img/Austin-Texas-400x284.png" alt="content">
-                                 <h3 class="text-xs font-bold tracking-widest text-indigo-600 title-font">SUBTITLE</h3>
-                                 <p class="pb-2 text-base leading-relaxed">Fingerstache flexitarian street art 8-bit
-                                     waistcoat. Distillery
-                                     hexagon disrupt edison bulbche.</p>
-                                 <a href="annonce"
-                                     class="flex justify-center px-4 py-2 mx-auto font-bold text-white transition duration-200 bg-[#6805F2] rounded hover:bg-indigo-600 active:bg-[#6805F2]">Plus
-                                     d'infos</a>
-                             </div>
-                         </div>
-                         <div class="p-4 xl:w-1/4 md:w-1/2">
-                             <div
-                                 class="p-6 transition duration-200 bg-gray-100 border border-gray-200 rounded-lg shadow-xl hover:border-gray-400">
-                                 <img class="object-cover object-center w-full h-40 mb-6"
-                                     src="./img/BirminghamAL-400x284.jpg" alt="content">
-                                 <h3 class="text-xs font-bold tracking-widest text-indigo-600 title-font">SUBTITLE</h3>
-                                 <p class="pb-2 text-base leading-relaxed">Fingerstache flexitarian street art 8-bit
-                                     waistcoat. Distillery
-                                     hexagon disrupt edison bulbche.</p>
-                                 <a href="annonce"
-                                     class="flex justify-center px-4 py-2 mx-auto font-bold text-white transition duration-200 bg-[#6805F2] rounded hover:bg-indigo-600 active:bg-[#6805F2]">Plus
-                                     d'infos</a>
-                             </div>
-                         </div>
-                         <div class="p-4 xl:w-1/4 md:w-1/2">
-                             <div
-                                 class="p-6 transition duration-200 bg-gray-100 border border-gray-200 rounded-lg shadow-xl hover:border-gray-400">
-                                 <img class="object-cover object-center w-full h-40 mb-6"
-                                     src="./img/Beverly_Hills_CA-400x284.png" alt="content">
-                                 <h3 class="text-xs font-bold tracking-widest text-indigo-600 title-font">SUBTITLE</h3>
-                                 <p class="pb-2 text-base leading-relaxed">Fingerstache flexitarian street art 8-bit
-                                     waistcoat. Distillery
-                                     hexagon disrupt edison bulbche.</p>
-                                 <a href="annonce"
-                                     class="flex justify-center px-4 py-2 mx-auto font-bold text-white transition duration-200 bg-[#6805F2] rounded hover:bg-indigo-600 active:bg-[#6805F2]">Plus
-                                     d'infos</a>
-                             </div>
-                         </div>
-                         <div class="p-4 xl:w-1/4 md:w-1/2">
-                             <div
-                                 class="p-6 transition duration-200 bg-gray-100 border border-gray-200 rounded-lg shadow-xl hover:border-gray-400">
-                                 <img class="object-cover object-center w-full h-40 mb-6"
-                                     src="./img/BirminghamAL-400x284.jpg" alt="content">
-                                 <h3 class="text-xs font-bold tracking-widest text-indigo-600 title-font">SUBTITLE</h3>
-                                 <p class="pb-2 text-base leading-relaxed">Fingerstache flexitarian street art 8-bit
-                                     waistcoat. Distillery
-                                     hexagon disrupt edison bulbche.</p>
-                                 <a href="annonce"
-                                     class="flex justify-center px-4 py-2 mx-auto font-bold text-white transition duration-200 bg-[#6805F2] rounded hover:bg-indigo-600 active:bg-[#6805F2]">Plus
-                                     d'infos</a>
-                             </div>
-                         </div>
-                         <div class="p-4 xl:w-1/4 md:w-1/2">
-                             <div
-                                 class="p-6 transition duration-200 bg-gray-100 border border-gray-200 rounded-lg shadow-xl hover:border-gray-400">
-                                 <img class="object-cover object-center w-full h-40 mb-6"
-                                     src="./img/Bluffton_SC-400x284.png" alt="content">
-                                 <h3 class="text-xs font-bold tracking-widest text-indigo-600 title-font">SUBTITLE</h3>
-                                 <p class="pb-2 text-base leading-relaxed">Fingerstache flexitarian street art 8-bit
-                                     waistcoat. Distillery
-                                     hexagon disrupt edison bulbche.</p>
-                                 <a href="annonce"
-                                     class="flex justify-center px-4 py-2 mx-auto font-bold text-white transition duration-200 bg-[#6805F2] rounded hover:bg-indigo-600 active:bg-[#6805F2]">Plus
-                                     d'infos</a>
-                             </div>
-                         </div>
-                         <div class="p-4 xl:w-1/4 md:w-1/2">
-                             <div
-                                 class="p-6 transition duration-200 bg-gray-100 border border-gray-200 rounded-lg shadow-xl hover:border-gray-400">
-                                 <img class="object-cover object-center w-full h-40 mb-6"
-                                     src="./img/Boston_MA-400x284.jpg" alt="content">
-                                 <h3 class="text-xs font-bold tracking-widest text-indigo-600 title-font">SUBTITLE</h3>
-                                 <p class="pb-2 text-base leading-relaxed">Fingerstache flexitarian street art 8-bit
-                                     waistcoat. Distillery
-                                     hexagon disrupt edison bulbche.</p>
-                                 <a href="annonce"
-                                     class="flex justify-center px-4 py-2 mx-auto font-bold text-white transition duration-200 bg-[#6805F2] rounded hover:bg-indigo-600 active:bg-[#6805F2]">Plus
-                                     d'infos</a>
-                             </div>
-                         </div>
+                         @endforelse
                      </div>
                  </div>
              </section>

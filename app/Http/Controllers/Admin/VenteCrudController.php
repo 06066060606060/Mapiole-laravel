@@ -136,7 +136,7 @@ class VenteCrudController extends CrudController
             'upload' => true,
             'temporary' => 10,
               'wrapper'   => [ 
-                 'class'      => 'form-group w-64 pl-3'
+                 'class'      => 'form-group w-48 pl-3'
               ], // change the HTML attributes for the field wrapper - mostly for resizing fields 
         ]);
 
@@ -323,7 +323,7 @@ class VenteCrudController extends CrudController
             'upload' => true,
             'temporary' => 10,
               'wrapper'   => [ 
-                 'class'      => 'form-group w-64 pl-3'
+                 'class'      => 'form-group w-48 pl-3'
               ], // change the HTML attributes for the field wrapper - mostly for resizing fields 
         ]);
 

@@ -279,20 +279,20 @@
         <div class="grid max-w-screen-xl px-4 py-5 mx-auto text-gray-900 sm:grid-cols-2 md:grid-cols-3 md:px-6">
             <ul aria-labelledby="mega-menu-full-dropdown-button">
                 <li>
-                    <a href="vendre" class="block p-3 rounded-lg mega-menu-link hover:bg-indigo-300 ">
+                    <a href="vendre-bien-immobilier-cameroun" class="block p-3 rounded-lg mega-menu-link hover:bg-indigo-300 ">
                         <div class="font-medium">Vendre un appartement</div>
 
                     </a>
                 </li>
                 <li>
-                    <a href="acheter" class="block p-3 rounded-lg mega-menu-link hover:bg-indigo-300 ">
+                    <a href="achat-bien-immobilier-cameroun" class="block p-3 rounded-lg mega-menu-link hover:bg-indigo-300 ">
                         <div class="font-medium">Acheter un terrain
                         </div>
 
                     </a>
                 </li>
                 <li>
-                    <a href="vendre" class="block p-3 rounded-lg mega-menu-link hover:bg-indigo-300 ">
+                    <a href="vendre-bien-immobilier-cameroun" class="block p-3 rounded-lg mega-menu-link hover:bg-indigo-300 ">
                         <div class="font-medium">Vendre une maison</div>
 
                     </a>
@@ -322,7 +322,7 @@
                     </a>
                 </li>
                 <li>
-                    <a href="louer" class="block p-3 rounded-lg mega-menu-link hover:bg-indigo-300 ">
+                    <a href="location-bien-immobilier-cameroun" class="block p-3 rounded-lg mega-menu-link hover:bg-indigo-300 ">
                         <div class="font-medium">Appartement meublé à louer
 
                         </div>
@@ -373,7 +373,7 @@
                 </li>
                 <li>
 
-                    <a href="service" class="block p-3 rounded-lg mega-menu-link hover:bg-indigo-300 ">
+                    <a href="services" class="block p-3 rounded-lg mega-menu-link hover:bg-indigo-300 ">
                         <div class="font-medium">Services immobiliers
 
                         </div>
@@ -387,21 +387,21 @@
         <div class="grid max-w-screen-xl px-4 py-5 mx-auto text-gray-900 sm:grid-cols-2 md:grid-cols-3 md:px-6">
             <ul aria-labelledby="mega-menu-full-dropdown-button2">
                 <li>
-                    <a href="acheter" class="block p-3 rounded-lg mega-menu-link hover:bg-indigo-300 ">
+                    <a href="achat-bien-immobilier-cameroun" class="block p-3 rounded-lg mega-menu-link hover:bg-indigo-300 ">
                         <div class="font-medium">Acheter un appartement
                         </div>
 
                     </a>
                 </li>
                 <li>
-                    <a href="acheter" class="block p-3 rounded-lg mega-menu-link hover:bg-indigo-300 ">
+                    <a href="achat-bien-immobilier-cameroun" class="block p-3 rounded-lg mega-menu-link hover:bg-indigo-300 ">
                         <div class="font-medium">Acheter une maison
                         </div>
 
                     </a>
                 </li>
                 <li>
-                    <a href="acheter" class="block p-3 rounded-lg mega-menu-link hover:bg-indigo-300 ">
+                    <a href="achat-bien-immobilier-cameroun" class="block p-3 rounded-lg mega-menu-link hover:bg-indigo-300 ">
                         <div class="font-medium">Acheter un terrain
                         </div>
 
@@ -410,21 +410,21 @@
             </ul>
             <ul>
                 <li>
-                    <a href="acheter" class="block p-3 rounded-lg mega-menu-link hover:bg-indigo-300 ">
+                    <a href="achat-bien-immobilier-cameroun" class="block p-3 rounded-lg mega-menu-link hover:bg-indigo-300 ">
                         <div class="font-medium">Acheter des bureaux
                         </div>
 
                     </a>
                 </li>
                 <li>
-                    <a href="acheter" class="block p-3 rounded-lg mega-menu-link hover:bg-indigo-300 ">
+                    <a href="achat-bien-immobilier-cameroun" class="block p-3 rounded-lg mega-menu-link hover:bg-indigo-300 ">
                         <div class="font-medium">Acheter un espace commercial
                         </div>
 
                     </a>
                 </li>
                 <li>
-                    <a href="acheter" class="block p-3 rounded-lg mega-menu-link hover:bg-indigo-300 ">
+                    <a href="achat-bien-immobilier-cameroun" class="block p-3 rounded-lg mega-menu-link hover:bg-indigo-300 ">
                         <div class="font-medium">Acheter une villa
                         </div>
 
@@ -433,7 +433,7 @@
             </ul>
             <ul>
                 <li>
-                    <a href="acheter" class="block p-3 rounded-lg mega-menu-link hover:bg-indigo-300 ">
+                    <a href="achat-bien-immobilier-cameroun" class="block p-3 rounded-lg mega-menu-link hover:bg-indigo-300 ">
                         <div class="font-medium">Acheter un immeuble
                         </div>
 
@@ -461,21 +461,21 @@
         <div class="grid max-w-screen-xl px-4 py-5 mx-auto text-gray-900 sm:grid-cols-2 md:grid-cols-3 md:px-6">
             <ul aria-labelledby="mega-menu-full-dropdown-button3">
                 <li>
-                    <a href="vendre" class="block p-3 rounded-lg mega-menu-link hover:bg-indigo-300 ">
+                    <a href="vendre-bien-immobilier-cameroun" class="block p-3 rounded-lg mega-menu-link hover:bg-indigo-300 ">
                         <div class="font-medium">Vendre un appartement
                         </div>
 
                     </a>
                 </li>
                 <li>
-                    <a href="vendre" class="block p-3 rounded-lg mega-menu-link hover:bg-indigo-300 ">
+                    <a href="vendre-bien-immobilier-cameroun" class="block p-3 rounded-lg mega-menu-link hover:bg-indigo-300 ">
                         <div class="font-medium">Vendre une maison
                         </div>
 
                     </a>
                 </li>
                 <li>
-                    <a href="vendre" class="block p-3 rounded-lg mega-menu-link hover:bg-indigo-300 ">
+                    <a href="vendre-bien-immobilier-cameroun" class="block p-3 rounded-lg mega-menu-link hover:bg-indigo-300 ">
                         <div class="font-medium">Vendre un terrain
                         </div>
 
@@ -484,21 +484,21 @@
             </ul>
             <ul>
                 <li>
-                    <a href="vendre" class="block p-3 rounded-lg mega-menu-link hover:bg-indigo-300 ">
+                    <a href="vendre-bien-immobilier-cameroun" class="block p-3 rounded-lg mega-menu-link hover:bg-indigo-300 ">
                         <div class="font-medium">Vendre des bureaux
                         </div>
 
                     </a>
                 </li>
                 <li>
-                    <a href="vendre" class="block p-3 rounded-lg mega-menu-link hover:bg-indigo-300 ">
+                    <a href="vendre-bien-immobilier-cameroun" class="block p-3 rounded-lg mega-menu-link hover:bg-indigo-300 ">
                         <div class="font-medium">Vendre un espace commercial
                         </div>
 
                     </a>
                 </li>
                 <li>
-                    <a href="vendre" class="block p-3 rounded-lg mega-menu-link hover:bg-indigo-300 ">
+                    <a href="vendre-bien-immobilier-cameroun" class="block p-3 rounded-lg mega-menu-link hover:bg-indigo-300 ">
                         <div class="font-medium">Vendre une villa
                         </div>
 
@@ -507,7 +507,7 @@
             </ul>
             <ul>
                 <li>
-                    <a href="vendre" class="block p-3 rounded-lg mega-menu-link hover:bg-indigo-300 ">
+                    <a href="vendre-bien-immobilier-cameroun" class="block p-3 rounded-lg mega-menu-link hover:bg-indigo-300 ">
                         <div class="font-medium">Vendre un immeuble
                         </div>
 
@@ -543,21 +543,21 @@
         <div class="grid max-w-screen-xl px-4 py-5 mx-auto text-gray-900 sm:grid-cols-2 md:grid-cols-3 md:px-6">
             <ul aria-labelledby="mega-menu-full-dropdown-button4">
                 <li>
-                    <a href="louer" class="block p-3 rounded-lg mega-menu-link hover:bg-indigo-300 ">
+                    <a href="location-bien-immobilier-cameroun" class="block p-3 rounded-lg mega-menu-link hover:bg-indigo-300 ">
                         <div class="font-medium">Louer un appartement
                         </div>
 
                     </a>
                 </li>
                 <li>
-                    <a href="louer" class="block p-3 rounded-lg mega-menu-link hover:bg-indigo-300 ">
+                    <a href="location-bien-immobilier-cameroun" class="block p-3 rounded-lg mega-menu-link hover:bg-indigo-300 ">
                         <div class="font-medium">Louer une maison
                         </div>
 
                     </a>
                 </li>
                 <li>
-                    <a href="louer" class="block p-3 rounded-lg mega-menu-link hover:bg-indigo-300 ">
+                    <a href="location-bien-immobilier-cameroun" class="block p-3 rounded-lg mega-menu-link hover:bg-indigo-300 ">
                         <div class="font-medium">Louer des bureaux
                         </div>
 
@@ -566,20 +566,20 @@
             </ul>
             <ul>
                 <li>
-                    <a href="louer" class="block p-3 rounded-lg mega-menu-link hover:bg-indigo-300 ">
+                    <a href="location-bien-immobilier-cameroun" class="block p-3 rounded-lg mega-menu-link hover:bg-indigo-300 ">
                         <div class="font-medium">Louer un espace commercial
                         </div>
 
                     </a>
                 </li>
                 <li>
-                    <a href="louer" class="block p-3 rounded-lg mega-menu-link hover:bg-indigo-300 ">
+                    <a href="location-bien-immobilier-cameroun" class="block p-3 rounded-lg mega-menu-link hover:bg-indigo-300 ">
                         <div class="font-medium">Louer un terrain</div>
 
                     </a>
                 </li>
                 <li>
-                    <a href="louer" class="block p-3 rounded-lg mega-menu-link hover:bg-indigo-300 ">
+                    <a href="location-bien-immobilier-cameroun" class="block p-3 rounded-lg mega-menu-link hover:bg-indigo-300 ">
                         <div class="font-medium">Louer une villa
                         </div>
 
@@ -588,14 +588,14 @@
             </ul>
             <ul>
                 <li>
-                    <a href="louer" class="block p-3 rounded-lg mega-menu-link hover:bg-indigo-300 ">
+                    <a href="location-bien-immobilier-cameroun" class="block p-3 rounded-lg mega-menu-link hover:bg-indigo-300 ">
                         <div class="font-medium">Louer un appartement meublé
                         </div>
 
                     </a>
                 </li>
                 <li>
-                    <a href="louer" class="block p-3 rounded-lg mega-menu-link hover:bg-indigo-300 ">
+                    <a href="location-bien-immobilier-cameroun" class="block p-3 rounded-lg mega-menu-link hover:bg-indigo-300 ">
                         <div class="font-medium">Louer un terrain commercial
                         </div>
 

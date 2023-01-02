@@ -7,6 +7,8 @@ use App\Models\Infosperso;
 use App\Models\User;
 use App\Models\Pages;
 use App\Models\Emails;
+use App\Models\Location;
+use App\Models\Vente;
 use App\Models\Sessions;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
@@ -39,6 +41,12 @@ class GlobalController extends Controller
         return $blog;
     }
 
+    static function oneBlog(Request $request)
+    {
+        $blogo = Blogs::where('id', $request->id)->get();
+        return view('oneblog', compact('blogo'));
+    }
+
     static function blogs()
     {
         $blogs = Blogs::where('id', '!=', 1)->get();
@@ -53,7 +61,8 @@ class GlobalController extends Controller
 
     public function rent()
     {
-        return view('rent');
+        $locations = Location::where('status', '!=', 'Non')->inRandomOrder()->limit('8')->get();
+        return view('rent', compact('locations'));
     }
 
     public function annonce()
@@ -63,7 +72,9 @@ class GlobalController extends Controller
 
     public function buy()
     {
-        return view('buy');
+    
+        $ventes = Vente::where('status', '!=', 'Non')->inRandomOrder()->limit('8')->get();
+        return view('buy' , compact('ventes'));
     }
 
     public function build()
