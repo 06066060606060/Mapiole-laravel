@@ -1,4 +1,4 @@
-  <div class=" xl:pt-52 lg:pt-[400px] pt-[500px] md:pt-[450px]">
+  <div id="foot" class=" xl:pt-52 lg:pt-[400px] pt-[500px] md:pt-[450px]">
 
       <section class="max-w-[1440px] mx-auto px-4">
           <h2 class="text-4xl font-bold text-center md:text-5xl drop-shadow-xl">Trouvez <b
@@ -29,6 +29,31 @@
               </div>
           </div>
       </section>
+
+
+      <div>
+          <div class="container p-8 mx-auto xl:px-0 mb-12">
+              <div
+                  class="relative flex flex-wrap items-center justify-between w-full max-w-4xl gap-5 mx-auto overflow-hidden text-white bg-indigo-600 bg-gradient-to-r from-indigo-600 to-indigo-700 px-7 py-7 lg:px-12 lg:py-12 lg:flex-nowrap rounded-xl">
+                  <div
+                      class="absolute w-24 h-24 bg-white rounded-full bg-gradient-to-b from-white to-indigo-600 opacity-20 -z-1 left-3 bottom-3">
+                  </div>
+                  <div
+                      class="absolute w-24 h-24 bg-white rounded-full bg-gradient-to-b from-white to-indigo-600 opacity-20 -z-1 left-1/2 -top-10">
+                  </div>
+                  <div class="relative z-0 flex-grow text-center lg:text-left">
+                      <h2 class="text-3xl font-medium lg:text-3xl">Vous étes un professionnel?</h2>
+                      <p class="mt-2 text-white text-opacity-80 lg:text-xl">Accèder à nos outils de gestion .</p>
+                  </div>
+                  <div class="relative flex-shrink-0 w-full text-center lg:w-auto">
+                      <a onclick="document.getElementById('primary_button').click()" target="_blank" rel="noopener"
+                          class="inline-block py-3 mx-auto font-medium text-center text-indigo-600 bg-white rounded-md sm:text-lg px-7 lg:px-10 lg:py-5">Inscrivez-vous</a>
+                  </div>
+              </div>
+          </div>
+      </div>
+
+
 
       <section class="fgrad2 py-16 px-4">
           <div class="mx-auto max-w-[1440px]">
@@ -218,57 +243,58 @@
           </div>
       </div>
 
-<section class="mt-12 mb-24 mx-auto  max-w-[1440px] ">
-      <div class=" bg-gray-100 border border-gray-200 rounded-md shadow-xl mx-4">
-          <div class="container flex flex-col p-6">
-              <h2 class="py-4 text-3xl font-bold text-center">Comment ça marche ?</h2>
-              <div class="divide-y divide-gray-300">
-                  <div class="grid justify-center grid-cols-4 p-8 mx-auto space-y-8 lg:space-y-0">
-                      <div class="flex items-center justify-center lg:col-span-1 col-span-full">
-                          <i class="fa-solid fa-pen-to-square fa-4x"></i>
-                      </div>
-                      <div
-                          class="flex flex-col justify-center max-w-3xl text-center col-span-full lg:col-span-3 lg:text-left">
+      <section class="mt-12 mb-24 mx-auto  max-w-[1440px] ">
+          <div class=" bg-gray-100 border border-gray-200 rounded-md shadow-xl mx-4">
+              <div class="container flex flex-col p-6">
+                  <h2 class="py-4 text-3xl font-bold text-center">Comment ça marche ?</h2>
+                  <div class="divide-y divide-gray-300">
+                      <div class="grid justify-center grid-cols-4 p-8 mx-auto space-y-8 lg:space-y-0">
+                          <div class="flex items-center justify-center lg:col-span-1 col-span-full">
+                              <i class="fa-solid fa-pen-to-square fa-4x"></i>
+                          </div>
+                          <div
+                              class="flex flex-col justify-center max-w-3xl text-center col-span-full lg:col-span-3 lg:text-left">
 
-                          <span class="text-xl font-bold md:text-2xl">Décrivez l'objet</span>
-                          <span class="mt-4 text-gray-700">Vous saisissez les principales informations sur le bien et
-                              vous
-                              téléchargez les images..</span>
+                              <span class="text-xl font-bold md:text-2xl">Décrivez l'objet</span>
+                              <span class="mt-4 text-gray-700">Vous saisissez les principales informations sur le bien
+                                  et
+                                  vous
+                                  téléchargez les images..</span>
+                          </div>
                       </div>
-                  </div>
-                  <div class="grid justify-center grid-cols-4 p-8 mx-auto space-y-8 lg:space-y-0">
-                      <div class="flex items-center justify-center lg:col-span-1 col-span-full">
-                          <i class="fa-solid fa-list fa-4x"></i>
+                      <div class="grid justify-center grid-cols-4 p-8 mx-auto space-y-8 lg:space-y-0">
+                          <div class="flex items-center justify-center lg:col-span-1 col-span-full">
+                              <i class="fa-solid fa-list fa-4x"></i>
+                          </div>
+                          <div
+                              class="flex flex-col justify-center max-w-3xl text-center col-span-full lg:col-span-3 lg:text-left">
+                              <span class="text-xl font-bold md:text-2xl">Choisissez les prestations</span>
+                              <span class="mt-4 text-gray-700">Vous définissez la durée de parution de l'annonce et les
+                                  extras
+                                  désirés..</span>
+                          </div>
                       </div>
-                      <div
-                          class="flex flex-col justify-center max-w-3xl text-center col-span-full lg:col-span-3 lg:text-left">
-                          <span class="text-xl font-bold md:text-2xl">Choisissez les prestations</span>
-                          <span class="mt-4 text-gray-700">Vous définissez la durée de parution de l'annonce et les
-                              extras
-                              désirés..</span>
-                      </div>
-                  </div>
-                  <div class="grid justify-center grid-cols-4 p-8 mx-auto space-y-8 lg:space-y-0">
-                      <div class="flex items-center justify-center lg:col-span-1 col-span-full">
-                          <i class="fa-solid fa-print fa-4x"></i>
-                      </div>
-                      <div
-                          class="flex flex-col justify-center max-w-3xl text-center col-span-full lg:col-span-3 lg:text-left">
+                      <div class="grid justify-center grid-cols-4 p-8 mx-auto space-y-8 lg:space-y-0">
+                          <div class="flex items-center justify-center lg:col-span-1 col-span-full">
+                              <i class="fa-solid fa-print fa-4x"></i>
+                          </div>
+                          <div
+                              class="flex flex-col justify-center max-w-3xl text-center col-span-full lg:col-span-3 lg:text-left">
 
-                          <span class="text-xl font-bold md:text-2xl">Publiez l'annonce</span>
-                          <span class="mt-4 text-gray-700">Vous choisissez la méthode de paiement et nous publions
-                              votre
-                              annonce..</span>
+                              <span class="text-xl font-bold md:text-2xl">Publiez l'annonce</span>
+                              <span class="mt-4 text-gray-700">Vous choisissez la méthode de paiement et nous publions
+                                  votre
+                                  annonce..</span>
+                          </div>
                       </div>
-                  </div>
-                  <div class="flex flex-col items-center justify-center pt-4">
-                      <a onclick="document.getElementById('secondaryButton').click()"
-                          class="px-4 py-2 font-bold text-white transition duration-200 bg-[#6805F2] rounded hover:bg-indigo-600 hover:scale-105 active:scale-100">Enregistrer-vous</a>
+                      <div class="flex flex-col items-center justify-center pt-4">
+                          <a onclick="document.getElementById('secondaryButton').click()"
+                              class="px-4 py-2 font-bold text-white transition duration-200 bg-[#6805F2] rounded hover:bg-indigo-600 hover:scale-105 active:scale-100">Enregistrer-vous</a>
+                      </div>
                   </div>
               </div>
           </div>
-      </div>
-</section>
+      </section>
 
 
 
@@ -349,7 +375,7 @@
       }
 
       .fgrad2 {
-        background: rgb(116,19,234);
-        background: linear-gradient(353deg, rgba(116,19,234,1) 0%, rgba(163,77,210,1) 0%, rgba(255,190,162,1) 69%);
+          background: rgb(116, 19, 234);
+          background: linear-gradient(353deg, rgba(116, 19, 234, 1) 0%, rgba(163, 77, 210, 1) 0%, rgba(255, 190, 162, 1) 69%);
       }
   </style>

@@ -38,7 +38,9 @@ Route::post('save_address', [GlobalController::class, 'saveAddress'])->name('sav
 Route::post('deleteuser/{id}', [GlobalController::class, 'deleteUser'])->name('deleteUser');
 
 
-
+Route::get('poster-annonce', function () {
+    return view('post');
+});
 //simple view
 Route::get('blog', function () {
     return view('blog');

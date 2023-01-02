@@ -2,7 +2,7 @@
 
  @section('main')
      <div data-barba="container">
-        <section class="relative mx-auto space-y-16">
+        <section id="foot" class="relative mx-auto space-y-16">
     <div class="w-full bg-center bg-cover h-[20rem] shadow-xl" style="background-image: url('./img/banner.jpeg');">
     <div class="flex flex-col items-center justify-center w-full h-full pt-16 bg-gray-900/40">
 

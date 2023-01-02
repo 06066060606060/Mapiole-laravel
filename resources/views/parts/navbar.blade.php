@@ -3,10 +3,9 @@
         <a href="/" class="flex items-center mr-16"  >
          <img src="./img/logo.png" class="h-32 mr-3" alt=" Logo" />
             <img src="./img/blob.svg" class="absolute h-32 ml-16 -z-10" alt=" Logo" />
-            
         </a>
         <button data-collapse-toggle="mega-menu-full" type="button"
-            class="inline-flex items-center p-2 ml-1 text-sm text-gray-500 rounded-lg md:hidden hover:bg-indigo-300 focus:outline-none focus:ring-2 focus:ring-gray-200"
+            class="inline-flex items-center p-2 ml-1 text-sm text-gray-500 rounded-lg lg:hidden hover:bg-indigo-300 focus:outline-none focus:ring-2 focus:ring-gray-200"
             aria-controls="mega-menu-full" aria-expanded="false">
             <span class="sr-only">Open main menu</span>
             <svg class="w-6 h-6" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20"
@@ -17,13 +16,13 @@
             </svg>
         </button>
 
-        <div id="mega-menu-full" class="items-center justify-between hidden w-full pb-4 mt-10 bg-white md:flex md:w-auto md:order-1 md:bg-transparent md:mt-0">
+        <div id="mega-menu-full" class="items-center justify-between hidden w-full pb-4 mt-10 bg-white rounded-md lg:flex lg:w-auto lg:order-1 lg:bg-transparent lg:mt-0 shadow-xl lg:shadow-transparent">
 
-            <ul class="flex flex-col w-full mt-4 text-sm font-medium md:flex-row md:space-x-4 md:mt-0">
+            <ul class="flex flex-col w-full mt-4 text-sm font-medium lg:flex-row lg:space-x-4 lg:mt-0">
            
                 <li>
                     <button id="mega-menu-full-dropdown-button" data-collapse-toggle="mega-menu-full-dropdown"
-                        class="flex items-center justify-between w-full py-2 pl-3 pr-4 mt-2 font-medium text-black border-b border-gray-100 megabutton xl:text-gray-700 md:w-auto hover:bg-indigo-300 md:hover:bg-transparent md:border-0 md:hover:text-indigo-600 md:p-0 ">Rechercher
+                        class="flex items-center justify-between w-full py-2 pl-3 pr-4 mt-2 font-medium text-black border-b border-gray-100 megabutton  lg:w-auto hover:bg-indigo-300 lg:hover:bg-transparent lg:border-0 lg:hover:text-indigo-600 lg:p-0 ">Rechercher
                         <svg class="w-4 h-4 ml-1" fill="currentColor" viewBox="0 0 20 20"
                             xmlns="http://www.w3.org/2000/svg">
                             <path fill-rule="evenodd"
@@ -33,7 +32,7 @@
                 </li>
                 <li>
                     <button id="mega-menu-full-dropdown-button2" data-collapse-toggle="mega-menu-full-dropdown2"
-                        class="flex items-center justify-between w-full py-2 pl-3 pr-4 mt-2 font-medium text-black border-b border-gray-100 megabutton xl:text-gray-700 md:w-auto hover:bg-indigo-300 md:hover:bg-transparent md:border-0 md:hover:text-indigo-600 md:p-0 ">Acheter
+                        class="flex items-center justify-between w-full py-2 pl-3 pr-4 mt-2 font-medium text-black border-b border-gray-100 megabutton  lg:w-auto hover:bg-indigo-300 lg:hover:bg-transparent lg:border-0 lg:hover:text-indigo-600 lg:p-0 ">Acheter
                         <svg class="w-4 h-4 ml-1" fill="currentColor" viewBox="0 0 20 20"
                             xmlns="http://www.w3.org/2000/svg">
                             <path fill-rule="evenodd"
@@ -43,7 +42,7 @@
                 </li>
                 <li>
                     <button id="mega-menu-full-dropdown-button3" data-collapse-toggle="mega-menu-full-dropdown3"
-                        class="flex items-center justify-between w-full py-2 pl-3 pr-4 mt-2 font-medium text-black border-b border-gray-100 megabutton xl:text-gray-700 md:w-auto hover:bg-indigo-300 md:hover:bg-transparent md:border-0 md:hover:text-indigo-600 md:p-0 ">Vendre
+                        class="flex items-center justify-between w-full py-2 pl-3 pr-4 mt-2 font-medium text-black border-b border-gray-100 megabutton  lg:w-auto hover:bg-indigo-300 lg:hover:bg-transparent lg:border-0 lg:hover:text-indigo-600 lg:p-0 ">Vendre
                         <svg class="w-4 h-4 ml-1" fill="currentColor" viewBox="0 0 20 20"
                             xmlns="http://www.w3.org/2000/svg">
                             <path fill-rule="evenodd"
@@ -53,7 +52,7 @@
                 </li>
                 <li>
                     <button id="mega-menu-full-dropdown-button4" data-collapse-toggle="mega-menu-full-dropdown4"
-                        class="flex items-center justify-between w-full py-2 pl-3 pr-4 mt-2 font-medium text-black border-b border-gray-100 megabutton xl:text-gray-700 md:w-auto hover:bg-indigo-300 md:hover:bg-transparent md:border-0 md:hover:text-indigo-600 md:p-0 ">Louer
+                        class="flex items-center justify-between w-full py-2 pl-3 pr-4 mt-2 font-medium text-black border-b border-gray-100 megabutton  lg:w-auto hover:bg-indigo-300 lg:hover:bg-transparent lg:border-0 lg:hover:text-indigo-600 lg:p-0 ">Louer
                         <svg class="w-4 h-4 ml-1" fill="currentColor" viewBox="0 0 20 20"
                             xmlns="http://www.w3.org/2000/svg">
                             <path fill-rule="evenodd"
@@ -63,7 +62,7 @@
                 </li>
                 <li>
                     <button id="mega-menu-full-dropdown-button5" data-collapse-toggle="mega-menu-full-dropdown5"
-                        class="flex items-center justify-between w-full py-2 pl-3 pr-4 mt-2 font-medium text-black border-b border-gray-100 megabutton xl:text-gray-700 md:w-auto hover:bg-indigo-300 md:hover:bg-transparent md:border-0 md:hover:text-indigo-600 md:p-0 ">Services
+                        class="flex items-center justify-between w-full py-2 pl-3 pr-4 mt-2 font-medium text-black border-b border-gray-100 megabutton  lg:w-auto hover:bg-indigo-300 lg:hover:bg-transparent lg:border-0 lg:hover:text-indigo-600 lg:p-0 ">Services
                         <svg class="w-4 h-4 ml-1" fill="currentColor" viewBox="0 0 20 20"
                             xmlns="http://www.w3.org/2000/svg">
                             <path fill-rule="evenodd"
@@ -73,20 +72,20 @@
                 </li>
                 <li>
                       <a onclick="document.getElementById('primary_button').click()"
-                                class="text-xs md:text-base font-medium items-center justify-center w-32 mr-16 h-10 px-2 ml-1  text-gray-600 bg-white border border-gray-600 rounded-md flex focus:outline-none hover:bg-[#6805F2] hover:text-white">
+                                class="text-xs lg:text-base font-medium items-center justify-center w-32 mr-16 h-10 px-2 ml-1  text-gray-600 bg-white border border-gray-600 rounded-lg flex focus:outline-none hover:bg-[#6805F2] hover:text-white">
                                 Professionel
                             </a>
                 </li>
                 <li>
-                    <div class="flex items-center mt-2 md:mt-0">
+                    <div class="flex items-center mt-2 lg:mt-0">
                         @if (backpack_auth()->check())
-                            <a href=""
-                                class="text-xs md:text-base font-medium items-center justify-center w-52 h-10 px-2 ml-1 mr-2 text-gray-600 bg-white border border-gray-600 rounded-md flex focus:outline-none hover:bg-[#6805F2] hover:text-white">
+                            <a href="poster-annonce"
+                                class="text-xs lg:text-base font-medium items-center justify-center w-48 h-10 px-1 ml-1 mr-2 text-gray-600 bg-white border border-gray-600 rounded-lg flex focus:outline-none hover:bg-[#6805F2] hover:text-white">
                                 Poster une annonce
                             </a>
                         @else
                             <a onclick="document.getElementById('primary_button').click()"
-                                class="text-xs md:text-base font-medium items-center justify-center w-52  h-10 px-2 ml-1 mr-2 text-gray-600 bg-white border border-gray-600 rounded-md flex focus:outline-none hover:bg-[#6805F2] hover:text-white">
+                                class="text-xs xl:text-base font-medium items-center justify-center w-48  h-10 px-1 ml-1 mr-2 text-gray-600 bg-white border border-gray-600 rounded-lg flex focus:outline-none hover:bg-[#6805F2] hover:text-white">
                                 Poster une annonce
                             </a>
                         @endif
@@ -94,7 +93,7 @@
                         <div x-data="{ isOpen: false }" class="relative inline-block pr-4">
                             <!-- Dropdown toggle button -->
                             <button @click="isOpen = !isOpen" type="button"
-                                class="mega-menu-link relative z-10 block p-[8px] text-gray-700 hover:text-gray-100  bg-white border border-gray-600 rounded-md focus:outline-none hover:bg-[#6805F2]">
+                                class="mega-menu-link relative z-10 block p-[8px] text-gray-700 hover:text-gray-100  bg-white border border-gray-600 rounded-lg focus:outline-none hover:bg-[#6805F2]">
                                 <i class=" fas fa-user"></i>
                             </button>
 
@@ -725,8 +724,10 @@ $('#mega-menu-full-dropdown-button2').click(function() { $('#mega-menu-full-drop
 $('#mega-menu-full-dropdown-button3').click(function() { $('#mega-menu-full-dropdown5, #mega-menu-full-dropdown4, #mega-menu-full-dropdown2, #mega-menu-full-dropdown1, #mega-menu-full-dropdown').addClass('hidden');});
 $('#mega-menu-full-dropdown-button4').click(function() { $('#mega-menu-full-dropdown5, #mega-menu-full-dropdown3, #mega-menu-full-dropdown2, #mega-menu-full-dropdown1, #mega-menu-full-dropdown').addClass('hidden');});
 $('#mega-menu-full-dropdown-button5').click(function() { $('#mega-menu-full-dropdown4, #mega-menu-full-dropdown3, #mega-menu-full-dropdown2, #mega-menu-full-dropdown1, #mega-menu-full-dropdown').addClass('hidden');});
-$('.mega-menu-link').click(function(){ $('#mega-menu-full-dropdown5, #mega-menu-full-dropdown4, #mega-menu-full-dropdown3, #mega-menu-full-dropdown2, #mega-menu-full-dropdown1, #mega-menu-full-dropdown').addClass('hidden');
+$('.mega-menu-link').click(function(){ 
+    $('#mega-menu-full-dropdown5, #mega-menu-full-dropdown4, #mega-menu-full-dropdown3, #mega-menu-full-dropdown2, #mega-menu-full-dropdown1, #mega-menu-full-dropdown').addClass('hidden');
 });
+
 </script>
 <style>
 

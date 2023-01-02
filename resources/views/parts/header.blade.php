@@ -1,9 +1,9 @@
- <section class="relative mx-auto space-y-16">
+ <section id="header" class="relative mx-auto space-y-16">
     <div id="dvImage" class="w-full h-[42rem] shadow-xl bg-cover  no-repeat center center" style="background-image: url('./img/banner.jpeg');">
       <div class="flex flex-col items-center justify-center w-full h-full bg-gray-900/40">
-        <h2 class="mx-4 text-5xl font-bold text-white drop-shadow-xl">Inscrivez vous.</h2>
+        <h2 class="mx-4 text-4xl xl:text-5xl  font-bold text-white drop-shadow-xl">Inscrivez vous.</h2>
         <p class="max-w-lg pt-2 mx-4 text-white">
-        <p class="mx-4 text-2xl font-medium text-center text-white drop-shadow-xl">Le meilleur choix pour vendre ou acheter<br> une maison, un appartements
+        <p class="mx-4 text-xl lg:text-2xl font-medium text-center text-white drop-shadow-xl">Le meilleur choix pour vendre ou acheter<br> une maison, un appartements
           ou un terrain.</p>
         </p>
         <label for="Toggle3"
@@ -85,3 +85,10 @@
     </div>
   </section>
   <!-- fin header -->
+  <script>
+
+    $('#header').on("click", function() {
+            $('#mega-menu-full-dropdown5, #mega-menu-full-dropdown4, #mega-menu-full-dropdown3, #mega-menu-full-dropdown2, #mega-menu-full-dropdown1, #mega-menu-full-dropdown').addClass('hidden');
+        })
+
+   </script>

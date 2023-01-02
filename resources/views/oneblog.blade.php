@@ -10,12 +10,12 @@
             </div>
         </section>
 
-        <div class="pt-8 pb-16 lg:pt-16 lg:pb-24 bg-white">
+        <div class="pt-8 pb-16 md:pt-20 lg:pb-24 bg-white">
             <div class="flex justify-between mx-auto max-w-[1440px] px-4 lg:px-16">
                 <article class="mx-auto w-full format format-sm sm:format-base lg:format-lg format-blue">
                     <header class="mb-4 lg:mb-6 not-format">
 
-                        <h1 class="mb-4 text-3xl font-extrabold leading-tight text-gray-900 lg:mb-6 lg:text-5xl "> {{ $blogo[0]->titre }}</h1>
+                        <h1 class="mb-4 text-3xl font-extrabold leading-tight text-gray-900 lg:mb-6 lg:text-5xl text-center"> {{ $blogo[0]->titre }}</h1>
                     </header>
                     <p class="leading-relaxed py-8 mx-8"> 
                     @php
@@ -31,9 +31,5 @@
         </div>
 
     </div>
-    <script>
-        window.addEventListener("DOMContentLoaded", (event) => {
-            $(window).scrollTop(0);
-        });
-    </script>
+
 @endsection

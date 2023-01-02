@@ -2,14 +2,15 @@
 
  @section('main')
      <div data-barba="container">
-         <section class="relative mx-auto space-y-16">
+         <section id="foot" class="relative mx-auto space-y-16">
              <div class="w-full bg-center bg-cover h-[32rem] shadow-xl" style="background-image: url('./img/banner.jpeg');">
                  <div class="flex flex-col items-center justify-center w-full h-full bg-gray-900/40">
                      <div class="flex flex-col items-center justify-center w-full h-full px-4">
-                         <p
-                             class="pt-40 pb-4 text-xl font-medium text-center text-white md:pb-8 md:pt24 md:text-5xl drop-shadow-xl">
-                             Trouvez un bien en vente</p>
-                         <div class="w-full p-5 bg-white rounded-lg shadow-lg md:w-1/2">
+     <p
+                             class="pt-44 pb-4 text-xl font-medium text-center text-white md:pb-8 md:pt24 md:text-5xl drop-shadow-xl">
+                           </p>
+                         <div class="w-full px-5 py-3 bg-white rounded-lg shadow-lg md:w-1/2 mt-4">
+                             <h1 class="text-2xl text-center font-bold text-black pb-2">Rechercher un bien en vente</h1>
                              <div class="relative">
                                  <div class="absolute flex items-center h-full ml-2">
                                      <svg class="w-4 h-4 fill-current text-primary-gray-dark" viewBox="0 0 16 16"
@@ -40,8 +41,12 @@
                                      <select
                                          class="w-full px-4 py-3 text-sm bg-gray-100 border-transparent rounded-md focus:border-gray-500 focus:ring-0">
                                          <option value="">Type</option>
-                                         <option value="for-rent">Maison</option>
+                                     <option value="for-rent">Maison</option>
                                          <option value="for-sale">Appartements</option>
+                                           <option value="for-sale">Terrain</option>
+                                             <option value="for-sale">Villa</option>
+                                              <option value="for-sale">Bureau</option>
+                                               <option value="for-sale">Esp. commercial</option>
                                      </select>
 
                                      <select

@@ -9,8 +9,13 @@
              </div>
          </section>
 
-<h1 class="text-4xl text-center font-bold text-black pt-6">Professionnel</h1>
+<h1 class="text-4xl text-center font-bold text-black pt-6">Poster une annonce</h1>
      </div>
 
-     
+
+     <script>
+         window.addEventListener("DOMContentLoaded", (event) => {
+             $(window).scrollTop(0);
+         });
+     </script>
  @endsection
