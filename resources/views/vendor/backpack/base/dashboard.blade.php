@@ -68,19 +68,13 @@
                     </div>
                 </div>
   @if (backpack_user()->role == 'admin')
-            <p class="w-1/4 px-4 py-2 mx-8 text-xs text-gray-800 bg-white shadow rounded -pl-2">
+            <p class="w-1/4 px-4 py-2 mx-8 text-xs text-gray-800 bg-white rounded shadow -pl-2">
                 Derniéres mise à jour: 1.9<br>
-                -fix mail inscription<br>
-                -base de donnée pages, blog<br>
-                -ajout pages cgu,cgu,faq<br>
-                -systeme d'edition des pages<br>
-                -page autoscroll<br>
-                -ajout paramétre mail inscription<br>
-                -ajout uploads documents multiple<br>
                 -ajout fonction  annonce<br>
                 -ajout fonction professionnel<br>
                 -ajout table settings<br>
                 -ajout mail setting<br>
+                -ajout pages de blog<br>
             </p>
         @endif
             </div>

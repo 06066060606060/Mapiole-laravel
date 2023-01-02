@@ -33,9 +33,15 @@ class GlobalController extends Controller
         return $pages;
     }
 
+    static function blog()
+    {
+        $blog = Blogs::where('id', 1)->get();
+        return $blog;
+    }
+
     static function blogs()
     {
-        $blogs = Blogs::all();
+        $blogs = Blogs::where('id', '!=', 1)->get();
         return $blogs;
     }
 

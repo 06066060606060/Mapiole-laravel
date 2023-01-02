@@ -65,6 +65,14 @@ img{
 
 }
 
+.croppedb {  
+  display: -webkit-box;
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  padding-bottom: 5px;
+
+}
 
 /* .shape-blob.two{
   z-index: 0 ;
