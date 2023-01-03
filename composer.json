@@ -12,6 +12,7 @@
         "guzzlehttp/guzzle": "^7.2",
         "laravel/framework": "^9.19",
         "laravel/sanctum": "^3.0",
+        "laravel/socialite": "^5.5",
         "pestopancake/laravel-backpack-database-notifications": "^1.0",
         "spatie/laravel-cookie-consent": "^3.2",
         "stripe/stripe-php": "^9.9"

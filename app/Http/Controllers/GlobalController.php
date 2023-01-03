@@ -194,9 +194,7 @@ class GlobalController extends Controller
 public function changeLocale()
 {
 
-
     \Session::put('locale', 'en');
-
     return redirect()->back();
 }
 

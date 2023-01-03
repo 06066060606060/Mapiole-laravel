@@ -77,6 +77,7 @@
                 -ajout pages de blog<br>
                 -locations dynamique<br>
                 -ventes dynamique<br>
+                -google auth<br>
             </p>
         @endif
             </div>

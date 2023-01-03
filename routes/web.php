@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\GlobalController;
 use App\Http\Controllers\MailController;
 use App\Http\Controllers\StripePaymentController;
+use App\Http\Controllers\SocialiteController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -37,8 +38,13 @@ Route::post('delete_order', [GlobalController::class, 'deleteOrder'])->name('del
 Route::post('save_address', [GlobalController::class, 'saveAddress'])->name('saveAddress');
 Route::post('deleteuser/{id}', [GlobalController::class, 'deleteUser'])->name('deleteUser');
 
+// La redirection vers le provider
+Route::get("redirect/{provider}",[SocialiteController::class, 'redirect'])->name('socialite.redirect');
 
-Route::get('poster-annonce', function () {
+// Le callback du provider
+Route::get("callback/{provider}",[SocialiteController::class, 'callback'])->name('socialite.callback');
+
+Route::get('/redirect', function () {
     return view('post');
 });
 //simple view
