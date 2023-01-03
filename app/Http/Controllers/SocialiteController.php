@@ -5,7 +5,7 @@ use Illuminate\Http\Request;
 
 use Socialite;
 
-use App\User;
+use App\Models\User;
 
 class SocialiteController extends Controller
 {
@@ -66,10 +66,10 @@ class SocialiteController extends Controller
             }
 
             # 4. On connecte l'utilisateur
-            auth()->login($user);
+            backpack_auth()->login($user);
 
             # 5. On redirige l'utilisateur vers /home
-            if (auth()->check()) return redirect(route('home'));
+            if (backpack_auth()->check()) return redirect('/');
 
          }
          abort(404);
