@@ -124,9 +124,11 @@
                                 <a href="#"
                                     class="block px-4 py-3 text-sm text-gray-600 capitalize transition-colors duration-300 transform hover:bg-indigo-300 ">
                                     Profil </a>
+                                    @if (backpack_auth()->check())
                                 <a href="logout"
                                     class="block px-4 py-3 text-sm text-gray-600 capitalize transition-colors duration-300 transform hover:bg-indigo-300 ">
                                     Déconnection</a>
+                                    @endif
                             </div>
                         </div>
 
