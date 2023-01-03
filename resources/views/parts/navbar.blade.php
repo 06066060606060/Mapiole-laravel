@@ -16,13 +16,13 @@
             </svg>
         </button>
 
-        <div id="mega-menu-full" class="items-center justify-between hidden w-full pb-4 mt-10 bg-white rounded-md lg:flex lg:w-auto lg:order-1 lg:bg-transparent lg:mt-0 shadow-xl lg:shadow-transparent">
+        <div id="mega-menu-full" class="items-center justify-between hidden w-full pb-4 mt-10 bg-white rounded-md shadow-xl lg:flex lg:w-auto lg:order-1 lg:bg-transparent lg:mt-0 lg:shadow-transparent">
 
             <ul class="flex flex-col w-full mt-4 text-sm font-medium lg:flex-row lg:space-x-4 lg:mt-0">
            
                 <li>
                     <button id="mega-menu-full-dropdown-button" data-collapse-toggle="mega-menu-full-dropdown"
-                        class="flex items-center justify-between w-full py-2 pl-3 pr-4 mt-2 font-medium text-black border-b border-gray-100 megabutton  lg:w-auto hover:bg-indigo-300 lg:hover:bg-transparent lg:border-0 lg:hover:text-indigo-600 lg:p-0 ">Rechercher
+                        class="flex items-center justify-between w-full py-2 pl-3 pr-4 mt-2 font-medium text-black border-b border-gray-100 megabutton lg:w-auto hover:bg-indigo-300 lg:hover:bg-transparent lg:border-0 lg:hover:text-indigo-600 lg:p-0 ">Rechercher
                         <svg class="w-4 h-4 ml-1" fill="currentColor" viewBox="0 0 20 20"
                             xmlns="http://www.w3.org/2000/svg">
                             <path fill-rule="evenodd"
@@ -32,7 +32,7 @@
                 </li>
                 <li>
                     <button id="mega-menu-full-dropdown-button2" data-collapse-toggle="mega-menu-full-dropdown2"
-                        class="flex items-center justify-between w-full py-2 pl-3 pr-4 mt-2 font-medium text-black border-b border-gray-100 megabutton  lg:w-auto hover:bg-indigo-300 lg:hover:bg-transparent lg:border-0 lg:hover:text-indigo-600 lg:p-0 ">Acheter
+                        class="flex items-center justify-between w-full py-2 pl-3 pr-4 mt-2 font-medium text-black border-b border-gray-100 megabutton lg:w-auto hover:bg-indigo-300 lg:hover:bg-transparent lg:border-0 lg:hover:text-indigo-600 lg:p-0 ">Acheter
                         <svg class="w-4 h-4 ml-1" fill="currentColor" viewBox="0 0 20 20"
                             xmlns="http://www.w3.org/2000/svg">
                             <path fill-rule="evenodd"
@@ -42,7 +42,7 @@
                 </li>
                 <li>
                     <button id="mega-menu-full-dropdown-button3" data-collapse-toggle="mega-menu-full-dropdown3"
-                        class="flex items-center justify-between w-full py-2 pl-3 pr-4 mt-2 font-medium text-black border-b border-gray-100 megabutton  lg:w-auto hover:bg-indigo-300 lg:hover:bg-transparent lg:border-0 lg:hover:text-indigo-600 lg:p-0 ">Vendre
+                        class="flex items-center justify-between w-full py-2 pl-3 pr-4 mt-2 font-medium text-black border-b border-gray-100 megabutton lg:w-auto hover:bg-indigo-300 lg:hover:bg-transparent lg:border-0 lg:hover:text-indigo-600 lg:p-0 ">Vendre
                         <svg class="w-4 h-4 ml-1" fill="currentColor" viewBox="0 0 20 20"
                             xmlns="http://www.w3.org/2000/svg">
                             <path fill-rule="evenodd"
@@ -52,7 +52,7 @@
                 </li>
                 <li>
                     <button id="mega-menu-full-dropdown-button4" data-collapse-toggle="mega-menu-full-dropdown4"
-                        class="flex items-center justify-between w-full py-2 pl-3 pr-4 mt-2 font-medium text-black border-b border-gray-100 megabutton  lg:w-auto hover:bg-indigo-300 lg:hover:bg-transparent lg:border-0 lg:hover:text-indigo-600 lg:p-0 ">Louer
+                        class="flex items-center justify-between w-full py-2 pl-3 pr-4 mt-2 font-medium text-black border-b border-gray-100 megabutton lg:w-auto hover:bg-indigo-300 lg:hover:bg-transparent lg:border-0 lg:hover:text-indigo-600 lg:p-0 ">Louer
                         <svg class="w-4 h-4 ml-1" fill="currentColor" viewBox="0 0 20 20"
                             xmlns="http://www.w3.org/2000/svg">
                             <path fill-rule="evenodd"
@@ -62,7 +62,7 @@
                 </li>
                 <li>
                     <button id="mega-menu-full-dropdown-button5" data-collapse-toggle="mega-menu-full-dropdown5"
-                        class="flex items-center justify-between w-full py-2 pl-3 pr-4 mt-2 font-medium text-black border-b border-gray-100 megabutton  lg:w-auto hover:bg-indigo-300 lg:hover:bg-transparent lg:border-0 lg:hover:text-indigo-600 lg:p-0 ">Services
+                        class="flex items-center justify-between w-full py-2 pl-3 pr-4 mt-2 font-medium text-black border-b border-gray-100 megabutton lg:w-auto hover:bg-indigo-300 lg:hover:bg-transparent lg:border-0 lg:hover:text-indigo-600 lg:p-0 ">Services
                         <svg class="w-4 h-4 ml-1" fill="currentColor" viewBox="0 0 20 20"
                             xmlns="http://www.w3.org/2000/svg">
                             <path fill-rule="evenodd"
@@ -71,7 +71,7 @@
                         </svg></button>
                 </li>
                 <li>
-                      <a onclick="document.getElementById('primary_button').click()"
+                      <a  href="professionel"
                                 class="text-xs lg:text-base font-medium items-center justify-center w-32 mr-16 h-10 px-2 ml-1  text-gray-600 bg-white border border-gray-600 rounded-lg flex focus:outline-none hover:bg-[#6805F2] hover:text-white">
                                 Professionel
                             </a>
@@ -84,7 +84,7 @@
                                 Poster une annonce
                             </a>
                         @else
-                            <a onclick="document.getElementById('primary_button').click()"
+                            <a href="poster-annonce"
                                 class="text-xs xl:text-base font-medium items-center justify-center w-48  h-10 px-1 ml-1 mr-2 text-gray-600 bg-white border border-gray-600 rounded-lg flex focus:outline-none hover:bg-[#6805F2] hover:text-white">
                                 Poster une annonce
                             </a>
@@ -117,8 +117,8 @@
                                             Dashboard </a>
                                     @endif
                                 @else
-                                    <a onclick="document.getElementById('primary_button').click()"
-                                        class="block px-4 py-3 text-sm text-gray-600 capitalize transition-colors duration-300 transform hover:bg-indigo-300 ">
+                                    <a href="admin/login"
+                                        class="block px-4 py-3 text-sm text-gray-600 capitalize transition-colors duration-300 transform prevent hover:bg-indigo-300 ">
                                         Se connecter </a>
                                 @endif
                                 <a href="#"
@@ -133,7 +133,7 @@
 
                         <div x-data="{ isOpen: false }" class="relative inline-block pr-4">
                             <button @click="isOpen = !isOpen" type="button"
-                                class="text-gray-600 mega-menu-link hover:text-gray-700 focus:outline-none focus:text-gray-800 "
+                                class="text-gray-800 mega-menu-link hover:text-gray-700 focus:outline-none focus:text-gray-800 "
                                 aria-label="toggle menu">
                                 Menu
 

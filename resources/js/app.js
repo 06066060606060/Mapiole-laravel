@@ -6,7 +6,11 @@ window.Alpine = Alpine;
 Alpine.start();
 
 
-barba.init();
+barba.init(
+  {
+      prevent: ({ el }) => el.classList && el.classList.contains('prevent')
+  }
+);
 barba.hooks.afterEnter((data) => {
   const swiper = new Swiper('.swiper-container', {
     loop: true,
@@ -47,6 +51,7 @@ barba.hooks.afterEnter((data) => {
   })
   $(window).scrollTop(0);
   $('#mega-menu-full-dropdown5, #mega-menu-full-dropdown4, #mega-menu-full-dropdown3, #mega-menu-full-dropdown2, #mega-menu-full-dropdown1, #mega-menu-full-dropdown').addClass('hidden');
+  $('#mega-menu-full').addClass('hidden');
 })
 
 
