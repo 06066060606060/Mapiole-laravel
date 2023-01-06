@@ -18,7 +18,7 @@
                         {{-- <img src="storage/{{ $blog->image }}" alt="" class="object-cover w-auto bg-cover h-96"> --}}
                         <div class="p-6 pb-12 m-4 -mt-16 space-y-6 bg-gray-900 rounded-md">
                                <h1 class="text-4xl font-bold text-white">{{ $page->title }}</h1>
-                            <div class="text-white ">
+                            <div class="text-white reverted">
                                 @php
                                     echo $page->content;
                                 @endphp
@@ -32,4 +32,5 @@
                 </div>
        
         </div>
+
     @endsection

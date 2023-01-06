@@ -75,6 +75,12 @@ img{
 }
 
 
+.reverted{
+
+   all: revert;
+}
+
+
 /* .shape-blob.two{
   z-index: 0 ;
 	height: 350px;

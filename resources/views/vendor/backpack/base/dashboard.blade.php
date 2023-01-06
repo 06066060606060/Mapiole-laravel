@@ -70,14 +70,11 @@
   @if (backpack_user()->role == 'admin')
             <p class="w-1/4 px-4 py-2 mx-8 text-xs text-gray-800 bg-white rounded shadow -pl-2">
                 Derniéres mise à jour: 1.9<br>
-                -ajout fonction  annonce<br>
-                -ajout fonction professionnel<br>
-                -ajout table settings<br>
-                -ajout mail setting<br>
-                -ajout pages de blog<br>
-                -locations dynamique<br>
-                -ventes dynamique<br>
-                -google auth<br>
+                -fix bug update serveur<br>
+                -fonction paiement<br>
+                -role backend<br>
+                -fix date<br>
+                -langue test<br>
             </p>
         @endif
             </div>
