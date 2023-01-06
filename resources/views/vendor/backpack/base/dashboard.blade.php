@@ -75,6 +75,7 @@
                 -role backend<br>
                 -fix date<br>
                 -langue test<br>
+                -livechat<br>
             </p>
         @endif
             </div>
