@@ -11,6 +11,8 @@ use App\Models\Location;
 use App\Models\Vente;
 use App\Models\Sessions;
 use Illuminate\Http\Request;
+use Illuminate\Contracts\Pagination\Paginator;
+use Illuminate\Contracts\View\View;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Session;
 
@@ -59,23 +61,77 @@ class GlobalController extends Controller
         return $emails;
     }
 
-    public function rent()
+    public function rent(Request $request)
     {
-        $locations = Location::where('status', '!=', 'Non')->inRandomOrder()->limit('8')->get();
-        return view('rent', compact('locations'));
+
+        $locations = Location::where('status', '!=', 'Non')->inRandomOrder()->paginate(8);
+        $q = request()->input('q');
+        if ($request->filled('q')) {
+            $locations->where('titre', 'like', '%' . $q . '%');
+        }
+        if ($request->filled('note')) {
+            $note = $request->note;
+            $locations->where('note', '>=', $note);
+        }
+        if ($request->filled('categories')) {
+            $categories = $request->categories;
+            $locations->whereHas('produit_categorie', function ($q) use ($categories) {
+
+                $q->where('categorie_id', '=', $categories);
+            });
+        }
+        if ($request->filled('prix')) {
+
+            $prix = $request->prix;
+            $locations->where('prix', '<=', $prix);
+        }
+        return view('rent', [
+            'locations' => $locations,  //a la place d'un get me demande pas pourquoi!
+            'q' => $q,
+        ]);
     }
 
+
+
+    public function buy(Request $request)
+    {
+    
+        $lastventes = Vente::where('status', '!=', 'Non')->orderBy('id', 'desc')->limit('4')->get();
+        $ventes = Vente::where('status', '!=', 'Non')->inRandomOrder()->paginate(8);
+        $q = request()->input('q');
+        if ($request->filled('q')) {
+            $ventes->where('titre', 'like', '%' . $q . '%');
+        }
+        if ($request->filled('note')) {
+            $note = $request->note;
+            $ventes->where('note', '>=', $note);
+        }
+        if ($request->filled('categories')) {
+            $categories = $request->categories;
+            $ventes->whereHas('produit_categorie', function ($q) use ($categories) {
+
+                $q->where('categorie_id', '=', $categories);
+            });
+        }
+        if ($request->filled('prix')) {
+
+            $prix = $request->prix;
+            $ventes->where('prix', '<=', $prix);
+        }
+        return view('buy', [
+            'ventes' => $ventes,  //a la place d'un get me demande pas pourquoi!
+            'q' => $q,
+            'lastventes' => $lastventes,
+        ]);
+    }
+
+
+    
     public function annonce()
     {
         return view('annonce');
     }
 
-    public function buy()
-    {
-    
-        $ventes = Vente::where('status', '!=', 'Non')->inRandomOrder()->limit('8')->get();
-        return view('buy' , compact('ventes'));
-    }
 
     public function build()
     {
@@ -84,6 +140,7 @@ class GlobalController extends Controller
 
     public function sell()
     {
+
         return view('sell');
     }
 

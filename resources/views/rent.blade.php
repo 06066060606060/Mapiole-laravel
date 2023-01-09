@@ -8,9 +8,9 @@
                      <div class="flex flex-col items-center justify-center w-full h-full px-4">
                          <p
                              class="pt-44 pb-4 text-xl font-medium text-center text-white md:pb-8 md:pt24 md:text-5xl drop-shadow-xl">
-                           </p>
+                         </p>
                          <div class="w-full px-5 py-3 bg-white rounded-lg shadow-lg md:w-1/2 mt-4">
-                          <h1 class="text-2xl text-center font-bold text-black pb-2">Rechercher un bien en location</h1>
+                             <h1 class="text-2xl text-center font-bold text-black pb-2">Rechercher un bien en location</h1>
                              <div class="relative">
                                  <div class="absolute flex items-center h-full ml-2">
                                      <svg class="w-4 h-4 fill-current text-primary-gray-dark" viewBox="0 0 16 16"
@@ -43,10 +43,10 @@
                                          <option value="">Type</option>
                                          <option value="for-rent">Maison</option>
                                          <option value="for-sale">Appartements</option>
-                                           <option value="for-sale">Terrain</option>
-                                             <option value="for-sale">Villa</option>
-                                              <option value="for-sale">Bureau</option>
-                                               <option value="for-sale">Esp. commercial</option>
+                                         <option value="for-sale">Terrain</option>
+                                         <option value="for-sale">Villa</option>
+                                         <option value="for-sale">Bureau</option>
+                                         <option value="for-sale">Esp. commercial</option>
                                      </select>
 
                                      <select
@@ -94,7 +94,7 @@
          <div class="mx-auto max-w-[1440px]">
 
 
-              <section class="pt-12 text-gray-600 body-font">
+             <section class="pt-12 text-gray-600 body-font">
                  <div class="px-4 py-12 mx-auto ">
                      <div class="flex flex-wrap w-full mb-8">
                          <div class="w-full pl-4 mb-4 lg:w-1/2 lg:mb-0">
@@ -103,10 +103,10 @@
                              <div class="h-1 bg-[#6805F2] rounded w-96"></div>
 
                          </div>
-                      
+
                      </div>
                      <section id="resultats" class="flex flex-col">
-                        
+
 
                          <div class="mb-4 bg-gray-100 rounded-lg ">
                              <div class="container pb-8 mx-auto md:mx-4">
@@ -123,8 +123,7 @@
                                              </div>
 
                                              <div class="swiper-slide">
-                                                 <img class="object-cover w-full h-96" src="./img/06.jpeg"
-                                                     alt="">
+                                                 <img class="object-cover w-full h-96" src="./img/06.jpeg" alt="">
                                              </div>
 
                                          </div>
@@ -173,7 +172,7 @@
                              </div>
                          </div>
 
- <div class="mb-4 bg-gray-100 rounded-lg ">
+                         <div class="mb-4 bg-gray-100 rounded-lg ">
                              <div class="container pb-8 mx-auto md:mx-4">
                                  <div class="mt-4 md:flex">
                                      <div class="w-full swiper mySwiper md:w-1/2">
@@ -184,11 +183,13 @@
                                              </div>
 
                                              <div class="swiper-slide">
-                                                 <img class="object-cover w-full h-96" src="./img/04.jpeg" alt="">
+                                                 <img class="object-cover w-full h-96" src="./img/04.jpeg"
+                                                     alt="">
                                              </div>
 
                                              <div class="swiper-slide">
-                                                 <img class="object-cover w-full h-96" src="./img/05.jpeg" alt="">
+                                                 <img class="object-cover w-full h-96" src="./img/05.jpeg"
+                                                     alt="">
                                              </div>
                                          </div>
                                          <div class=" swiper-button-next"></div>
@@ -247,51 +248,52 @@
                      </div>
 
                      <div class="flex flex-wrap pb-16 mt-8 -m-4">
-                        @forelse($locations as $location)
-                         <div class="p-4 xl:w-1/4 md:w-1/2">
-                           @php $images =  $location->image[0] ?? null; @endphp
-                             <div class="p-6 transition duration-200 bg-gray-100 border border-gray-200 rounded-lg shadow-xl hover:border-gray-400">
-                                 <img class="object-cover object-center w-full h-40 mb-6"
-                                     src="{{ asset('storage/' . $images) }}" alt="content">
-                                 <h3 class="text-xs font-bold tracking-widest text-indigo-600 title-font">{{ $location->name }}</h3>
-                                 <p class="pb-2 text-base leading-relaxed cropped">{{ $location->description }}</p>
-                                 <a href="annonce?id={{ $location->id }}"
-                                     class="flex justify-center px-4 py-2 mx-auto font-bold text-white transition duration-200 bg-[#6805F2] rounded hover:bg-indigo-600 active:bg-[#6805F2]">Plus
-                                     d'infos</a>
+                         @forelse($locations as $location)
+                             <div class="p-4 xl:w-1/4 md:w-1/2">
+                                 @php $images =  $location->image[0] ?? null; @endphp
+                                 <div
+                                     class="p-6 transition duration-200 bg-gray-100 border border-gray-200 rounded-lg shadow-xl hover:border-gray-400">
+                                     <img class="object-cover object-center w-full h-40 mb-6"
+                                         src="{{ asset('storage/' . $images) }}" alt="content">
+                                     <h3 class="text-xs font-bold tracking-widest text-indigo-600 title-font">
+                                         {{ $location->name }}</h3>
+                                     <p class="pb-2 text-base leading-relaxed cropped">{{ $location->description }}</p>
+                                     <a href="annonce?id={{ $location->id }}"
+                                         class="flex justify-center px-4 py-2 mx-auto font-bold text-white transition duration-200 bg-[#6805F2] rounded hover:bg-indigo-600 active:bg-[#6805F2]">Plus
+                                         d'infos</a>
+                                 </div>
                              </div>
-                         </div>
-                        @empty
-                        <div class="p-4 xl:w-1/4 md:w-1/2">
-                             <div
-                                 class="p-6 transition duration-200 bg-gray-100 border border-gray-200 rounded-lg shadow-xl hover:border-gray-400">
-                                 <img class="object-cover object-center w-full h-40 mb-6"
-                                     src="./img/empty.png" alt="content">
-                                 <h3 class="text-xs font-bold tracking-widest text-indigo-600 title-font">Empty</h3>
-                                 <p class="pb-2 text-base leading-relaxed">Dummy text.</p>
-                                 <a href="annonce"
-                                     class="flex justify-center px-4 py-2 mx-auto font-bold text-white transition duration-200 bg-[#6805F2] rounded hover:bg-indigo-600 active:bg-[#6805F2]">Plus
-                                     d'infos</a>
+                         @empty
+                             <div class="p-4 xl:w-1/4 md:w-1/2">
+                                 <div
+                                     class="p-6 transition duration-200 bg-gray-100 border border-gray-200 rounded-lg shadow-xl hover:border-gray-400">
+                                     <img class="object-cover object-center w-full h-40 mb-6" src="./img/empty.png"
+                                         alt="content">
+                                     <h3 class="text-xs font-bold tracking-widest text-indigo-600 title-font">Empty</h3>
+                                     <p class="pb-2 text-base leading-relaxed">Dummy text.</p>
+                                     <a href="annonce"
+                                         class="flex justify-center px-4 py-2 mx-auto font-bold text-white transition duration-200 bg-[#6805F2] rounded hover:bg-indigo-600 active:bg-[#6805F2]">Plus
+                                         d'infos</a>
+                                 </div>
                              </div>
-                         </div>
                          @endforelse
                      </div>
                  </div>
              </section>
          </div>
-
+        {{ $locations->appends(Request::all())->links('pagination::tailwind') }}
      </div>
-<style>
+     <style>
 
 
-</style>
+     </style>
 
-<script>
-$(".hover").mouseleave(
-  function () {
-    $(this).removeClass("hover");
-  }
-);
-
-</script>
-
+     <script>
+         $(".hover").mouseleave(
+             function() {
+                 $(this).removeClass("hover");
+             }
+         );
+     </script>
+ 
  @endsection

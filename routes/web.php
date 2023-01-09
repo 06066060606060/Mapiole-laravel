@@ -20,7 +20,9 @@ Route::controller(GlobalController::class)->group(function(){
 Route::get('/', 'getAll')->name('getAll');
 Route::get('logout', 'logout');
 Route::get('location-bien-immobilier-cameroun', 'rent');
+Route::get('location-bien-immobilier-cameroun/filter', 'rent')->name('searchfilter');
 Route::get('achat-bien-immobilier-cameroun', 'buy');
+Route::get('achat-bien-immobilier-cameroun/filter', 'buy')->name('searchfilter');
 Route::get('construire', 'build');
 Route::get('vendre-bien-immobilier-cameroun', 'sell');
 Route::get('services', 'service');
@@ -44,7 +46,7 @@ Route::get("redirect/{provider}",[SocialiteController::class, 'redirect'])->name
 // Le callback du provider
 Route::get("callback/{provider}",[SocialiteController::class, 'callback'])->name('socialite.callback');
 
-Route::get('/redirect', function () {
+Route::get('poster-annonce', function () {
     return view('post');
 });
 //simple view

@@ -35,7 +35,7 @@
                         @foreach ($blogs as $blog)
                             @php $images =  $blog->image[0] ?? null; @endphp
                             <a rel="noopener noreferrer" href="oneblog?id={{ $blog->id }}"
-                                class="max-w-sm mx-auto bg-gray-200 rounded-lg group hover:no-underline focus:no-underline overflow-y-hidden">
+                                class="max-w-sm mx-auto overflow-y-hidden bg-gray-200 rounded-lg group hover:no-underline focus:no-underline">
                                 <img role="presentation" class="object-cover w-full bg-gray-500 rounded h-44"
                                     src="{{ asset('storage/' . $images) }}" onerror="this.src='/img/empty.png'">
                                 <div class="p-6 space-y-2">

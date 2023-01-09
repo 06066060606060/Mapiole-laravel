@@ -76,6 +76,9 @@
                 -fix date<br>
                 -langue test<br>
                 -livechat<br>
+                -page poster annonce<br>
+                -page dynamique<br>
+                -ajout pagination<br>
             </p>
         @endif
             </div>

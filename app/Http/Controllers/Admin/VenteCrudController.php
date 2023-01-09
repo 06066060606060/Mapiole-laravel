@@ -433,7 +433,22 @@ class VenteCrudController extends CrudController
         CRUD::addField(['name' => 'ville', 'type' => 'text', 'label' => 'Ville', 'wrapper' => [ 'class' => 'form-group col-md pl-3'],]);
         CRUD::addField(['name' => 'code_postal', 'type' => 'text', 'label' => 'Code postal', 'wrapper' => [ 'class' => 'form-group col-md pl-3'],]);
         CRUD::addField(['name' => 'telephone', 'type' => 'text', 'label' => 'Téléphone', 'wrapper' => [ 'class' => 'form-group col-md pl-3'],]);
-        
+        $this->crud->addField([   // select_from_array
+            'name'        => 'type',
+            'label'       => "Type",
+            'type'        => 'select_from_array',
+            'options'     => [
+                'Maison' => 'Maison',
+                'Appartement' => 'Appartement',
+                'Villa' => 'Villa',
+                'Terrain' => 'Terrain',
+                'Immeuble' => 'Immeuble',
+            ],
+
+            'allows_null' => false,
+            'default'     => 'Diamants',
+            // 'allows_multiple' => true, // OPTIONAL; needs you to cast this to array in your model;
+        ]);
         $this->crud->addField([
             // radio
             'name' => 'status', // the name of the db column

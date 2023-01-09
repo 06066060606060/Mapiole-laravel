@@ -7,10 +7,10 @@
                  <div class="flex flex-col items-center justify-center w-full h-full bg-gray-900/40">
                      <div class="flex flex-col items-center justify-center w-full h-full px-4">
      <p
-                             class="pt-44 pb-4 text-xl font-medium text-center text-white md:pb-8 md:pt24 md:text-5xl drop-shadow-xl">
+                             class="pb-4 text-xl font-medium text-center text-white pt-44 md:pb-8 md:pt24 md:text-5xl drop-shadow-xl">
                            </p>
-                         <div class="w-full px-5 py-3 bg-white rounded-lg shadow-lg md:w-1/2 mt-4">
-                             <h1 class="text-2xl text-center font-bold text-black pb-2">Rechercher un bien en vente</h1>
+                         <div class="w-full px-5 py-3 mt-4 bg-white rounded-lg shadow-lg md:w-1/2">
+                             <h1 class="pb-2 text-2xl font-bold text-center text-black">Rechercher un bien en vente</h1>
                              <div class="relative">
                                  <div class="absolute flex items-center h-full ml-2">
                                      <svg class="w-4 h-4 fill-current text-primary-gray-dark" viewBox="0 0 16 16"
@@ -105,23 +105,27 @@
                          </div>
                       
                      </div>
-                     <section id="resultats" class="flex flex-col">
-                         <div class="mb-4 bg-gray-100 rounded-lg ">
+              <section id="resultats" class="flex flex-col">
+                    @forelse ($lastventes as $lastvente)
+                                <div class="mb-4 bg-gray-100 rounded-lg ">
                              <div class="container pb-8 mx-auto md:mx-4">
                                  <div class="mt-4 md:flex">
                                      <div class="w-full swiper mySwiper md:w-1/2">
                                          <div class="swiper-wrapper">
 
                                              <div class="swiper-slide">
-                                                 <img class="object-cover w-full h-96" src="./img/03.jpg" alt="">
+                                               @php $image0 =  $lastvente->image[0] ?? null; @endphp
+                                                 <img class="object-cover w-full h-96" src="./storage/{{ $image0 }}" alt="" onerror="this.src='/img/empty.png'">
                                              </div>
 
                                              <div class="swiper-slide">
-                                                 <img class="object-cover w-full h-96" src="./img/04.jpeg" alt="">
+                                                @php $image1 =  $lastvente->image[1] ?? null; @endphp
+                                                 <img class="object-cover w-full h-96" src="./storage/{{ $image1 }}" alt="" onerror="this.src='/img/empty.png'">
                                              </div>
 
                                              <div class="swiper-slide">
-                                                 <img class="object-cover w-full h-96" src="./img/05.jpeg" alt="">
+                                               @php $image2 =  $lastvente->image[2] ?? null; @endphp
+                                                 <img class="object-cover w-full h-96" src="./storage/{{ $image2 }}" alt="" onerror="this.src='/img/empty.png'">
                                              </div>
                                          </div>
                                          <div class=" swiper-button-next"></div>
@@ -131,28 +135,19 @@
 
                                      <div class="pl-8 mx-6 mt-6 lg:w-1/2 lg:mt-0">
                                          <button
-                                             class="px-4 py-2 mb-4 text-sm font-bold text-white bg-green-800 rounded-full">Location</button>
-                                         <p class="text-xl font-bold text-indigo-600 uppercase">Appartement</p>
+                                             class="px-4 py-2 mb-4 text-sm font-bold text-white bg-purple-800 rounded-full">Location</button>
+                                         <p class="text-xl font-bold text-indigo-600 uppercase"> {{ $lastvente->type }}</p>
                                          <a
                                              class="block mt-4 text-2xl font-semibold text-gray-800 hover:underline md:text-3xl">
-                                             3 pièces, 60 m²
+                                           {{ $lastvente->name }}
                                          </a>
 
                                          <p class="max-w-xl mt-3 text-sm text-gray-800 md:text-sm">
-                                             Dans un emplacement central (terminus de tramway Weissenbühl), nous louons à
-                                             partir du 1er mars 2023
-                                             ou sur rendez-vous un appartement de 4,5 pièces en mezzanine (avec ascenseur).
-
-                                             L'appartement dispose d'un balcon (face à la rue), parquet dans les chambres et
-                                             sols en dalles dans
-                                             la
-                                             cuisine (avec lave-vaisselle) et dans la salle de bain / WC.
-
-                                             Le compartiment cave offre un espace de rangement supplémentaire.
+                                              {{ $lastvente->description }}
                                          </p>
 
                                          <a href="annonce"
-                                             class="inline-block px-4 py-2 mt-2 text-white bg-[#6805F2] rounded text-bold hover:bg-blue-700 active:bg-[#6805F2]">Plus
+                                             class="inline-block px-4 py-2 mt-2 text-white bg-blue-800 rounded text-bold hover:bg-blue-700 active:bg-blue-500">Plus
                                              d'info</a>
                                          <div class="flex">
                                              <div class="flex items-center mt-6">
@@ -169,71 +164,13 @@
                                  </div>
                              </div>
                          </div>
+                    @empty
+                        
+                    @endforelse
+       
+                 
 
-                         <div class="mb-4 bg-gray-100 rounded-lg ">
-                             <div class="container pb-8 mx-auto md:mx-4">
-                                 <div class="mt-4 md:flex">
-                                     <div class="w-full swiper mySwiper md:w-1/2">
-                                         <div class="swiper-wrapper">
-
-                                             <div class="swiper-slide">
-                                                 <img class="object-cover w-full h-96" src="./img/01.jpg" alt="">
-                                             </div>
-
-                                             <div class="swiper-slide">
-                                                 <img class="object-cover w-full h-96" src="./img/02.jpg" alt="">
-                                             </div>
-
-                                             <div class="swiper-slide">
-                                                 <img class="object-cover w-full h-96" src="./img/06.jpeg"
-                                                     alt="">
-                                             </div>
-
-                                         </div>
-                                         <div class="swiper-button-next"></div>
-                                         <div class="swiper-button-prev"></div>
-                                         <div class="swiper-pagination"></div>
-                                     </div>
-
-                                     <div class="pl-8 mx-6 mt-6 lg:w-1/2 lg:mt-0">
-                                         <button
-                                             class="px-4 py-2 mb-4 text-sm font-bold text-white bg-purple-800 rounded-full">Vente</button>
-                                         <p class="text-xl font-bold text-indigo-600 uppercase">Maison</p>
-                                         <a
-                                             class="block mt-4 text-2xl font-semibold text-gray-800 hover:underline md:text-3xl">
-                                             6 pièces, 100 m²
-                                         </a>
-
-                                         <p class="max-w-xl mt-3 text-sm text-gray-800 md:text-sm">
-                                             Dans un emplacement central (terminus de tramway Weissenbühl), nous louons à
-                                             partir du 1er mars 2023
-                                             ou sur rendez-vous un appartement de 4,5 pièces en mezzanine (avec ascenseur).
-
-                                             L'appartement dispose d'un balcon (face à la rue), parquet dans les chambres et
-                                             sols en dalles dans
-                                             la
-                                             cuisine (avec lave-vaisselle) et dans la salle de bain / WC.
-
-                                             Le compartiment cave offre un espace de rangement supplémentaire.
-                                         </p>
-
-                                         <a href="annonce"
-                                             class="inline-block px-4 py-2 mt-2 text-white bg-[#6805F2] rounded text-bold hover:bg-blue-700 active:bg-[#6805F2]">Plus
-                                             d'info</a>
-                                         <div class="flex">
-                                             <div class="flex items-center mt-6">
-                                                 <img class="object-cover object-center w-10 h-10 rounded-full"
-                                                     src="./img/avatar.png" alt="">
-
-                                                 <div class="mx-4">
-                                                     <p class="text-sm text-gray-500 ">Professionel</p>
-                                                 </div>
-                                             </div>
-                                         </div>
-                                     </div>
-                                 </div>
-                             </div>
-                         </div>
+                         
 
                      </section>
 
@@ -277,6 +214,6 @@
                  </div>
              </section>
          </div>
-
+     {{ $ventes->appends(Request::all())->links('pagination::tailwind') }}
      </div>
  @endsection
