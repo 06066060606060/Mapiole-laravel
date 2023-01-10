@@ -48,7 +48,7 @@
                                          class="w-full px-4 py-3 text-sm bg-gray-100 border-transparent rounded-md focus:border-gray-500 focus:ring-0">
                                          <option value="">Type</option>
                                          <option value="Maison">Maison</option>
-                                         <option value="Appart">Appartements</option>
+                                         <option value="Appartement">Appartement</option>
                                          <option value="Terrain">Terrain</option>
                                          <option value="Villa">Villa</option>
                                          <option value="Bureau">Bureau</option>
@@ -109,7 +109,7 @@
                               @if (request()->q)
                                  <h1 class="mb-2 text-3xl font-medium text-gray-900 md:text-4xl title-font">Résultats de
                                      votre
-                                     recherche</h1>
+                                     recherche pour {{ $q }}</h1>
                              @else
                                  <h1 class="mb-2 text-3xl font-medium text-gray-900 md:text-4xl title-font">Dernières
                                      annonces</h1>

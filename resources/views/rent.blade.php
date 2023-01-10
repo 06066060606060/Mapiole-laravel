@@ -1,13 +1,10 @@
  @extends('layouts.app')
 
  @section('main')
-     @php($urltype = request()->query('type')) @endphp
-     @php($urlsurface = request()->query('surface')) @endphp
-     @php($urlnb = request()->query('nb_pieces')) @endphp
-     @php($urlprix = request()->query('prix')) @endphp
      <div data-barba="container">
          <section id="foot" class="relative mx-auto space-y-16">
-             <div class="w-full bg-center bg-cover h-[32rem] shadow-xl" style="background-image: url('{{asset('img/banner.jpeg')}}');">
+             <div class="w-full bg-center bg-cover h-[32rem] shadow-xl"
+                 style="background-image: url('{{ asset('img/banner.jpeg') }}');">
                  <div class="flex flex-col items-center justify-center w-full h-full bg-gray-900/40">
                      <div class="flex flex-col items-center justify-center w-full h-full px-4">
                          <p
@@ -48,7 +45,7 @@
                                          class="w-full px-4 py-3 text-sm bg-gray-100 border-transparent rounded-md focus:border-gray-500 focus:ring-0">
                                          <option value="">Type</option>
                                          <option value="Maison">Maison</option>
-                                         <option value="Appart">Appartements</option>
+                                         <option value="Appartement">Appartement</option>
                                          <option value="Terrain">Terrain</option>
                                          <option value="Villa">Villa</option>
                                          <option value="Bureau">Bureau</option>
@@ -106,13 +103,12 @@
                  <div class="px-4 py-12 mx-auto ">
                      <div class="flex flex-wrap w-full mb-8">
                          <div class="w-full pl-4 mb-4 lg:w-1/2 lg:mb-0">
-                             @if (request()->q)
+                             @if (request()->q || request()->type || request()->prix || request()->surface || request()->nb_pieces)
                                  <h1 class="mb-2 text-3xl font-medium text-gray-900 md:text-4xl title-font">Résultats de
-                                     votre
-                                     recherche</h1>
+                                     votre recherche</h1>
                              @else
                                  <h1 class="mb-2 text-3xl font-medium text-gray-900 md:text-4xl title-font">Dernières
-                                     annonces</h1>
+                                     annonces </h1>
                              @endif
 
                              <div class="h-1 bg-[#6805F2] rounded w-96"></div>
