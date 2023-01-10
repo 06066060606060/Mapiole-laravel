@@ -1,10 +1,10 @@
  @extends('layouts.app')
 
  @section('main')
- @php($urltype = request()->query('type')) @endphp
-@php($urlsurface = request()->query('surface')) @endphp
-@php($urlnb = request()->query('nb_pieces')) @endphp
-@php($urlprix = request()->query('prix')) @endphp
+     @php($urltype = request()->query('type')) @endphp
+     @php($urlsurface = request()->query('surface')) @endphp
+     @php($urlnb = request()->query('nb_pieces')) @endphp
+     @php($urlprix = request()->query('prix')) @endphp
      <div data-barba="container">
          <section id="foot" class="relative mx-auto space-y-16">
              <div class="w-full bg-center bg-cover h-[32rem] shadow-xl" style="background-image: url('./img/banner.jpeg');">
@@ -13,7 +13,8 @@
                          <p
                              class="pb-4 text-xl font-medium text-center text-white pt-44 md:pb-8 md:pt24 md:text-5xl drop-shadow-xl">
                          </p>
-                         <form class="w-full px-5 py-3 mt-4 bg-white rounded-lg shadow-lg prevent md:w-1/2" action="/location-bien-immobilier-cameroun/filter" method="get">
+                         <form class="w-full px-5 py-3 mt-4 bg-white rounded-lg shadow-lg prevent md:w-1/2"
+                             action="/location-bien-immobilier-cameroun/filter" method="get">
                              <h1 class="pb-2 text-2xl font-bold text-center text-black">Rechercher un bien en location</h1>
                              <div class="relative">
                                  <div class="absolute flex items-center h-full ml-2">
@@ -26,7 +27,8 @@
                                  </div>
 
                                  <input type="text" placeholder="Recherche par ville, prix, surface..." name="q"
-                                     class="w-full px-8 py-3 text-sm bg-gray-100 border-transparent rounded-md focus:border-gray-500 focus:ring-0" value="{{ request()->q ?? '' }}">
+                                     class="w-full px-8 py-3 text-sm bg-gray-100 border-transparent rounded-md focus:border-gray-500 focus:ring-0"
+                                     value="{{ request()->q ?? '' }}">
                              </div>
 
                              <div class="flex items-center justify-between mt-4">
@@ -42,47 +44,47 @@
 
                              <div>
                                  <div class="grid grid-cols-2 gap-4 mt-4 md:grid-cols-3 xl:grid-cols-5">
-                                      <select name="type"
+                                     <select name="type"
                                          class="w-full px-4 py-3 text-sm bg-gray-100 border-transparent rounded-md focus:border-gray-500 focus:ring-0">
-                                    <option value="" >Type</option>
-                                     <option value="Maison" >Maison</option>
-                                         <option value="Appart" >Appartements</option>
-                                           <option value="Terrain" >Terrain</option>
-                                             <option value="Villa" >Villa</option>
-                                              <option value="Bureau">Bureau</option>
-                                               <option value="Commerce" >Esp. commercial</option>
+                                         <option value="">Type</option>
+                                         <option value="Maison">Maison</option>
+                                         <option value="Appart">Appartements</option>
+                                         <option value="Terrain">Terrain</option>
+                                         <option value="Villa">Villa</option>
+                                         <option value="Bureau">Bureau</option>
+                                         <option value="Commerce">Esp. commercial</option>
                                      </select>
 
                                      <select name="prix"
                                          class="w-full px-4 py-3 text-sm bg-gray-100 border-transparent rounded-md focus:border-gray-500 focus:ring-0">
                                          <option value="">Prix</option>
-                                         <option value="19000" >moins de 20000 €</option>
-                                         <option value="29000" >30000</option>
-                                         <option value="39000" >40000</option>
-                                         <option value="50000" >50000</option>
-                                         <option value="80000" >80000</option>
-                                         <option value="100000" >100000</option>
+                                         <option value="19000">moins de 20000 €</option>
+                                         <option value="29000">30000</option>
+                                         <option value="39000">40000</option>
+                                         <option value="50000">50000</option>
+                                         <option value="80000">80000</option>
+                                         <option value="100000">100000</option>
                                      </select>
 
                                      <select name="surface"
                                          class="w-full px-4 py-3 text-sm bg-gray-100 border-transparent rounded-md focus:border-gray-500 focus:ring-0">
                                          <option value="">Surface</option>
-                                         <option value="50" >50 m2</option>
-                                         <option value="100" >100 m2</option>
-                                         <option value="200" >200 m2</option>
-                                         <option value="300" >300 m2</option>
-                                         <option value="400" >400 m2</option>
-                                         <option value="500" >+ 400 m2</option>
+                                         <option value="50">50 m2</option>
+                                         <option value="100">100 m2</option>
+                                         <option value="200">200 m2</option>
+                                         <option value="300">300 m2</option>
+                                         <option value="400">400 m2</option>
+                                         <option value="500">+ 400 m2</option>
                                      </select>
 
                                      <select name="nb_pieces"
                                          class="w-full px-4 py-3 text-sm bg-gray-100 border-transparent rounded-md focus:border-gray-500 focus:ring-0">
                                          <option value="">Nb Piéces</option>
-                                         <option value="3" >3</option>
-                                         <option value="4" >4</option>
-                                         <option value="5" >5</option>
-                                         <option value="6" >6</option>
-                                         <option value="10" >10+</option>
+                                         <option value="3">3</option>
+                                         <option value="4">4</option>
+                                         <option value="5">5</option>
+                                         <option value="6">6</option>
+                                         <option value="10">10+</option>
                                      </select>
 
                                      <button type="submit"
@@ -100,11 +102,100 @@
          <div class="mx-auto max-w-[1440px]">
 
 
-             
+             <section class="pt-12 text-gray-600 body-font">
+                 <div class="px-4 py-12 mx-auto ">
+                     <div class="flex flex-wrap w-full mb-8">
+                         <div class="w-full pl-4 mb-4 lg:w-1/2 lg:mb-0">
+                             @if (request()->q)
+                                 <h1 class="mb-2 text-3xl font-medium text-gray-900 md:text-4xl title-font">Résultats de
+                                     votre
+                                     recherche</h1>
+                             @else
+                                 <h1 class="mb-2 text-3xl font-medium text-gray-900 md:text-4xl title-font">Dernières
+                                     annonces</h1>
+                             @endif
+
+                             <div class="h-1 bg-[#6805F2] rounded w-96"></div>
+
+                         </div>
+
+                     </div>
+                     <section id="resultats" class="flex flex-col">
+                         @forelse ($lastlocations as $lastlocation)
+                             <div class="mb-4 bg-gray-100 rounded-lg ">
+                                 <div class="container pb-8 mx-auto md:mx-4">
+                                     <div class="mt-4 md:flex">
+                                         <div class="w-full swiper mySwiper md:w-1/2">
+                                             <div class="swiper-wrapper">
+
+                                                 <div class="swiper-slide">
+                                                     @php $image0 =  $lastlocation->image[0] ?? null; @endphp
+                                                     <img class="object-cover w-full h-96"
+                                                         src="./storage/{{ $image0 }}" alt=""
+                                                         onerror="this.src='/img/empty.png'">
+                                                 </div>
+
+                                                 <div class="swiper-slide">
+                                                     @php $image1 =  $lastlocation->image[1] ?? null; @endphp
+                                                     <img class="object-cover w-full h-96"
+                                                         src="./storage/{{ $image1 }}" alt=""
+                                                         onerror="this.src='/img/empty.png'">
+                                                 </div>
+
+                                                 <div class="swiper-slide">
+                                                     @php $image2 =  $lastlocation->image[2] ?? null; @endphp
+                                                     <img class="object-cover w-full h-96"
+                                                         src="./storage/{{ $image2 }}" alt=""
+                                                         onerror="this.src='/img/empty.png'">
+                                                 </div>
+                                             </div>
+                                             <div class=" swiper-button-next"></div>
+                                             <div class="swiper-button-prev"></div>
+                                             <div class="swiper-pagination"></div>
+                                         </div>
+
+                                         <div class="pl-8 mx-6 mt-6 lg:w-1/2 lg:mt-0">
+                                             <button
+                                                 class="px-4 py-2 mb-4 text-sm font-bold text-white bg-purple-800 rounded-full">Location</button>
+                                             <p class="text-xl font-bold text-indigo-600 uppercase">
+                                                 {{ $lastlocation->type }}
+                                             </p>
+                                             <a
+                                                 class="block mt-4 text-2xl font-semibold text-gray-800 hover:underline md:text-3xl">
+                                                 {{ $lastlocation->name }}
+                                             </a>
+
+                                             <p class="max-w-xl mt-3 text-sm text-gray-800 md:text-sm">
+                                                 {{ $lastlocation->description }}
+                                             </p>
+
+                                             <a href="annonce"
+                                                 class="inline-block px-4 py-2 mt-2 text-white bg-blue-800 rounded text-bold hover:bg-blue-700 active:bg-blue-500">Plus
+                                                 d'info</a>
+                                             <div class="flex">
+                                                 <div class="flex items-center mt-6">
+                                                     <img class="object-cover object-center w-10 h-10 rounded-full"
+                                                         src="https://images.unsplash.com/photo-1531590878845-12627191e687?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=764&q=80"
+                                                         alt="">
+
+                                                     <div class="mx-4">
+                                                         <p class="text-sm text-gray-500 ">user type</p>
+                                                     </div>
+                                                 </div>
+                                             </div>
+                                         </div>
+                                     </div>
+                                 </div>
+                             </div>
+                         @empty
+                         @endforelse
+
+                     </section>
 
 
                      <div class="w-full py-4 pl-4 lg:w-1/2 lg:mb-0">
-                         <h1 class="mt-4 mb-2 text-3xl font-medium text-gray-900 md:text-4xl title-font">Disponible à la location</h1>
+                         <h1 class="mt-4 mb-2 text-3xl font-medium text-gray-900 md:text-4xl title-font">Disponible à la
+                             location</h1>
                          <div class="h-1 bg-[#6805F2] rounded w-96"></div>
 
                      </div>
@@ -143,7 +234,7 @@
                  </div>
              </section>
          </div>
-        {{ $locations->appends(Request::all())->links('pagination::tailwind') }}
+         {{ $locations->appends(Request::all())->links('pagination::tailwind') }}
      </div>
      <style>
 
@@ -157,5 +248,4 @@
              }
          );
      </script>
- 
  @endsection

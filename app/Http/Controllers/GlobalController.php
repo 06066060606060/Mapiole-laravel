@@ -63,28 +63,33 @@ class GlobalController extends Controller
 
     public function rent(Request $request)
     {
-        $lastlocations = Location::where('status', '!=', 'Non')->orderBy('id', 'desc')->limit('4')->get();
+        $lastlocations = Location::where('status', '!=', 'Non')->orderBy('id', 'desc')->limit('2')->get();
         $locations = Location::where('status', '!=', 'Non');
         $q = request()->input('q');
         if ($request->filled('q')) {
             $locations->where('name', 'like', '%' . $q . '%');
+            $lastlocations =  $locations->where('name', 'like', '%' . $q . '%')->orderBy('id', 'desc')->limit('2')->get();
         }
         if ($request->filled('surface')) {
             $surface = $request->surface;
             $locations->where('surface', '<=', $surface);
+            $lastlocations =  $locations->where('surface', '<=', $surface)->orderBy('id', 'desc')->limit('2')->get();
         }
         if ($request->filled('nb_piece')) {
             $nb_piece = $request->nb_piece;
             $locations->where('nb_piece', '<=', $nb_piece);
+            $lastlocations =  $locations->where('nb_piece', '<=', $nb_piece)->orderBy('id', 'desc')->limit('2')->get();
         }
         if ($request->filled('type')) {
             $type = $request->type;
             $locations->where('type', '=', $type);
+            $lastlocations =  $locations->where('type', '=', $type)->orderBy('id', 'desc')->limit('2')->get();
         }
         if ($request->filled('prix')) {
 
             $prix = $request->prix;
             $locations->where('prix', '<=', $prix);
+            $lastlocations =  $locations->where('prix', '<=', $prix)->orderBy('id', 'desc')->limit('2')->get();
         }
         return view('rent', [
             'locations' => $locations->paginate(8),  //a la place d'un get me demande pas pourquoi!
@@ -98,28 +103,33 @@ class GlobalController extends Controller
     public function buy(Request $request)
     {
     
-        $lastventes = Vente::where('status', '!=', 'Non')->orderBy('id', 'desc')->limit('4')->get();
+        $lastventes = Vente::where('status', '!=', 'Non')->orderBy('id', 'desc')->limit('2')->get();
         $ventes = Vente::where('status', '!=', 'Non');
         $q = request()->input('q');
         if ($request->filled('q')) {
             $ventes->where('name', 'like', '%' . $q . '%');
+            $lastventes = $ventes->where('name', 'like', '%' . $q . '%')->orderBy('id', 'desc')->limit('2')->get();
         }
         if ($request->filled('surface')) {
             $surface = $request->surface;
             $ventes->where('surface', '<=', $surface);
+            $lastventes = $ventes->where('name', 'like', '%' . $q . '%')->orderBy('id', 'desc')->limit('2')->get();
         }
         if ($request->filled('nb_piece')) {
             $nb_piece = $request->nb_piece;
             $ventes->where('nb_piece', '<=', $nb_piece);
+            $lastventes = $ventes->where('name', 'like', '%' . $q . '%')->orderBy('id', 'desc')->limit('2')->get();
         }
         if ($request->filled('type')) {
             $type = $request->type;
             $ventes->where('type', '=', $type);
+            $lastventes = $ventes->where('name', 'like', '%' . $q . '%')->orderBy('id', 'desc')->limit('2')->get();
         }
         if ($request->filled('prix')) {
 
             $prix = $request->prix;
             $ventes->where('prix', '<=', $prix);
+            $lastventes = $ventes->where('name', 'like', '%' . $q . '%')->orderBy('id', 'desc')->limit('2')->get();
         }
         return view('buy', [
             'ventes' => $ventes->paginate(8),  //a la place d'un get me demande pas pourquoi!
