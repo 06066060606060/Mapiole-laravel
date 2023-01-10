@@ -9,7 +9,7 @@
      <p
                              class="pb-4 text-xl font-medium text-center text-white pt-44 md:pb-8 md:pt24 md:text-5xl drop-shadow-xl">
                            </p>
-                          <form class="w-full px-5 py-3 mt-4 bg-white rounded-lg shadow-lg md:w-1/2" action="{{ route('searchfilterbuy') }}" method="get">
+                          <form class="w-full px-5 py-3 mt-4 bg-white rounded-lg shadow-lg prevent md:w-1/2" action="/achat-bien-immobilier-cameroun/filter" method="get">
                              <h1 class="pb-2 text-2xl font-bold text-center text-black">Rechercher un bien en vente</h1>
                              <div class="relative">
                                  <div class="absolute flex items-center h-full ml-2">
@@ -30,7 +30,7 @@
                                      Filtres
                                  </p>
 
-                                 <button
+                                         <button type="reset"
                                      class="px-4 py-2 text-sm font-medium text-gray-800 bg-gray-100 rounded-md hover:bg-indigo-300">
                                      Reset Filtres
                                  </button>

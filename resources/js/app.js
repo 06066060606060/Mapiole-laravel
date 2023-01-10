@@ -1,17 +1,11 @@
 import './bootstrap';
 import Alpine from 'alpinejs'
-import barba from '@barba/core';
 window.Alpine = Alpine;
 
 Alpine.start();
 
 
-barba.init(
-  {
-      prevent: ({ el }) => el.classList && el.classList.contains('prevent')
-  }
-);
-barba.hooks.afterEnter((data) => {
+
   const swiper = new Swiper('.swiper-container', {
     loop: true,
     slidesPerView: 1.5,
@@ -52,9 +46,6 @@ barba.hooks.afterEnter((data) => {
   $(window).scrollTop(0);
   $('#mega-menu-full-dropdown5, #mega-menu-full-dropdown4, #mega-menu-full-dropdown3, #mega-menu-full-dropdown2, #mega-menu-full-dropdown1, #mega-menu-full-dropdown').addClass('hidden');
   $('#mega-menu-full').addClass('hidden');
-})
-
-
 
 document.addEventListener('DOMContentLoaded', function () {
   const swiper = new Swiper('.swiper-container', {
