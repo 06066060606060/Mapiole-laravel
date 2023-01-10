@@ -63,22 +63,23 @@ class GlobalController extends Controller
 
     public function rent(Request $request)
     {
-
-        $locations = Location::where('status', '!=', 'Non')->inRandomOrder()->paginate(8);
+        $lastlocations = Location::where('status', '!=', 'Non')->orderBy('id', 'desc')->limit('4')->get();
+        $locations = Location::where('status', '!=', 'Non');
         $q = request()->input('q');
         if ($request->filled('q')) {
-            $locations->where('titre', 'like', '%' . $q . '%');
+            $locations->where('name', 'like', '%' . $q . '%');
         }
-        if ($request->filled('note')) {
-            $note = $request->note;
-            $locations->where('note', '>=', $note);
+        if ($request->filled('surface')) {
+            $surface = $request->surface;
+            $locations->where('surface', '<=', $surface);
         }
-        if ($request->filled('categories')) {
-            $categories = $request->categories;
-            $locations->whereHas('produit_categorie', function ($q) use ($categories) {
-
-                $q->where('categorie_id', '=', $categories);
-            });
+        if ($request->filled('nb_piece')) {
+            $nb_piece = $request->nb_piece;
+            $locations->where('nb_piece', '<=', $nb_piece);
+        }
+        if ($request->filled('type')) {
+            $type = $request->type;
+            $locations->where('type', '=', $type);
         }
         if ($request->filled('prix')) {
 
@@ -86,8 +87,9 @@ class GlobalController extends Controller
             $locations->where('prix', '<=', $prix);
         }
         return view('rent', [
-            'locations' => $locations,  //a la place d'un get me demande pas pourquoi!
+            'locations' => $locations->paginate(8),  //a la place d'un get me demande pas pourquoi!
             'q' => $q,
+            'lastlocations' => $lastlocations,
         ]);
     }
 
@@ -97,21 +99,22 @@ class GlobalController extends Controller
     {
     
         $lastventes = Vente::where('status', '!=', 'Non')->orderBy('id', 'desc')->limit('4')->get();
-        $ventes = Vente::where('status', '!=', 'Non')->inRandomOrder()->paginate(8);
+        $ventes = Vente::where('status', '!=', 'Non');
         $q = request()->input('q');
         if ($request->filled('q')) {
-            $ventes->where('titre', 'like', '%' . $q . '%');
+            $ventes->where('name', 'like', '%' . $q . '%');
         }
-        if ($request->filled('note')) {
-            $note = $request->note;
-            $ventes->where('note', '>=', $note);
+        if ($request->filled('surface')) {
+            $surface = $request->surface;
+            $ventes->where('surface', '<=', $surface);
         }
-        if ($request->filled('categories')) {
-            $categories = $request->categories;
-            $ventes->whereHas('produit_categorie', function ($q) use ($categories) {
-
-                $q->where('categorie_id', '=', $categories);
-            });
+        if ($request->filled('nb_piece')) {
+            $nb_piece = $request->nb_piece;
+            $ventes->where('nb_piece', '<=', $nb_piece);
+        }
+        if ($request->filled('type')) {
+            $type = $request->type;
+            $ventes->where('type', '=', $type);
         }
         if ($request->filled('prix')) {
 
@@ -119,7 +122,7 @@ class GlobalController extends Controller
             $ventes->where('prix', '<=', $prix);
         }
         return view('buy', [
-            'ventes' => $ventes,  //a la place d'un get me demande pas pourquoi!
+            'ventes' => $ventes->paginate(8),  //a la place d'un get me demande pas pourquoi!
             'q' => $q,
             'lastventes' => $lastventes,
         ]);

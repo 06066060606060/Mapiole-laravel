@@ -69,16 +69,14 @@
                 </div>
   @if (backpack_user()->role == 'admin')
             <p class="w-1/4 px-4 py-2 mx-8 text-xs text-gray-800 bg-white rounded shadow -pl-2">
-                Derniéres mise à jour: 1.9<br>
-                -fix bug update serveur<br>
-                -fonction paiement<br>
-                -role backend<br>
-                -fix date<br>
-                -langue test<br>
+                Derniéres mise à jour: 2.8<br>
                 -livechat<br>
                 -page poster annonce<br>
                 -page dynamique<br>
                 -ajout pagination<br>
+                -ajout recherche<br>
+                -fonction search rent<br>
+                -fonction search buy<br>
             </p>
         @endif
             </div>

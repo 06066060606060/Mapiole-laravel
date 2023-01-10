@@ -9,7 +9,7 @@
      <p
                              class="pb-4 text-xl font-medium text-center text-white pt-44 md:pb-8 md:pt24 md:text-5xl drop-shadow-xl">
                            </p>
-                         <div class="w-full px-5 py-3 mt-4 bg-white rounded-lg shadow-lg md:w-1/2">
+                          <form class="w-full px-5 py-3 mt-4 bg-white rounded-lg shadow-lg md:w-1/2" action="{{ route('searchfilterbuy') }}" method="get">
                              <h1 class="pb-2 text-2xl font-bold text-center text-black">Rechercher un bien en vente</h1>
                              <div class="relative">
                                  <div class="absolute flex items-center h-full ml-2">
@@ -21,8 +21,8 @@
                                      </svg>
                                  </div>
 
-                                 <input type="text" placeholder="Recherche par ville, prix, surface..."
-                                     class="w-full px-8 py-3 text-sm bg-gray-100 border-transparent rounded-md focus:border-gray-500 focus:ring-0">
+                                 <input type="text" placeholder="Recherche par ville, prix, surface..." name="q"
+                                     class="w-full px-8 py-3 text-sm bg-gray-100 border-transparent rounded-md focus:border-gray-500 focus:ring-0" value="{{ request()->q ?? '' }}">
                              </div>
 
                              <div class="flex items-center justify-between mt-4">
@@ -38,55 +38,57 @@
 
                              <div>
                                  <div class="grid grid-cols-2 gap-4 mt-4 md:grid-cols-3 xl:grid-cols-5">
-                                     <select
+                                      <select name="type"
                                          class="w-full px-4 py-3 text-sm bg-gray-100 border-transparent rounded-md focus:border-gray-500 focus:ring-0">
-                                         <option value="">Type</option>
-                                     <option value="for-rent">Maison</option>
-                                         <option value="for-sale">Appartements</option>
-                                           <option value="for-sale">Terrain</option>
-                                             <option value="for-sale">Villa</option>
-                                              <option value="for-sale">Bureau</option>
-                                               <option value="for-sale">Esp. commercial</option>
+                                    <option value="" >Type</option>
+                                     <option value="Maison" >Maison</option>
+                                         <option value="Appart" >Appartements</option>
+                                           <option value="Terrain" >Terrain</option>
+                                             <option value="Villa" >Villa</option>
+                                              <option value="Bureau">Bureau</option>
+                                               <option value="Commerce" >Esp. commercial</option>
                                      </select>
 
-                                     <select
+                                     <select name="prix"
                                          class="w-full px-4 py-3 text-sm bg-gray-100 border-transparent rounded-md focus:border-gray-500 focus:ring-0">
                                          <option value="">Prix</option>
-                                         <option value="1000">RM 1000</option>
-                                         <option value="2000">RM 2000</option>
-                                         <option value="3000">RM 3000</option>
-                                         <option value="4000">RM 4000</option>
+                                         <option value="19000" >moins de 20000 €</option>
+                                         <option value="29000" >30000</option>
+                                         <option value="39000" >40000</option>
+                                         <option value="50000" >50000</option>
+                                         <option value="80000" >80000</option>
+                                         <option value="100000" >100000</option>
                                      </select>
 
-                                     <select
+                                     <select name="surface"
                                          class="w-full px-4 py-3 text-sm bg-gray-100 border-transparent rounded-md focus:border-gray-500 focus:ring-0">
                                          <option value="">Surface</option>
-                                         <option value="200">200 sq.ft</option>
-                                         <option value="400">400 sq.ft</option>
-                                         <option value="600">600 sq.ft</option>
-                                         <option value="800 sq.ft">800</option>
-                                         <option value="1000 sq.ft">1000</option>
-                                         <option value="1200 sq.ft">1200</option>
+                                         <option value="50" >50 m2</option>
+                                         <option value="100" >100 m2</option>
+                                         <option value="200" >200 m2</option>
+                                         <option value="300" >300 m2</option>
+                                         <option value="400" >400 m2</option>
+                                         <option value="500" >+ 400 m2</option>
                                      </select>
 
-                                     <select
+                                     <select name="nb_pieces"
                                          class="w-full px-4 py-3 text-sm bg-gray-100 border-transparent rounded-md focus:border-gray-500 focus:ring-0">
-                                         <option value="">Nb Chambres</option>
-                                         <option value="1">1 bedroom</option>
-                                         <option value="2">2 bedrooms</option>
-                                         <option value="3">3 bedrooms</option>
-                                         <option value="4">4 bedrooms</option>
-                                         <option value="5">5 bedrooms</option>
+                                         <option value="">Nb Piéces</option>
+                                         <option value="3" >3</option>
+                                         <option value="4" >4</option>
+                                         <option value="5" >5</option>
+                                         <option value="6" >6</option>
+                                         <option value="10" >10+</option>
                                      </select>
 
-                                     <button
+                                     <button type="submit"
                                          class="w-full px-4 py-3 text-sm text-white transition duration-200 bg-indigo-600 border border-transparent border-gray-400 rounded-md hover:bg-indigo-600 focus:border-gray-500 active:bg-white active:text-black">
                                          Rechercher
                                      </button>
 
                                  </div>
                              </div>
-                         </div>
+                         </form>
 
                      </div>
          </section>
