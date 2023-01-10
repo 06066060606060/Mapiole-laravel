@@ -7,7 +7,7 @@
      @php($urlprix = request()->query('prix')) @endphp
      <div data-barba="container">
          <section id="foot" class="relative mx-auto space-y-16">
-             <div class="w-full bg-center bg-cover h-[32rem] shadow-xl" style="background-image: url('./img/banner.jpeg');">
+             <div class="w-full bg-center bg-cover h-[32rem] shadow-xl" style="background-image: url('{{asset('img/banner.jpeg')}}');">
                  <div class="flex flex-col items-center justify-center w-full h-full bg-gray-900/40">
                      <div class="flex flex-col items-center justify-center w-full h-full px-4">
                          <p
@@ -36,10 +36,10 @@
                                      Filtres
                                  </p>
 
-                                 <button type="reset"
+                                 <a href="/achat-bien-immobilier-cameroun"
                                      class="px-4 py-2 text-sm font-medium text-gray-800 bg-gray-100 rounded-md hover:bg-indigo-300">
                                      Reset Filtres
-                                 </button>
+                                 </a>
                              </div>
 
                              <div>
