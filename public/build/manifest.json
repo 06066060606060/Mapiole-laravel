@@ -1,0 +1,16 @@
+{
+  "resources/css/anim.svg": {
+    "file": "assets/anim.0792a69c.svg",
+    "src": "resources/css/anim.svg"
+  },
+  "resources/js/app.js": {
+    "file": "assets/app.aa7f44ad.js",
+    "src": "resources/js/app.js",
+    "isEntry": true
+  },
+  "resources/css/app.css": {
+    "file": "assets/app.d38f1044.css",
+    "src": "resources/css/app.css",
+    "isEntry": true
+  }
+}
