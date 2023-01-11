@@ -32,7 +32,7 @@
 
 
       <div>
-          <div class="container p-8 mx-auto xl:px-0 mb-12">
+          <div class="container p-8 mx-auto mb-12 xl:px-0">
               <div
                   class="relative flex flex-wrap items-center justify-between w-full max-w-4xl gap-5 mx-auto overflow-hidden text-white bg-indigo-600 bg-gradient-to-r from-indigo-600 to-indigo-700 px-7 py-7 lg:px-12 lg:py-12 lg:flex-nowrap rounded-xl">
                   <div
@@ -55,7 +55,7 @@
 
 
 
-      <section class="fgrad2 py-16 px-4">
+      <section class="px-4 py-16 fgrad2">
           <div class="mx-auto max-w-[1440px]">
               <div class="grid gap-6 lg:grid-cols-3">
                   <div class="overflow-hidden rounded lg:flex lg:col-span-3">
@@ -64,11 +64,11 @@
                       <div
                           class="p-6 space-y-6 bg-gray-100 border border-gray-200 shadow-xl lg:p-8 md:flex md:flex-col">
                           <div class="flex">
-                              <a href="#"
+                              <a href="location-bien-immobilier-cameroun"
                                   class="self-start px-3 py-1 text-sm text-white bg-green-800 rounded-full">Location</a>
-                              <a href="#"
+                              <a href="vendre-bien-immobilier-cameroun"
                                   class="self-start px-3 py-1 mx-1 text-sm text-white bg-purple-800 rounded-full">Vente</a>
-                              <a href="#"
+                              <a href="achat-bien-immobilier-cameroun"
                                   class="self-start px-3 py-1 mx-1 text-sm text-white bg-orange-600 rounded-full">Achat</a>
                           </div>
                           <h2 class="text-3xl font-bold md:flex-1 drop-shadow-xl">Choisissez parmi une large selection
@@ -137,7 +137,7 @@
                   </button>
               </div>
 
-              <div class="swiper-container py-8" x-ref="container">
+              <div class="py-8 swiper-container" x-ref="container">
                   <div class="swiper-wrapper">
                       <!-- Slides -->
                       <div class="p-4 swiper-slide mySwiper">
@@ -203,7 +203,7 @@
           </div>
       </div>
 
-      <section class="bg-blue-100 mt-14 px-4">
+      <section class="px-4 bg-blue-100 mt-14">
           <div class="grid gap-6 py-10 mx-auto  lg:grid-cols-2 mybody max-w-[1440px]">
 
               <img src="./img/house1.jpeg" alt=""
@@ -244,7 +244,7 @@
       </div>
 
       <section class="mt-12 mb-24 mx-auto  max-w-[1440px] ">
-          <div class=" bg-gray-100 border border-gray-200 rounded-md shadow-xl mx-4">
+          <div class="mx-4 bg-gray-100 border border-gray-200 rounded-md shadow-xl ">
               <div class="container flex flex-col p-6">
                   <h2 class="py-4 text-3xl font-bold text-center">Comment ça marche ?</h2>
                   <div class="divide-y divide-gray-300">
