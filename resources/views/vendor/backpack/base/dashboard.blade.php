@@ -78,6 +78,7 @@
                 -fonction search rent<br>
                 -fonction search buy<br>
                 -code login facebook<br>
+                -fix page paramétre avancé<br>
 
             </p>
         @endif
