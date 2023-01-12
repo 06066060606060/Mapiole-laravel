@@ -1,10 +1,11 @@
  @extends('layouts.app')
 
  @section('main')
-     @php($urltype = request()->query('type')) @endphp
-     @php($urlsurface = request()->query('surface')) @endphp
-     @php($urlnb = request()->query('nb_pieces')) @endphp
-     @php($urlprix = request()->query('prix')) @endphp
+     @php $urltype = request()->query('type');
+          $urlsurface = request()->query('surface');
+          $urlnb = request()->query('nb_pieces');
+          $urlprix = request()->query('prix') ;
+          @endphp
      <div data-barba="container">
          <section id="foot" class="relative mx-auto space-y-16">
              <div class="w-full bg-center bg-cover h-[32rem] shadow-xl" style="background-image: url('{{asset('img/banner.jpeg')}}');">
@@ -47,44 +48,44 @@
                                      <select name="type"
                                          class="w-full px-4 py-3 text-sm bg-gray-100 border-transparent rounded-md focus:border-gray-500 focus:ring-0">
                                          <option value="">Type</option>
-                                         <option value="Maison">Maison</option>
-                                         <option value="Appartement">Appartement</option>
-                                         <option value="Terrain">Terrain</option>
-                                         <option value="Villa">Villa</option>
-                                         <option value="Bureau">Bureau</option>
-                                         <option value="Commerce">Esp. commercial</option>
+                                         <option value="Maison"  {{ $urltype == 'Maison' ? 'selected' : '' }}>Maison</option>
+                                         <option value="Appartement"  {{ $urltype == 'Appartement' ? 'selected' : '' }}>Appartement</option>
+                                         <option value="Terrain" {{ $urltype == 'Terrain' ? 'selected' : '' }}>Terrain</option>
+                                         <option value="" {{ $urltype == 'Villa' ? 'selected' : '' }}>Villa</option>
+                                         <option value="Bureau" {{ $urltype == 'Bureau' ? 'selected' : '' }}>Bureau</option>
+                                         <option value="Commerce" {{ $urltype == 'Commerce' ? 'selected' : '' }}>Esp. commercial</option>
                                      </select>
 
                                      <select name="prix"
                                          class="w-full px-4 py-3 text-sm bg-gray-100 border-transparent rounded-md focus:border-gray-500 focus:ring-0">
                                          <option value="">Prix</option>
-                                         <option value="19000">moins de 20000 €</option>
-                                         <option value="29000">30000</option>
-                                         <option value="39000">40000</option>
-                                         <option value="50000">50000</option>
-                                         <option value="80000">80000</option>
-                                         <option value="100000">100000</option>
+                                         <option value="19000" {{ $urlprix == '19000' ? 'selected' : '' }}>moins de 20000 €</option>
+                                         <option value="29000" {{ $urlprix == '29000' ? 'selected' : '' }}>30000</option>
+                                         <option value="39000" {{ $urlprix == '39000' ? 'selected' : '' }}>40000</option>
+                                         <option value="50000" {{ $urlprix == '50000' ? 'selected' : '' }}>50000</option>
+                                         <option value="80000" {{ $urlprix == '80000' ? 'selected' : '' }}>80000</option>
+                                         <option value="100000" {{ $urlprix == '100000' ? 'selected' : '' }}>100000</option>
                                      </select>
 
                                      <select name="surface"
                                          class="w-full px-4 py-3 text-sm bg-gray-100 border-transparent rounded-md focus:border-gray-500 focus:ring-0">
                                          <option value="">Surface</option>
-                                         <option value="50">50 m2</option>
-                                         <option value="100">100 m2</option>
-                                         <option value="200">200 m2</option>
-                                         <option value="300">300 m2</option>
-                                         <option value="400">400 m2</option>
-                                         <option value="500">+ 400 m2</option>
+                                         <option value="50"  {{ $urlsurface == '50' ? 'selected' : '' }}>50 m2</option>
+                                         <option value="100" {{ $urlsurface == '100' ? 'selected' : '' }}>100 m2</option>
+                                         <option value="200" {{ $urlsurface == '200' ? 'selected' : '' }}>200 m2</option>
+                                         <option value="300" {{ $urlsurface == '300' ? 'selected' : '' }}>300 m2</option>
+                                         <option value="400" {{ $urlsurface == '400' ? 'selected' : '' }}>400 m2</option>
+                                         <option value="500" {{ $urlsurface == '500' ? 'selected' : '' }}>+ 400 m2</option>
                                      </select>
 
                                      <select name="nb_pieces"
                                          class="w-full px-4 py-3 text-sm bg-gray-100 border-transparent rounded-md focus:border-gray-500 focus:ring-0">
                                          <option value="">Nb Piéces</option>
-                                         <option value="3">3</option>
-                                         <option value="4">4</option>
-                                         <option value="5">5</option>
-                                         <option value="6">6</option>
-                                         <option value="10">10+</option>
+                                         <option value="3" {{ $urlnb == '3' ? 'selected' : '' }}>3</option>
+                                         <option value="4" {{ $urlnb == '4' ? 'selected' : '' }}>4</option>
+                                         <option value="5" {{ $urlnb == '5' ? 'selected' : '' }}>5</option>
+                                         <option value="6" {{ $urlnb == '6' ? 'selected' : '' }}>6</option>
+                                         <option value="10" {{ $urlnb == '7' ? 'selected' : '' }}>10+</option>
                                      </select>
 
                                      <button type="submit"
@@ -167,7 +168,7 @@
                                                  {{ $lastvente->description }}
                                              </p>
 
-                                             <a href="annonce"
+                                             <a href="/annonce_ventes?id={{ $lastvente->id }}"
                                                  class="inline-block px-4 py-2 mt-2 text-white bg-blue-800 rounded text-bold hover:bg-blue-700 active:bg-blue-500">Plus
                                                  d'info</a>
                                              <div class="flex">
@@ -213,7 +214,7 @@
                                      <h3 class="text-xs font-bold tracking-widest text-indigo-600 title-font">
                                          {{ $vente->name }}</h3>
                                      <p class="pb-2 text-base leading-relaxed cropped">{{ $vente->description }}</p>
-                                     <a href="annonce?id={{ $vente->id }}"
+                                     <a href="/annonce_ventes?id={{ $vente->id }}"
                                          class="flex justify-center px-4 py-2 mx-auto font-bold text-white transition duration-200 bg-[#6805F2] rounded hover:bg-indigo-600 active:bg-[#6805F2]">Plus
                                          d'infos</a>
                                  </div>
@@ -226,7 +227,7 @@
                                          alt="content">
                                      <h3 class="text-xs font-bold tracking-widest text-indigo-600 title-font">Empty</h3>
                                      <p class="pb-2 text-base leading-relaxed">Dummy text.</p>
-                                     <a href="annonce"
+                                     <a href="/annonce"
                                          class="flex justify-center px-4 py-2 mx-auto font-bold text-white transition duration-200 bg-[#6805F2] rounded hover:bg-indigo-600 active:bg-[#6805F2]">Plus
                                          d'infos</a>
                                  </div>

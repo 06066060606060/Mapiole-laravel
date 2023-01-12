@@ -79,6 +79,9 @@
                 -fonction search buy<br>
                 -code login facebook<br>
                 -fix page paramétre avancé<br>
+                -modif base de donnée<br>
+                -ajout page annonce<br>
+
 
             </p>
         @endif

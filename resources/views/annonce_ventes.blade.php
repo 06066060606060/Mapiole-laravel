@@ -19,21 +19,29 @@
             <div class="w-full swiper mySwiper">
               <div class="swiper-wrapper">
 
-                <div class="swiper-slide">
-                  <img class="object-cover w-full h-96" src="./img/01.jpg" alt="">
-                </div>
+                 <div class="swiper-slide">
+                                         @php $image0 =  $ventes->image[0] ?? null; @endphp
+                                         <img class="object-cover w-full h-96" src="./storage/{{ $image0 }}"
+                                             alt="" onerror="this.src='/img/empty.png'">
+                                     </div>
 
-                <div class="swiper-slide">
-                  <img class="object-cover w-full h-96" src="./img/02.jpg" alt="">
-                </div>
+                                     <div class="swiper-slide">
+                                         @php $image1 =  $ventes->image[1] ?? null; @endphp
+                                         <img class="object-cover w-full h-96" src="./storage/{{ $image1 }}"
+                                             alt="" onerror="this.src='/img/empty.png'">
+                                     </div>
 
-                <div class="swiper-slide">
-                  <img class="object-cover w-full h-96" src="./img/03.jpg" alt="">
-                </div>
+                                     <div class="swiper-slide">
+                                         @php $image2 =  $ventes->image[2] ?? null; @endphp
+                                         <img class="object-cover w-full h-96" src="./storage/{{ $image2 }}"
+                                             alt="" onerror="this.src='/img/empty.png'">
+                                     </div>
 
-                <div class="swiper-slide">
-                  <img class="object-cover w-full h-96" src="./img/04.jpeg" alt="">
-                </div>
+                                     <div class="swiper-slide">
+                                         @php $image3 =  $ventes->image[3] ?? null; @endphp
+                                         <img class="object-cover w-full h-96" src="./storage/{{ $image3 }}"
+                                             alt="" onerror="this.src='/img/empty.png'">
+                                     </div>
 
               </div>
               <div class=" swiper-button-next"></div>
@@ -42,13 +50,14 @@
             </div>
 
             <div class="grid grid-cols-4 gap-4 lg:mt-4">
-              <img alt="Les Paul" src="./img/01.jpg" class="object-cover w-full " />
-
-              <img alt="Les Paul" src="./img/02.jpg" class="object-cover w-full " />
-
-              <img alt="Les Paul" src="./img/03.jpg" class="object-cover w-full " />
-
-              <img alt="Les Paul" src="./img/04.jpeg" class="object-cover " />
+                 <img class="object-cover w-full" src="./storage/{{ $image0 }}" alt=""
+                                     onerror="this.src='/img/empty.png'">
+                                 <img class="object-cover w-full" src="./storage/{{ $image1 }}" alt=""
+                                     onerror="this.src='/img/empty.png'">
+                                 <img class="object-cover w-full" src="./storage/{{ $image2 }}" alt=""
+                                     onerror="this.src='/img/empty.png'">
+                                 <img class="object-cover w-full" src="./storage/{{ $image3 }}" alt=""
+                                     onerror="this.src='/img/empty.png'">
             </div>
           </div>
 
@@ -59,7 +68,7 @@
 
             <div class="flex justify-between mt-8">
               <div class="max-w-[35ch]">
-                <p class="mt-0.5 text-xl font-bold text-blue-500 uppercase">Appartement</p>
+                <p class="mt-0.5 text-xl font-bold text-blue-500 uppercase">{{ $ventes->type }}</p>
                 <h1 class="text-2xl font-bold">
                   3 pièces, 60 m²
                 </h1>

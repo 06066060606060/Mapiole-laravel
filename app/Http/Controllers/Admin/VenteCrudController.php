@@ -154,6 +154,8 @@ class VenteCrudController extends CrudController
             );
         });
 
+        CRUD::field('description2')->type('textarea')->label('Details');
+
         CRUD::addField(['name' => 'prix', 'type' => 'number', 'label' => 'Prix / mois', 'wrapper' => [ 'class' => 'form-group col-md pl-3'],]);
         CRUD::addField(['name' => 'surface', 'type' => 'number', 'label' => 'Surface m3', 'wrapper' => [ 'class' => 'form-group col-md pl-3'],]);
         CRUD::addField(['name' => 'nb_piece', 'type' => 'number', 'label' => 'Nb pièces', 'wrapper' => [ 'class' => 'form-group col-md pl-3'],]);
@@ -340,6 +342,8 @@ class VenteCrudController extends CrudController
                 )
             );
         });
+
+        CRUD::field('description2')->type('textarea')->label('Details');
 
         CRUD::addField(['name' => 'prix', 'type' => 'number', 'label' => 'Prix / mois', 'wrapper' => [ 'class' => 'form-group col-md pl-3'],]);
         CRUD::addField(['name' => 'surface', 'type' => 'number', 'label' => 'Surface m3', 'wrapper' => [ 'class' => 'form-group col-md pl-3'],]);

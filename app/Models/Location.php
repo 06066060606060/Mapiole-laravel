@@ -25,6 +25,7 @@ class Location extends Model
         'prix',
         'name',
         'description',
+        'description2',
         'image',
         'documents',
         'category',

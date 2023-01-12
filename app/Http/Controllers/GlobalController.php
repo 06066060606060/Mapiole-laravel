@@ -140,11 +140,19 @@ class GlobalController extends Controller
 
 
     
-    public function annonce()
+    public function annonce(Request $request)
     {
-        return view('annonce');
+        $locations = Location::where('status', '!=', 'Non');
+        $locations = $locations->where('id', $request->id)->first();
+        return view(('annonce_locations'), compact('locations'));
     }
 
+    public function vente(Request $request)
+    {
+        $ventes = Vente::where('status', '!=', 'Non');
+        $ventes = $ventes->where('id', $request->id)->first();
+        return view(('annonce_ventes'), compact('ventes'));
+    }
 
     public function build()
     {

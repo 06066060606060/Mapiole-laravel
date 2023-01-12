@@ -25,6 +25,7 @@ class Vente extends Model
         'prix',
         'name',
         'description',
+        'description2',
         'image',
         'documents',
         'category',

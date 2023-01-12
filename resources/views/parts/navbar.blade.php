@@ -287,7 +287,7 @@
                     </a>
                 </li>
                 <li>
-                    <a href="achat-bien-immobilier-cameroun/filter?q=&type=Terrain&prix=&surface=&nb_pieces=" class="block p-3 rounded-lg mega-menu-link hover:bg-indigo-300 ">
+                    <a href="/achat-bien-immobilier-cameroun/filter?q=&type=Terrain&prix=&surface=&nb_pieces=" class="block p-3 rounded-lg mega-menu-link hover:bg-indigo-300 ">
                         <div class="font-medium">Acheter un terrain
                         </div>
 
@@ -324,7 +324,7 @@
                     </a>
                 </li>
                 <li>
-                    <a href="location-bien-immobilier-cameroun/filter?q=&type=Appartement&prix=&surface=&nb_pieces=" class="block p-3 rounded-lg mega-menu-link hover:bg-indigo-300 ">
+                    <a href="/location-bien-immobilier-cameroun/filter?q=&type=Appartement&prix=&surface=&nb_pieces=" class="block p-3 rounded-lg mega-menu-link hover:bg-indigo-300 ">
                         <div class="font-medium">Appartement meublé à louer
 
                         </div>

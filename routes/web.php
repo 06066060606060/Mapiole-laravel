@@ -26,7 +26,8 @@ Route::get('achat-bien-immobilier-cameroun/filter', 'buy')->name('searchfilterbu
 Route::get('construire', 'build');
 Route::get('vendre-bien-immobilier-cameroun', 'sell');
 Route::get('services', 'service');
-Route::get('annonce', 'annonce');
+Route::get('annonce_locations', 'annonce');
+Route::get('annonce_ventes', 'vente');
 });
 
 Route::get('legal' , [GlobalController::class, 'getLegal']);
