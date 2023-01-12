@@ -1,3 +1,7 @@
+  @php
+         $lang = request()->query('lang');
+     @endphp
+ 
   <div id="foot" class=" xl:pt-52 lg:pt-[400px] pt-[500px] md:pt-[450px]">
 
       <section class="max-w-[1440px] mx-auto px-4">
@@ -30,6 +34,12 @@
           </div>
       </section>
 
+@if ($lang == 'en')
+ENGLISH
+@else
+
+@endif
+
 
       <div>
           <div class="container p-8 mx-auto mb-12 xl:px-0">
@@ -52,8 +62,6 @@
               </div>
           </div>
       </div>
-
-
 
       <section class="px-4 py-16 fgrad2">
           <div class="mx-auto max-w-[1440px]">

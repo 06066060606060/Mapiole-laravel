@@ -203,14 +203,9 @@
                                  </div>
                              </div>
                          @empty
+
                          @endforelse
-
-
-
-
-
                      </section>
-
 
                      <div class="w-full py-4 pl-4 lg:w-1/2 lg:mb-0">
                          @if (request()->q)
@@ -220,8 +215,6 @@
                                  
                          <div class="h-1 bg-[#6805F2] rounded w-[490px]"></div>
                          @endif
-
-
                      </div>
 
                      <div class="flex flex-wrap pb-16 mt-8 -m-4">

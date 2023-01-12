@@ -26,14 +26,7 @@
                                          clip-rule="evenodd" />
                                  </svg>
                              </span>
-
-                             <span class="hidden sm:block"> Details </span>
-
-                             <svg class="w-6 h-6 ml-0 sm:hidden" xmlns="http://www.w3.org/2000/svg" fill="none"
-                                 viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                                 <path stroke-linecap="round" stroke-linejoin="round"
-                                     d="M10 6H5a2 2 0 00-2 2v9a2 2 0 002 2h14a2 2 0 002-2V8a2 2 0 00-2-2h-5m-4 0V5a2 2 0 114 0v1m-4 0a2 2 0 104 0m-5 8a2 2 0 100-4 2 2 0 000 4zm0 0c1.306 0 2.417.835 2.83 2M9 14a3.001 3.001 0 00-2.83 2M15 11h3m-3 4h2" />
-                             </svg>
+                             <span class="block"> Details </span>
                          </li>
 
                          <li class="relative text-center text-gray-600">
@@ -46,16 +39,7 @@
                                          clip-rule="evenodd" />
                                  </svg>
                              </span>
-
-                             <span class="hidden sm:block"> Documents </span>
-
-                             <svg class="w-6 h-6 mx-auto sm:hidden" xmlns="http://www.w3.org/2000/svg" fill="none"
-                                 viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                                 <path stroke-linecap="round" stroke-linejoin="round"
-                                     d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
-                                 <path stroke-linecap="round" stroke-linejoin="round"
-                                     d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
-                             </svg>
+                             <span class="block"> Documents </span>
                          </li>
 
                          <li class="relative text-right text-gray-600">
@@ -68,16 +52,7 @@
                                          clip-rule="evenodd" />
                                  </svg>
                              </span>
-
-                             <span class="hidden sm:block">Enregistrer</span>
-
-                             <svg class="w-6 h-6 mx-auto sm:hidden" xmlns="http://www.w3.org/2000/svg" fill="none"
-                                 viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                                 <path stroke-linecap="round" stroke-linejoin="round"
-                                     d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
-                                 <path stroke-linecap="round" stroke-linejoin="round"
-                                     d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
-                             </svg>
+                             <span class="block">Enregistrement</span>
                          </li>
                      </ol>
                  </div>
@@ -103,7 +78,7 @@
 
                                      <label for="DeliveryPriority"
                                          class="block p-4 text-sm font-medium border border-gray-100 rounded-lg shadow-sm cursor-pointer hover:border-gray-200 peer-checked:border-blue-500 peer-checked:ring-1 peer-checked:ring-blue-500">
-                                         <p class="text-gray-700">Vente</p>
+                                         <p class="text-center text-gray-700">Vente</p>
                                      </label>
                                  </div>
                              </fieldset>
@@ -228,7 +203,7 @@
 
                          <div class="pb-4 sm:col-span-2">
                              <label for="description"
-                                 class="block mb-2 text-sm font-medium text-gray-900">Description</label>
+                                 class="block mb-2 text-sm font-medium text-gray-900">Description:</label>
                              <textarea id="description" rows="8"
                                  class="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-primary-500 focus:border-primary-500 "
                                  placeholder="description"></textarea>
@@ -243,28 +218,28 @@
                              </div>
                              <div class="w-full">
                                  <label for="piece" class="block mb-2 text-sm font-medium text-gray-900">Nb de
-                                     piéces</label>
+                                     piéces:</label>
                                  <input type="number" name="piece" id="piece"
                                      class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 "
                                      placeholder="5" required="">
                              </div>
                              <div class="w-full">
                                  <label for="Chambres"
-                                     class="block mb-2 text-sm font-medium text-gray-900">Chambres</label>
+                                     class="block mb-2 text-sm font-medium text-gray-900">Chambres:</label>
                                  <input type="number" name="chambre" id="chambre"
                                      class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 "
                                      placeholder="2" required="">
                              </div>
                              <div>
                                  <label for="bain" class="block mb-2 text-sm font-medium text-gray-900">Salle de
-                                     bain</label>
+                                     bain:</label>
                                  <input type="number" name="bain" id="bain"
                                      class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 "
                                      placeholder="1" required="">
                              </div>
                              <div class="w-full">
                                  <label for="bain"
-                                     class="block mb-2 text-sm font-medium text-gray-900">Options</label>
+                                     class="block mb-2 text-sm font-medium text-gray-900">Options:</label>
                                  <div class="flex flex-wrap">
                                      <div class="py-2 mx-2">
                                          <label class="relative inline-flex items-center cursor-pointer">
@@ -272,7 +247,7 @@
                                              <div
                                                  class="w-11 h-6 bg-gray-200 rounded-full peer peer-focus:ring-4 peer-focus:ring-blue-300  peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-0.5 after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-blue-600">
                                              </div>
-                                             <span class="ml-3 text-sm font-medium text-gray-900 ">Terrasse</span>
+                                             <span class="ml-3 text-sm font-medium text-gray-900 ">Terrasse:</span>
                                          </label>
                                      </div>
                                      <div class="py-2 mx-2">
@@ -281,7 +256,7 @@
                                              <div
                                                  class="w-11 h-6 bg-gray-200 rounded-full peer peer-focus:ring-4 peer-focus:ring-blue-300  peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-0.5 after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-blue-600">
                                              </div>
-                                             <span class="ml-3 text-sm font-medium text-gray-900 ">Garage</span>
+                                             <span class="ml-3 text-sm font-medium text-gray-900 ">Garage:</span>
                                          </label>
                                      </div>
                                      <div class="py-2 mx-2">
@@ -290,7 +265,7 @@
                                              <div
                                                  class="w-11 h-6 bg-gray-200 rounded-full peer peer-focus:ring-4 peer-focus:ring-blue-300  peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-0.5 after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-blue-600">
                                              </div>
-                                             <span class="ml-3 text-sm font-medium text-gray-900 ">Parking</span>
+                                             <span class="ml-3 text-sm font-medium text-gray-900 ">Parking:</span>
                                          </label>
                                      </div>
                                      <div class="py-2 mx-2">
@@ -299,7 +274,7 @@
                                              <div
                                                  class="w-11 h-6 bg-gray-200 rounded-full peer peer-focus:ring-4 peer-focus:ring-blue-300  peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-0.5 after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-blue-600">
                                              </div>
-                                             <span class="ml-3 text-sm font-medium text-gray-900 ">Jardin</span>
+                                             <span class="ml-3 text-sm font-medium text-gray-900 ">Jardin:</span>
                                          </label>
                                      </div>
                                  </div>
@@ -312,48 +287,100 @@
                                      class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 "
                                      placeholder="70" required="">
                              </div>
+
+                             <div>
+                                 <label for="surface"
+                                     class="block mb-2 text-sm font-medium text-gray-900">Photos:</label>
+                                 <input type="file" name="surface" id="surface"
+                                     class="block w-full text-sm text-gray-900 border border-gray-300 rounded-lg bg-gray-50 focus:ring-primary-600 focus:border-primary-600 "
+                                     placeholder="70">
+                             </div>
+
+                             <div>
+                                 <label for="surface"
+                                     class="block mb-2 text-sm font-medium text-gray-900">Documents:</label>
+                                 <input type="file" name="surface" id="surface"
+                                     class="block w-full text-sm text-gray-900 border border-gray-300 rounded-lg bg-gray-50 focus:ring-primary-600 focus:border-primary-600"
+                                     placeholder="70">
+                             </div>
                          </div>
                  </div>
-                 <div class="flex">
+
+                 <div class="flex mx-4">
                      <div class="w-full pb-4">
-                         <label for="name" class="block mb-2 text-sm font-medium text-gray-900">Adresse</label>
+                         <label for="name" class="block mb-2 text-sm font-medium text-gray-900">Adresse:</label>
                          <input type="text" name="name" id="name"
                              class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 "
                              placeholder="adresse" required="">
                      </div>
                  </div>
-                 <div class="flex flex-wrap">
+                 <div class="flex flex-wrap mx-4">
                      <div class="w-1/3 py-2">
-                         <label for="name" class="block mb-2 text-sm font-medium text-gray-900">Ville</label>
+                         <label for="name" class="block mb-2 text-sm font-medium text-gray-900">Ville:</label>
                          <input type="text" name="name" id="name"
                              class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 "
                              placeholder="Ville" required="">
                      </div>
                      <div class="py-2 mx-2">
-                         <label for="name" class="block mb-2 text-sm font-medium text-gray-900">Code Postal</label>
+                         <label for="name" class="block mb-2 text-sm font-medium text-gray-900">Code Postal:</label>
                          <input type="text" name="name" id="name"
                              class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 "
                              placeholder="97410" required="">
                      </div>
                      <div class="py-2 mx-2">
-                         <label for="name" class="block mb-2 text-sm font-medium text-gray-900">Téléphone</label>
+                         <label for="name" class="block mb-2 text-sm font-medium text-gray-900">Téléphone:</label>
                          <input type="text" name="name" id="name"
                              class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 "
                              placeholder="06.06.06.06.06" required="">
                      </div>
                      <div class="py-2 mx-2">
-                      <label for="name" class="block mb-2 text-sm font-medium "> &nbsp;</label>
-                     <button type="submit"
-                         class="inline-flex items-center px-5 py-2.5 text-sm font-medium text-center text-white bg-gray-700 rounded-lg">
-                         Enregistrer l'annonce
-                     </button>
+                         <label for="name" class="block mb-2 text-sm font-medium "> &nbsp;</label>
+                         <button type="submit"
+                             class="inline-flex items-center px-5 py-2.5 text-sm font-medium text-center text-white bg-gray-700 rounded-lg">
+                             Enregistrer l'annonce
+                         </button>
+                     </div>
+                 </div>
+                 <div class="mx-4">
+                     <label for="name" class="block pt-8 mb-2 text-sm font-medium text-gray-900">Localisation:</label>
+                     <div class="flex h-96">
+                         <div id="map" class="w-full mx-2 mt-4 rounded">
+                         </div>
                      </div>
                  </div>
 
 
-                 </form>
-             </div>
-         </div>
+     </section>
+
+     <script type="module">
+      let mymap = L.map('map').setView([3.8534, 11.5054], 10);
+        let markers = {};
+        L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {}).addTo(mymap);
+
+        let greenIcon = L.icon({
+            iconUrl: '/img/icon.bomb.png',
+            iconSize: [30, 45],
+            iconAnchor: [0, 0],
+            popupAnchor: [1, 1]
+        });
+ 
+var popup = L.popup();
+
+function onMapClick(e) {
+    popup
+        .setLatLng(e.latlng)
+        .setContent("You clicked the map at " + e.latlng.toString())
+        .openOn(map);
+}
+
+L.on('click', mymap);
+
+    </script>
+
+
+     </form>
+     </div>
+     </div>
      </section>
 
      </div>

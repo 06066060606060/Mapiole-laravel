@@ -85,6 +85,7 @@
                 -fonction profil verifié<br>
                 -option meublée<br>
                 -lien footer<br>
+                -ajout map localisation annonce<br>
 
 
 
