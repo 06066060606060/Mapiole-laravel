@@ -271,6 +271,7 @@ class LocationCrudController extends CrudController
         CRUD::addField(['name' => 'ville', 'type' => 'text', 'label' => 'Ville', 'wrapper' => [ 'class' => 'form-group col-md pl-3'],]);
         CRUD::addField(['name' => 'code_postal', 'type' => 'text', 'label' => 'Code postal', 'wrapper' => [ 'class' => 'form-group col-md pl-3'],]);
         CRUD::addField(['name' => 'telephone', 'type' => 'text', 'label' => 'Téléphone', 'wrapper' => [ 'class' => 'form-group col-md pl-3'],]);
+        CRUD::addField(['name' => 'localisation', 'type' => 'text', 'label' => 'Coordonnées GPS', 'wrapper' => [ 'class' => 'form-group col-md pl-3'],]);
         
         $this->crud->addField([
             // radio
@@ -479,6 +480,7 @@ class LocationCrudController extends CrudController
         CRUD::addField(['name' => 'ville', 'type' => 'text', 'label' => 'Ville', 'wrapper' => [ 'class' => 'form-group col-md pl-3'],]);
         CRUD::addField(['name' => 'code_postal', 'type' => 'text', 'label' => 'Code postal', 'wrapper' => [ 'class' => 'form-group col-md pl-3'],]);
         CRUD::addField(['name' => 'telephone', 'type' => 'text', 'label' => 'Téléphone', 'wrapper' => [ 'class' => 'form-group col-md pl-3'],]);
+        CRUD::addField(['name' => 'localisation', 'type' => 'text', 'label' => 'Coordonnées GPS', 'wrapper' => [ 'class' => 'form-group col-md pl-3'],]);
         
         $this->crud->addField([
             // radio

@@ -26,6 +26,7 @@ class Location extends Model
         'name',
         'description',
         'description2',
+        'localisation',
         'image',
         'documents',
         'category',

@@ -21,6 +21,7 @@ return new class extends Migration
             $table->text('name')->nullable();
             $table->text('description')->nullable();
             $table->text('description2')->nullable();
+            $table->string('localisation')->nullable();
             $table->string('image')->nullable();
             $table->string('documents')->nullable();
             $table->string('category')->nullable();

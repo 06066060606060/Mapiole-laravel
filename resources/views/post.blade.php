@@ -334,8 +334,8 @@
                              placeholder="06.06.06.06.06" required="">
                      </div>
                      <div class="py-2 mx-2">
-                         <label for="name" class="block mb-2 text-sm font-medium text-gray-900">Coordonnées GPS:</label>
-                         <input type="text" name="name" id="name"
+                         <label for="gps" class="block mb-2 text-sm font-medium text-gray-900">Coordonnées GPS:</label>
+                         <input type="text" name="gps" id="gps"
                              class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 "
                              placeholder="3.8534, 11.5054" required="">
                      </div>
@@ -360,9 +360,8 @@
      </section>
 
      <script type="module">
-      let mymap = L.map('map').setView([3.8534, 11.5054], 10);
-        let markers = {};
-        L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {}).addTo(mymap);
+      let map = L.map('map').setView([3.8534, 11.5054], 10);
+        L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {}).addTo(map);
 
         let greenIcon = L.icon({
             iconUrl: '/img/icon.bomb.png',
@@ -372,10 +371,11 @@
         });
  
 function onMapClick(e) {
-    alert("You clicked the map at " + e.latlng);
+    L.marker(e.latlng).addTo(map);
+    document.getElementById("gps").value = e.latlng.toString();
 }
 
-L.on('click', mymap);
+map.on('click', onMapClick);
 
     </script>
 

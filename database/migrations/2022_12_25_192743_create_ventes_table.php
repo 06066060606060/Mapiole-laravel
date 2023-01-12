@@ -23,6 +23,7 @@ return new class extends Migration
             $table->text('description2')->nullable();
             $table->string('image')->nullable();
             $table->string('documents')->nullable();
+            $table->string('localisation')->nullable();
             $table->string('category')->nullable();
             $table->string('adresse')->nullable();
             $table->string('ville')->nullable();
