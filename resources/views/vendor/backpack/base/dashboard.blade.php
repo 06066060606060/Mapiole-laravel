@@ -83,6 +83,7 @@
                 -ajout page annonce<br>
                 -fonction annonce_verifiee<br>
                 -fonction profil verifié<br>
+                -option meublée<br>
                 -lien footer<br>
 
 
