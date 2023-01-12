@@ -334,6 +334,13 @@
                              placeholder="06.06.06.06.06" required="">
                      </div>
                      <div class="py-2 mx-2">
+                         <label for="name" class="block mb-2 text-sm font-medium text-gray-900">Coordonnées GPS:</label>
+                         <input type="text" name="name" id="name"
+                             class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 "
+                             placeholder="3.8534, 11.5054" required="">
+                     </div>
+
+                     <div class="py-2 mx-2">
                          <label for="name" class="block mb-2 text-sm font-medium "> &nbsp;</label>
                          <button type="submit"
                              class="inline-flex items-center px-5 py-2.5 text-sm font-medium text-center text-white bg-gray-700 rounded-lg">
@@ -364,13 +371,8 @@
             popupAnchor: [1, 1]
         });
  
-var popup = L.popup();
-
 function onMapClick(e) {
-    popup
-        .setLatLng(e.latlng)
-        .setContent("You clicked the map at " + e.latlng.toString())
-        .openOn(map);
+    alert("You clicked the map at " + e.latlng);
 }
 
 L.on('click', mymap);
