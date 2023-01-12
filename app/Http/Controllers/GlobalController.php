@@ -170,6 +170,16 @@ class GlobalController extends Controller
         return view('service');
     }
 
+    public function annonce_verifiee()
+    {
+        return view('annonce_verifiee');
+    }
+
+    public function profil_verifiee()
+    {
+        return view('profil_verifiee');
+    }
+
     
 
     static function version()

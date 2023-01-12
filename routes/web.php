@@ -28,6 +28,10 @@ Route::get('vendre-bien-immobilier-cameroun', 'sell');
 Route::get('services', 'service');
 Route::get('annonce_locations', 'annonce');
 Route::get('annonce_ventes', 'vente');
+Route::get('annonce_verifiee', 'annonce_verifiee');
+Route::get('profil_verifiee', 'profil_verifiee');
+
+
 });
 
 Route::get('legal' , [GlobalController::class, 'getLegal']);

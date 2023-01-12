@@ -1,11 +1,12 @@
  @extends('layouts.app')
 
  @section('main')
-      @php $urltype = request()->query('type');
-          $urlsurface = request()->query('surface');
-          $urlnb = request()->query('nb_pieces');
-          $urlprix = request()->query('prix') ;
-          @endphp
+     @php
+         $urltype = request()->query('type');
+         $urlsurface = request()->query('surface');
+         $urlnb = request()->query('nb_pieces');
+         $urlprix = request()->query('prix');
+     @endphp
      <div data-barba="container">
          <section id="foot" class="relative mx-auto space-y-16">
              <div class="w-full bg-center bg-cover h-[32rem] shadow-xl"
@@ -46,21 +47,25 @@
 
                              <div>
                                  <div class="grid grid-cols-2 gap-4 mt-4 md:grid-cols-3 xl:grid-cols-5">
-                                                              <select name="type"
+                                     <select name="type"
                                          class="w-full px-4 py-3 text-sm bg-gray-100 border-transparent rounded-md focus:border-gray-500 focus:ring-0">
                                          <option value="">Type</option>
-                                         <option value="Maison"  {{ $urltype == 'Maison' ? 'selected' : '' }}>Maison</option>
-                                         <option value="Appartement"  {{ $urltype == 'Appartement' ? 'selected' : '' }}>Appartement</option>
-                                         <option value="Terrain" {{ $urltype == 'Terrain' ? 'selected' : '' }}>Terrain</option>
+                                         <option value="Maison" {{ $urltype == 'Maison' ? 'selected' : '' }}>Maison</option>
+                                         <option value="Appartement" {{ $urltype == 'Appartement' ? 'selected' : '' }}>
+                                             Appartement</option>
+                                         <option value="Terrain" {{ $urltype == 'Terrain' ? 'selected' : '' }}>Terrain
+                                         </option>
                                          <option value="" {{ $urltype == 'Villa' ? 'selected' : '' }}>Villa</option>
                                          <option value="Bureau" {{ $urltype == 'Bureau' ? 'selected' : '' }}>Bureau</option>
-                                         <option value="Commerce" {{ $urltype == 'Commerce' ? 'selected' : '' }}>Esp. commercial</option>
+                                         <option value="Commerce" {{ $urltype == 'Commerce' ? 'selected' : '' }}>Esp.
+                                             commercial</option>
                                      </select>
 
                                      <select name="prix"
                                          class="w-full px-4 py-3 text-sm bg-gray-100 border-transparent rounded-md focus:border-gray-500 focus:ring-0">
                                          <option value="">Loyer</option>
-                                         <option value="900" {{ $urlprix == '900' ? 'selected' : '' }}>moins de 20000 €</option>
+                                         <option value="900" {{ $urlprix == '900' ? 'selected' : '' }}>moins de 20000 €
+                                         </option>
                                          <option value="2900" {{ $urlprix == '2900' ? 'selected' : '' }}>30000</option>
                                          <option value="3900" {{ $urlprix == '3900' ? 'selected' : '' }}>40000</option>
                                          <option value="5000" {{ $urlprix == '5000' ? 'selected' : '' }}>50000</option>
@@ -71,12 +76,17 @@
                                      <select name="surface"
                                          class="w-full px-4 py-3 text-sm bg-gray-100 border-transparent rounded-md focus:border-gray-500 focus:ring-0">
                                          <option value="">Surface</option>
-                                         <option value="50"  {{ $urlsurface == '50' ? 'selected' : '' }}>50 m2</option>
-                                         <option value="100" {{ $urlsurface == '100' ? 'selected' : '' }}>100 m2</option>
-                                         <option value="200" {{ $urlsurface == '200' ? 'selected' : '' }}>200 m2</option>
-                                         <option value="300" {{ $urlsurface == '300' ? 'selected' : '' }}>300 m2</option>
-                                         <option value="400" {{ $urlsurface == '400' ? 'selected' : '' }}>400 m2</option>
-                                         <option value="500" {{ $urlsurface == '500' ? 'selected' : '' }}>+ 400 m2</option>
+                                         <option value="50" {{ $urlsurface == '50' ? 'selected' : '' }}>50 m2</option>
+                                         <option value="100" {{ $urlsurface == '100' ? 'selected' : '' }}>100 m2
+                                         </option>
+                                         <option value="200" {{ $urlsurface == '200' ? 'selected' : '' }}>200 m2
+                                         </option>
+                                         <option value="300" {{ $urlsurface == '300' ? 'selected' : '' }}>300 m2
+                                         </option>
+                                         <option value="400" {{ $urlsurface == '400' ? 'selected' : '' }}>400 m2
+                                         </option>
+                                         <option value="500" {{ $urlsurface == '500' ? 'selected' : '' }}>+ 400 m2
+                                         </option>
                                      </select>
 
                                      <select name="nb_pieces"
@@ -109,13 +119,13 @@
                          <div class="w-full pl-4 mb-4 lg:w-1/2 lg:mb-0">
                              @if (request()->q || request()->type || request()->prix || request()->surface || request()->nb_pieces)
                                  <h1 class="mb-2 text-3xl font-medium text-gray-900 md:text-4xl title-font">Résultats de
-                                     votre recherche</h1>
+                                     votre recherche <span class="text-[#6805F2] font-semibold">{{ $q }}</span> </h1>
                              @else
                                  <h1 class="mb-2 text-3xl font-medium text-gray-900 md:text-4xl title-font">Dernières
                                      annonces </h1>
                              @endif
 
-                             <div class="h-1 bg-[#6805F2] rounded w-96"></div>
+                             <div class="h-1 bg-[#6805F2] rounded w-[490px]"></div>
 
                          </div>
 
@@ -155,8 +165,10 @@
                                          </div>
 
                                          <div class="pl-8 mx-6 mt-6 lg:w-1/2 lg:mt-0">
-                                             <button
-                                                 class="px-4 py-2 mb-4 text-sm font-bold text-white bg-purple-800 rounded-full">Location</button>
+                                             <div class="flex justify-between my-2">
+                                                 <a class="px-4 py-2 mb-4 text-sm font-bold text-white bg-green-800 rounded-full">Location</a>
+                                                 <a class="py-2 pr-12 font-bold text-black">{{ $lastlocation->loyer }} €/Mois</a>
+                                             </div>
                                              <p class="text-xl font-bold text-indigo-600 uppercase">
                                                  {{ $lastlocation->type }}
                                              </p>
@@ -165,11 +177,11 @@
                                                  {{ $lastlocation->name }}
                                              </a>
 
-                                             <p class="max-w-xl mt-3 text-sm text-gray-800 md:text-sm">
+                                             <p class="max-w-xl pb-2 mt-3 text-sm text-gray-800 md:text-sm">
                                                  {{ $lastlocation->description }}
                                              </p>
 
-                                              <a href="/annonce_locations?id={{ $lastlocation->id }}"
+                                             <a href="/annonce_locations?id={{ $lastlocation->id }}"
                                                  class="inline-block px-4 py-2 mt-2 text-white bg-blue-800 rounded text-bold hover:bg-blue-700 active:bg-blue-500">Plus
                                                  d'info</a>
                                              <div class="flex">
@@ -194,9 +206,13 @@
 
 
                      <div class="w-full py-4 pl-4 lg:w-1/2 lg:mb-0">
-                         <h1 class="mt-4 mb-2 text-3xl font-medium text-gray-900 md:text-4xl title-font">Disponible à la
-                             location</h1>
+                        @if (request()->q)
+                         @else
+                             <h1 class="mt-4 mb-2 text-3xl font-medium text-gray-900 md:text-4xl title-font">Egalement
+                                 Disponible:</h1>
+                                 
                          <div class="h-1 bg-[#6805F2] rounded w-96"></div>
+                         @endif
 
                      </div>
 
@@ -220,13 +236,10 @@
                              <div class="p-4 xl:w-1/4 md:w-1/2">
                                  <div
                                      class="p-6 transition duration-200 bg-gray-100 border border-gray-200 rounded-lg shadow-xl hover:border-gray-400">
-                                     <img class="object-cover object-center w-full h-40 mb-6" src="./img/empty.png"
+                                     <img class="object-cover object-center w-full h-40 mb-6" src="/img/empty.png"
                                          alt="content">
-                                     <h3 class="text-xs font-bold tracking-widest text-indigo-600 title-font">Empty</h3>
-                                     <p class="pb-2 text-base leading-relaxed">Dummy text.</p>
-                                    <a href="/annonce_locations?id={{ $location->id }}"
-                                         class="flex justify-center px-4 py-2 mx-auto font-bold text-white transition duration-200 bg-[#6805F2] rounded hover:bg-indigo-600 active:bg-[#6805F2]">Plus
-                                         d'infos</a>
+                                     <h3 class="text-xs font-bold tracking-widest text-indigo-600 title-font"></h3>
+                                     <p class="pb-2 text-base leading-relaxed">Aucun Résultat.</p>
                                  </div>
                              </div>
                          @endforelse

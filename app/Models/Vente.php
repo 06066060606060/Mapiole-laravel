@@ -42,6 +42,7 @@ class Vente extends Model
         'nb_toilette',
         'terrasse',
         'balcon',
+        'jardin',
         'garage',
         'parking',
         'piscine',

@@ -41,6 +41,7 @@ class Location extends Model
         'nb_salle_bain',
         'nb_toilette',
         'terrasse',
+        'jardin',
         'balcon',
         'garage',
         'parking',

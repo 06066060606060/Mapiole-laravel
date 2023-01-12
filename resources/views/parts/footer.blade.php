@@ -3,7 +3,7 @@
     @php $mail = $pages[5]->content; @endphp
     @php $phone = $pages[4]->content; @endphp
 
-    <section id="foot" class="mx-4 bg-white pt-8">
+    <section id="foot" class="pt-8 mx-4 bg-white">
         <div class=" px-6 py-8 mx-auto max-w-[1440px]">
             <div class="grid gap-8 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
                 <div class="flex flex-col items-center">
@@ -11,31 +11,31 @@
                         Immobilier à louer
                     </div>
 
-                    <a href="#"
+                    <a href="/location-bien-immobilier-cameroun/filter?q=&type=Appartement&prix=&surface=&nb_pieces="
                         class="block mt-5 text-sm font-medium text-gray-500 duration-700 hover:text-gray-400 hover:underline">
                         Appartement à louer
                     </a>
-                    <a href="#"
+                    <a href="/location-bien-immobilier-cameroun/"
                         class="block mt-3 text-sm font-medium text-gray-500 duration-700 hover:text-gray-400 hover:underline">
                         Immobilier à louer
                     </a>
-                    <a href="#"
+                    <a href="/location-bien-immobilier-cameroun/filter?q=&type=Maison&prix=&surface=&nb_pieces="
                         class="block mt-3 text-sm font-medium text-gray-500 duration-700 hover:text-gray-400 hover:underline">
                         Maison à louer
                     </a>
-                    <a href="#"
+                    <a href="/location-bien-immobilier-cameroun/filter?q=&type=&prix=&surface=&nb_pieces="
                         class="block mt-3 text-sm font-medium text-gray-500 duration-700 hover:text-gray-400 hover:underline">
                         Construction neuve à louer
                     </a>
-                    <a href="#"
+                    <a href="/location-bien-immobilier-cameroun/filter?q=&type=&prix=&surface=&nb_pieces="
                         class="block mt-3 text-sm font-medium text-gray-500 duration-700 hover:text-gray-400 hover:underline">
                         Objet meublé à louer
                     </a>
-                    <a href="#"
+                    <a href="/location-bien-immobilier-cameroun/filter?q=&type=Terrain&prix=&surface=&nb_pieces="
                         class="block mt-3 text-sm font-medium text-gray-500 duration-700 hover:text-gray-400 hover:underline">
                         Terrain à louer
                     </a>
-                    <a href="#"
+                    <a href="/location-bien-immobilier-cameroun/filter?q=&type=&prix=&surface=&nb_pieces="
                         class="block mt-3 text-sm font-medium text-gray-500 duration-700 hover:text-gray-400 hover:underline">
                         Place de parking à louer
                     </a>
@@ -46,31 +46,31 @@
                         Immobilier à vendre
                     </div>
 
-                    <a href="#"
+                    <a href="/achat-bien-immobilier-cameroun/filter?q=&type=Appartement&prix=&surface=&nb_pieces="
                         class="block mt-5 text-sm font-medium text-gray-500 duration-700 hover:text-gray-400 hover:underline">
                         Appartement à vendre
                     </a>
-                    <a href="#"
+                    <a href="/achat-bien-immobilier-cameroun/filter?q=&type=&prix=&surface=&nb_pieces="
                         class="block mt-3 text-sm font-medium text-gray-500 duration-700 hover:text-gray-400 hover:underline">
                         Immobilier à vendre
                     </a>
-                    <a href="#"
+                    <a href="/achat-bien-immobilier-cameroun/filter?q=&type=Maison&prix=&surface=&nb_pieces="
                         class="block mt-3 text-sm font-medium text-gray-500 duration-700 hover:text-gray-400 hover:underline">
                         Maison à vendre
                     </a>
-                    <a href="#"
+                    <a href="/achat-bien-immobilier-cameroun/filter?q=&type=&prix=&surface=&nb_pieces="
                         class="block mt-3 text-sm font-medium text-gray-500 duration-700 hover:text-gray-400 hover:underline">
                         Construction neuve à vendre
                     </a>
-                    <a href="#"
+                    <a href="/achat-bien-immobilier-cameroun/filter?q=&type=Terrain&prix=&surface=&nb_pieces="
                         class="block mt-3 text-sm font-medium text-gray-500 duration-700 hover:text-gray-400 hover:underline">
                         Terrain à vendre
                     </a>
-                    <a href="#"
+                    <a href="/achat-bien-immobilier-cameroun/filter?q=&type=&prix=&surface=&nb_pieces="
                         class="block mt-3 text-sm font-medium text-gray-500 duration-700 hover:text-gray-400 hover:underline">
                         Place de parking à vendre
                     </a>
-                    <a href="#"
+                    <a href="/achat-bien-immobilier-cameroun/filter?q=&type=&prix=&surface=&nb_pieces="
                         class="block mt-3 text-sm font-medium text-gray-500 duration-700 hover:text-gray-400 hover:underline">
                         Immeuble d'habitation à vendre
                     </a>
@@ -81,47 +81,47 @@
                         Louer un bien à
                     </div>
 
-                    <a href="#"
+                    <a href="/location-bien-immobilier-cameroun/filter?q=Yaoundé&type=&prix=&surface=&nb_pieces="
                         class="block mt-5 text-sm font-medium text-gray-500 duration-700 hover:text-gray-400 hover:underline">
                         Yaoundé
                     </a>
-                    <a href="#"
+                    <a href="/location-bien-immobilier-cameroun/filter?q=Douala&type=&prix=&surface=&nb_pieces="
                         class="block mt-3 text-sm font-medium text-gray-500 duration-700 hover:text-gray-400 hover:underline">
                         Douala
                     </a>
-                    <a href="#"
+                    <a href="/location-bien-immobilier-cameroun/filter?q=Bafoussam&type=&prix=&surface=&nb_pieces="
                         class="block mt-3 text-sm font-medium text-gray-500 duration-700 hover:text-gray-400 hover:underline">
                         Bafoussam
                     </a>
-                    <a href="#"
+                    <a href="/location-bien-immobilier-cameroun/filter?q=Garoua&type=&prix=&surface=&nb_pieces="
                         class="block mt-3 text-sm font-medium text-gray-500 duration-700 hover:text-gray-400 hover:underline">
                         Garoua
                     </a>
-                    <a href="#"
+                    <a href="/location-bien-immobilier-cameroun/filter?q=Kribi&type=&prix=&surface=&nb_pieces="
                         class="block mt-3 text-sm font-medium text-gray-500 duration-700 hover:text-gray-400 hover:underline">
                         Kribi
                     </a>
-                    <a href="#"
+                    <a href="/location-bien-immobilier-cameroun/filter?q=Buéa&type=&prix=&surface=&nb_pieces="
                         class="block mt-3 text-sm font-medium text-gray-500 duration-700 hover:text-gray-400 hover:underline">
                         Buéa
                     </a>
-                    <a href="#"
+                    <a href="/location-bien-immobilier-cameroun/filter?q=Bamenda&type=&prix=&surface=&nb_pieces="
                         class="block mt-3 text-sm font-medium text-gray-500 duration-700 hover:text-gray-400 hover:underline">
                         Bamenda
                     </a>
-                    <a href="#"
+                    <a href="/location-bien-immobilier-cameroun/filter?q=Maroua&type=&prix=&surface=&nb_pieces="
                         class="block mt-3 text-sm font-medium text-gray-500 duration-700 hover:text-gray-400 hover:underline">
                         Maroua
                     </a>
-                    <a href="#"
+                    <a href="/location-bien-immobilier-cameroun/filter?q=Limbé&type=&prix=&surface=&nb_pieces="
                         class="block mt-3 text-sm font-medium text-gray-500 duration-700 hover:text-gray-400 hover:underline">
                         Limbé
                     </a>
-                    <a href="#"
+                    <a href="/location-bien-immobilier-cameroun/filter?q=Bertoua&type=&prix=&surface=&nb_pieces="
                         class="block mt-3 text-sm font-medium text-gray-500 duration-700 hover:text-gray-400 hover:underline">
                         Bertoua
                     </a>
-                    <a href="#"
+                    <a href="/location-bien-immobilier-cameroun/filter?q=Ebolowa&type=&prix=&surface=&nb_pieces="
                         class="block mt-3 text-sm font-medium text-gray-500 duration-700 hover:text-gray-400 hover:underline">
                         Ebolowa
                     </a>
@@ -132,47 +132,47 @@
                         Acheter un objet à
                     </div>
 
-                    <a href="#"
+                    <a href="/achat-bien-immobilier-cameroun/filter?q=Yaoundé&type=&prix=&surface=&nb_pieces="
                         class="block mt-5 text-sm font-medium text-gray-500 duration-700 hover:text-gray-400 hover:underline">
                         Yaoundé
                     </a>
-                    <a href="#"
+                    <a href="/achat-bien-immobilier-cameroun/filter?q=Douala&type=&prix=&surface=&nb_pieces="
                         class="block mt-3 text-sm font-medium text-gray-500 duration-700 hover:text-gray-400 hover:underline">
                         Douala
                     </a>
-                    <a href="#"
+                    <a href="/achat-bien-immobilier-cameroun/filter?q=Bafoussam&type=&prix=&surface=&nb_pieces="
                         class="block mt-3 text-sm font-medium text-gray-500 duration-700 hover:text-gray-400 hover:underline">
                         Bafoussam
                     </a>
-                    <a href="#"
+                    <a href="/achat-bien-immobilier-cameroun/filter?q=Garoua&type=&prix=&surface=&nb_pieces="
                         class="block mt-3 text-sm font-medium text-gray-500 duration-700 hover:text-gray-400 hover:underline">
                         Garoua
                     </a>
-                    <a href="#"
+                    <a href="/achat-bien-immobilier-cameroun/filter?q=Kribi&type=&prix=&surface=&nb_pieces="
                         class="block mt-3 text-sm font-medium text-gray-500 duration-700 hover:text-gray-400 hover:underline">
                         Kribi
                     </a>
-                    <a href="#"
+                    <a href="/achat-bien-immobilier-cameroun/filter?q=Buéa&type=&prix=&surface=&nb_pieces="
                         class="block mt-3 text-sm font-medium text-gray-500 duration-700 hover:text-gray-400 hover:underline">
                         Buéa
                     </a>
-                    <a href="#"
+                    <a href="/achat-bien-immobilier-cameroun/filter?q=Bamenda&type=&prix=&surface=&nb_pieces="
                         class="block mt-3 text-sm font-medium text-gray-500 duration-700 hover:text-gray-400 hover:underline">
                         Bamenda
                     </a>
-                    <a href="#"
+                    <a href="/achat-bien-immobilier-cameroun/filter?q=Maroua&type=&prix=&surface=&nb_pieces="
                         class="block mt-3 text-sm font-medium text-gray-500 duration-700 hover:text-gray-400 hover:underline">
                         Maroua
                     </a>
-                    <a href="#"
+                    <a href="/achat-bien-immobilier-cameroun/filter?q=Limbé&type=&prix=&surface=&nb_pieces="
                         class="block mt-3 text-sm font-medium text-gray-500 duration-700 hover:text-gray-400 hover:underline">
                         Limbé
                     </a>
-                    <a href="#"
+                    <a href="/achat-bien-immobilier-cameroun/filter?q=Bertoua&type=&prix=&surface=&nb_pieces="
                         class="block mt-3 text-sm font-medium text-gray-500 duration-700 hover:text-gray-400 hover:underline">
                         Bertoua
                     </a>
-                    <a href="#"
+                    <a href="/achat-bien-immobilier-cameroun/filter?q=Ebolowa&type=&prix=&surface=&nb_pieces="
                         class="block mt-3 text-sm font-medium text-gray-500 duration-700 hover:text-gray-400 hover:underline">
                         Ebolowa
                     </a>
@@ -237,7 +237,7 @@
             <hr class="h-px my-6 bg-gray-200 border-none ">
         </div>
         <div class="bg-gray-900">
-            <p class="pb-2 text-center text-gray-300 py-2">© Mapiole 2022 - All rights reserved</p>
+            <p class="py-2 pb-2 text-center text-gray-300">© Mapiole 2022 - All rights reserved</p>
         </div>
     </div>
 

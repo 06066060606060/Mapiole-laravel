@@ -71,10 +71,10 @@
                                  <div class="max-w-[35ch]">
                                      <p class="mt-0.5 text-xl font-bold text-blue-500 uppercase">{{ $locations->type }}</p>
                                      <h1 class="text-2xl font-bold">
-                                      {{ $locations->name }}
+                                         {{ $locations->name }}
                                      </h1>
                                  </div>
-                                 <p class="text-lg font-bold"> {{ $locations->loyer }}</p>
+                                 <p class="text-lg font-bold"> {{ $locations->loyer }} €/mois</p>
                              </div>
 
                              <details class="group relative mt-4 [&_summary::-webkit-details-marker]:hidden">
@@ -82,58 +82,102 @@
                                      <div>
                                          <div class="prose max-w-none group-open:hidden">
                                              <p>
-                                                {{ $locations->description }}
+                                                 {{ $locations->description }}
                                              </p>
                                          </div>
 
                                          <span
                                              class="mt-4 text-sm font-medium underline cursor-pointer group-open:absolute group-open:bottom-0 group-open:left-0 group-open:mt-0">
-                                            En savoir plus
+                                             En savoir plus
                                          </span>
                                      </div>
                                  </summary>
 
                                  <div class="pb-6 prose max-w-none">
                                      <p>
-                                      {{ $locations->description }}<br>
+                                         {{ $locations->description }}
+
+                                     </p>
+                                     <p>
                                          {{ $locations->description2 }}
                                      </p>
-
                                  </div>
                              </details>
 
                              <form class="mt-8">
                                  <fieldset>
-                                     <legend class="mb-1 text-sm font-medium">Equipements:</legend>
+                                     <legend class="mb-1 text-sm font-medium">Details:</legend>
 
                                      <div class="flow-root">
                                          <div class="-m-0.5 flex flex-wrap">
+                                          @if ( $locations->terrasse == 1)
                                              <label for="color_tt" class="p-0.5">
                                                  <span
                                                      class="inline-block px-3 py-1 text-xs font-medium bg-white border rounded-full group">
-                                                     Cusine équipée
+                                                     Terrasse
                                                  </span>
                                              </label>
+                                          @endif
 
+                                            @if ( $locations->balcon == 1)
                                              <label for="color_tt" class="p-0.5">
                                                  <span
                                                      class="inline-block px-3 py-1 text-xs font-medium bg-white border rounded-full group">
-                                                     Baignoire
+                                                     Balcon
                                                  </span>
                                              </label>
+                                          @endif
+
+                                          @if ( $locations->garage == 1)
+                                             <label for="color_tt" class="p-0.5">
+                                                 <span
+                                                     class="inline-block px-3 py-1 text-xs font-medium bg-white border rounded-full group">
+                                                     Garage
+                                                 </span>
+                                             </label>
+                                          @endif
+
+                                          
+                                          @if ( $locations->parking == 1)
+                                             <label for="color_tt" class="p-0.5">
+                                                 <span
+                                                     class="inline-block px-3 py-1 text-xs font-medium bg-white border rounded-full group">
+                                                     Parking
+                                                 </span>
+                                             </label>
+                                          @endif
+
+                                             @if ( $locations->piscine == 1)
+                                             <label for="color_tt" class="p-0.5">
+                                                 <span
+                                                     class="inline-block px-3 py-1 text-xs font-medium bg-white border rounded-full group">
+                                                     Piscine
+                                                 </span>
+                                             </label>
+                                          @endif
+
+                                               @if ( $locations->jardin == 1)
+                                             <label for="color_tt" class="p-0.5">
+                                                 <span
+                                                     class="inline-block px-3 py-1 text-xs font-medium bg-white border rounded-full group">
+                                                     Jardin
+                                                 </span>
+                                             </label>
+                                          @endif
+
                                          </div>
                                      </div>
                                  </fieldset>
 
                                  <fieldset class="mt-4">
-                                     <legend class="mb-1 text-sm font-medium">Surface</legend>
+                                     <legend class="mb-1 text-sm font-medium">Surface:</legend>
 
                                      <div class="flow-root">
                                          <div class="-m-0.5 flex flex-wrap">
                                              <label for="size_xs" class="p-0.5">
                                                  <span
-                                                     class="inline-flex items-center justify-center w-12 h-8 text-xs font-medium text-white bg-black border rounded-full group">
-                                                     60m3
+                                                     class="inline-flex items-center justify-center h-8 px-2 text-xs font-medium text-white bg-black border rounded-full group">
+                                                    {{ $locations->surface }} m2
                                                  </span>
                                              </label>
 
@@ -142,7 +186,7 @@
                                  </fieldset>
 
                                  <div class="flex mt-8">
-                                     <button type="submit"
+                                     <button
                                          class="block px-5 py-3 ml-3 text-xs font-medium text-white bg-green-600 rounded hover:bg-green-500">
                                          Contacter
                                      </button>
