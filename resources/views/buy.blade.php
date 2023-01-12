@@ -175,6 +175,9 @@
                                              <p class="text-xl font-bold text-indigo-600 uppercase">
                                                  {{ $lastvente->type }}
                                              </p>
+
+                                             <a class="py-2 mb-4 text-sm font-bold text-gray-600">Région:<span class="text-black"> {{ $lastvente->ville }}</span> </a>
+
                                              <a
                                                  class="block mt-4 text-2xl font-semibold text-gray-800 hover:underline md:text-3xl">
                                                  {{ $lastvente->name }}
@@ -225,8 +228,12 @@
                                      class="p-6 transition duration-200 bg-gray-100 border border-gray-200 rounded-lg shadow-xl hover:border-gray-400">
                                      <img class="object-cover object-center w-full h-40 mb-6"
                                          src="{{ asset('storage/' . $images) }}" alt="content">
+                                         <div class="flex flex-col">
+                                        
                                      <h3 class="text-xs font-bold tracking-widest text-indigo-600 title-font">
                                          {{ $vente->name }}</h3>
+                                         <a class="py-2 mb-2 text-sm font-bold text-gray-600"><span class="text-black"> {{ $vente->ville }}</span> </a>
+                                         </div>
                                      <p class="pb-2 text-base leading-relaxed cropped">{{ $vente->description }}</p>
                                      <a href="/annonce_ventes?id={{ $vente->id }}"
                                          class="flex justify-center px-4 py-2 mx-auto font-bold text-white transition duration-200 bg-[#6805F2] rounded hover:bg-indigo-600 active:bg-[#6805F2]">Plus
