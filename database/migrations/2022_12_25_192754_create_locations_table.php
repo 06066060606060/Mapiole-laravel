@@ -36,6 +36,7 @@ return new class extends Migration
             $table->integer('nb_salle_bain')->nullable();
             $table->integer('nb_toilette')->nullable();
             $table->integer('terrasse')->nullable();
+            $table->integer('meublee')->nullable();
             $table->integer('jardin')->nullable();
             $table->integer('garage')->nullable();
             $table->integer('parking')->nullable();

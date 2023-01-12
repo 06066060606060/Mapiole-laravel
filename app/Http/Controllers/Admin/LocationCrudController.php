@@ -171,6 +171,23 @@ class LocationCrudController extends CrudController
             'value' => '<hr>'
         ],);
 
+
+        $this->crud->addField([
+            // select_from_array
+            'name' => 'meublee',
+            'label' => 'Meublé',
+            'type' => 'select_from_array',
+            'wrapper' => [ 'class' => 'form-group col-md pl-3'],
+            'options' => [
+                // the key will be stored in the db, the value will be shown as label;
+                1 => 'Oui',
+                0 => 'Non',
+            ],
+            // optional
+            'default' => '0',
+            'inline' => true, // show the radios all on the same line?
+        ]);
+
         $this->crud->addField([
             // select_from_array
             'name' => 'terrasse',
@@ -186,6 +203,9 @@ class LocationCrudController extends CrudController
             'default' => '0',
             'inline' => true, // show the radios all on the same line?
         ]);
+
+
+
         $this->crud->addField([
             // select_from_array
             'name' => 'garage',
@@ -362,6 +382,22 @@ class LocationCrudController extends CrudController
             'type'  => 'custom_html',
             'value' => '<hr>'
         ],);
+
+        $this->crud->addField([
+            // select_from_array
+            'name' => 'meublee',
+            'label' => 'Meublé',
+            'type' => 'select_from_array',
+            'wrapper' => [ 'class' => 'form-group col-md pl-3'],
+            'options' => [
+                // the key will be stored in the db, the value will be shown as label;
+                1 => 'Oui',
+                0 => 'Non',
+            ],
+            // optional
+            'default' => '0',
+            'inline' => true, // show the radios all on the same line?
+        ]);
 
         $this->crud->addField([
             // select_from_array

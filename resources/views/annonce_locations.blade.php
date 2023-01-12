@@ -165,6 +165,15 @@
                                              </label>
                                           @endif
 
+                                            @if ( $locations->meublee == 1)
+                                             <label for="color_tt" class="p-0.5">
+                                                 <span
+                                                     class="inline-block px-3 py-1 text-xs font-medium bg-white border rounded-full group">
+                                                     Meublé
+                                                 </span>
+                                             </label>
+                                          @endif
+
                                          </div>
                                      </div>
                                  </fieldset>
