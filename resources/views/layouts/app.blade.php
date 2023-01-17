@@ -21,17 +21,10 @@
 
     @vite('resources/js/app.js')
     <!--Start of Tawk.to Script-->
-<script type="text/javascript">
-var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
-(function(){
-var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
-s1.async=true;
-s1.src='{{ Setting::get('tawk_url') }}';
-s1.charset='UTF-8';
-s1.setAttribute('crossorigin','*');
-s0.parentNode.insertBefore(s1,s0);
-})();
-</script>
+
+<script src="https://apps.elfsight.com/p/platform.js" defer></script>
+<div class="elfsight-app-baf1ff36-7d9e-4c20-b95e-ab4345b4c45a"></div>
+
 <!--End of Tawk.to Script-->
 <script src="https://unpkg.com/flowbite@1.5.5/dist/flowbite.js"></script>
     <script src='https://unpkg.com/swiper@6.8.4/swiper-bundle.min.js'></script>
