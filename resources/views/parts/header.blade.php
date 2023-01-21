@@ -2,10 +2,9 @@
     <div id="dvImage" class="w-full h-[42rem] shadow-xl bg-cover  no-repeat center center" style="background-image: url('{{asset('img/banner.jpeg')}}');">
       <div class="flex flex-col items-center justify-center w-full h-full bg-gray-900/40">
         <h2 class="mx-4 text-4xl font-bold text-white xl:text-5xl drop-shadow-xl">Inscrivez vous.</h2>
-        <p class="max-w-lg pt-2 mx-4 text-white">
-        <p class="mx-4 text-xl font-medium text-center text-white lg:text-2xl drop-shadow-xl">Le meilleur choix pour vendre ou acheter<br> une maison, un appartements
-          ou un terrain.</p>
-        </p>
+      
+        <p class="mx-4 text-4xl font-medium text-center text-white lg:text-2xl drop-shadow-xl">refonte du design en cours</p>
+
         <label for="Toggle3"
           class="flex flex-col items-center p-2 mt-4 text-white rounded-md cursor-pointer md:flex-row">
           <input id="Toggle3" type="checkbox" class="hidden peer">
