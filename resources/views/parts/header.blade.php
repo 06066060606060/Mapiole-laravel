@@ -1,7 +1,7 @@
  <section id="header" class="relative mx-auto space-y-16">
     <div id="dvImage" class="w-full h-[42rem] shadow-xl bg-cover  no-repeat center center" style="background-image: url('{{asset('img/banner.jpeg')}}');">
       <div class="flex flex-col items-center justify-center w-full h-full bg-gray-900/40">
-        <h2 class="mx-4 text-4xl font-bold text-white xl:text-5xl drop-shadow-xl">Inscrivez vous.</h2>
+        <h2 class="mx-4 text-4xl font-bold text-white xl:text-5xl drop-shadow-xl"></h2>
       
         <p class="mx-4 text-4xl font-medium text-center text-white lg:text-2xl drop-shadow-xl">refonte du design en cours</p>
 
