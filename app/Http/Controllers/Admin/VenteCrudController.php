@@ -91,21 +91,11 @@ class VenteCrudController extends CrudController
     {
       
         CRUD::setValidation(VenteRequest::class);
-        CRUD::field('user_id')->label('Utilisateur');
-
-        CRUD::addField([
-            'name' => 'user_id',
-            'label' => 'Utilisateur',
-            'attributes' => [
-                'class'       => 'form-control ',
-              ], // change the HTML attributes of your input
-              'wrapper'   => [ 
-                 'class'      => 'form-group col-xs-2 pl-3 pt-2'
-              ], // change the HTML attributes for the field wrapper - mostly for resizing fields 
-        ]);
         CRUD::addField([
             'name' => 'name',
             'label' => 'titre de l\'annonce',
+            'type' => 'text',
+            'tab' => 'Informations générales',
             'attributes' => [
                 'class'       => 'form-control ',
               ], // change the HTML attributes of your input
@@ -118,6 +108,7 @@ class VenteCrudController extends CrudController
             'name' => 'image',
             'key' => 'image_up',
             'label' => 'Images',
+            'tab' => 'Informations générales',
             'type' => 'upload_multiple',
             'prefix' => 'storage/',
             'upload' => true,
@@ -126,51 +117,69 @@ class VenteCrudController extends CrudController
                  'class'      => 'form-group w-64 pl-3'
               ], // change the HTML attributes for the field wrapper - mostly for resizing fields 
         ]);
-
         CRUD::addField([
             'name' => 'documents',
             'key' => 'documents',
             'label' => 'Documents',
+            'tab' => 'Informations générales',
             'type' => 'upload_multiple',
             'prefix' => 'storage/',
             'upload' => true,
             'temporary' => 10,
               'wrapper'   => [ 
-                 'class'      => 'form-group w-48 pl-3'
+                 'class'      => 'form-group w-48 pl-3 overflow-hidden'
               ], // change the HTML attributes for the field wrapper - mostly for resizing fields 
         ]);
+        CRUD::addField([
+            'name' => 'description',
+            'label' => 'Description',
+            'type' => 'textarea',
+            'tab' => 'Informations générales',
+        ]);
 
-        CRUD::field('description')->type('textarea')->on('saving', function () {
-            $admin = backpack_user()->find(1);
-            $admin->notify(
-                new DatabaseNotification(
-                    ($type = 'info'), // info / success / warning / error
-                    ($message = 'Nouvelle Enregistrement'),
-                    ($messageLong = 'Nouvelle Vente Ajouté par '. backpack_user()->name),
-                       // rand(1, 99999)), // optional
-                    // ($href = '/some-custom-url'), // optional, e.g. backpack_url('/example')
-                   // ($hrefText = 'Go to custom URL') // optional
-                )
-            );
-        });
+        CRUD::addfield([
+            'name' => 'description2',
+            'label' => 'Details',
+            'type' => 'textarea',
+            'tab' => 'Informations générales',
+        ]);
 
-        CRUD::field('description2')->type('textarea')->label('Details');
+        CRUD::addField(['tab' => 'Informations générales','name' => 'prix', 'type' => 'number', 'label' => 'Prix de vente', 'wrapper' => [ 'class' => 'form-group col-md pl-3'],]);
 
-        CRUD::addField(['name' => 'prix', 'type' => 'number', 'label' => 'Prix / mois', 'wrapper' => [ 'class' => 'form-group col-md pl-3'],]);
-        CRUD::addField(['name' => 'surface', 'type' => 'number', 'label' => 'Surface m3', 'wrapper' => [ 'class' => 'form-group col-md pl-3'],]);
-        CRUD::addField(['name' => 'nb_piece', 'type' => 'number', 'label' => 'Nb pièces', 'wrapper' => [ 'class' => 'form-group col-md pl-3'],]);
-        CRUD::addField(['name' => 'nb_chambre', 'type' => 'number', 'label' => 'Nb chambres', 'wrapper' => [ 'class' => 'form-group col-md pl-3'],]);
-        CRUD::addField(['name' => 'nb_salle_bain', 'type' => 'number', 'label' => 'Nb salle de bain', 'wrapper' => [ 'class' => 'form-group col-md pl-3'],]);
-        CRUD::addField(['name' => 'nb_toilette', 'type' => 'number', 'label' => 'Nb toilette', 'wrapper' => [ 'class' => 'form-group col-md pl-3'],]);
+        CRUD::addField(['tab' => 'Details','name' => 'surface', 'type' => 'number', 'label' => 'Surface m3', 'wrapper' => [ 'class' => 'form-group col-md pl-3'],]);
+        CRUD::addField(['tab' => 'Details','name' => 'nb_piece', 'type' => 'number', 'label' => 'Nb pièces', 'wrapper' => [ 'class' => 'form-group col-md pl-3'],]);
+        CRUD::addField(['tab' => 'Details','name' => 'nb_chambre', 'type' => 'number', 'label' => 'Nb chambres', 'wrapper' => [ 'class' => 'form-group col-md pl-3'],]);
+        CRUD::addField(['tab' => 'Details','name' => 'nb_salle_bain', 'type' => 'number', 'label' => 'Nb salle de bain', 'wrapper' => [ 'class' => 'form-group col-md pl-3'],]);
+        CRUD::addField(['tab' => 'Details','name' => 'nb_toilette', 'type' => 'number', 'label' => 'Nb toilette', 'wrapper' => [ 'class' => 'form-group col-md pl-3'],]);
         $this->crud->addField([   // CustomHTML
             'name'  => 'separator',
             'type'  => 'custom_html',
-            'value' => '<hr>'
+            'value' => '<hr>',
+            'tab' => 'Details',
         ],);
+
+
+        $this->crud->addField([
+            // select_from_array
+            'name' => 'meublee',
+            'label' => 'Meublé',
+            'tab' => 'Details',
+            'type' => 'select_from_array',
+            'wrapper' => [ 'class' => 'form-group col-md pl-3'],
+            'options' => [
+                // the key will be stored in the db, the value will be shown as label;
+                1 => 'Oui',
+                0 => 'Non',
+            ],
+            // optional
+            'default' => '0',
+            'inline' => true, // show the radios all on the same line?
+        ]);
 
         $this->crud->addField([
             // select_from_array
             'name' => 'terrasse',
+            'tab' => 'Details',
             'label' => 'terrasse/balcon',
             'type' => 'select_from_array',
             'wrapper' => [ 'class' => 'form-group col-md pl-3'],
@@ -183,10 +192,14 @@ class VenteCrudController extends CrudController
             'default' => '0',
             'inline' => true, // show the radios all on the same line?
         ]);
+
+
+
         $this->crud->addField([
             // select_from_array
             'name' => 'garage',
             'label' => 'garage',
+            'tab' => 'Details',
             'type' => 'select_from_array',
             'wrapper' => [ 'class' => 'form-group col-md pl-3'],
             'options' => [
@@ -202,6 +215,7 @@ class VenteCrudController extends CrudController
             // select_from_array
             'name' => 'parking',
             'label' => 'parking',
+            'tab' => 'Details',
             'wrapper' => [ 'class' => 'form-group col-md pl-3'],
             'type' => 'select_from_array',
             'options' => [
@@ -217,6 +231,7 @@ class VenteCrudController extends CrudController
             // select_from_array
             'name' => 'piscine',
             'label' => 'piscine',
+            'tab' => 'Details',
             'wrapper' => [ 'class' => 'form-group col-md pl-3'],
             'type' => 'select_from_array',
             'options' => [
@@ -232,6 +247,7 @@ class VenteCrudController extends CrudController
             // select_from_array
             'name' => 'jardin',
             'label' => 'jardin',
+            'tab' => 'Details',
             'wrapper' => [ 'class' => 'form-group col-md pl-3'],
             'type' => 'select_from_array',
             'options' => [
@@ -243,18 +259,32 @@ class VenteCrudController extends CrudController
             'default' => '0',
             'inline' => true, // show the radios all on the same line?
         ]);
+        $this->crud->field('name')->on('saving', function () {
+            $admin = backpack_user()->find(1);
+            $admin->notify(
+                new DatabaseNotification(
+                    ($type = 'info'), // info / success / warning / error
+                    ($message = 'Vente edité'),
+                    ($messageLong = ' Vente edité par ' . backpack_user()->name),
+                       // rand(1, 99999)), // optional
+                    // ($href = '/some-custom-url'), // optional, e.g. backpack_url('/example')
+                   // ($hrefText = 'Go to custom URL') // optional
+                )
+            );
+        });
       
-        CRUD::addField(['name' => 'adresse', 'type' => 'text', 'label' => 'Adresse']);
-        CRUD::addField(['name' => 'ville', 'type' => 'text', 'label' => 'Ville', 'wrapper' => [ 'class' => 'form-group col-md pl-3'],]);
-        CRUD::addField(['name' => 'code_postal', 'type' => 'text', 'label' => 'Code postal', 'wrapper' => [ 'class' => 'form-group col-md pl-3'],]);
-        CRUD::addField(['name' => 'telephone', 'type' => 'text', 'label' => 'Téléphone', 'wrapper' => [ 'class' => 'form-group col-md pl-3'],]);
-        CRUD::addField(['name' => 'localisation', 'type' => 'text', 'label' => 'Coordonnées GPS', 'wrapper' => [ 'class' => 'form-group col-md pl-3'],]);
+        CRUD::addField(['tab' => 'Localisation','name' => 'adresse', 'type' => 'text', 'label' => 'Adresse']);
+        CRUD::addField(['tab' => 'Localisation','name' => 'ville', 'type' => 'text', 'label' => 'Ville', 'wrapper' => [ 'class' => 'form-group col-md pl-3'],]);
+        CRUD::addField(['tab' => 'Localisation','name' => 'code_postal', 'type' => 'text', 'label' => 'Code postal', 'wrapper' => [ 'class' => 'form-group col-md pl-3'],]);
+        CRUD::addField(['tab' => 'Localisation','name' => 'telephone', 'type' => 'text', 'label' => 'Téléphone', 'wrapper' => [ 'class' => 'form-group col-md pl-3'],]);
+        CRUD::addField(['tab' => 'Localisation','name' => 'localisation', 'type' => 'text', 'label' => 'Coordonnées GPS', 'wrapper' => [ 'class' => 'form-group col-md pl-3'],]);
         
         $this->crud->addField([
             // radio
             'name' => 'status', // the name of the db column
             'label' => 'Activé', // the input label
             'type' => 'radio',
+            'tab' => 'Informations générales',
             'options' => [
                 // the key will be stored in the db, the value will be shown as label;
                 'Oui' => 'Oui',
@@ -264,6 +294,7 @@ class VenteCrudController extends CrudController
             'default' => 'Oui',
             'inline' => true, // show the radios all on the same line?
         ]);
+
 
         /**
          * Fields can be defined using the fluent syntax or array syntax:
@@ -281,21 +312,12 @@ class VenteCrudController extends CrudController
     protected function setupUpdateOperation()
     {
         CRUD::setValidation(VenteRequest::class);
-        CRUD::field('user_id')->label('Utilisateur');
-
-        CRUD::addField([
-            'name' => 'user_id',
-            'label' => 'Utilisateur',
-            'attributes' => [
-                'class'       => 'form-control ',
-              ], // change the HTML attributes of your input
-              'wrapper'   => [ 
-                 'class'      => 'form-group col-xs-2 pl-3 pt-2'
-              ], // change the HTML attributes for the field wrapper - mostly for resizing fields 
-        ]);
+ 
         CRUD::addField([
             'name' => 'name',
             'label' => 'titre de l\'annonce',
+            'type' => 'text',
+            'tab' => 'Informations générales',
             'attributes' => [
                 'class'       => 'form-control ',
               ], // change the HTML attributes of your input
@@ -308,6 +330,7 @@ class VenteCrudController extends CrudController
             'name' => 'image',
             'key' => 'image_up',
             'label' => 'Images',
+            'tab' => 'Informations générales',
             'type' => 'upload_multiple',
             'prefix' => 'storage/',
             'upload' => true,
@@ -316,51 +339,69 @@ class VenteCrudController extends CrudController
                  'class'      => 'form-group w-64 pl-3'
               ], // change the HTML attributes for the field wrapper - mostly for resizing fields 
         ]);
-
         CRUD::addField([
             'name' => 'documents',
             'key' => 'documents',
             'label' => 'Documents',
+            'tab' => 'Informations générales',
             'type' => 'upload_multiple',
             'prefix' => 'storage/',
             'upload' => true,
             'temporary' => 10,
               'wrapper'   => [ 
-                 'class'      => 'form-group w-48 pl-3'
+                 'class'      => 'form-group w-48 pl-3 overflow-hidden'
               ], // change the HTML attributes for the field wrapper - mostly for resizing fields 
         ]);
+        CRUD::addField([
+            'name' => 'description',
+            'label' => 'Description',
+            'type' => 'textarea',
+            'tab' => 'Informations générales',
+        ]);
 
-        CRUD::field('description')->type('textarea')->on('saving', function () {
-            $admin = backpack_user()->find(1);
-            $admin->notify(
-                new DatabaseNotification(
-                    ($type = 'info'), // info / success / warning / error
-                    ($message = 'Vente Modifié'),
-                    ($messageLong = 'Une Vente à été modifié par '. backpack_user()->name),
-                       // rand(1, 99999)), // optional
-                    // ($href = '/some-custom-url'), // optional, e.g. backpack_url('/example')
-                   // ($hrefText = 'Go to custom URL') // optional
-                )
-            );
-        });
+        CRUD::addfield([
+            'name' => 'description2',
+            'label' => 'Details',
+            'type' => 'textarea',
+            'tab' => 'Informations générales',
+        ]);
 
-        CRUD::field('description2')->type('textarea')->label('Details');
+        CRUD::addField(['tab' => 'Informations générales','name' => 'prix', 'type' => 'number', 'label' => 'Prix de vente', 'wrapper' => [ 'class' => 'form-group col-md pl-3'],]);
 
-        CRUD::addField(['name' => 'prix', 'type' => 'number', 'label' => 'Prix / mois', 'wrapper' => [ 'class' => 'form-group col-md pl-3'],]);
-        CRUD::addField(['name' => 'surface', 'type' => 'number', 'label' => 'Surface m3', 'wrapper' => [ 'class' => 'form-group col-md pl-3'],]);
-        CRUD::addField(['name' => 'nb_piece', 'type' => 'number', 'label' => 'Nb pièces', 'wrapper' => [ 'class' => 'form-group col-md pl-3'],]);
-        CRUD::addField(['name' => 'nb_chambre', 'type' => 'number', 'label' => 'Nb chambres', 'wrapper' => [ 'class' => 'form-group col-md pl-3'],]);
-        CRUD::addField(['name' => 'nb_salle_bain', 'type' => 'number', 'label' => 'Nb salle de bain', 'wrapper' => [ 'class' => 'form-group col-md pl-3'],]);
-        CRUD::addField(['name' => 'nb_toilette', 'type' => 'number', 'label' => 'Nb toilette', 'wrapper' => [ 'class' => 'form-group col-md pl-3'],]);
+        CRUD::addField(['tab' => 'Details','name' => 'surface', 'type' => 'number', 'label' => 'Surface m3', 'wrapper' => [ 'class' => 'form-group col-md pl-3'],]);
+        CRUD::addField(['tab' => 'Details','name' => 'nb_piece', 'type' => 'number', 'label' => 'Nb pièces', 'wrapper' => [ 'class' => 'form-group col-md pl-3'],]);
+        CRUD::addField(['tab' => 'Details','name' => 'nb_chambre', 'type' => 'number', 'label' => 'Nb chambres', 'wrapper' => [ 'class' => 'form-group col-md pl-3'],]);
+        CRUD::addField(['tab' => 'Details','name' => 'nb_salle_bain', 'type' => 'number', 'label' => 'Nb salle de bain', 'wrapper' => [ 'class' => 'form-group col-md pl-3'],]);
+        CRUD::addField(['tab' => 'Details','name' => 'nb_toilette', 'type' => 'number', 'label' => 'Nb toilette', 'wrapper' => [ 'class' => 'form-group col-md pl-3'],]);
         $this->crud->addField([   // CustomHTML
             'name'  => 'separator',
             'type'  => 'custom_html',
-            'value' => '<hr>'
+            'value' => '<hr>',
+            'tab' => 'Details',
         ],);
+
+
+        $this->crud->addField([
+            // select_from_array
+            'name' => 'meublee',
+            'label' => 'Meublé',
+            'tab' => 'Details',
+            'type' => 'select_from_array',
+            'wrapper' => [ 'class' => 'form-group col-md pl-3'],
+            'options' => [
+                // the key will be stored in the db, the value will be shown as label;
+                1 => 'Oui',
+                0 => 'Non',
+            ],
+            // optional
+            'default' => '0',
+            'inline' => true, // show the radios all on the same line?
+        ]);
 
         $this->crud->addField([
             // select_from_array
             'name' => 'terrasse',
+            'tab' => 'Details',
             'label' => 'terrasse/balcon',
             'type' => 'select_from_array',
             'wrapper' => [ 'class' => 'form-group col-md pl-3'],
@@ -373,10 +414,14 @@ class VenteCrudController extends CrudController
             'default' => '0',
             'inline' => true, // show the radios all on the same line?
         ]);
+
+
+
         $this->crud->addField([
             // select_from_array
             'name' => 'garage',
             'label' => 'garage',
+            'tab' => 'Details',
             'type' => 'select_from_array',
             'wrapper' => [ 'class' => 'form-group col-md pl-3'],
             'options' => [
@@ -392,6 +437,7 @@ class VenteCrudController extends CrudController
             // select_from_array
             'name' => 'parking',
             'label' => 'parking',
+            'tab' => 'Details',
             'wrapper' => [ 'class' => 'form-group col-md pl-3'],
             'type' => 'select_from_array',
             'options' => [
@@ -407,6 +453,7 @@ class VenteCrudController extends CrudController
             // select_from_array
             'name' => 'piscine',
             'label' => 'piscine',
+            'tab' => 'Details',
             'wrapper' => [ 'class' => 'form-group col-md pl-3'],
             'type' => 'select_from_array',
             'options' => [
@@ -422,6 +469,7 @@ class VenteCrudController extends CrudController
             // select_from_array
             'name' => 'jardin',
             'label' => 'jardin',
+            'tab' => 'Details',
             'wrapper' => [ 'class' => 'form-group col-md pl-3'],
             'type' => 'select_from_array',
             'options' => [
@@ -433,33 +481,32 @@ class VenteCrudController extends CrudController
             'default' => '0',
             'inline' => true, // show the radios all on the same line?
         ]);
+        $this->crud->field('name')->on('saving', function () {
+            $admin = backpack_user()->find(1);
+            $admin->notify(
+                new DatabaseNotification(
+                    ($type = 'info'), // info / success / warning / error
+                    ($message = 'Vente edité'),
+                    ($messageLong = ' Vente edité par ' . backpack_user()->name),
+                       // rand(1, 99999)), // optional
+                    // ($href = '/some-custom-url'), // optional, e.g. backpack_url('/example')
+                   // ($hrefText = 'Go to custom URL') // optional
+                )
+            );
+        });
       
-        CRUD::addField(['name' => 'adresse', 'type' => 'text', 'label' => 'Adresse']);
-        CRUD::addField(['name' => 'ville', 'type' => 'text', 'label' => 'Ville', 'wrapper' => [ 'class' => 'form-group col-md pl-3'],]);
-        CRUD::addField(['name' => 'code_postal', 'type' => 'text', 'label' => 'Code postal', 'wrapper' => [ 'class' => 'form-group col-md pl-3'],]);
-        CRUD::addField(['name' => 'telephone', 'type' => 'text', 'label' => 'Téléphone', 'wrapper' => [ 'class' => 'form-group col-md pl-3'],]);
-        CRUD::addField(['name' => 'localisation', 'type' => 'text', 'label' => 'Coordonnées GPS', 'wrapper' => [ 'class' => 'form-group col-md pl-3'],]);
-        $this->crud->addField([   // select_from_array
-            'name'        => 'type',
-            'label'       => "Type",
-            'type'        => 'select_from_array',
-            'options'     => [
-                'Maison' => 'Maison',
-                'Appartement' => 'Appartement',
-                'Villa' => 'Villa',
-                'Terrain' => 'Terrain',
-                'Immeuble' => 'Immeuble',
-            ],
-
-            'allows_null' => false,
-            'default'     => 'Diamants',
-            // 'allows_multiple' => true, // OPTIONAL; needs you to cast this to array in your model;
-        ]);
+        CRUD::addField(['tab' => 'Localisation','name' => 'adresse', 'type' => 'text', 'label' => 'Adresse']);
+        CRUD::addField(['tab' => 'Localisation','name' => 'ville', 'type' => 'text', 'label' => 'Ville', 'wrapper' => [ 'class' => 'form-group col-md pl-3'],]);
+        CRUD::addField(['tab' => 'Localisation','name' => 'code_postal', 'type' => 'text', 'label' => 'Code postal', 'wrapper' => [ 'class' => 'form-group col-md pl-3'],]);
+        CRUD::addField(['tab' => 'Localisation','name' => 'telephone', 'type' => 'text', 'label' => 'Téléphone', 'wrapper' => [ 'class' => 'form-group col-md pl-3'],]);
+        CRUD::addField(['tab' => 'Localisation','name' => 'localisation', 'type' => 'text', 'label' => 'Coordonnées GPS', 'wrapper' => [ 'class' => 'form-group col-md pl-3'],]);
+        
         $this->crud->addField([
             // radio
             'name' => 'status', // the name of the db column
             'label' => 'Activé', // the input label
             'type' => 'radio',
+            'tab' => 'Informations générales',
             'options' => [
                 // the key will be stored in the db, the value will be shown as label;
                 'Oui' => 'Oui',
@@ -469,13 +516,6 @@ class VenteCrudController extends CrudController
             'default' => 'Oui',
             'inline' => true, // show the radios all on the same line?
         ]);
-
-        /**
-         * Fields can be defined using the fluent syntax or array syntax:
-         * - CRUD::field('price')->type('number');
-         * - CRUD::addField(['name' => 'price', 'type' => 'number']));
-         */
-    
 
     }
 }
