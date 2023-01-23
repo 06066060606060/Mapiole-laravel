@@ -5,8 +5,8 @@
   <div id="foot" class=" xl:pt-52 lg:pt-[400px] pt-[500px] md:pt-[450px]">
 
       <section class="max-w-[1440px] mx-auto px-4">
-          <h2 class="text-4xl font-bold text-center md:text-5xl drop-shadow-xl">Trouvez <b
-                  class="text-blue-600">votre</b> nouveau <b class="text-blue-600">chez-vous..</b></h2>
+          <h2 class="text-4xl font-bold text-center md:text-5xl drop-shadow-xl">Trouvez <b class="text-blue-600">votre</b>
+              nouveau <b class="text-blue-600">chez-vous..</b></h2>
           <div class="grid gap-6 my-16 lg:grid-cols-3">
               <div class="flex flex-col p-8 space-y-4 bg-gray-100 border border-gray-200 rounded-md shadow-xl">
 
@@ -42,7 +42,7 @@
       <section class="px-4 py-16 border-b">
           <div class="mx-auto max-w-[1440px]">
               <div class="block mx-4 md:mx-16">
-                  <h2 class="text-3xl font-bold text-center md:text-4xl drop-shadow-xl pb-16">Choisissez parmi une large
+                  <h2 class="pb-16 text-3xl font-bold text-center md:text-4xl drop-shadow-xl">Choisissez parmi une large
                       gamme de bien immobilier</h2>
 
                   <div class="grid grid-cols-2 gap-5 lg:grid-cols-4 xl:grid-cols-5">
@@ -109,12 +109,12 @@
                           <span class="z-0 inline-flex justify-center space-x-4 text-white rounded-md shadow-sm">
 
                               <a href="{{ route('location') }}"
-                                  class="flex items-center p-4 justify-center duration-150 bg-black rounded-md shadow-md hover:bg-gray-600 focus:shadow-outline">
+                                  class="flex items-center justify-center p-4 duration-150 bg-black rounded-md shadow-md hover:bg-gray-600 focus:shadow-outline">
                                   Biens en location
                               </a>
 
-                                  <a href="{{ route('vente') }}"
-                                  class="flex items-center p-4 justify-center duration-150 bg-black rounded-md shadow-md hover:bg-gray-600 focus:shadow-outline">
+                              <a href="{{ route('vente') }}"
+                                  class="flex items-center justify-center p-4 duration-150 bg-black rounded-md shadow-md hover:bg-gray-600 focus:shadow-outline">
                                   Biens en vente
                               </a>
                           </span>
@@ -131,7 +131,7 @@
 
 
       <div>
-          <div class="container p-8 mx-auto mb-12 mt-8 xl:px-0">
+          <div class="container p-8 mx-auto mt-8 mb-12 xl:px-0">
               <div
                   class="relative flex flex-wrap items-center justify-between w-full max-w-4xl gap-5 mx-auto overflow-hidden text-white bg-blue-600 bg-gradient-to-r from-blue-600 to-blue-800 px-7 py-7 lg:px-12 lg:py-12 lg:flex-nowrap rounded-xl">
                   <div
@@ -246,9 +246,9 @@
       </section>
 
 
- <h2 class="text-3xl font-bold text-center md:text-4xl drop-shadow-xl pb-8">Actuellement en location</h2>
+      <h2 class="pb-8 text-3xl font-bold text-center md:text-4xl drop-shadow-xl">Actuellement en location</h2>
 
-      <div class="flex flex-col md:flex-row justify-center -m-8 pb-4 mt-4 mx-auto">
+      <div class="flex flex-col justify-center pb-4 mx-auto mt-4 -m-8 md:flex-row">
           <div x-data="{ swiper: null }" x-init="swiper = new Swiper($refs.container, {
               loop: true,
               slidesPerView: 1,
@@ -284,7 +284,7 @@
                   </button>
               </div>
 
-              <div class="swiper-container" x-ref="container">
+              <div class="pb-8 mb-8 border-b swiper-container" x-ref="container">
                   <div class="my-8 swiper-wrapper">
 
 
@@ -347,6 +347,31 @@
           </section>
           <script src="https://unpkg.com/swiper@6.8.4/swiper-bundle.min.js"></script>
       </div>
+
+      
+      <h2 class="py-8 text-3xl font-bold text-center md:text-4xl drop-shadow-xl">Localisation des biens</h2>
+
+      <div class="flex mx-auto max-w-[1440px]">
+          <div id="map" class="mx-2 my-4 rounded h-[550px] w-screen z-0"></div>
+      </div>
+
+      <script src="https://unpkg.com/leaflet@1.9.1/dist/leaflet.js"
+          integrity="sha256-NDI0K41gVbWqfkkaHj15IzU7PtMoelkzyKp8TOaFQ3s=" crossorigin=""></script>
+      <script>
+          let mymap = L.map('map').setView([4.843, 11.92], 7);
+          osmLayer = L.tileLayer(
+              'https://{s}.tile-cyclosm.openstreetmap.fr/cyclosm/{z}/{x}/{y}.png', {
+                  maxZoom: 19,
+                  apikey: 'choisirgeoportail',
+                  format: 'image/jpeg',
+                  style: 'normal'
+              }).addTo(mymap);
+          mymap.addLayer(osmLayer);
+          L.marker([5.04640922, 11.9904689]).addTo(mymap);
+          mymap.touchZoom.enable();
+            mymap.doubleClickZoom.enable();
+            mymap.scrollWheelZoom.disable();
+      </script>
 
   </div>
 

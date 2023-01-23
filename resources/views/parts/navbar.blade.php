@@ -1,4 +1,4 @@
-<nav id="navbar" class="fixed top-0 z-50 w-full pt-2 pb-2 transition duration-200 border-b border-gray-400 border-opacity-50 backdrop-blur-lg" >
+<nav id="navbar" class="fixed top-0 z-50 w-full pt-2 pb-2 text-gray-800 transition duration-200 bg-white border-b border-gray-400 border-opacity-50 " >
     <div class="flex flex-wrap items-center w-full px-4 md:px-6 py-2.5 justify-around " >
         <a href="/" class="flex items-center mr-16"  >
          <img src="{{asset('img/logo.png')}}" class="h-32 mr-3" alt=" Logo" />
