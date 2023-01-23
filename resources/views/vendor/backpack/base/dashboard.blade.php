@@ -57,17 +57,16 @@
     <script src="https://unpkg.com/leaflet@1.9.1/dist/leaflet.js"
         integrity="sha256-NDI0K41gVbWqfkkaHj15IzU7PtMoelkzyKp8TOaFQ3s=" crossorigin=""></script>
     <script>
-        let mymap = L.map('map').setView([48.6890, 11.14086], 5);
+        let mymap = L.map('map').setView([4.843, 11.92], 7);
         osmLayer = L.tileLayer(
-            'https://wxs.ign.fr/{apikey}/geoportail/wmts?REQUEST=GetTile&SERVICE=WMTS&VERSION=1.0.0&STYLE={style}&TILEMATRIXSET=PM&FORMAT={format}&LAYER=ORTHOIMAGERY.ORTHOPHOTOS&TILEMATRIX={z}&TILEROW={y}&TILECOL={x}', {
+            'https://{s}.tile-cyclosm.openstreetmap.fr/cyclosm/{z}/{x}/{y}.png', {
                 maxZoom: 19,
                 apikey: 'choisirgeoportail',
                 format: 'image/jpeg',
                 style: 'normal'
             }).addTo(mymap);
         mymap.addLayer(osmLayer);
-        L.marker([47.97618, 7.82580]).addTo(mymap);
-        L.marker([44.97618, 9.82580]).addTo(mymap);
+        L.marker([5.04640922, 11.9904689]).addTo(mymap);
         mymap.touchZoom.enable();
     
     </script>
