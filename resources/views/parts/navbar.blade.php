@@ -2,7 +2,7 @@
     <div class="flex flex-wrap items-center w-full px-4 md:px-6 py-2.5 justify-around " >
         <a href="/" class="flex items-center mr-16"  >
          <img src="{{asset('img/logo.png')}}" class="h-32 mr-3" alt=" Logo" />
-            <img src="{{asset('img/blob.svg')}}" class="absolute h-32 ml-16 -z-10" alt=" Logo" />
+            {{-- <img src="{{asset('img/blob.svg')}}" class="absolute h-32 ml-16 -z-10" alt=" Logo" /> --}}
         </a>
         <button data-collapse-toggle="mega-menu-full" type="button"
             class="inline-flex items-center p-2 ml-1 text-sm text-gray-500 rounded-lg lg:hidden hover:bg-indigo-300 focus:outline-none focus:ring-2 focus:ring-gray-200"
@@ -71,14 +71,7 @@
                         </svg></button>
                 </li>
                 <li>
-                      <a  href="professionnel"
-                                class="text-xs lg:text-base font-medium items-center justify-center w-32 mr-16 h-10 px-2 ml-1  text-gray-600 bg-white border border-gray-600 rounded-lg flex focus:outline-none hover:bg-[#6805F2] hover:text-white">
-                                Professionel
-                            </a>
-                </li>
-                <li>
-                    <div class="flex items-center mt-2 lg:mt-0">
-                        @if (backpack_auth()->check())
+                   @if (backpack_auth()->check())
                             <a href="poster-annonce"
                                 class="text-xs lg:text-base font-medium items-center justify-center w-48 h-10 px-1 ml-1 mr-2 text-gray-600 bg-white border border-gray-600 rounded-lg flex focus:outline-none hover:bg-[#6805F2] hover:text-white">
                                 Poster une annonce
@@ -89,6 +82,14 @@
                                 Poster une annonce
                             </a>
                         @endif
+               
+                </li>
+                <li>
+                    <div class="flex items-center mt-2 lg:mt-0">
+                            <a  href="professionnel"
+                                class="text-xs lg:text-base font-medium items-center justify-center w-32 mr-2 h-10 px-2 ml-1  text-gray-600 bg-white border border-gray-600 rounded-lg flex focus:outline-none hover:bg-[#6805F2] hover:text-white">
+                                Professionel
+                            </a>
 
                         <div x-data="{ isOpen: false }" class="relative inline-block pr-4">
                             <!-- Dropdown toggle button -->
@@ -131,143 +132,6 @@
                                     Déconnection</a>
                                     @endif
                             </div>
-                        </div>
-
-
-                        <div x-data="{ isOpen: false }" class="relative inline-block pr-4">
-                            <button @click="isOpen = !isOpen" type="button"
-                                class="text-gray-800 mega-menu-link hover:text-gray-700 focus:outline-none focus:text-gray-800 "
-                                aria-label="toggle menu">
-                                Menu
-
-                            </button>
-
-                            <!-- // pop menu  -->
-                            <div x-cloak x-show="isOpen" @click.away="isOpen = false"
-                                :class="[!isOpen ? 'translate-x-full opacity-0 ' : 'opacity-100 translate-x-0']"
-                                class="absolute right-0 z-20 px-6 py-4 mt-6 transition duration-200 ease-in-out bg-white border border-gray-200 rounded-md shadow-xl w-72 hover:border-gray-400">
-                                <div class="flex flex-col pb-4 space-y-2 align-baseline md:pb-0">
-
-                                    <details class="group" open>
-                                        <summary class="flex items-center justify-between cursor-pointer">
-                                            <h5 class="font-black text-gray-900 text-md">
-                                                Rechercher
-                                            </h5>
-                                            <span>
-                                                <img class="w-4 h-4" src="./img/plus.png" alt="">
-                                            </span>
-                                        </summary>
-
-                                        <div class="flex flex-col">
-                                            <a class="px-2 py-1 text-sm text-gray-600 hover:bg-indigo-300"
-                                                href="/">&nbsp; -A
-                                                louer</a>
-                                            <a class="px-2 py-1 text-sm text-gray-600 hover:bg-indigo-300"
-                                                href="recherche">&nbsp; -A
-                                                vendre</a>
-                                            <a class="px-2 py-1 text-sm text-gray-600 hover:bg-indigo-300"
-                                                href="recherche">&nbsp; -Un
-                                                professionel</a>
-                                            <a class="px-2 py-1 text-sm text-gray-600 hover:bg-indigo-300"
-                                                href="recherche">&nbsp; -Un
-                                                locataire</a>
-                                        </div>
-                                    </details>
-                                    <div class="pt-2 mb-2 border-b border-gray-200"></div>
-
-
-                                    <details class="group" open>
-                                        <summary class="flex items-center justify-between cursor-pointer">
-                                            <h5 class="font-black text-gray-900 text-md">
-                                                Vendre
-                                            </h5>
-                                            <span>
-                                                <img class="w-4 h-4" src="./img/plus.png" alt="">
-                                            </span>
-                                        </summary>
-
-                                        <div class="flex flex-col">
-                                            <a class="px-2 py-1 text-sm text-gray-600 hover:bg-indigo-300"
-                                                href="/">&nbsp; -Maison</a>
-                                            <a class="px-2 py-1 text-sm text-gray-600 hover:bg-indigo-300"
-                                                href="recherche">&nbsp;
-                                                -Appartement</a>
-                                            <a class="px-2 py-1 text-sm text-gray-600 hover:bg-indigo-300"
-                                                href="construire">&nbsp;
-                                                -Terrain</a>
-                                            <a class="px-2 py-1 text-sm text-gray-600 hover:bg-indigo-300"
-                                                href="construire">&nbsp;
-                                                -Bureau</a>
-                                        </div>
-                                </div>
-                                </details>
-                                <div class="pt-2 mb-2 border-b border-gray-200"></div>
-
-                                <details class="group" open>
-                                    <summary class="flex items-center justify-between cursor-pointer">
-                                        <h5 class="font-black text-gray-900 text-md">
-                                            Louer
-                                        </h5>
-                                        <span>
-                                            <img class="w-4 h-4" src="./img/plus.png" alt="">
-                                        </span>
-                                    </summary>
-
-                                    <div class="flex flex-col">
-                                        <a class="px-2 py-1 text-sm text-gray-600 hover:bg-indigo-300"
-                                            href="/">&nbsp;
-                                            -Maison</a>
-                                        <a class="px-2 py-1 text-sm text-gray-600 hover:bg-indigo-300"
-                                            href="recherche">&nbsp;
-                                            -Appartement</a>
-                                        <a class="px-2 py-1 text-sm text-gray-600 hover:bg-indigo-300"
-                                            href="construire">&nbsp; -Terrain</a>
-                                        <a class="px-2 py-1 text-sm text-gray-600 hover:bg-indigo-300"
-                                            href="construire">&nbsp; -Bureau</a>
-                                    </div>
-                                </details>
-                                <div class="pt-2 mb-2 border-b border-gray-200"></div>
-
-                                <details class="group">
-                                    <summary class="flex items-center justify-between cursor-pointer">
-                                        <h5 class="font-black text-gray-900 text-md">
-                                            Services
-                                        </h5>
-                                        <span>
-                                            <img class="w-4 h-4" src="./img/plus.png" alt="">
-                                        </span>
-                                    </summary>
-                                    <div class="flex flex-col">
-                                        <a class="px-2 py-1 text-sm text-gray-600 hover:bg-indigo-300"
-                                            href="recherche">&nbsp; -Recherche
-                                            immobilière</a>
-                                        <a class="px-2 py-1 text-sm text-gray-600 hover:bg-indigo-300"
-                                            href="recherche">&nbsp; -Estimation
-                                            immobilière</a>
-                                        <a class="px-2 py-1 text-sm text-gray-600 hover:bg-indigo-300"
-                                            href="construire">&nbsp; -Conseil et
-                                            acommpagnement</a>
-                                        <a class="px-2 py-1 text-sm text-gray-600 hover:bg-indigo-300"
-                                            href="recherche">&nbsp;-document
-                                            administratif</a>
-                                        <a class="px-2 py-1 text-sm text-gray-600 hover:bg-indigo-300"
-                                            href="construire">&nbsp;-Notariat</a>
-                                        <a class="px-2 py-1 text-sm text-gray-600 hover:bg-indigo-300"
-                                            href="recherche">&nbsp;-Avocat</a>
-                                        <a class="px-2 py-1 text-sm text-gray-600 hover:bg-indigo-300"
-                                            href="construire">&nbsp; -Agent
-                                            immobilier</a>
-                                    </div>
-
-                                </details>
-                                <p class="mt-4 text-sm leading-relaxed text-gray-700">
-                                <div class="mb-2 border-b border-gray-200"></div>
-                                <a class="px-2 py-1 text-sm text-gray-600 hover:bg-indigo-300" href="recherche">&nbsp;
-                                    Partenaires</a>
-                                <a class="px-2 py-1 text-sm text-gray-600 hover:bg-indigo-300" href="construire">&nbsp;
-                                    Contact</a>
-                            </div>
-
                         </div>
                     </div>
                 </li>

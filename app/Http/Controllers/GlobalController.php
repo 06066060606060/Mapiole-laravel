@@ -26,8 +26,9 @@ class GlobalController extends Controller
      */
     public function getAll()
     {
+        $locations = Location::where('id', '!=', 0)->orderBy('id', 'desc')->get();
         
-        return view('index');
+        return view('index', compact('locations'));
     }
 
 

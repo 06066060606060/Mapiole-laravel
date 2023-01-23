@@ -1,25 +1,25 @@
   @php
-         $lang = request()->query('lang');
-     @endphp
- 
+      $lang = request()->query('lang');
+  @endphp
+
   <div id="foot" class=" xl:pt-52 lg:pt-[400px] pt-[500px] md:pt-[450px]">
 
       <section class="max-w-[1440px] mx-auto px-4">
           <h2 class="text-4xl font-bold text-center md:text-5xl drop-shadow-xl">Trouvez <b
-                  class="text-[#6805F2]">votre</b> nouveau <b class="text-[#6805F2]">chez-vous..</b></h2>
+                  class="text-blue-600">votre</b> nouveau <b class="text-blue-600">chez-vous..</b></h2>
           <div class="grid gap-6 my-16 lg:grid-cols-3">
               <div class="flex flex-col p-8 space-y-4 bg-gray-100 border border-gray-200 rounded-md shadow-xl">
 
                   <p class="text-2xl font-semibold">
                       Calculer le prix d'achat maximal?<br> <span class="text-lg font-medium">Quel
-                          <b class="text-[#6805F2]">prix d'achat</b> pouvez vous assumer.</span>
+                          <b class="text-blue-600">prix d'achat</b> pouvez vous assumer.</span>
                   </p>
               </div>
               <div class="flex flex-col p-8 space-y-4 bg-gray-100 border border-gray-200 rounded-md shadow-xl">
 
                   <p class="text-2xl font-semibold">
                       Un bien à louer vous intéresse ?<br> <span class="text-lg font-medium"><b
-                              class="text-[#6805F2]">Céez </b>
+                              class="text-blue-600">Céez </b>
                           un dossier et prenez rendez-vous.</span>
                   </p>
               </div>
@@ -27,29 +27,118 @@
 
                   <p class="text-2xl font-semibold">
                       Vous recherchez un professionnel!<br> <span class="text-lg font-medium"><b
-                              class="text-[#6805F2]">Recherchez
+                              class="text-blue-600">Recherchez
                           </b> dans notre liste de partenaires.</span>
                   </p>
               </div>
           </div>
       </section>
 
-@if ($lang == 'en')
-ENGLISH
-@else
+      @if ($lang == 'en')
+          ENGLISH
+      @else
+      @endif
 
-@endif
+      <section class="px-4 py-16 border-b">
+          <div class="mx-auto max-w-[1440px]">
+              <div class="block mx-4 md:mx-16">
+                  <h2 class="text-3xl font-bold text-center md:text-4xl drop-shadow-xl pb-16">Choisissez parmi une large
+                      gamme de bien immobilier</h2>
+
+                  <div class="grid grid-cols-2 gap-5 lg:grid-cols-4 xl:grid-cols-5">
+                      @php $i = 0; @endphp
+                      @forelse ($locations as $location)
+                          @php $i++; @endphp
+                          @if ($i == 3 || $i == 6 || $i == 11)
+                              <div
+                                  class="col-span-2 transition shadow-md bg-gray-50 hover:bg-gray-100 md:hover:scale-105">
+                                  <a href="#" class="flex flex-col h-full">
+                                      <img alt="Art"
+                                          src="{{ asset('storage/' . $location->image[0]) }}"alt=""
+                                          onerror="this.src='./img/empty.png'"
+                                          class="object-cover h-full max-h-[480px]" />
+                                      <div class="p-2">
+                                          <h3 class="mt-4 font-bold text-gray-900 md:text-xl"> {{ $location->name }}
+                                          </h3>
+                                          <p class="max-w-sm pb-2 mt-2 text-xs text-gray-700 md:text-sm">
+                                              {{ $location->ville }}
+                                          </p>
+                                      </div>
+                                  </a>
+                              </div>
+                          @else
+                              <div class="transition shadow-md bg-gray-50 hover:bg-gray-100 md:hover:scale-105">
+                                  <a href="#" class="flex flex-col h-full">
+                                      <img alt="Art"
+                                          src="{{ asset('storage/' . $location->image[0]) }}"alt=""
+                                          onerror="this.src='./img/empty.png'"
+                                          class="object-cover h-full max-h-[480px]" />
+                                      <div class="p-2">
+                                          <h3 class="mt-4 font-bold text-gray-900 md:text-xl"> {{ $location->name }}
+                                          </h3>
+                                          <p class="max-w-sm pb-2 mt-2 text-xs text-gray-700 md:text-sm">
+                                              {{ $location->vill }}
+                                          </p>
+                                      </div>
+                                  </a>
+                              </div>
+                          @endif
+
+
+
+                      @empty
+                          <div class="transition shadow-md bg-gray-50 hover:bg-gray-100 md:hover:scale-105">
+                              <a href="#" class="flex flex-col h-full">
+                                  <img alt="Art" src="./img/empty.png" class="object-cover h-full max-h-[480px]" />
+                                  <div class="p-2">
+                                      <h3 class="mt-4 font-bold text-gray-900 md:text-xl">empty</h3>
+                                      <p class="max-w-sm pb-2 mt-2 text-xs text-gray-700 md:text-sm">
+                                          Lorem ipsum dolor sit
+                                      </p>
+                                  </div>
+                              </a>
+                          </div>
+                      @endforelse
+
+
+
+                  </div>
+
+                  <div class="flex flex-row items-center justify-center pt-16 mx-auto">
+                      <div>
+                          <span class="z-0 inline-flex justify-center space-x-4 text-white rounded-md shadow-sm">
+
+                              <a href="{{ route('location') }}"
+                                  class="flex items-center p-4 justify-center duration-150 bg-black rounded-md shadow-md hover:bg-gray-600 focus:shadow-outline">
+                                  Biens en location
+                              </a>
+
+                                  <a href="{{ route('vente') }}"
+                                  class="flex items-center p-4 justify-center duration-150 bg-black rounded-md shadow-md hover:bg-gray-600 focus:shadow-outline">
+                                  Biens en vente
+                              </a>
+                          </span>
+                      </div>
+                  </div>
+              </div>
+
+
+
+
+          </div>
+      </section>
+
 
 
       <div>
-          <div class="container p-8 mx-auto mb-12 xl:px-0">
+          <div class="container p-8 mx-auto mb-12 mt-8 xl:px-0">
               <div
-                  class="relative flex flex-wrap items-center justify-between w-full max-w-4xl gap-5 mx-auto overflow-hidden text-white bg-indigo-600 bg-gradient-to-r from-indigo-600 to-indigo-700 px-7 py-7 lg:px-12 lg:py-12 lg:flex-nowrap rounded-xl">
+                  class="relative flex flex-wrap items-center justify-between w-full max-w-4xl gap-5 mx-auto overflow-hidden text-white bg-blue-600 bg-gradient-to-r from-blue-600 to-blue-800 px-7 py-7 lg:px-12 lg:py-12 lg:flex-nowrap rounded-xl">
                   <div
-                      class="absolute w-24 h-24 bg-white rounded-full bg-gradient-to-b from-white to-indigo-600 opacity-20 -z-1 left-3 bottom-3">
+                      class="absolute w-24 h-24 bg-white rounded-full bg-gradient-to-b from-white to-blue-600 opacity-20 -z-1 left-3 bottom-3">
                   </div>
                   <div
-                      class="absolute w-24 h-24 bg-white rounded-full bg-gradient-to-b from-white to-indigo-600 opacity-20 -z-1 left-1/2 -top-10">
+                      class="absolute w-24 h-24 bg-white rounded-full bg-gradient-to-b from-white to-blue-600 opacity-20 -z-1 left-1/2 -top-10">
                   </div>
                   <div class="relative z-0 flex-grow text-center lg:text-left">
                       <h2 class="text-3xl font-medium lg:text-3xl">Vous étes un professionnel?</h2>
@@ -57,156 +146,8 @@ ENGLISH
                   </div>
                   <div class="relative flex-shrink-0 w-full text-center lg:w-auto">
                       <a onclick="document.getElementById('primary_button').click()" target="_blank" rel="noopener"
-                          class="inline-block py-3 mx-auto font-medium text-center text-indigo-600 bg-white rounded-md sm:text-lg px-7 lg:px-10 lg:py-5">Inscrivez-vous</a>
+                          class="inline-block py-3 mx-auto font-medium text-center text-blue-600 bg-white rounded-md sm:text-lg px-7 lg:px-10 lg:py-5">Inscrivez-vous</a>
                   </div>
-              </div>
-          </div>
-      </div>
-
-      <section class="px-4 py-16 fgrad2">
-          <div class="mx-auto max-w-[1440px]">
-              <div class="grid gap-6 lg:grid-cols-3">
-                  <div class="overflow-hidden rounded lg:flex lg:col-span-3">
-                      <img src="./img/house2.webp" alt=""
-                          class="object-cover w-full h-auto max-h-96 drop-shadow-xl">
-                      <div
-                          class="p-6 space-y-6 bg-gray-100 border border-gray-200 shadow-xl lg:p-8 md:flex md:flex-col">
-                          <div class="flex">
-                              <a href="location-bien-immobilier-cameroun"
-                                  class="self-start px-3 py-1 text-sm text-white bg-green-800 rounded-full">Location</a>
-                              <a href="vendre-bien-immobilier-cameroun"
-                                  class="self-start px-3 py-1 mx-1 text-sm text-white bg-purple-800 rounded-full">Vente</a>
-                              <a href="achat-bien-immobilier-cameroun"
-                                  class="self-start px-3 py-1 mx-1 text-sm text-white bg-orange-600 rounded-full">Achat</a>
-                          </div>
-                          <h2 class="text-3xl font-bold md:flex-1 drop-shadow-xl">Choisissez parmi une large selection
-                              de
-                              biens immobiliers</h2>
-
-                      </div>
-                  </div>
-
-                  <div class="p-6 bg-gray-100 border border-gray-200 rounded shadow-md lg:p-8 lg:py-12">
-
-                      <p class="inline text-lg">Découvrez notre sélection de maisons et terrains disponibles en location
-                          et
-                          vente
-                          dans les
-                          meilleures localisations.</p>
-                  </div>
-                  <div class="p-6 bg-gray-100 border border-gray-200 rounded shadow-md lg:p-8 lg:py-12">
-
-                      <p class="inline text-lg">Nous avons une large gamme de maisons à louer avec option d'achat, pour
-                          répondre à
-                          tous
-                          les budgets et toutes les envies.</p>
-                  </div>
-                  <div class="p-6 bg-gray-100 border border-gray-200 rounded shadow-md lg:p-8 lg:py-12">
-
-                      <p class="inline text-lg">N'hésitez pas à nous contacter pour plus d'informations sur nos offres.
-                          Nous
-                          serons
-                          ravis
-                          de vous aider à concrétiser votre projet.</p>
-                  </div>
-              </div>
-          </div>
-      </section>
-
-      <div class="flex flex-col md:flex-row justify-center -m-4 pb-4 mt-4 mx-auto max-w-[1440px]">
-          <div x-data="{ swiper: null }" x-init="swiper = new Swiper($refs.container, {
-              loop: true,
-              slidesPerView: 1,
-              spaceBetween: 0,
-          
-              breakpoints: {
-                  640: {
-                      slidesPerView: 1,
-                      spaceBetween: 0,
-                  },
-                  768: {
-                      slidesPerView: 2,
-                      spaceBetween: 0,
-                  },
-                  1024: {
-                      slidesPerView: 3,
-                      spaceBetween: 0,
-                  },
-              },
-          })" class="relative w-[97%] mx-auto flex flex-row">
-              <div class="absolute inset-y-0 left-0 z-10 flex items-center">
-                  <button @click="swiper.slidePrev()"
-                      class="flex items-center justify-center w-10 h-10 -ml-2 bg-gray-200 rounded-full shadow lg:-ml-4 focus:outline-none">
-                      <svg viewBox="0 0 20 20" fill="currentColor" class="w-6 h-6 chevron-left">
-                          <path fill-rule="evenodd"
-                              d="M12.707 5.293a1 1 0 010 1.414L9.414 10l3.293 3.293a1 1 0 01-1.414 1.414l-4-4a1 1 0 010-1.414l4-4a1 1 0 011.414 0z"
-                              clip-rule="evenodd"></path>
-                      </svg>
-                  </button>
-              </div>
-
-              <div class="py-8 swiper-container" x-ref="container">
-                  <div class="swiper-wrapper">
-                      <!-- Slides -->
-                      <div class="p-4 swiper-slide mySwiper">
-                          <div class="flex flex-col overflow-hidden rounded shadow">
-                              <div class="flex-shrink-0">
-                                  <img class="object-cover w-full h-48" src="./img/01.jpg" alt="">
-                              </div>
-                          </div>
-                      </div>
-
-                      <div class="p-4 swiper-slide">
-                          <div class="flex flex-col overflow-hidden rounded shadow">
-                              <div class="flex-shrink-0">
-                                  <img class="object-cover w-full h-48" src="./img/02.jpg" alt="">
-                              </div>
-                          </div>
-                      </div>
-
-                      <div class="p-4 swiper-slide">
-                          <div class="flex flex-col overflow-hidden rounded shadow">
-                              <div class="flex-shrink-0">
-                                  <img class="object-cover w-full h-48" src="./img/03.jpg " alt="">
-                              </div>
-                          </div>
-                      </div>
-
-                      <div class="p-4 swiper-slide">
-                          <div class="flex flex-col overflow-hidden rounded shadow">
-                              <div class="flex-shrink-0">
-                                  <img class="object-cover w-full h-48" src="./img/04.jpeg " alt="">
-                              </div>
-                          </div>
-                      </div>
-
-                      <div class="p-4 swiper-slide">
-                          <div class="flex flex-col overflow-hidden rounded shadow">
-                              <div class="flex-shrink-0">
-                                  <img class="object-cover w-full h-48" src="./img/06.jpeg " alt="">
-                              </div>
-                          </div>
-                      </div>
-
-                      <div class="p-4 swiper-slide">
-                          <div class="flex flex-col overflow-hidden rounded shadow">
-                              <div class="flex-shrink-0">
-                                  <img class="object-cover w-full h-48" src="./img/07.jpeg " alt="">
-                              </div>
-                          </div>
-                      </div>
-                  </div>
-              </div>
-
-              <div class="absolute inset-y-0 right-0 z-10 flex items-center">
-                  <button @click="swiper.slideNext()"
-                      class="flex items-center justify-center w-10 h-10 -mr-2 bg-gray-200 rounded-full shadow lg:-mr-4 focus:outline-none">
-                      <svg viewBox="0 0 20 20" fill="currentColor" class="w-6 h-6 chevron-right">
-                          <path fill-rule="evenodd"
-                              d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"
-                              clip-rule="evenodd"></path>
-                      </svg>
-                  </button>
               </div>
           </div>
       </div>
@@ -233,13 +174,13 @@ ENGLISH
 
       <div class="grid gap-6 pt-8 mx-auto  lg:grid-cols-2 mybody max-w-[1440px] px-4">
           <p class="py-12 mx-auto text-4xl font-bold text-center lg:col-span-full md:text-5xl drop-shadow-xl">Vous
-              souhaitez <b class="text-[#6805F2]">vendre</b> ou
-              <b class="text-[#6805F2]">louez</b> votre bien.
+              souhaitez <b class="text-blue-600">vendre</b> ou
+              <b class="text-blue-600">louez</b> votre bien.
           </p>
 
           <div
               class="p-8 mb-8 space-y-8 bg-gray-100 border border-gray-200 rounded-md shadow-md lg:col-span-full lg:py-12">
-              <h2 class="text-4xl font-bold drop-shadow-xl">Nous somme la <b class="text-[#6805F2]">plate-forme
+              <h2 class="text-4xl font-bold drop-shadow-xl">Nous somme la <b class="text-blue-600">plate-forme
                       immobilière</b> qui vous
                   accompagne.</h2>
               <p class="">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nesciunt facilis quod
@@ -297,7 +238,7 @@ ENGLISH
                       </div>
                       <div class="flex flex-col items-center justify-center pt-4">
                           <a onclick="document.getElementById('secondaryButton').click()"
-                              class="px-4 py-2 font-bold text-white transition duration-200 bg-[#6805F2] rounded hover:bg-indigo-600 hover:scale-105 active:scale-100">Enregistrer-vous</a>
+                              class="px-4 py-2 font-bold text-white transition duration-200 bg-blue-600 rounded hover:bg-indigo-600 hover:scale-105 active:scale-100">Enregistrer-vous</a>
                       </div>
                   </div>
               </div>
@@ -305,21 +246,119 @@ ENGLISH
       </section>
 
 
+ <h2 class="text-3xl font-bold text-center md:text-4xl drop-shadow-xl pb-8">Actuellement en location</h2>
+
+      <div class="flex flex-col md:flex-row justify-center -m-8 pb-4 mt-4 mx-auto">
+          <div x-data="{ swiper: null }" x-init="swiper = new Swiper($refs.container, {
+              loop: true,
+              slidesPerView: 1,
+              spaceBetween: 0,
+          
+              breakpoints: {
+                  640: {
+                      slidesPerView: 2,
+                      spaceBetween: 0,
+                  },
+                  768: {
+                      slidesPerView: 3,
+                      spaceBetween: 0,
+                  },
+                  1024: {
+                      slidesPerView: 4,
+                      spaceBetween: 0,
+                  },
+                  1440: {
+                      slidesPerView: 5,
+                      spaceBetween: 0,
+                  },
+              },
+          })" class="relative flex flex-row w-9/12 mx-auto">
+              <div class="absolute inset-y-0 left-0 z-10 flex items-center mb-4">
+                  <button @click="swiper.slidePrev()"
+                      class="flex items-center justify-center w-10 h-10 -ml-2 transition bg-black border rounded-full shadow lg:-ml-4 focus:outline-none hover:bg-gray-800 active:bg-black border-opacity-20">
+                      <svg viewBox="0 0 20 20" fill="white" class="w-6 h-6 chevron-left">
+                          <path fill-rule="evenodd"
+                              d="M12.707 5.293a1 1 0 010 1.414L9.414 10l3.293 3.293a1 1 0 01-1.414 1.414l-4-4a1 1 0 010-1.414l4-4a1 1 0 011.414 0z"
+                              clip-rule="evenodd"></path>
+                      </svg>
+                  </button>
+              </div>
+
+              <div class="swiper-container" x-ref="container">
+                  <div class="my-8 swiper-wrapper">
 
 
-      <section class="p-8 bg-[#002932] ">
-          <div
-              class="p-6 pt-10 pb-20 mx-auto my-8 bg-gray-100 border border-gray-200 rounded shadow-md max-w-[1440px] ">
-              <h2 class="text-3xl font-bold text-center md:text-4xl">Trouvez votre bien et comparez les offres.</h2>
+                      @forelse ($locations as $location)
+                          <div class="m-3 swiper-slide">
+                              <a href="">
+                                  <div
+                                      class="flex flex-col overflow-hidden transition border shadow-lg md:hover:scale-110">
+                                      <div class="flex-shrink-0">
+                                          <img class="h-[350px] w-full object-cover border-b"
+                                              src="{{ asset('storage/' . $location->image[0]) }}"alt=""
+                                              onerror="this.src='./img/empty.png'" />
+                                          <h1 class="pt-4 mx-8 font-bold text-center text-black uppercase">
+                                              {{ $location->name }}</h1>
+                                          <p class="pb-4 mx-8 text-xs text-center text-gray-700">
+                                              {{ $location->ville }}
+                                          </p>
+                                      </div>
+                                  </div>
+                              </a>
+                          </div>
+                      @empty
+                          <div class="p-4 swiper-slide">
+                              <a href="">
+                                  <div
+                                      class="flex flex-col overflow-hidden transition border shadow-lg md:hover:scale-110">
+                                      <div class="flex-shrink-0">
+                                          <img class="h-[450px] w-full object-cover border-b"
+                                              src="./img/M_DOUBLE-DUTCH_Stadstuin-1-1-scaled.jpg" alt="">
+                                          <h1 class="pt-4 mx-8 font-bold text-center text-black">Empty</h1>
+                                          <p class="pb-4 mx-8 text-xs text-center text-gray-700">
+                                              dummy
+                                          </p>
+                                      </div>
+                                  </div>
+                              </a>
+                          </div>
+                      @endforelse
 
-              <img src="./img/house3.jpeg" alt="" class="object-cover w-full h-auto mt-8 max-h-96 ">
+
+
+
+
+
+                  </div>
+              </div>
+
+              <div class="absolute inset-y-0 right-0 z-10 flex items-center mb-4">
+                  <button @click="swiper.slideNext()"
+                      class="flex items-center justify-center w-10 h-10 -mr-2 transition bg-black border rounded-full shadow lg:-mr-4 focus:outline-none hover:bg-gray-800 active:bg-black border-opacity-20">
+                      <svg viewBox="0 0 20 20" fill="white" class="w-6 h-6 chevron-right">
+                          <path fill-rule="evenodd"
+                              d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"
+                              clip-rule="evenodd"></path>
+                      </svg>
+                  </button>
+              </div>
           </div>
-      </section>
+
+          </section>
+          <script src="https://unpkg.com/swiper@6.8.4/swiper-bundle.min.js"></script>
+      </div>
 
   </div>
 
 
   <style>
+      .loopgrid::nth-child(3) {
+          column-span: 2;
+      }
+
+
+
+
       #dvImage {
           background-blend-mode: darken;
           transition: 2s;

@@ -9,6 +9,8 @@
     scroll-behavior: smooth;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+    image-rendering: -webkit-optimize-contrast;
+    image-rendering: crisp-edges;
 }
 
 body{
@@ -35,11 +37,6 @@ img{
 
 .pattern {
   background-image: url("./anim.svg");
-}
-
-
-.sidebar {
-  @apply p-4 shadow-md shadow-black border-t border-black border-opacity-50 rounded-lg mb-2 mt-3 w-[230px] !important;
 }
 
 /* .nav-link {
