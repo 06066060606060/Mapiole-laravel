@@ -20,9 +20,9 @@ Route::controller(GlobalController::class)->group(function () {
     // Route::get('/', 'getAll')->name('getAll')->middleware('App\Http\Middleware\MyMiddleware');
     Route::get('/', 'getAll')->name('getAll');
     Route::get('logout', 'logout');
-    Route::get('location-bien-immobilier-cameroun', 'rent');
+    Route::get('location-bien-immobilier-cameroun', 'rent')->name('location');
     Route::get('location-bien-immobilier-cameroun/filter', 'rent')->name('searchfilterloc');
-    Route::get('achat-bien-immobilier-cameroun', 'buy');
+    Route::get('achat-bien-immobilier-cameroun', 'buy')->name('vente');
     Route::get('achat-bien-immobilier-cameroun/filter', 'buy')->name('searchfilterbuy');
     Route::get('construire', 'build');
     Route::get('vendre-bien-immobilier-cameroun', 'sell');

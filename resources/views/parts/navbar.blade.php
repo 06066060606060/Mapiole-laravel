@@ -1,9 +1,8 @@
-<nav id="navbar"
-    class="fixed top-0 z-50 w-full pt-2 pb-2 transition duration-200 border-b border-gray-400 border-opacity-50 backdrop-blur-lg">
-    <div class="flex flex-wrap items-center w-full px-4 md:px-6 py-2.5 justify-around ">
-        <a href="/" class="flex items-center mr-16">
-            <img src="{{ asset('img/logo.png') }}" class="h-32 mr-3" alt=" Logo" />
-            <img src="{{ asset('img/blob.svg') }}" class="absolute h-32 ml-16 -z-10" alt=" Logo" />
+<nav id="navbar" class="fixed top-0 z-50 w-full pt-2 pb-2 text-gray-800 transition duration-200 bg-white border-b border-gray-400 border-opacity-50 " >
+    <div class="flex flex-wrap items-center w-full px-4 md:px-6 py-2.5 justify-around " >
+        <a href="/" class="flex items-center mr-16"  >
+         <img src="{{asset('img/logo.png')}}" class="h-32 mr-3" alt=" Logo" />
+            {{-- <img src="{{asset('img/blob.svg')}}" class="absolute h-32 ml-16 -z-10" alt=" Logo" /> --}}
         </a>
         <button data-collapse-toggle="mega-menu-full" type="button"
             class="inline-flex items-center p-2 ml-1 text-sm text-gray-500 rounded-lg lg:hidden hover:bg-indigo-300 focus:outline-none focus:ring-2 focus:ring-gray-200"
@@ -67,6 +66,9 @@
                                 clip-rule="evenodd"></path>
                         </svg></button>
                 </li>
+                <li>
+                   @if (backpack_auth()->check())
+                            <a href="poster-annonce"
 
                 <li>
                     <div class="flex items-center mt-2 lg:mt-0">
