@@ -81,9 +81,6 @@ Route::get('cgu', function () {
 Route::get('cgv', function () {
     return view('cgv');
 });
-Route::get('avocat', function () {
-    return view('avocat');
-});
 
 
 //languages

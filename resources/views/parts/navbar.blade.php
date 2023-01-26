@@ -16,15 +16,19 @@
             </svg>
         </button>
 
-        <div id="mega-menu-full"
-            class="items-center justify-between hidden w-full pb-4 mt-10 bg-white rounded-md shadow-xl lg:flex lg:w-auto lg:order-1 lg:bg-transparent lg:mt-0 lg:shadow-transparent">
+        <div id="mega-menu-full" class="items-center justify-between hidden w-full pb-4 mt-10 bg-white rounded-md shadow-xl lg:flex lg:w-auto lg:order-1 lg:bg-transparent lg:mt-0 lg:shadow-transparent">
 
             <ul class="flex flex-col w-full mt-4 text-sm font-medium lg:flex-row lg:space-x-4 lg:mt-0">
-
+           
                 <li>
-                    <button> <a href="/achat-bien-immobilier-cameroun/"
-                            class="flex items-center justify-between w-full py-2 pl-3 pr-4 mt-2 font-medium text-black border-b border-gray-100 megabutton lg:w-auto hover:bg-indigo-300 lg:hover:bg-transparent lg:border-0 lg:hover:text-indigo-600 lg:p-0 ">Rechercher
-                        </a></button>
+                    <button id="mega-menu-full-dropdown-button" data-collapse-toggle="mega-menu-full-dropdown"
+                        class="flex items-center justify-between w-full py-2 pl-3 pr-4 mt-2 font-medium text-black border-b border-gray-100 megabutton lg:w-auto hover:bg-indigo-300 lg:hover:bg-transparent lg:border-0 lg:hover:text-indigo-600 lg:p-0 ">Rechercher
+                        <svg class="w-4 h-4 ml-1" fill="currentColor" viewBox="0 0 20 20"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd"
+                                d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                                clip-rule="evenodd"></path>
+                        </svg></button>
                 </li>
                 <li>
                     <button id="mega-menu-full-dropdown-button2" data-collapse-toggle="mega-menu-full-dropdown2"
@@ -73,22 +77,16 @@
                 <li>
                     <div class="flex items-center mt-2 lg:mt-0">
                         @if (backpack_auth()->check())
-                            <a href="admin/location/create"
+                            <a href="poster-annonce"
                                 class="text-xs lg:text-base font-medium items-center justify-center w-48 h-10 px-1 ml-1 mr-2 text-gray-600 bg-white border border-gray-600 rounded-lg flex focus:outline-none hover:bg-[#6805F2] hover:text-white">
                                 Poster une annonce
                             </a>
                         @else
-                            <a href="admin/login"
+                            <a href="poster-annonce"
                                 class="text-xs xl:text-base font-medium items-center justify-center w-48  h-10 px-1 ml-1 mr-2 text-gray-600 bg-white border border-gray-600 rounded-lg flex focus:outline-none hover:bg-[#6805F2] hover:text-white">
                                 Poster une annonce
                             </a>
                         @endif
-
-                        <a href="professionnel"
-                            class="text-xs lg:text-base font-medium items-center justify-center w-32 mr-2 h-10 px-2 ml-1  text-gray-600 bg-white border border-gray-600 rounded-lg flex focus:outline-none hover:bg-[#6805F2] hover:text-white">
-                            Professionel
-                        </a>
-
 
                         <div x-data="{ isOpen: false }" class="relative inline-block pr-4">
                             <!-- Dropdown toggle button -->
@@ -99,6 +97,7 @@
 
                             <!-- Dropdown menu -->
                             <div x-cloak x-show="isOpen" @click.away="isOpen = false"
+                            
                                 x-transition:enter="transition ease-out duration-100"
                                 x-transition:enter-start="opacity-0 scale-90"
                                 x-transition:enter-end="opacity-100 scale-100"
@@ -109,10 +108,12 @@
 
 
                                 @if (backpack_auth()->check())
-                                    <a href="admin"
-                                        class="block px-4 py-3 text-sm text-gray-600 capitalize transition-colors duration-300 transform hover:bg-indigo-300"
-                                        data-barba-prevent="self">
-                                        Dashboard </a>
+                                    @if (backpack_auth()->user()->role == 'admin')
+                                        <a href="admin"
+                                            class="block px-4 py-3 text-sm text-gray-600 capitalize transition-colors duration-300 transform hover:bg-indigo-300"
+                                            data-barba-prevent="self">
+                                            Dashboard </a>
+                                    @endif
                                 @else
                                     <a href="admin/login"
                                         class="block px-4 py-3 text-sm text-gray-600 capitalize transition-colors duration-300 transform prevent hover:bg-indigo-300 ">
@@ -122,32 +123,152 @@
                                     class="block px-4 py-3 text-sm text-gray-600 capitalize transition-colors duration-300 transform hover:bg-indigo-300 ">
                                     Profil </a>
 
-                                @if (backpack_auth()->check())
-                                    <a href="admin/logout"
-                                        class="block px-4 py-3 text-sm text-gray-600 capitalize transition-colors duration-300 transform hover:bg-indigo-300 prevent">
-                                        Déconnection</a>
-                                @endif
+                                    @if (backpack_auth()->check())
+                                <a href="logout" 
+                                    class="block px-4 py-3 text-sm text-gray-600 capitalize transition-colors duration-300 transform hover:bg-indigo-300 prevent">
+                                    Déconnection</a>
+                                    @endif
                             </div>
                         </div>
 
 
+                        <div x-data="{ isOpen: false }" class="relative inline-block pr-4">
+                            <button @click="isOpen = !isOpen" type="button"
+                                class="text-gray-800 mega-menu-link hover:text-gray-700 focus:outline-none focus:text-gray-800 "
+                                aria-label="toggle menu">
+                                Menu
+
+                            </button>
+
+                            <!-- // pop menu  -->
+                            <div x-cloak x-show="isOpen" @click.away="isOpen = false"
+                                :class="[!isOpen ? 'translate-x-full opacity-0 ' : 'opacity-100 translate-x-0']"
+                                class="absolute right-0 z-20 px-6 py-4 mt-6 transition duration-200 ease-in-out bg-white border border-gray-200 rounded-md shadow-xl w-72 hover:border-gray-400">
+                                <div class="flex flex-col pb-4 space-y-2 align-baseline md:pb-0">
+
+                                    <details class="group" open>
+                                        <summary class="flex items-center justify-between cursor-pointer">
+                                            <h5 class="font-black text-gray-900 text-md">
+                                                Rechercher
+                                            </h5>
+                                            <span>
+                                                <img class="w-4 h-4" src="./img/plus.png" alt="">
+                                            </span>
+                                        </summary>
+
+                                        <div class="flex flex-col">
+                                            <a class="px-2 py-1 text-sm text-gray-600 hover:bg-indigo-300"
+                                                href="/">&nbsp; -A
+                                                louer</a>
+                                            <a class="px-2 py-1 text-sm text-gray-600 hover:bg-indigo-300"
+                                                href="recherche">&nbsp; -A
+                                                vendre</a>
+                                            <a class="px-2 py-1 text-sm text-gray-600 hover:bg-indigo-300"
+                                                href="recherche">&nbsp; -Un
+                                                professionel</a>
+                                            <a class="px-2 py-1 text-sm text-gray-600 hover:bg-indigo-300"
+                                                href="recherche">&nbsp; -Un
+                                                locataire</a>
+                                        </div>
+                                    </details>
+                                    <div class="pt-2 mb-2 border-b border-gray-200"></div>
 
 
+                                    <details class="group" open>
+                                        <summary class="flex items-center justify-between cursor-pointer">
+                                            <h5 class="font-black text-gray-900 text-md">
+                                                Vendre
+                                            </h5>
+                                            <span>
+                                                <img class="w-4 h-4" src="./img/plus.png" alt="">
+                                            </span>
+                                        </summary>
 
+                                        <div class="flex flex-col">
+                                            <a class="px-2 py-1 text-sm text-gray-600 hover:bg-indigo-300"
+                                                href="/">&nbsp; -Maison</a>
+                                            <a class="px-2 py-1 text-sm text-gray-600 hover:bg-indigo-300"
+                                                href="recherche">&nbsp;
+                                                -Appartement</a>
+                                            <a class="px-2 py-1 text-sm text-gray-600 hover:bg-indigo-300"
+                                                href="construire">&nbsp;
+                                                -Terrain</a>
+                                            <a class="px-2 py-1 text-sm text-gray-600 hover:bg-indigo-300"
+                                                href="construire">&nbsp;
+                                                -Bureau</a>
+                                        </div>
+                                </div>
+                                </details>
+                                <div class="pt-2 mb-2 border-b border-gray-200"></div>
 
+                                <details class="group" open>
+                                    <summary class="flex items-center justify-between cursor-pointer">
+                                        <h5 class="font-black text-gray-900 text-md">
+                                            Louer
+                                        </h5>
+                                        <span>
+                                            <img class="w-4 h-4" src="./img/plus.png" alt="">
+                                        </span>
+                                    </summary>
 
+                                    <div class="flex flex-col">
+                                        <a class="px-2 py-1 text-sm text-gray-600 hover:bg-indigo-300"
+                                            href="/">&nbsp;
+                                            -Maison</a>
+                                        <a class="px-2 py-1 text-sm text-gray-600 hover:bg-indigo-300"
+                                            href="recherche">&nbsp;
+                                            -Appartement</a>
+                                        <a class="px-2 py-1 text-sm text-gray-600 hover:bg-indigo-300"
+                                            href="construire">&nbsp; -Terrain</a>
+                                        <a class="px-2 py-1 text-sm text-gray-600 hover:bg-indigo-300"
+                                            href="construire">&nbsp; -Bureau</a>
+                                    </div>
+                                </details>
+                                <div class="pt-2 mb-2 border-b border-gray-200"></div>
 
+                                <details class="group">
+                                    <summary class="flex items-center justify-between cursor-pointer">
+                                        <h5 class="font-black text-gray-900 text-md">
+                                            Services
+                                        </h5>
+                                        <span>
+                                            <img class="w-4 h-4" src="./img/plus.png" alt="">
+                                        </span>
+                                    </summary>
+                                    <div class="flex flex-col">
+                                        <a class="px-2 py-1 text-sm text-gray-600 hover:bg-indigo-300"
+                                            href="recherche">&nbsp; -Recherche
+                                            immobilière</a>
+                                        <a class="px-2 py-1 text-sm text-gray-600 hover:bg-indigo-300"
+                                            href="recherche">&nbsp; -Estimation
+                                            immobilière</a>
+                                        <a class="px-2 py-1 text-sm text-gray-600 hover:bg-indigo-300"
+                                            href="construire">&nbsp; -Conseil et
+                                            acommpagnement</a>
+                                        <a class="px-2 py-1 text-sm text-gray-600 hover:bg-indigo-300"
+                                            href="recherche">&nbsp;-document
+                                            administratif</a>
+                                        <a class="px-2 py-1 text-sm text-gray-600 hover:bg-indigo-300"
+                                            href="construire">&nbsp;-Notariat</a>
+                                        <a class="px-2 py-1 text-sm text-gray-600 hover:bg-indigo-300"
+                                            href="recherche">&nbsp;-Avocat</a>
+                                        <a class="px-2 py-1 text-sm text-gray-600 hover:bg-indigo-300"
+                                            href="construire">&nbsp; -Agent
+                                            immobilier</a>
+                                    </div>
 
+                                </details>
+                                <p class="mt-4 text-sm leading-relaxed text-gray-700">
+                                <div class="mb-2 border-b border-gray-200"></div>
+                                <a class="px-2 py-1 text-sm text-gray-600 hover:bg-indigo-300" href="recherche">&nbsp;
+                                    Partenaires</a>
+                                <a class="px-2 py-1 text-sm text-gray-600 hover:bg-indigo-300" href="construire">&nbsp;
+                                    Contact</a>
+                            </div>
 
-
-
-
-
-
-
+                        </div>
                     </div>
                 </li>
-
 
             </ul>
 
@@ -158,23 +279,20 @@
         <div class="grid max-w-screen-xl px-4 py-5 mx-auto text-gray-900 sm:grid-cols-2 md:grid-cols-3 md:px-6">
             <ul aria-labelledby="mega-menu-full-dropdown-button">
                 <li>
-                    <a href="/admin/vente/create"
-                        class="block p-3 rounded-lg mega-menu-link hover:bg-indigo-300 ">
+                    <a href="/vendre-bien-immobilier-cameroun" class="block p-3 rounded-lg mega-menu-link hover:bg-indigo-300 ">
                         <div class="font-medium">Vendre un appartement</div>
 
                     </a>
                 </li>
                 <li>
-                    <a href="/achat-bien-immobilier-cameroun/filter?q=&type=Terrain&prix=&surface=&nb_pieces="
-                        class="block p-3 rounded-lg mega-menu-link hover:bg-indigo-300 ">
+                    <a href="/achat-bien-immobilier-cameroun/filter?q=&type=Terrain&prix=&surface=&nb_pieces=" class="block p-3 rounded-lg mega-menu-link hover:bg-indigo-300 ">
                         <div class="font-medium">Acheter un terrain
                         </div>
 
                     </a>
                 </li>
                 <li>
-                    <a href="/admin/vente/create"
-                        class="block p-3 rounded-lg mega-menu-link hover:bg-indigo-300 ">
+                    <a href="/vendre-bien-immobilier-cameroun" class="block p-3 rounded-lg mega-menu-link hover:bg-indigo-300 ">
                         <div class="font-medium">Vendre une maison</div>
 
                     </a>
@@ -204,8 +322,7 @@
                     </a>
                 </li>
                 <li>
-                    <a href="/location-bien-immobilier-cameroun/filter?q=&type=Appartement&prix=&surface=&nb_pieces="
-                        class="block p-3 rounded-lg mega-menu-link hover:bg-indigo-300 ">
+                    <a href="/location-bien-immobilier-cameroun/filter?q=&type=Appartement&prix=&surface=&nb_pieces=" class="block p-3 rounded-lg mega-menu-link hover:bg-indigo-300 ">
                         <div class="font-medium">Appartement meublé à louer
 
                         </div>
@@ -266,33 +383,25 @@
             </ul>
         </div>
     </div>
-
-
-
-
-
     <div id="mega-menu-full-dropdown2" class="hidden mt-1 bg-white border-gray-200 shadow-sm border-y ">
         <div class="grid max-w-screen-xl px-4 py-5 mx-auto text-gray-900 sm:grid-cols-2 md:grid-cols-3 md:px-6">
             <ul aria-labelledby="mega-menu-full-dropdown-button2">
                 <li>
-                    <a href="/achat-bien-immobilier-cameroun/filter?q=&type=Appartement&prix=&surface=&nb_pieces="
-                        class="block p-3 rounded-lg mega-menu-link hover:bg-indigo-300 ">
+                    <a href="/achat-bien-immobilier-cameroun/filter?q=&type=Appartement&prix=&surface=&nb_pieces=" class="block p-3 rounded-lg mega-menu-link hover:bg-indigo-300 ">
                         <div class="font-medium">Acheter un appartement
                         </div>
 
                     </a>
                 </li>
                 <li>
-                    <a href="/achat-bien-immobilier-cameroun/filter?q=&type=Maison&prix=&surface=&nb_pieces="
-                        class="block p-3 rounded-lg mega-menu-link hover:bg-indigo-300 ">
+                    <a href="/achat-bien-immobilier-cameroun/filter?q=&type=Maison&prix=&surface=&nb_pieces=" class="block p-3 rounded-lg mega-menu-link hover:bg-indigo-300 ">
                         <div class="font-medium">Acheter une maison
                         </div>
 
                     </a>
                 </li>
                 <li>
-                    <a href="/achat-bien-immobilier-cameroun/filter?q=&type=Terrain&prix=&surface=&nb_pieces="
-                        class="block p-3 rounded-lg mega-menu-link hover:bg-indigo-300 ">
+                    <a href="/achat-bien-immobilier-cameroun/filter?q=&type=Terrain&prix=&surface=&nb_pieces=" class="block p-3 rounded-lg mega-menu-link hover:bg-indigo-300 ">
                         <div class="font-medium">Acheter un terrain
                         </div>
 
@@ -301,24 +410,21 @@
             </ul>
             <ul>
                 <li>
-                    <a href="/achat-bien-immobilier-cameroun/filter?q=&type=Bureau&prix=&surface=&nb_pieces="
-                        class="block p-3 rounded-lg mega-menu-link hover:bg-indigo-300 ">
+                    <a href="/achat-bien-immobilier-cameroun/filter?q=&type=Bureau&prix=&surface=&nb_pieces=" class="block p-3 rounded-lg mega-menu-link hover:bg-indigo-300 ">
                         <div class="font-medium">Acheter des bureaux
                         </div>
 
                     </a>
                 </li>
                 <li>
-                    <a href="/achat-bien-immobilier-cameroun/filter?q=&type=Commerce&prix=&surface=&nb_pieces="
-                        class="block p-3 rounded-lg mega-menu-link hover:bg-indigo-300 ">
+                    <a href="/achat-bien-immobilier-cameroun/filter?q=&type=Commerce&prix=&surface=&nb_pieces=" class="block p-3 rounded-lg mega-menu-link hover:bg-indigo-300 ">
                         <div class="font-medium">Acheter un espace commercial
                         </div>
 
                     </a>
                 </li>
                 <li>
-                    <a href="/achat-bien-immobilier-cameroun/filter?q=&type=Villa&prix=&surface=&nb_pieces="
-                        class="block p-3 rounded-lg mega-menu-link hover:bg-indigo-300 ">
+                    <a href="/achat-bien-immobilier-cameroun/filter?q=&type=Villa&prix=&surface=&nb_pieces=" class="block p-3 rounded-lg mega-menu-link hover:bg-indigo-300 ">
                         <div class="font-medium">Acheter une villa
                         </div>
 
@@ -327,8 +433,7 @@
             </ul>
             <ul>
                 <li>
-                    <a href="/achat-bien-immobilier-cameroun/filter?q=&type=Appartement&prix=&surface=&nb_pieces="
-                        class="block p-3 rounded-lg mega-menu-link hover:bg-indigo-300 ">
+                    <a href="/achat-bien-immobilier-cameroun/filter?q=&type=Appartement&prix=&surface=&nb_pieces=" class="block p-3 rounded-lg mega-menu-link hover:bg-indigo-300 ">
                         <div class="font-medium">Acheter un immeuble
                         </div>
 
@@ -352,31 +457,25 @@
         </div>
     </div>
 
-
-
-
-
-
-
     <div id="mega-menu-full-dropdown3" class="hidden mt-1 bg-white border-gray-200 shadow-sm border-y ">
         <div class="grid max-w-screen-xl px-4 py-5 mx-auto text-gray-900 sm:grid-cols-2 md:grid-cols-3 md:px-6">
             <ul aria-labelledby="mega-menu-full-dropdown-button3">
                 <li>
-                    <a href="/admin/vente/create" class="block p-3 rounded-lg mega-menu-link hover:bg-indigo-300 ">
+                    <a href="/vendre-bien-immobilier-cameroun" class="block p-3 rounded-lg mega-menu-link hover:bg-indigo-300 ">
                         <div class="font-medium">Vendre un appartement
                         </div>
 
                     </a>
                 </li>
                 <li>
-                    <a href="/admin/vente/create" class="block p-3 rounded-lg mega-menu-link hover:bg-indigo-300 ">
+                    <a href="/vendre-bien-immobilier-cameroun" class="block p-3 rounded-lg mega-menu-link hover:bg-indigo-300 ">
                         <div class="font-medium">Vendre une maison
                         </div>
 
                     </a>
                 </li>
                 <li>
-                    <a href="/admin/vente/create" class="block p-3 rounded-lg mega-menu-link hover:bg-indigo-300 ">
+                    <a href="/vendre-bien-immobilier-cameroun" class="block p-3 rounded-lg mega-menu-link hover:bg-indigo-300 ">
                         <div class="font-medium">Vendre un terrain
                         </div>
 
@@ -385,24 +484,21 @@
             </ul>
             <ul>
                 <li>
-                    <a href="/admin/vente/create"
-                        class="block p-3 rounded-lg mega-menu-link hover:bg-indigo-300 ">
+                    <a href="/vendre-bien-immobilier-cameroun" class="block p-3 rounded-lg mega-menu-link hover:bg-indigo-300 ">
                         <div class="font-medium">Vendre des bureaux
                         </div>
 
                     </a>
                 </li>
                 <li>
-                    <a href="/admin/vente/create"
-                        class="block p-3 rounded-lg mega-menu-link hover:bg-indigo-300 ">
+                    <a href="/vendre-bien-immobilier-cameroun" class="block p-3 rounded-lg mega-menu-link hover:bg-indigo-300 ">
                         <div class="font-medium">Vendre un espace commercial
                         </div>
 
                     </a>
                 </li>
                 <li>
-                    <a href="/admin/vente/create"
-                        class="block p-3 rounded-lg mega-menu-link hover:bg-indigo-300 ">
+                    <a href="/vendre-bien-immobilier-cameroun" class="block p-3 rounded-lg mega-menu-link hover:bg-indigo-300 ">
                         <div class="font-medium">Vendre une villa
                         </div>
 
@@ -411,8 +507,7 @@
             </ul>
             <ul>
                 <li>
-                    <a href="/admin/vente/create"
-                        class="block p-3 rounded-lg mega-menu-link hover:bg-indigo-300 ">
+                    <a href="/vendre-bien-immobilier-cameroun" class="block p-3 rounded-lg mega-menu-link hover:bg-indigo-300 ">
                         <div class="font-medium">Vendre un immeuble
                         </div>
 
@@ -448,24 +543,21 @@
         <div class="grid max-w-screen-xl px-4 py-5 mx-auto text-gray-900 sm:grid-cols-2 md:grid-cols-3 md:px-6">
             <ul aria-labelledby="mega-menu-full-dropdown-button4">
                 <li>
-                    <a href="/admin/location/create"
-                        class="block p-3 rounded-lg mega-menu-link hover:bg-indigo-300 ">
+                    <a href="/location-bien-immobilier-cameroun/filter?q=&type=Appartement&prix=&surface=&nb_pieces=" class="block p-3 rounded-lg mega-menu-link hover:bg-indigo-300 ">
                         <div class="font-medium">Louer un appartement
                         </div>
 
                     </a>
                 </li>
                 <li>
-                    <a href="/admin/location/create"
-                        class="block p-3 rounded-lg mega-menu-link hover:bg-indigo-300 ">
+                    <a href="/location-bien-immobilier-cameroun/filter?q=&type=Maison&prix=&surface=&nb_pieces=" class="block p-3 rounded-lg mega-menu-link hover:bg-indigo-300 ">
                         <div class="font-medium">Louer une maison
                         </div>
 
                     </a>
                 </li>
                 <li>
-                    <a href="/admin/location/create"
-                        class="block p-3 rounded-lg mega-menu-link hover:bg-indigo-300 ">
+                    <a href="/location-bien-immobilier-cameroun" class="block p-3 rounded-lg mega-menu-link hover:bg-indigo-300 ">
                         <div class="font-medium">Louer des bureaux
                         </div>
 
@@ -474,23 +566,20 @@
             </ul>
             <ul>
                 <li>
-                    <a href="/admin/location/create"
-                        class="block p-3 rounded-lg mega-menu-link hover:bg-indigo-300 ">
+                    <a href="/location-bien-immobilier-cameroun" class="block p-3 rounded-lg mega-menu-link hover:bg-indigo-300 ">
                         <div class="font-medium">Louer un espace commercial
                         </div>
 
                     </a>
                 </li>
                 <li>
-                    <a href="/admin/location/create"
-                        class="block p-3 rounded-lg mega-menu-link hover:bg-indigo-300 ">
+                    <a href="/location-bien-immobilier-cameroun" class="block p-3 rounded-lg mega-menu-link hover:bg-indigo-300 ">
                         <div class="font-medium">Louer un terrain</div>
 
                     </a>
                 </li>
                 <li>
-                    <a href="/admin/location/create"
-                        class="block p-3 rounded-lg mega-menu-link hover:bg-indigo-300 ">
+                    <a href="/location-bien-immobilier-cameroun" class="block p-3 rounded-lg mega-menu-link hover:bg-indigo-300 ">
                         <div class="font-medium">Louer une villa
                         </div>
 
@@ -499,16 +588,14 @@
             </ul>
             <ul>
                 <li>
-                    <a href="/admin/location/create"
-                        class="block p-3 rounded-lg mega-menu-link hover:bg-indigo-300 ">
+                    <a href="/location-bien-immobilier-cameroun" class="block p-3 rounded-lg mega-menu-link hover:bg-indigo-300 ">
                         <div class="font-medium">Louer un appartement meublé
                         </div>
 
                     </a>
                 </li>
                 <li>
-                    <a href="/admin/location/create"
-                        class="block p-3 rounded-lg mega-menu-link hover:bg-indigo-300 ">
+                    <a href="/location-bien-immobilier-cameroun" class="block p-3 rounded-lg mega-menu-link hover:bg-indigo-300 ">
                         <div class="font-medium">Louer un terrain commercial
                         </div>
 
@@ -631,35 +718,17 @@
     </div>
 </nav>
 <script>
-    //$('.megabutton').mouseenter(function() { $(this).click() });
-    $('#mega-menu-full-dropdown-button').click(function() {
-        $('#mega-menu-full-dropdown5, #mega-menu-full-dropdown4, #mega-menu-full-dropdown3, #mega-menu-full-dropdown2, #mega-menu-full-dropdown1')
-            .addClass('hidden');
-    });
-    $('#mega-menu-full-dropdown-button1').click(function() {
-        $('#mega-menu-full-dropdown5, #mega-menu-full-dropdown4, #mega-menu-full-dropdown3, #mega-menu-full-dropdown2, #mega-menu-full-dropdown')
-            .addClass('hidden');
-    });
-    $('#mega-menu-full-dropdown-button2').click(function() {
-        $('#mega-menu-full-dropdown5, #mega-menu-full-dropdown4, #mega-menu-full-dropdown3, #mega-menu-full-dropdown1, #mega-menu-full-dropdown')
-            .addClass('hidden');
-    });
-    $('#mega-menu-full-dropdown-button3').click(function() {
-        $('#mega-menu-full-dropdown5, #mega-menu-full-dropdown4, #mega-menu-full-dropdown2, #mega-menu-full-dropdown1, #mega-menu-full-dropdown')
-            .addClass('hidden');
-    });
-    $('#mega-menu-full-dropdown-button4').click(function() {
-        $('#mega-menu-full-dropdown5, #mega-menu-full-dropdown3, #mega-menu-full-dropdown2, #mega-menu-full-dropdown1, #mega-menu-full-dropdown')
-            .addClass('hidden');
-    });
-    $('#mega-menu-full-dropdown-button5').click(function() {
-        $('#mega-menu-full-dropdown4, #mega-menu-full-dropdown3, #mega-menu-full-dropdown2, #mega-menu-full-dropdown1, #mega-menu-full-dropdown')
-            .addClass('hidden');
-    });
-    $('.mega-menu-link').click(function() {
-        $('#mega-menu-full-dropdown5, #mega-menu-full-dropdown4, #mega-menu-full-dropdown3, #mega-menu-full-dropdown2, #mega-menu-full-dropdown1, #mega-menu-full-dropdown')
-            .addClass('hidden');
-    });
+//$('.megabutton').mouseenter(function() { $(this).click() });
+$('#mega-menu-full-dropdown-button').click(function() { $('#mega-menu-full-dropdown5, #mega-menu-full-dropdown4, #mega-menu-full-dropdown3, #mega-menu-full-dropdown2, #mega-menu-full-dropdown1').addClass('hidden');});
+$('#mega-menu-full-dropdown-button1').click(function() { $('#mega-menu-full-dropdown5, #mega-menu-full-dropdown4, #mega-menu-full-dropdown3, #mega-menu-full-dropdown2, #mega-menu-full-dropdown').addClass('hidden');});
+$('#mega-menu-full-dropdown-button2').click(function() { $('#mega-menu-full-dropdown5, #mega-menu-full-dropdown4, #mega-menu-full-dropdown3, #mega-menu-full-dropdown1, #mega-menu-full-dropdown').addClass('hidden');});
+$('#mega-menu-full-dropdown-button3').click(function() { $('#mega-menu-full-dropdown5, #mega-menu-full-dropdown4, #mega-menu-full-dropdown2, #mega-menu-full-dropdown1, #mega-menu-full-dropdown').addClass('hidden');});
+$('#mega-menu-full-dropdown-button4').click(function() { $('#mega-menu-full-dropdown5, #mega-menu-full-dropdown3, #mega-menu-full-dropdown2, #mega-menu-full-dropdown1, #mega-menu-full-dropdown').addClass('hidden');});
+$('#mega-menu-full-dropdown-button5').click(function() { $('#mega-menu-full-dropdown4, #mega-menu-full-dropdown3, #mega-menu-full-dropdown2, #mega-menu-full-dropdown1, #mega-menu-full-dropdown').addClass('hidden');});
+$('.mega-menu-link').click(function(){ 
+    $('#mega-menu-full-dropdown5, #mega-menu-full-dropdown4, #mega-menu-full-dropdown3, #mega-menu-full-dropdown2, #mega-menu-full-dropdown1, #mega-menu-full-dropdown').addClass('hidden');
+});
+
 </script>
 <style>
 
