@@ -15,27 +15,26 @@ use App\Http\Controllers\SocialiteController;
 | contains the "web" middleware group. Now create something great!
 |
 */
-Route::controller(GlobalController::class)->group(function(){
+
+Route::controller(GlobalController::class)->group(function () {
     // Route::get('/', 'getAll')->name('getAll')->middleware('App\Http\Middleware\MyMiddleware');
-Route::get('/', 'getAll')->name('getAll');
-Route::get('logout', 'logout');
-Route::get('location-bien-immobilier-cameroun', 'rent');
-Route::get('location-bien-immobilier-cameroun/filter', 'rent')->name('searchfilterloc');
-Route::get('achat-bien-immobilier-cameroun', 'buy');
-Route::get('achat-bien-immobilier-cameroun/filter', 'buy')->name('searchfilterbuy');
-Route::get('construire', 'build');
-Route::get('vendre-bien-immobilier-cameroun', 'sell');
-Route::get('services', 'service');
-Route::get('annonce_locations', 'annonce');
-Route::get('annonce_ventes', 'vente');
-Route::get('annonce_verifiee', 'annonce_verifiee');
-Route::get('profil_verifiee', 'profil_verifiee');
-
-
+    Route::get('/', 'getAll')->name('getAll');
+    Route::get('logout', 'logout');
+    Route::get('location-bien-immobilier-cameroun', 'rent');
+    Route::get('location-bien-immobilier-cameroun/filter', 'rent')->name('searchfilterloc');
+    Route::get('achat-bien-immobilier-cameroun', 'buy');
+    Route::get('achat-bien-immobilier-cameroun/filter', 'buy')->name('searchfilterbuy');
+    Route::get('construire', 'build');
+    Route::get('vendre-bien-immobilier-cameroun', 'sell');
+    Route::get('services', 'service');
+    Route::get('annonce_locations', 'annonce');
+    Route::get('annonce_ventes', 'vente');
+    Route::get('annonce_verifiee', 'annonce_verifiee');
+    Route::get('profil_verifiee', 'profil_verifiee');
 });
 
-Route::get('legal' , [GlobalController::class, 'getLegal']);
-Route::get('confidentialite' , [GlobalController::class, 'getConf']);
+Route::get('legal', [GlobalController::class, 'getLegal']);
+Route::get('confidentialite', [GlobalController::class, 'getConf']);
 Route::get('oneblog', [GlobalController::class, 'oneBlog']);
 Route::post('order', [GlobalController::class, 'setOrder'])->name('setOrder');
 Route::get('order', [GlobalController::class, 'getProfil'])->name('getProfil');
@@ -46,10 +45,10 @@ Route::post('save_address', [GlobalController::class, 'saveAddress'])->name('sav
 Route::post('deleteuser/{id}', [GlobalController::class, 'deleteUser'])->name('deleteUser');
 
 // La redirection vers le provider
-Route::get("redirect/{provider}",[SocialiteController::class, 'redirect'])->name('socialite.redirect');
+Route::get("redirect/{provider}", [SocialiteController::class, 'redirect'])->name('socialite.redirect');
 
 // Le callback du provider
-Route::get("callback/{provider}",[SocialiteController::class, 'callback'])->name('socialite.callback');
+Route::get("callback/{provider}", [SocialiteController::class, 'callback'])->name('socialite.callback');
 
 Route::get('poster-annonce', function () {
     return view('post');
@@ -81,6 +80,9 @@ Route::get('cgu', function () {
 });
 Route::get('cgv', function () {
     return view('cgv');
+});
+Route::get('avocat', function () {
+    return view('avocat');
 });
 
 

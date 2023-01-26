@@ -5,6 +5,7 @@ namespace App\Http\Middleware;
 use Closure;
 use Illuminate\Http\Request;
 use App\Models\User;
+
 class MyMiddleware
 {
     /**
@@ -16,15 +17,13 @@ class MyMiddleware
      */
     public function handle(Request $request, Closure $next)
     {
-    
-       if (backpack_auth()->user()->role == 'admin') {
+
+        if (backpack_auth()->user()->role == 'admin') {
             return $next($request);
-        } else if (backpack_auth()->user()->role == 'abo') {
-            return redirect('/');
-        } else{
+        } else if (backpack_auth()->user()->role == 'user') {
+            return $next($request);
+        } else {
             return redirect('/');
         }
-
-      
     }
 }

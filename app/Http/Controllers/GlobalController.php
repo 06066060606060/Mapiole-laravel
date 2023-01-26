@@ -26,7 +26,7 @@ class GlobalController extends Controller
      */
     public function getAll()
     {
-        
+
         return view('index');
     }
 
@@ -102,7 +102,7 @@ class GlobalController extends Controller
 
     public function buy(Request $request)
     {
-    
+
         $lastventes = Vente::where('status', '!=', 'Non')->orderBy('id', 'desc')->limit('2')->get();
         $ventes = Vente::where('status', '!=', 'Non');
         $q = request()->input('q');
@@ -139,7 +139,7 @@ class GlobalController extends Controller
     }
 
 
-    
+
     public function annonce(Request $request)
     {
         $locations = Location::where('status', '!=', 'Non');
@@ -180,7 +180,7 @@ class GlobalController extends Controller
         return view('profil_verifiee');
     }
 
-    
+
 
     static function version()
     {
@@ -193,10 +193,9 @@ class GlobalController extends Controller
 
     public function getProfil()
     {
-      
     }
 
-   
+
 
     public function saveAddress(Request $request)
     {
@@ -210,7 +209,7 @@ class GlobalController extends Controller
                     'adresse' => $request->address,
                     'codepostal' => $request->zip,
                     'ville' => $request->city,
-                    
+
                 ]);
                 return back();
             } else {
@@ -238,7 +237,7 @@ class GlobalController extends Controller
         $thisuser[0]->delete();
         Session::flush();
         Auth::logout();
-        $request->session()->invalidate();
+        // $request->session()->invalidate();
         return redirect('/');
     }
 
@@ -275,15 +274,14 @@ class GlobalController extends Controller
     }
 
     /**
- * Change session locale
- * @param  Request $request
- * @return Response
- */
-public function changeLocale()
-{
+     * Change session locale
+     * @param  Request $request
+     * @return Response
+     */
+    public function changeLocale()
+    {
 
-    \Session::put('locale', 'en');
-    return redirect()->back();
-}
-
+        // \Session::put('locale', 'en');
+        return redirect()->back();
+    }
 }
