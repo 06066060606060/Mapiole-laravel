@@ -28,7 +28,7 @@ class GlobalController extends Controller
     public function getAll()
     {
         $locations = Location::where('id', '!=', 0)->orderBy('id', 'desc')->get();
-        
+
         return view('index', compact('locations'));
     }
 
@@ -140,7 +140,7 @@ class GlobalController extends Controller
 
     public function buy(Request $request)
     {
-    
+
         $lastventes = Vente::where('status', '!=', 'Non')->orderBy('id', 'desc')->limit('2')->get();
         $ventes = Vente::where('status', '!=', 'Non');
         $q = request()->input('q');
@@ -177,7 +177,7 @@ class GlobalController extends Controller
     }
 
 
-    
+
     public function annonce(Request $request)
     {
         $locations = Location::where('status', '!=', 'Non');
@@ -218,7 +218,7 @@ class GlobalController extends Controller
         return view('profil_verifiee');
     }
 
-    
+
 
     static function version()
     {
@@ -231,10 +231,9 @@ class GlobalController extends Controller
 
     public function getProfil()
     {
-      
     }
 
-   
+
 
     public function saveAddress(Request $request)
     {
@@ -248,7 +247,7 @@ class GlobalController extends Controller
                     'adresse' => $request->address,
                     'codepostal' => $request->zip,
                     'ville' => $request->city,
-                    
+
                 ]);
                 return back();
             } else {
@@ -313,16 +312,12 @@ class GlobalController extends Controller
     }
 
     /**
- * Change session locale
- * @param  Request $request
- * @return Response
- */
-public function changeLocale()
-{
-
-    \Session::put('locale', 'en');
-    return redirect()->back();
-}
+     * Change session locale
+     * @param  Request $request
+     * @return Response
+     */
+    public function changeLocale()
+    {
 
 public function import(Request $request) 
 {
