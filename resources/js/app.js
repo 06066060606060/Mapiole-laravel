@@ -44,8 +44,7 @@ Alpine.start();
     },
   })
   $(window).scrollTop(0);
-  $('#mega-menu-full-dropdown5, #mega-menu-full-dropdown4, #mega-menu-full-dropdown3, #mega-menu-full-dropdown2, #mega-menu-full-dropdown1, #mega-menu-full-dropdown').addClass('hidden');
-  $('#mega-menu-full').addClass('hidden');
+
 
 document.addEventListener('DOMContentLoaded', function () {
   const swiper = new Swiper('.swiper-container', {

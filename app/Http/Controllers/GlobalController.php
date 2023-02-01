@@ -15,6 +15,7 @@ use Illuminate\Contracts\Pagination\Paginator;
 use Illuminate\Contracts\View\View;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Session;
+use Maatwebsite\Excel\Facades\Excel;
 
 class GlobalController extends Controller
 {
@@ -99,6 +100,42 @@ class GlobalController extends Controller
         ]);
     }
 
+    public function recherche(Request $request)
+    {
+        $lastlocations = Location::where('status', '!=', 'Non')->orderBy('id', 'desc')->limit('2')->get();
+        $locations = Location::where('status', '!=', 'Non');
+        $q = request()->input('q');
+        if ($request->filled('q')) {
+            $locations->where('name', 'like', '%' . $q . '%');
+            $lastlocations =  $locations->where('name', 'like', '%' . $q . '%')->orderBy('id', 'desc')->limit('2')->get();
+        }
+        if ($request->filled('surface')) {
+            $surface = $request->surface;
+            $locations->where('surface', '<=', $surface);
+            $lastlocations =  $locations->where('surface', '<=', $surface)->orderBy('id', 'desc')->limit('2')->get();
+        }
+        if ($request->filled('nb_piece')) {
+            $nb_piece = $request->nb_piece;
+            $locations->where('nb_piece', '<=', $nb_piece);
+            $lastlocations =  $locations->where('nb_piece', '<=', $nb_piece)->orderBy('id', 'desc')->limit('2')->get();
+        }
+        if ($request->filled('type')) {
+            $type = $request->type;
+            $locations->where('type', '=', $type);
+            $lastlocations =  $locations->where('type', '=', $type)->orderBy('id', 'desc')->limit('2')->get();
+        }
+        if ($request->filled('prix')) {
+
+            $prix = $request->prix;
+            $locations->where('prix', '<=', $prix);
+            $lastlocations =  $locations->where('prix', '<=', $prix)->orderBy('id', 'desc')->limit('2')->get();
+        }
+        return view('recherche', [
+            'locations' => $locations->paginate(8),  //a la place d'un get me demande pas pourquoi!
+            'q' => $q,
+            'lastlocations' => $lastlocations,
+        ]);
+    }
 
 
     public function buy(Request $request)
@@ -286,5 +323,27 @@ public function changeLocale()
     \Session::put('locale', 'en');
     return redirect()->back();
 }
+
+public function import(Request $request) 
+{
+    $request->validate([
+        'file' => 'required|mimes:xls,xlsx'
+    ]);
+
+    $file = $request->file('file');
+
+    if ($request->dataType == "masterplans"){
+        // Excel::import(new MasterplansImport, $file);
+    } elseif ($request->dataType == "neighbourhoods"){
+        // Excel::import(new NeighbourhoodsImport, $file);
+    } elseif ($request->dataType == "streetscapes"){
+        // Excel::import(new StreetscapesImport, $file);
+    }
+    
+    \Alert::success('Excel data imported successfully.')->flash();
+    return redirect('/admin/masterplan')->with('success', 'Data imported successfully.');
+}
+
+
 
 }

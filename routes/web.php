@@ -23,6 +23,7 @@ Route::get('location-bien-immobilier-cameroun', 'rent')->name('location');
 Route::get('location-bien-immobilier-cameroun/filter', 'rent')->name('searchfilterloc');
 Route::get('achat-bien-immobilier-cameroun', 'buy')->name('vente');
 Route::get('achat-bien-immobilier-cameroun/filter', 'buy')->name('searchfilterbuy');
+Route::get('recherche', 'recherche')->name('searchfilter');
 Route::get('construire', 'build');
 Route::get('vendre-bien-immobilier-cameroun', 'sell');
 Route::get('services', 'service');

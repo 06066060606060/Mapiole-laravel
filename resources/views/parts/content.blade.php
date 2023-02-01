@@ -7,31 +7,6 @@
       <section class="max-w-[1440px] mx-auto px-4">
           <h2 class="text-4xl font-bold text-center md:text-5xl drop-shadow-xl">Trouvez <b class="text-blue-600">votre</b>
               nouveau <b class="text-blue-600">chez-vous..</b></h2>
-          <div class="grid gap-6 my-16 lg:grid-cols-3">
-              <div class="flex flex-col p-8 space-y-4 bg-gray-100 border border-gray-200 rounded-md shadow-xl">
-
-                  <p class="text-2xl font-semibold">
-                      Calculer le prix d'achat maximal?<br> <span class="text-lg font-medium">Quel
-                          <b class="text-blue-600">prix d'achat</b> pouvez vous assumer.</span>
-                  </p>
-              </div>
-              <div class="flex flex-col p-8 space-y-4 bg-gray-100 border border-gray-200 rounded-md shadow-xl">
-
-                  <p class="text-2xl font-semibold">
-                      Un bien à louer vous intéresse ?<br> <span class="text-lg font-medium"><b
-                              class="text-blue-600">Céez </b>
-                          un dossier et prenez rendez-vous.</span>
-                  </p>
-              </div>
-              <div class="flex flex-col p-8 space-y-4 bg-gray-100 border border-gray-200 rounded-md shadow-xl">
-
-                  <p class="text-2xl font-semibold">
-                      Vous recherchez un professionnel!<br> <span class="text-lg font-medium"><b
-                              class="text-blue-600">Recherchez
-                          </b> dans notre liste de partenaires.</span>
-                  </p>
-              </div>
-          </div>
       </section>
 
       @if ($lang == 'en')
@@ -110,12 +85,12 @@
 
                               <a href="{{ route('location') }}"
                                   class="flex items-center justify-center p-4 duration-150 bg-black rounded-md shadow-md hover:bg-gray-600 focus:shadow-outline">
-                                  Biens en location
+                                  Voir toutes les locations
                               </a>
 
                               <a href="{{ route('vente') }}"
                                   class="flex items-center justify-center p-4 duration-150 bg-black rounded-md shadow-md hover:bg-gray-600 focus:shadow-outline">
-                                  Biens en vente
+                                  Voir toutes les ventes
                               </a>
                           </span>
                       </div>
@@ -130,7 +105,7 @@
 
 
 
-      <div>
+      <div class="border-b">
           <div class="container p-8 mx-auto mt-8 mb-12 xl:px-0">
               <div
                   class="relative flex flex-wrap items-center justify-between w-full max-w-4xl gap-5 mx-auto overflow-hidden text-white bg-blue-600 bg-gradient-to-r from-blue-600 to-blue-800 px-7 py-7 lg:px-12 lg:py-12 lg:flex-nowrap rounded-xl">
@@ -152,26 +127,16 @@
           </div>
       </div>
 
-      <section class="px-4 bg-blue-100 mt-14">
-          <div class="grid gap-6 py-10 mx-auto  lg:grid-cols-2 mybody max-w-[1440px]">
+      <section class="px-4  mt-14 border-b">
+             <h2 class="py-8 text-3xl font-bold text-center md:text-4xl drop-shadow-xl">Localisation des biens</h2>
 
-              <img src="./img/house1.jpeg" alt=""
-                  class="object-cover w-full border border-gray-200 shadow-md max-h-96">
-
-              <div
-                  class="flex flex-col items-center w-full p-6 space-y-8 bg-gray-100 border border-gray-200 rounded-md shadow-md lg:h-full lg:p-8">
-                  <img src="./img/house2.webp" alt="" class="object-cover w-20 h-20 rounded-full ">
-                  <blockquote class="max-w-lg text-lg italic font-medium text-center">Nous travaillons uniquement en
-                      partenariat
-                      avec les meilleurs agents</blockquote>
-                  <div class="text-center ">
-                      <p>Leroy Jenkins</p>
-                      <p>CEO of Company Co.</p>
-                  </div>
-              </div>
-          </div>
+      <div class="flex mx-auto max-w-[1440px]">
+          <div id="map" class="mx-2 my-4 rounded h-[550px] w-screen z-0"></div>
+      </div>
       </section>
 
+
+   <div class="border-b">
       <div class="grid gap-6 pt-8 mx-auto  lg:grid-cols-2 mybody max-w-[1440px] px-4">
           <p class="py-12 mx-auto text-4xl font-bold text-center lg:col-span-full md:text-5xl drop-shadow-xl">Vous
               souhaitez <b class="text-blue-600">vendre</b> ou
@@ -191,6 +156,8 @@
                   cupiditate commodi in beatae, ipsa eligendi? Quis, saepe.</p>
           </div>
       </div>
+
+
 
       <section class="mt-12 mb-24 mx-auto  max-w-[1440px] ">
           <div class="mx-4 bg-gray-100 border border-gray-200 rounded-md shadow-xl ">
@@ -244,9 +211,9 @@
               </div>
           </div>
       </section>
+ </div>
 
-
-      <h2 class="pb-8 text-3xl font-bold text-center md:text-4xl drop-shadow-xl">Actuellement en location</h2>
+      <h2 class="pb-4 pt-16 text-3xl font-bold text-center md:text-4xl drop-shadow-xl">Actuellement disponible</h2>
 
       <div class="flex flex-col justify-center pb-4 mx-auto mt-4 -m-8 md:flex-row">
           <div x-data="{ swiper: null }" x-init="swiper = new Swiper($refs.container, {
@@ -349,11 +316,7 @@
       </div>
 
       
-      <h2 class="py-8 text-3xl font-bold text-center md:text-4xl drop-shadow-xl">Localisation des biens</h2>
-
-      <div class="flex mx-auto max-w-[1440px]">
-          <div id="map" class="mx-2 my-4 rounded h-[550px] w-screen z-0"></div>
-      </div>
+ 
 
       <script src="https://unpkg.com/leaflet@1.9.1/dist/leaflet.js"
           integrity="sha256-NDI0K41gVbWqfkkaHj15IzU7PtMoelkzyKp8TOaFQ3s=" crossorigin=""></script>

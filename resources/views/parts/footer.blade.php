@@ -255,7 +255,6 @@
         window.addEventListener("DOMContentLoaded", (event) => {
             $(window).scrollTop(0);
         });
-            $('#foot').on("click", function() {
-            $('#mega-menu-full-dropdown5, #mega-menu-full-dropdown4, #mega-menu-full-dropdown3, #mega-menu-full-dropdown2, #mega-menu-full-dropdown1, #mega-menu-full-dropdown').addClass('hidden');
-        })
+          
+ 
     </script>
