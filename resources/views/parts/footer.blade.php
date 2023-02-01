@@ -192,7 +192,7 @@
                 <div class="px-6">
                     <div>
                         <a class="flex justify-center md:justify-start" href="./index.html">
-                            <img src="./img/logo.png" class="w-auto h-28">
+                            <img src="./img/logo2.png" class="w-auto h-28">
                         </a>
                     </div>
 
