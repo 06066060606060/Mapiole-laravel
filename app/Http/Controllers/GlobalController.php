@@ -311,13 +311,7 @@ class GlobalController extends Controller
         return redirect('/');
     }
 
-    /**
-     * Change session locale
-     * @param  Request $request
-     * @return Response
-     */
-    public function changeLocale()
-    {
+
 
 public function import(Request $request) 
 {
@@ -336,7 +330,7 @@ public function import(Request $request)
     }
     
     \Alert::success('Excel data imported successfully.')->flash();
-    return redirect('/admin/masterplan')->with('success', 'Data imported successfully.');
+    return redirect('/admin')->with('success', 'Data imported successfully.');
 }
 
 
