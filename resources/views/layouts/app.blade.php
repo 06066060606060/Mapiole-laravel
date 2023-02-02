@@ -27,7 +27,7 @@
 
 <!--End of Tawk.to Script-->
 <script src="https://unpkg.com/flowbite@1.5.5/dist/flowbite.js"></script>
-    <script src='https://unpkg.com/swiper@6.8.4/swiper-bundle.min.js'></script>
+<script src='https://unpkg.com/swiper@6.8.4/swiper-bundle.min.js'></script>
 
 </body>
 
