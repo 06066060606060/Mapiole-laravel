@@ -57,20 +57,7 @@
                              x-transition:leave-start="opacity-100 translate-y-0 sm:scale-100"
                              x-transition:leave-end="opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95"
                              class="inline-block w-full max-w-xl p-8 my-20 overflow-hidden text-left transition-all transform bg-white rounded-lg shadow-xl 2xl:max-w-2xl">
-
-                             <h1 class="text-xl font-medium text-center text-gray-800">Mettez en location votre bien</h1>
-                             <div class="items-center space-x-4 bloc">
-
-                                 <div class="flex pt-6 justify-evenly">
-                                     <form class="mx-3" action="" method="post">
-                                    
-
-
-                                     </form>
-                                 </div>
-                             </div>
-
-
+                            @include('parts.multiform')
                          </div>
                      </div>
                  </div>
@@ -114,17 +101,7 @@
                              x-transition:leave-end="opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95"
                              class="inline-block w-full max-w-xl p-8 my-20 overflow-hidden text-left transition-all transform bg-white rounded-lg shadow-xl 2xl:max-w-2xl">
 
-                             <h1 class="text-xl font-medium text-center text-gray-800">  Mettez en vente votre bien</h1>
-                              <div class="items-center space-x-4 bloc">
-
-                                 <div class="flex pt-6 justify-evenly">
-                                     <form class="mx-3" action="" method="post">
-                                    
-
-
-                                     </form>
-                                 </div>
-                             </div>
+                               @include('parts.multiform')
 
 
                          </div>
@@ -168,17 +145,7 @@
                              x-transition:leave-end="opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95"
                              class="inline-block w-full max-w-xl p-8 my-20 overflow-hidden text-left transition-all transform bg-white rounded-lg shadow-xl 2xl:max-w-2xl">
 
-                             <h1 class="text-xl font-medium text-center text-gray-800"> Acheter un bien</h1>
-                             <div class="items-center space-x-4 bloc">
-
-                                 <div class="flex pt-6 justify-evenly">
-                                    
-                                     <form class="mx-3" action="" method="post">
-                                      
-                                     </form>
-                                 </div>
-                             </div>
-
+                                @include('parts.multiform')
 
                          </div>
                      </div>

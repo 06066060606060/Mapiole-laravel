@@ -237,9 +237,7 @@
     </script>
  
     <script type="text/javascript"
-            src=
-"https://translate.google.com/translate_a/element.js?
-cb=googleTranslateElementInit">
+            src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit">
     </script>
     <style>
         #google_translate_element select{
@@ -254,6 +252,7 @@ cb=googleTranslateElementInit">
   }
  .goog-te-gadget{
  color:transparent!important;
+    display:none!important;
  } 
  .goog-te-banner-frame{
  display:none !important;
@@ -265,5 +264,13 @@ cb=googleTranslateElementInit">
     }
 .goog-text-highlight {
      background: none !important; box-shadow: none !important;
+       
      }
+.goog-te-combo option:first-of-type{
+  content:'Translator';
+     }
+     .VIpgJd-ZVi9od-l4eHX-hSRGP{
+         display:none;
+     }
+
     </style>
