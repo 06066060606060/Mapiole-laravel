@@ -163,7 +163,7 @@
                 </div>
             </div>
 
-             <div id="google_translate_element"></div>
+          
 
             <div class="inline-flex items-center gap-2 mt-2 list-none lg:ml-16 md:mt-0">
                 @if (backpack_auth()->check())
@@ -227,50 +227,4 @@
         </nav>
     </div>
 </div>
- <script type="text/javascript">
-        function googleTranslateElementInit() {
-            new google.translate.TranslateElement(
-                {pageLanguage: 'fr', includedLanguages: 'fr,en,ar,de,es,pt,ru,zh-CN', autoDisplay: false, text: 'Language'},
-                'google_translate_element',
-            );
-        }
-    </script>
  
-    <script type="text/javascript"
-            src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit">
-    </script>
-    <style>
-        #google_translate_element select{
- color:gray;
- border-radius:8px;
- padding:6px 8px;
- margin-top: 20px;
- padding: 6px;
- }
- .goog-logo-link{
-   display:none!important;
-  }
- .goog-te-gadget{
- color:transparent!important;
-    display:none!important;
- } 
- .goog-te-banner-frame{
- display:none !important;
- height:0px !important;
- }
-
- #goog-gt-tt, .goog-te-balloon-frame{
-    display: none !important;
-    }
-.goog-text-highlight {
-     background: none !important; box-shadow: none !important;
-       
-     }
-.goog-te-combo option:first-of-type{
-  content:'Translator';
-     }
-     .VIpgJd-ZVi9od-l4eHX-hSRGP{
-         display:none;
-     }
-
-    </style>

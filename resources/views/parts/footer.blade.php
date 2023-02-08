@@ -190,15 +190,15 @@
 
             <div class="w-full -mx-6 lg:w-2/5">
                 <div class="px-6">
-                    <div>
+                    <div class="flex flex-col">
                         <a class="flex justify-center md:justify-start" href="./index.html">
                             <img src="./img/logo2.png" class="w-auto h-28">
                         </a>
+                       
+                        <div class="ml-16" id="google_translate_element"></div>
+                      
                     </div>
 
-                    <p class="max-w-sm mt-4 text-center text-gray-100 md:text-left">Peu importe ce que vous cherchez<br>
-                        trouver
-                        le logement de vos rêves.</p>
                 </div>
             </div>
 
@@ -258,3 +258,63 @@
           
  
     </script>
+ 
+     <script type="text/javascript">
+        function googleTranslateElementInit() {
+            new google.translate.TranslateElement(
+                {pageLanguage: 'fr', includedLanguages: 'fr,en,ar,de,es,pt,ru,zh-CN', autoDisplay: false, text: 'Language'},
+                'google_translate_element',
+            );
+        }
+    </script>
+ 
+    <script type="text/javascript"
+            src=
+"https://translate.google.com/translate_a/element.js?
+cb=googleTranslateElementInit">
+    </script>
+    <style>
+    #google_translate_element{
+    display: flex;
+    flex-direction: row;
+
+    
+    }
+
+
+        #google_translate_element select{
+ color:black;
+ border-radius:8px;
+ padding:6px 8px;
+ margin-top: 20px;
+ padding: 6px;
+ }
+ .goog-logo-link{
+   display:none!important;
+  }
+ .goog-te-gadget{
+ color:transparent!important;
+ } 
+ .goog-te-banner-frame{
+ display:none !important;
+ height:0px !important;
+ }
+
+ #goog-gt-tt, .goog-te-balloon-frame{
+    display: none !important;
+    }
+.goog-text-highlight {
+     background: none !important; box-shadow: none !important;
+       
+     }
+.goog-te-combo option:first-of-type{
+  content:'Translator';
+     }
+
+.VIpgJd-ZVi9od-l4eHX-hSRGPd{
+    display:none;
+    user-select:none;
+}
+
+
+    </style>
